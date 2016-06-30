@@ -1,0 +1,101 @@
+%
+% A simple LaTeX template for Books
+%  (c) Aleksander Morgado <aleksander@es.gnu.org>
+%  Released into public domain
+%
+\RequirePackage{lineno}
+%\linenumbers 
+\documentclass{article}
+\usepackage[a4paper, top=3cm, bottom=3cm]{geometry}
+%\usepackage[latin1]{inputenc}
+%\usepackage{setspace}
+\usepackage{fancyhdr}
+%\usepackage{tocloft}
+\usepackage{verbatim}
+\usepackage{graphicx,amsmath,epsfig,color,amsfonts,relsize,subfigure}
+\usepackage{authblk}
+%\usepackage[running]{lineno}
+\begin{document}
+
+ 
+%\pagestyle{empty}
+%\begin{flushleft}
+\pagenumbering{}
+% Set book title
+\title{\textbf{CMS}}
+
+\author{Ekaterina Avdeeva}
+
+\affil{University of Nebraska-Lincoln, USA}
+\maketitle
+%\end{flushleft}
+
+\begin{abstract}
+This paper reviews
+\end{abstract}
+
+% 2nd page, thanks message
+%-------------------------------------------------------------------------------
+%\thispagestyle{empty}
+%\newpage
+
+
+% General definitions for all Chapters
+%-------------------------------------------------------------------------------
+
+% Define Page style for all chapters
+\pagestyle{fancy}
+% Delete the current section for header and footer
+\fancyhf{}
+% Set custom header
+\lhead[]{\thepage}
+\rhead[\thepage]{}
+
+% Set arabic (1,2,3...) page numbering
+\pagenumbering{arabic}
+\tableofcontents
+
+%
+% Not enumerated chapter
+%-------------------------------------------------------------------------------
+%\linenumbers
+
+
+\include{Intro} % 7-20 pages
+\include{Intro_FundParticles}
+\include{Intro_Electroweak}
+\include{Intro_Higgs}
+\include{Intro_QCD}
+\include{Intro_ppCollisions}
+\include{Intro_OpenQuestions}
+
+\section{The W$\gamma$ Process} % 5-10 pages
+\include{WgAbout_SMproduction}
+\include{WgAbout_ATGC}
+\include{WgAbout_PastMeasurements}
+
+\section{Experimental Setup} % 7-20 pages
+\include{Exp_LHC}
+\include{Exp_CMS}
+
+\section{CMS Tracker Alignment} % 5-10 pages
+\include{Alignment_Intro}
+\include{Alignment_Algorithm}
+\include{Alignment_Results}
+
+\include{AN_WgMeas} % 30 pages
+% Explain analysis outline here
+\include{AN_WgMeas_Samples}
+\include{AN_WgMeas_Selection}
+\include{AN_WgMeas_Bkgr}
+\include{AN_WgMeas_Unfolding}
+\include{AN_WgMeas_AccXEff}
+\include{AN_WgMeas_Syst}
+\include{AN_WgMeas_CS}
+
+\include{Conclusions} % 1-2 pages
+
+% Appendices
+
+\end{document}
+

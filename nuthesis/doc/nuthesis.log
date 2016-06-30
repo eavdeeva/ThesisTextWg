@@ -1,0 +1,411 @@
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2014.7.28)  30 JUN 2016 11:57
+entering extended mode
+ %&-line parsing enabled.
+**nuthesis.dtx
+(./nuthesis.dtx
+LaTeX2e <2005/12/01>
+Babel <v3.8h> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, arabic, basque, bulgarian, coptic, welsh, czech, slovak, german, ng
+erman, danish, esperanto, spanish, catalan, galician, estonian, farsi, finnish,
+ french, greek, monogreek, ancientgreek, croatian, hungarian, interlingua, ibyc
+us, indonesian, icelandic, italian, latin, mongolian, dutch, norsk, polish, por
+tuguese, pinyin, romanian, russian, slovenian, uppersorbian, serbian, swedish, 
+turkish, ukenglish, ukrainian, loaded.
+File: nuthesis.dtx 2013/05/23 v0.7.1 University of Nebraska Thesis class
+(/usr/share/texmf/tex/latex/base/ltxdoc.cls
+Document Class: ltxdoc 1999/08/08 v2.0u Standard LaTeX documentation class
+(/usr/share/texmf/tex/latex/base/article.cls
+Document Class: article 2005/09/16 v1.4f Standard LaTeX document class
+(/usr/share/texmf/tex/latex/base/size10.clo
+File: size10.clo 2005/09/16 v1.4f Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texmf/tex/latex/base/doc.sty
+Package: doc 2006/02/02 v2.1d Standard LaTeX documentation package (FMi)
+\c@StandardModuleDepth=\count87
+\guard@level=\count88
+\MacrocodeTopsep=\skip43
+\MacroIndent=\dimen103
+\macro@cnt=\count89
+\MacroTopsep=\skip44
+\index@excludelist=\toks14
+
+(/usr/share/texmf/tex/latex/tools/multicol.sty
+Package: multicol 2006/05/18 v1.6g multicolumn formatting (FMi)
+\c@tracingmulticols=\count90
+\mult@box=\box26
+\multicol@leftmargin=\dimen104
+\c@unbalance=\count91
+\c@collectmore=\count92
+\doublecol@number=\count93
+\multicoltolerance=\count94
+\multicolpretolerance=\count95
+\full@width=\dimen105
+\page@free=\dimen106
+\premulticols=\dimen107
+\postmulticols=\dimen108
+\multicolsep=\skip45
+\multicolbaselineskip=\skip46
+\partial@page=\box27
+\last@line=\box28
+\mult@rightbox=\box29
+\mult@grightbox=\box30
+\mult@gfirstbox=\box31
+\mult@firstbox=\box32
+\@tempa=\box33
+\@tempa=\box34
+\@tempa=\box35
+\@tempa=\box36
+\@tempa=\box37
+\@tempa=\box38
+\@tempa=\box39
+\@tempa=\box40
+\@tempa=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\c@columnbadness=\count96
+\c@finalcolumnbadness=\count97
+\last@try=\dimen109
+\multicolovershoot=\dimen110
+\multicolundershoot=\dimen111
+\mult@nat@firstbox=\box50
+\colbreak@box=\box51
+)
+\IndexMin=\dimen112
+\c@IndexColumns=\count98
+\GlossaryMin=\dimen113
+\c@GlossaryColumns=\count99
+\check@sum=\count100
+\bslash@cnt=\count101
+\wrong@table=\toks15
+\c@CodelineNo=\count102
+))
+(/usr/share/texmf/tex/latex/ltxmisc/url.sty
+\Urlmuskip=\muskip10
+Package: url 2005/06/27  ver 3.2  Verb mode for urls, etc.
+)
+(/usr/share/texmf/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2005/03/16 v1.6180 publication quality tables
+\heavyrulewidth=\dimen114
+\lightrulewidth=\dimen115
+\cmidrulewidth=\dimen116
+\belowrulesep=\dimen117
+\belowbottomsep=\dimen118
+\aboverulesep=\dimen119
+\abovetopsep=\dimen120
+\cmidrulesep=\dimen121
+\cmidrulekern=\dimen122
+\defaultaddspace=\dimen123
+\@cmidla=\count103
+\@cmidlb=\count104
+\@aboverulesep=\dimen124
+\@belowrulesep=\dimen125
+\@thisruleclass=\count105
+\@lastruleclass=\count106
+\@thisrulewidth=\dimen126
+)
+(/usr/share/texmf/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 1998/07/17
+
+Style option: `fancyvrb' v2.6, with DG/SPQR fixes <1998/07/17> (tvz)
+(/usr/share/texmf/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+\FV@CodeLineNo=\count107
+\FV@InFile=\read1
+\FV@TabBox=\box52
+\c@FancyVerbLine=\count108
+\FV@StepNumber=\count109
+\FV@OutFile=\write3
+
+No file fancyvrb.cfg.
+)
+\@indexfile=\write4
+\openout4 = `nuthesis.idx'.
+
+
+Writing index file nuthesis.idx
+\@glossaryfile=\write5
+\openout5 = `nuthesis.glo'.
+
+Writing glossary file nuthesis.glo 
+\codeSkip=\skip47
+(./nuthesis.aux)
+\openout1 = `nuthesis.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+Package doc Info: Made | a short reference for \verb on input line 38.
+ (./nuthesis.dtx
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <17.28> on input line 131.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 131.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 131.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 131.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 131.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 139.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 153.
+
+
+LaTeX Warning: Marginpar on page 1 moved.
+
+
+LaTeX Warning: Marginpar on page 1 moved.
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 181.
+
+(/usr/share/texmf/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 181.
+ [1
+
+{/usr/share/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+
+LaTeX Warning: Marginpar on page 2 moved.
+
+
+LaTeX Warning: Marginpar on page 2 moved.
+
+
+LaTeX Warning: Marginpar on page 2 moved.
+
+
+LaTeX Warning: Marginpar on page 2 moved.
+
+
+LaTeX Warning: Marginpar on page 2 moved.
+
+
+LaTeX Warning: Marginpar on page 2 moved.
+
+
+LaTeX Warning: Marginpar on page 2 moved.
+
+
+LaTeX Warning: Marginpar on page 2 moved.
+
+
+LaTeX Warning: Marginpar on page 2 moved.
+
+[2]
+
+LaTeX Warning: Marginpar on page 3 moved.
+
+
+LaTeX Warning: Marginpar on page 3 moved.
+
+
+LaTeX Warning: Marginpar on page 3 moved.
+
+
+LaTeX Warning: Marginpar on page 3 moved.
+
+
+LaTeX Warning: Marginpar on page 3 moved.
+
+[3]
+
+LaTeX Warning: Marginpar on page 4 moved.
+
+
+LaTeX Warning: Marginpar on page 4 moved.
+
+
+LaTeX Warning: Marginpar on page 4 moved.
+
+
+LaTeX Warning: Marginpar on page 4 moved.
+
+
+LaTeX Warning: Marginpar on page 4 moved.
+
+
+LaTeX Warning: Marginpar on page 4 moved.
+
+[4] [5] [6] [7] [8] [9] [10] [11]
+Overfull \hbox (38.38727pt too wide) in paragraph at lines 1180--1180
+ [][]  \OT1/cmtt/m/n/9 \ifthenelse{\boolean{nu@single}}{\begin{singlespacing}}{
+\begin{doublespacing}}% 
+ []
+
+
+Overfull \hbox (38.38727pt too wide) in paragraph at lines 1180--1180
+ [][]      \OT1/cmtt/m/n/9 \ifthenelse{\boolean{nu@single}}{\end{singlespacing}
+}{\end{doublespacing}}% 
+ []
+
+
+Overfull \hbox (38.38727pt too wide) in paragraph at lines 1180--1180
+ [][]  \OT1/cmtt/m/n/9 \ifthenelse{\boolean{nu@single}}{\begin{singlespacing}}{
+\begin{doublespacing}}% 
+ []
+
+
+Overfull \hbox (38.38727pt too wide) in paragraph at lines 1180--1180
+ [][]      \OT1/cmtt/m/n/9 \ifthenelse{\boolean{nu@single}}{\end{singlespacing}
+}{\end{doublespacing}}% 
+ []
+
+
+Overfull \hbox (38.38727pt too wide) in paragraph at lines 1180--1180
+ [][]  \OT1/cmtt/m/n/9 \ifthenelse{\boolean{nu@single}}{\begin{singlespacing}}{
+\begin{doublespacing}}% 
+ []
+
+
+Overfull \hbox (38.38727pt too wide) in paragraph at lines 1180--1180
+ [][]      \OT1/cmtt/m/n/9 \ifthenelse{\boolean{nu@single}}{\end{singlespacing}
+}{\end{doublespacing}}% 
+ []
+
+
+Overfull \hbox (38.38727pt too wide) in paragraph at lines 1180--1180
+ [][]  \OT1/cmtt/m/n/9 \ifthenelse{\boolean{nu@single}}{\begin{singlespacing}}{
+\begin{doublespacing}}% 
+ []
+
+
+Overfull \hbox (38.38727pt too wide) in paragraph at lines 1180--1180
+ [][]      \OT1/cmtt/m/n/9 \ifthenelse{\boolean{nu@single}}{\end{singlespacing}
+}{\end{doublespacing}}% 
+ []
+
+[12] [13]
+Overfull \hbox (24.11028pt too wide) in paragraph at lines 1250--1252
+[]\OT1/cmr/m/n/10 error check-ing of mu-tu-ally ex-clu-sive op-tions - []\OT1/c
+mtt/m/n/10 print\OT1/cmr/m/n/10 /[]\OT1/cmtt/m/n/10 electronic\OT1/cmr/m/n/10 ,
+ []\OT1/cmtt/m/n/10 single\OT1/cmr/m/n/10 /[]\OT1/cmtt/m/n/10 double\OT1/cmr/m/
+n/10 . 
+ []
+
+(./nuthesis.gls
+Underfull \hbox (badness 10000) in paragraph at lines 9--10
+[]| \OT1/cmr/m/n/9 Gen-eral: \OT1/cmtt/m/n/9 \subsubsections \OT1/cmr/m/n/9 now
+ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--20
+[]| \OT1/cmr/m/n/9 Place sin-gle/double code in 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--22
+[]| \OT1/cmr/m/n/9 Gen-eral: \OT1/cmtt/m/n/9 \MakeUppercase \OT1/cmr/m/n/9 to 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--26
+[]| \OT1/cmr/m/n/9 Fix sig-na-ture page to use 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--28
+[]| \OT1/cmr/m/n/9 Fixed miss-ing en-tries in 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--31
+[]| \OT1/cmr/m/n/9 Lots of mi-nor things 
+ []
+
+[14]) (./nuthesis.bbl
+LaTeX Font Info:    Font shape `OT1/cmss/m/it' in size <10> not available
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 5.
+
+Underfull \hbox (badness 5667) in paragraph at lines 34--38
+[]\OT1/cmr/m/n/10 Denis Girou, Se-bas-tian Rahtz, and Tim-o-thy Van Zandt.  \OT
+1/cmr/m/it/10 The
+ []
+
+
+Underfull \hbox (badness 7099) in paragraph at lines 34--38
+\OT1/cmss/m/sl/10 fan-cyvrb \OT1/cmr/m/it/10 pack-age\OT1/cmr/m/n/10 .  Avail-a
+ble at: $\OT1/cmtt/m/n/10 http : / / tug . ctan . org / cgi-[]bin /
+ []
+
+
+Underfull \hbox (badness 2846) in paragraph at lines 45--49
+[]\OT1/cmr/m/n/10 Markus Kohm.  \OT1/cmss/m/sl/10 scr-time \OT1/cmr/m/it/10 par
+t of the \OT1/cmss/m/sl/10 KOMA-Script \OT1/cmr/m/it/10 bun-dle\OT1/cmr/m/n/10 
+.  Avail-
+ []
+
+
+Underfull \hbox (badness 1845) in paragraph at lines 45--49
+\OT1/cmr/m/n/10 able at: $\OT1/cmtt/m/n/10 http : / / tug . ctan . org / cgi-[]
+bin / ctanPackageInformation . py ?
+ []
+
+[15]) (./nuthesis.ind [16])
+*******************
+* Checksum passed *
+*******************
+) [17] (./nuthesis.aux) ) 
+Here is how much of TeX's memory you used:
+ 1189 strings out of 256216
+ 15655 string characters out of 1917072
+ 74307 words of memory out of 1500000
+ 4490 multiletter control sequences out of 10000+200000
+ 12847 words of font info for 45 fonts, out of 1200000 for 2000
+ 645 hyphenation exceptions out of 8191
+ 30i,9n,21p,227b,496s stack positions out of 5000i,500n,6000p,200000b,15000s
+</usr/share/texmf/fonts/type1/bluesky/cm/cmbx10.pfb></
+usr/share/texmf/fonts/type1/bluesky/cm/cmbx12.pfb></usr/share/texmf/fonts/type1
+/bluesky/cm/cmbx9.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmmi10.pfb></usr
+/share/texmf/fonts/type1/bluesky/cm/cmr10.pfb></usr/share/texmf/fonts/type1/blu
+esky/cm/cmr12.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr17.pfb></usr/shar
+e/texmf/fonts/type1/bluesky/cm/cmr6.pfb></usr/share/texmf/fonts/type1/bluesky/c
+m/cmr7.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr8.pfb></usr/share/texmf/
+fonts/type1/bluesky/cm/cmr9.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmss10
+.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmss17.pfb></usr/share/texmf/font
+s/type1/bluesky/cm/cmss8.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmss9.pfb
+></usr/share/texmf/fonts/type1/bluesky/cm/cmssi10.pfb></usr/share/texmf/fonts/t
+ype1/bluesky/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmsy6.pfb><
+/usr/share/texmf/fonts/type1/bluesky/cm/cmsy8.pfb></usr/share/texmf/fonts/type1
+/bluesky/cm/cmti10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmti7.pfb></usr
+/share/texmf/fonts/type1/bluesky/cm/cmti9.pfb></usr/share/texmf/fonts/type1/blu
+esky/cm/cmtt10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmtt12.pfb></usr/sh
+are/texmf/fonts/type1/bluesky/cm/cmtt9.pfb>
+Output written on nuthesis.pdf (17 pages, 194991 bytes).
+PDF statistics:
+ 157 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 131072)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+
