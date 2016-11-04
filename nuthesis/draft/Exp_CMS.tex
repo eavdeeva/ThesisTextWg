@@ -79,18 +79,15 @@ Muons pass through the ECal, the HCal and the magnet without interacting. They a
 
 There are four concentric layers of muon detectors (stations) and iron return yoke between them. Muons induce several hits in the muon stations which are later fitted and matched to the tracking system measurements to provide the best possible resolution in the measurements of all parameters of the muon's trajectory and momentum.\\
 
-Overall, there are 1400 muon chambers including 250 drift tubes (DTs), 540 cathode strip chambers (CSCs) and 610 resistive plate chambers (RPCs).\\
+There are three types of muon chambers used in the CMS muon system: drift tubes (DTs), cathode strip chambers (CSCs) and resistive plate chambers (RPCs). Overall, there are 1400 muon chambers including 250 DTs, 540 CSCs and 610 RPCs.\\
 
 The system of DTs measures positions of muons in the barrel. Each DT chamber is about~2~m by~2.5~m in size. It consists of~12~layers of aluminium which are groups by four. There are up to~60~drift tubes in a layer. The middle group of layers measures $z$-coordinate and two other groups determine the perpendicular coordinate.\\
 
 Each drift tube is~4~cm in width, is filled with a gas and has a wire inside. When a charged particle passes through the volume, it ionizes atoms and the wire receives an electric charge.\\
 
-% (how it works? why do we need it?)
+CSCs are placed in endcap regions. CSCs are arrays of anode wires which are crossed by copper cathode strips placed in a gas volume. When a charged particle penetrates to the gas volume, it ionizes the gas. Electrons drift to the wires while ions move to the strips. Strips are perpendicular to wires, thus, we measure two coordinates for each particle. \\ 
 
-% Copypaste: In total there are 1400 muon chambers: 250 drift tubes (DTs) and 540 cathode strip chambers (CSCs) track the particles’ positions and provide a trigger, while 610 resistive plate chambers (RPCs) form a redundant trigger system, which quickly decides to keep the acquired muon data or not. 
-
-cathode strip chambers
-resistive plate chambers
+RPCs are parallel capacitors made of high-resistivity plastic plates with a space between them filled with a gas. RPCs provide quick measurements of muon momenta and are used for triggering. \\ 
 
 \begin{figure}[htb]
   \begin{center}
@@ -102,8 +99,37 @@ resistive plate chambers
 
 
 \subsubsection{Triggering and Data Aquisition}
-Level-I trigger
-High Level Trigger
+
+At peak luminosity, CMS experiences one billion proton-proton collisions per second which come in bunches separated just by~25~ns from one other. New events come before the events from the previous bunch crossing left the detector. To process the information from many different collisions at the same time, data is stored in pipelines. \\
+
+It is not technically possible to readout all these events. Moreover, we do not need most of these events for a physics analysis because most of these events do not have a potential to discover a new physics. We have resources to store about one hundred events out of one billion that is why we need a trigger system which quickly decides what the best one hundred events are.\\
+
+If the triggers were too loose, and we would select one hundred events too quickly, e.g., out of a hundred million events, then CMS would not be able to process the rest~90\% of events in a givem set of one billion and we would lose~90\% of potentially interesting events.\\
+
+If the triggers were too strict, we would select, e.g,~ten events out of one billion, not one hundred and lose CMS potential to store and process data by~90\% which would significantly reduce our chances for a discovery.\\
+
+Thus, the challenge of the trigger system is to select the best one hundred events out of one billion and do that fast to be able to process every single event.To achive this goal, a two-level trigger system was developed consisting from the Level~1 (L1) trigger and the high level trigger (HLT) as shown in Fig.~\ref{fig:trigger_2level}.\\
+
+L1 is a hardware based trigger (Fig.~\ref{fig:trigger_L1}). It uses information from the ECal, HCal and muon system. L1 reduces frequency of coming events from~40~MHz to~100~kHz. Events which did not pass the L1 trigger are lost forever while events which pass the L1 trigger are temporarily stored to get checked by the HLT.\\
+
+HLT is a software-based trigger. It uses information from all subdetectors and runs quick reconstruction and identification algorithms to determine types of particles and their kinematics. It reduces the number of events to~100~Hz. Events which did not pass HLT are lost forever. Events which pass HLT are arranged into appropriate datasets depending on HLT selection criteria they passed and stored for physics analyses.\\
+
+\begin{figure}[htb]
+  \begin{center}
+    \includegraphics[width=0.8\textwidth]{../figs/Exp/trigger_2level.png}
+    \caption{Two-level CMS trigger system.}
+    \label{fig:trigger_2level}
+  \end{center}
+\end{figure}
+
+\begin{figure}[htb]
+  \begin{center}
+    \includegraphics[width=0.8\textwidth]{../figs/Exp/trigger_L1.png}
+    \caption{Level 1 CMS trigger system.}
+    \label{fig:trigger_L1}
+  \end{center}
+\end{figure}
+
 
 \subsubsection{Event Reconstruction}
 Where to place particle reconstruction, particle flow algorithm and MET? Check other theses
