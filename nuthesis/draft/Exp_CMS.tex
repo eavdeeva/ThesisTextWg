@@ -2,11 +2,22 @@
 \label{sec:Exp_CMS}
 \subsubsection{Introduction}
 
-CMS is a general-purpose detector designed for detecting various particles which are being produced in pp collisions at LHC. Its main feature is a huge magnet to create a magnetic field of 4T to curve charged particles in the tracking system and 2T outside to curve muons in the muon system.\\
+The CMS is a general-purpose detector designed for detecting various highly energetic particles which are being produced in pp collisions at the LHC. The CMS has a broad program with goals of direct and indirect searches of the BSM physics including but not limited to supersymmetric particles. Its main feature is a huge magnet to create a magnetic field of~4T to curve charged particles in the tracking system and~2T outside to curve muons in the muon system.\\
 
-CMS detector is a cylindrically symmetric with a colliding beam as a central axis. The detector consists, from inner to outer layer,  of a tracking system, an electromagnetic calorimeter (ECal), a hadronic calorimeter (HCal), a magnet and a muon system. Having the tracking system, ECal and HCal inside of a large solenoid makes the detector "compact". A segment of a CMS slice in $r-\phi$ plane is shown in Fig.~\ref{fig:CMS_slice}.\\
+% ADD MORE ABOUT GEOMETRY
+The CMS detector is a cylindrically symmetric with a colliding beam as a central axis. Cartesian, cylindrical and spherical coordinates are all used to describe the CMS geometry, depending on the context. The $x$-axis of the CMS points towards the center of the LHC while the $y$-axis points vertically up. The direction of the $z$-axis corresponds to the couterclockwise direction of the LHC beam (Fig.~\ref{fig:CMScoord}, left). Cylindrical coordinates are defined as $r=\sqrt{x^2+y^2}$, $\phi=arctan(y/x)$. Instead of the polar angle $\theta$, it is more convinient to use the pseudorapidity $\eta=-\ln{\tan{\theta/2}}$. A pseudorapidity changes from $\eta=-\infty$ to $\eta=+\infty$ for directions parallel to the beam axis with the value of $\eta=0$ for a direction perpendicular to the beamline. This variable is convinient for measurements because a distribution of a massless particle in $\eta$ is nearly flat. The acceptance of the CMS in $\eta$ is limited and varies from $|\eta|=2.4$ to $|\eta|=5.0$ depending on a subdetector.  \\ 
 
-When a heavy particle is produced in a collision, it decays immediately, and we detect its long-living decay products including an electron, a photon, a muon, a neutral hadron or a charged hadron. Depending on the trace left by a particle in different subdetectors we can identify a particle. Electrons and positrons leave curved tracks in the tracking system and then induce showers in the electromagnetic calorimeter (ECal) where they are typically stopped. Photons induce the same electromagnetic showers is ECal however, as neutral particles, they do not leave tracks in the tracking system. Hadrons normally travel through the ECal undisturbed and induce a hadronic shower in the hadronic calorimeter (HCal). Charged and neutral hadrons can be distinguished from each other by checking whether they leave a track in the tracking system or not. Muons are the only particles which are not stopped by the layer of ferrum and leave tracks in the CMS muon system. Neutrinos are not detected by CMS. \\  
+\begin{figure}[htb]
+  \begin{center}
+    {\includegraphics[width=0.45\textwidth]{../figs/Exp/CMScoord.png}\includegraphics[width=0.45\textwidth]{../figs/Exp/CMScoord_eta.png}}
+    \caption{Left: CMS coordinate system. Right: pseudorapidity ranges for different CMS subdetectors.}
+    \label{fig:CMScoord}
+  \end{center}
+\end{figure}
+
+The detector consists, from inner to outer layer,  of a tracking system, an electromagnetic calorimeter (ECal), a hadronic calorimeter (HCal), a magnet and a muon system. Having the tracking system, ECal and HCal inside of a large solenoid makes the detector compact. A segment of a CMS slice in $r-\phi$ plane is shown in Fig.~\ref{fig:CMS_slice}.\\
+
+When a heavy particle is produced in a collision, it decays immediately, and we detect its long-living decay products including an electron, a photon, a muon, a neutral hadron or a charged hadron. Depending on the trace left by a particle in different subdetectors we can identify a particle. Electrons and positrons leave curved tracks in the tracking system and then induce showers in the electromagnetic calorimeter (ECal). Photons induce the same electromagnetic showers is ECal however, as neutral particles, they do not leave tracks in the tracking system. Hadrons normally travel through the ECal undisturbed and induce a hadronic shower in the hadronic calorimeter (HCal). Charged and neutral hadrons can be distinguished from each other by checking whether they leave a track in the tracking system or not. Muons are the only particles which penetrate through the ECal, the HCal and the magnet and leave tracks in the CMS muon system. Neutrinos are not detected by CMS. \\  
 
 \begin{figure}[htb]
   \begin{center}
@@ -19,8 +30,7 @@ When a heavy particle is produced in a collision, it decays immediately, and we 
 % CMS detector geometry and variables
 
 % In this dissertation...
-In $W\gamma$ measurement we have muons and electrons as final state particles. They are both affected by CMS magnetic field allowing the tracking system and the muon system to measure their trajectory parameters and momenta.\\
-In this dissertation we use the information of the primary vertex determined by the tracking system to select our events. Also the tracker provide us the information about electrons trajectories and momenta in the electron channel and distinguishes between electrons and photons.\\
+All subdetectors are important for the $W\gamma$ measurement and the remainder of this chapter describes the subdetectors in greater details. Muons and electrons which we have as final state particles are both affected by CMS magnetic field allowing the tracking system and the muon system to measure their trajectory parameters and momenta. In this dissertation we use the information of the primary vertex determined by the tracking system to select our events. Also the tracker provide us the information about electrons trajectories and momenta in the electron channel and distinguishes between electrons and photons.\\
 
 \subsubsection{Magnet}
 
@@ -32,13 +42,13 @@ The magnet is made of superconducting wires. An electric current flowing in the 
 
 \subsubsection{Tracking System}
 
-The tracking system measures track geometry including particles trajectories and locations of primary and secondary vertices and momenta of charged particles. It needs to disturb particles as little as possible so that they can pass through. Therefore, just a few measurements must be enough to reconstruct the track. The accuracy of a measurement of each hit is 10~$\mu$m.\\
+The tracking system measures track geometry including particles trajectories and locations of primary and secondary vertices and momenta of charged particles. It needs to disturb particles as little as possible so that they can pass through. Therefore, just a few measurements must be enough to reconstruct the track. The accuracy of a measurement of each hit is~10~$\mu$m.\\
 
 The tracking system consists of silicon pixels and silicon strips (Fig.~\ref{fig:tracker_slice}). Collision tracks start at the center and then cross the layers of the tracking system. Tracks are straight in $r-z$ plane and curved by the magnetic field in the $r-\phi$ plane. The acceptance of the tracker system in $r-z$ plane is geometrically limited by $\eta=2.5$ ($\eta=-\ln[ {\tan{\theta/2}}]$, where $\theta$ is a polar angle).\\
 
-The pixel tracker is the closest subsystem of CMS to the collision point thus it receives the largest particle flux: at~8~cm from the collision point the flux is about~10~million $1/(cm^2 s)$, and the pixel detector with its~65~millions sensors is capable to reconsruct all these tracks. It consists of three layers of cylinders in the barrel with radii of~4~cm,~7~cm and~11~cm and four disks in the endcap, two disks at each side. The tracker is designed in such a way that a single track hits multiple sensors. Then the trajectory is reconstructed based on how much charge is collected on each sensor. This allows us to reach a spacial resolution of 15-20~$\mu$m which is much smaller than a distance between sensors.\\
+The pixel tracker is the closest subsystem of CMS to the collision point thus it experiences the largest particle flux: at~8~cm from the collision point the flux is about~10~million~1/(cm$^2$s), and the pixel detector with its~65~millions sensors is capable to reconsruct all these tracks. It consists of three layers of cylinders in the barrel with radii of~4~cm,~7~cm and~11~cm and four disks in the endcap, two disks at each side. The tracker is designed in such a way that a single track hits multiple sensors. Then the trajectory is reconstructed based on how much charge is collected on each sensor. This allows us to reach a spacial resolution of 15-20~$\mu$m which is much smaller than a distance between sensors.\\
 
-The strip tracker is placed right after the pixel tracker and occupies the detector volume up to~130~cm aound the beam axis. The strip tracker consists of four parts: the tracker inner barrel (TIB), the tracker inner disks (TID), the tracker outer barrel (TOB) and the tracker endcap (TEC) as shown in Fig.~\ref{fig:tracker_slice}. In the strip tracker there are over 15,000 sensitive modules with a total number of~10~million strips. Each sensitive module consists of a set of sensors, its support structure and readout elements.\\
+The strip tracker is placed right after the pixel tracker and occupies the detector volume up to~130~cm around the beam axis. The strip tracker consists of four parts: the tracker inner barrel (TIB), the tracker inner disks (TID), the tracker outer barrel (TOB) and the tracker endcap (TEC) as shown in Fig.~\ref{fig:tracker_slice}. In the strip tracker there are over 15,000 sensitive modules with a total number of~10~million strips. Each sensitive module consists of a set of sensors, its support structure and readout elements.\\
 
 %electric charge and amplification
 
