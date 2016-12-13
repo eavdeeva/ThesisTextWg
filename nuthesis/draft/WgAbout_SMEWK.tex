@@ -8,12 +8,12 @@ The SM is a quantum field theory invariant under the local $SU(3)_C \times SU(2)
 
 The part of the SM Lagrangian based on the $SU(3)_C$ symmetry and is called QCD or theory of strong interactions. QCD has three types of charges which are called colors: red, blue, and green. To be a subject of strong interaction, a fermion must posses a color charge. Quarks and antiquarks are such fermions. The requirement to satisfy the gauge invariance with respect to $SU(3)_C$ transformations generates eight massless gluons, and the non-abelian nature of the $SU(3)$ group generates self-interactions of gluons including three-gluon and four-gluon vertices.\\
 
-The part of the SM Lagrangian based on the $SU(2)_L \times U(1)_Y$ symmetry is a foundation of the unified theory of electroweak interactions. $SU(2)_L$ reflects transformations in the weak isospin space of left-handed fermions (\cite{ref_Griffiths},~Ch.~9) while $U(1)_Y$ reflects transformations in a weak hypercharge space of all fermions. The requirement of the local gauge invariant generates four massless vector bosons which are mediators of electromagnetic and weak interactions. The non-abelian structure of $SU(2)$ group generates gauge boson couplings the same way as self-interactions of gluons appear in QCD.\\ 
+The part of the SM Lagrangian based on the $SU(2)_L \times U(1)_Y$ symmetry is a foundation of the unified theory of electroweak interactions. $SU(2)_L$ reflects transformations in the weak isospin space of left-handed fermions (\cite{ref_Griffiths},~Ch.~9) while $U(1)_Y$ reflects transformations in a weak hypercharge space of all fermions. The requirement of the local gauge invariant generates four massless vector bosons which are mediators of electromagnetic and weak interactions. The non-abelian structure of $SU(2)$ group generates gauge boson self-couplings the same way as self-interactions of gluons appear in QCD.\\ 
 
 Mass terms for the vector bosons would violate the gauge invariance of the electroweak Lagrangian, however it is experimentally known that mediators of weak interactions are heavy particles with masses $M_W=80$~GeV and $M_Z=91$~GeV. A possible solution of the discrepancy is a mechanism of the spontateous symmetry breaking. QED symmetry group $U(1)$ remains unbroken because a photon is massless.\\
 
 % REPHRASE ENTIRELY
-The mechanism of the Spontaneous Symmetry Breaking and the appearance of the mass terms for $W$ and $Z$ boson is realized by introducing an additional doublet of scalar fields. After that, the Lagrangian is being transformed in such a way that $W$ and $Z$ bosons acquire masses through their interactions with a new particle: a Higgs boson ($H$). A photon does not couple to the Higgs boson remaining a massless particle and keeping $U(1)_{QED}$ symmetry unbroken.\\
+The mechanism of the Spontaneous Symmetry Breaking and the appearance of the mass terms for $W$ and $Z$ boson is realized by introducing an additional doublet of scalar fields. After that, the Lagrangian is being transformed in such a way that $W$ and $Z$ bosons acquire masses through their interactions with a new particle: a Higgs boson ($H$). A photon does not couple to the Higgs boson remaining a massless particle.\\
 
 The measurement in this dissertation provides a test for the electroweak sector of the SM. We will retrace the steps of the derivation of the EWK part of the SM Lagrangian starting from terms of free fermions. The resulting Lagrangian accommodates electroweak gauge bosons including their self-couplings. One of these self-couplings, $WW\gamma$, is the primary focus of our measurement.\\
 
@@ -29,7 +29,7 @@ It is experimentally known that dynamics of weak interactions depends on particl
 \psi_1(x)=\begin{pmatrix} \nu_e \\ e^- \end{pmatrix}_L \text{, } \psi_2(x)=\nu_{eR} \text{, } \psi_3(x)=e^-_R \text{. }
 \end{equation}
 
-\noindent{The state $d'$ in Eq.~\ref{eq:psi_for_quarks} is a mixture of $d$, $c$ and $b$ quark's wave functions and is determined by the quark mixing matrix which is also called Cabbibo-Kobayashi-Maskawa matrix \cite{ref_Pich}:}\\
+\noindent{The state $d'$ in Eq.~\ref{eq:psi_for_quarks} is a weak eigenstate which is a linear combination of mass eigenstates $d$, $c$ and $b$ quark's wave functions and is determined by the quark mixing matrix which is also called Cabbibo-Kobayashi-Maskawa matrix \cite{ref_Pich}:}\\
 
 \begin{equation}
   \begin{pmatrix} d' \\ c' \\ b' \end{pmatrix} = V
@@ -52,7 +52,7 @@ The wave function $\psi_1$ changes under the $SU(2)_L \times U(1)_Y$ transformat
 
 \noindent{while the wave functions $\psi_{(2,3)}(x)$ are singlets of $SU(2)_L$ and are affected only by $U(1)$ transformations:}\\
 
-\begin{equation}{eq:psi23_transform}
+\begin{equation}\label{eq:psi23_transform}
 \psi_{(2,3)}(x) \rightarrow e^{i y_{(2,3)} \beta} \psi_{(2,3)}(x).
 \end{equation}
 
@@ -114,7 +114,7 @@ L_{QED} = i \bar{\psi}(x) \gamma^\mu \partial_\mu \psi(x) - m \bar{\psi}(x) \psi
 
 This requirement relates $g$, $g'$, $\theta_W$ and $e$ as $g \sin \theta_W = g' \cos \theta_W = e$ and provides expression for weak hypercharges: $y = q - t_3$, where $q$ is the electric charge and $t_3$ is a $z$-component of the weak isospin. This results in $y_1=1/6$, $y_2=2/3$, and $y_3=-1/3$ for quarks and $y_1=-1/2$, $y_2=0$, and $y_3=-1$ for leptons. A right-handed neutrino has a weak hypercharge of $y_2=0$. It also does not have an electric charge and, as a right-handed fermion, has $t_3=0$ and, therefore, does not couple to a $W$ boson. Thus, a right-handed neutrino does not participate in any SM interaction.\\
 
-Writing $\tilde{W}_\mu$ in Eq.~\ref{eq:L_gauge_kin} explicitly, we obtain TGC and QGC coupling terms:\\ 
+Writing $\tilde{W}_\mu$ in Eq.~\ref{eq:L_gauge_kin} explicitly, we obtain triple gauge coupling (TGC) and quartic gauge coupling (QGC) coupling terms:\\ 
 
 \begin{equation} \label{eq:L_TGC_1}
 L_{TGC} = -\frac{g}{4}(\partial_\mu W_\nu^i - \partial_\nu W_\mu^i)\epsilon^{ijk}W^{\mu j}W^{\nu k} - \frac{g}{4}\epsilon^{ijk}W_\mu^j W_\nu^k (\partial^\mu W^{\nu i} - \partial^\nu W^{\mu i})
@@ -171,7 +171,7 @@ L_{QGC}^{(3)} = - e^2 \cot \theta_W (2 W_\mu^+ W^{-\mu} Z_\nu A^{\nu} - W^{+}_\m
 L_{QGC}^{(4)} = - e^2 (W^+_\mu W^{-\mu} A_\nu A^{\nu} - W^+_\mu A^{\mu} W^-_\nu A^{\nu}).
 \end{equation}
 
-In the measurement of this dissertation we probe $WW\gamma$ coupling (Eq.~\ref{eq:eq:L_TGC_2_2}).\\
+In the measurement of this dissertation we probe $WW\gamma$ coupling (Eq.~\ref{eq:L_TGC_2_2}).\\
 
 The unified electroweak Lagrangian discussed above involves kinetic energy terms for fermions and gauge bosons as well as interactions of fermions with gauge bosons, TGC, and QGC. However, this Lagrangian does not contain any mass terms. Because left-handed and right-handed wave functions transform differently under the electroweak symmetry, adding fermion mass terms of $\frac{1}{2} m_f^2 \bar{\psi} \psi$ would violate the Lagrangian invariance and, therefore, fermion mass terms are forbidden by the $SU(2) \times U(1)$ symmetry requirement. Mass terms for gauge bosons also would violate the Lagrangian invariance just as a photon mass term $\frac{1}{2} m^2 A^\mu A_\mu$ would violate $U(1)$ invariance of $L_{QED}$~\cite{ref_Griffiths}. Therefore, Lagrangian $L$ in Eq.~\ref{eq:L_free_covariant} contains massless particles only.\\
 
