@@ -1,9 +1,9 @@
 \subsection{Cross Section and Luminosity}
 \label{sec:LumiAndCS}
 
-In this dissertation we are measuring the total cross section of the process $pp \rightarrow l \nu_l \gamma + X$ and its differential cross section in transverse momentum of the photon. The cross section in particle physics is the interaction probability per unit flux of incident particles~\cite{ref_fnal_LumiCS}. It can be interpreted as area which must be crossed by an incident particle in order to interact with a scattering center, or, in case of a differential cross section, area $d\sigma$ within which an incident particle must appear to be scattered off by an angle $d\theta$ (Fig.~\ref{fig:CSclassical}). The relationship between $d\sigma$ and $d\theta$ gives us the expression for a differential cross section $d\sigma/d\theta$. Integrating over $d\theta$, one would get the total cross section $\sigma$. \\
+In this dissertation we are measuring the total cross section of the process $pp \rightarrow l \nu_l \gamma + X$ and its differential cross section in transverse momentum of the photon. A cross section in particle physics is an interaction probability per unit flux of incident particles~\cite{ref_fnal_LumiCS}. It can be interpreted as an area which must be crossed by an incident particle in order to interact with a scattering center, or, in case of a differential cross section, area $d\sigma$ within which an incident particle must appear to be scattered off by an angle $d\theta$ (Fig.~\ref{fig:CSclassical}). The relationship between $d\sigma$ and $d\theta$ gives us the expression for a differential cross section $d\sigma/d\theta$. Integrating over $d\theta$, we obtain the total cross section $\sigma$. \\
 
-In Fig.~\ref{fig:CSclassical} an incident particle is the same as a final state particle, however in particle physics final state particles can differ from initial state particles, and we measure a differential cross section with respect to a parameter $X$ of the final state particle. Differentiating $\sigma$ by $X$ we get the expression for the differential cross section $d\sigma/dX$.\\
+In particle physics we measure a differential cross section with respect to a parameter $X$ which can be a parameter of one of final state particles or of a system of final state particles. For example, a transverse momentum of a final state photon $P_T^\gamma$, an invariant mass of two final state leptons $m_{ll}$, a number of jets associated with the process $N_{jets}$ and other parameters. \\
 
 \begin{figure}[htb]
   \begin{center}
@@ -13,17 +13,17 @@ In Fig.~\ref{fig:CSclassical} an incident particle is the same as a final state 
   \end{center}
 \end{figure}
 
-Referring to the Fig.~\ref{fig:CSclassical}, a number of particles passing through the area $\sigma$ per unit time is $N=L \cdot \sigma$, where $L$ is the flux of incident particles and is called luminosity. Therefore, the cross section $\sigma$ of a specific process can be determined from an experiment as $\sigma=N/L$. \\
+Referring to the Fig.~\ref{fig:CSclassical}, the number of particles passing through the area $\sigma$ per unit time is $N=L \cdot \sigma$, where $L$ is the flux of incident particles and is called luminosity. Therefore, the cross section $\sigma$ of a specific process can be determined from an experiment as $\sigma=N/L$. \\
 
-A cross section also can be computed theoretically. The formula to compute a cross section is:\\
+A cross section also can be computed theoretically. The formula to compute a cross section is\\
 
 \begin{equation}
   \sigma = \frac{W_{fi}}{L} N_{fs},
 \end{equation}
 
-where $W_{fi}$ is a transition probability between final and initial states of the system per unit volume, $L$ is the flux of initial particles, and $N_{fs}$ is the density of final states~\cite{ref_Halzen_Martin},~chapter~4.3.\\ 
+\nonindent{where $W_{fi}$ is a transition probability between final and initial states of the system per unit volume, $L$ is the flux of initial particles, and $N_{fs}$ is the density of final states~\cite{ref_Halzen_Martin}, chapter~4.3.}\\ 
 
-The formula of the cross section is called the Fermi's Golden Rule~\cite{ref_Griffiths}. In case of the scattering of two particles to three final state particles $1+2\rightarrow 3+4+5$, it takes the following form:\\
+The formula of the cross section of scattering of two particles to three final state particles $1+2\rightarrow 3+4+5$ is determined by the Fermi's Golden Rule~\cite{ref_Griffiths}: \\
 %Further on, you do mention amplitude several times, but you never explain what it is. You may want to discuss probability amplitudes, connecting initial and final states, etc, with some basic quantum mechanics bra-ket notations, etc.
 %You do not need to derive it. But you need to explain, I think, how it comes about and what it means. Just a few more sentences would be enough.
 
@@ -31,10 +31,10 @@ The formula of the cross section is called the Fermi's Golden Rule~\cite{ref_Gri
   \sigma = \frac{ 1 }{4\sqrt{(p_1p_2)^2-(m_1m_2)^2}} \int |M|^2 (2\pi)^4 \delta^4(p_1+p_2-p_3-p_4-p_5) \prod_{j=3}^{5} \frac{1}{2 \sqrt{\bar{p_j^2}+m_j^2 }}\frac{d^3\bar{p_j}}{(2\pi)^3},  
 \end{equation}
 
-where $p_i$ are 4-momenta and ${\bar{p_i}}$ are three momenta of the initial state and the final state particles, $m_i$ are masses of particles, $M$ is the process amplitude determined by the dynamics of the particles interaction. All available momenta of the final state particles is called the phase space.\\ 
+\nonindent{where $p_i$ are four-momenta and ${\bar{p_i}}$ are three momenta of the initial state and the final state particles, $m_i$ are masses of particles, $M$ is the process amplitude determined by the dynamics of the particles interaction. All available momenta of the final state particles is called the phase space.}\\ 
 %Consider discussing parton luminosity and the cross section expression that involves the PDFs and parton-based cross sections
 
-The cross section of the hard scattering in proton-proton collisions $pp \rightarrow X+Y$ has two ingridients: PDFs and a partonic cross section $\sigma_{ab\rightarrow X}$. The partonic cross section is described by perturbative QCD while PDFs require non-perturbative computations and are determined, in part, from experiments (Fig.~\ref{fig:pdfs}). According to the QCD factorization theorem~\cite{ref_HardScattering}:\\
+During proton-proton collisions, at high energy the hard scattering process occurs between partons in the protons, as discussed in Ch.~\ref{sec:Intro_ppCollisions}. Therefore, the cross section of a process $pp \rightarrow X+Y$ has two ingridients: PDFs and a partonic cross section $\sigma_{ab\rightarrow X}$. The partonic cross section is described by perturbative QCD while PDFs require non-perturbative computations and are determined, in part, from experiments (Fig.~\ref{fig:pdfs}). According to the QCD factorization theorem~\cite{ref_HardScattering}:\\
 %The paragraph on the lines 473 - 478. I think you need to explain a bit more. Why can we factorize into partonic cross sections? I suggest you refer to the discussion of the proton structure in section 1.4, to the partons and parton PDFs discussed there. You also need to explain what are “i”, “j”, what are x1, x2, etc.
 
 \begin{equation}\label{eq:ppCS_general}
@@ -42,4 +42,5 @@ The cross section of the hard scattering in proton-proton collisions $pp \righta
 \end{equation}
 %Another question I forgot to mention: in the equation 28 you have Q2. There is no integration over Q2. So what happens to it? Is it that the cross section defined by this equation a function of Q2?
 
-In case of $W\gamma$ process, $X$ is $l \nu \gamma$, $ab$ are $q_i \bar{q}_j$ or $q_j \bar{q}_i$. $Q^2$ is the large momentum scale that characterizes hard scattering, $f_a$ and $f_b$ are PDFs, $x_a$ and $x_b$ are fractions of momenta of the partons.\\
+In the case of $W\gamma$ process, $X$ is $l \nu \gamma$, $ab$ are $q_i \bar{q}_j$ or $q_j \bar{q}_i$. $Q^2$ is the large momentum scale that characterizes hard scattering, $f_a$ and $f_b$ are PDFs, $x_a$ and $x_b$ are fractions of momenta of the partons. In the next sections we will discuss the computation of partonic cross sections of the $W\gamma$ process and possible BSM effects.\\
+
