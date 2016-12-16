@@ -1,9 +1,9 @@
 \subsection{Standard Model W$\gamma$ Production}
 \label{WgAbout_SMproduction}
 
-A $W$ boson in proton-proton collisions can be produced in the processes $q {\bar{q'}} \rightarrow W$ where $q$ and $\bar{q'}$ are a quark and an antiquark which have a total charge of $+1$ if producing a $W^+$ boson or of $-1$ if producing a $W^-$ boson. The processes $u\bar{d}\rightarrow W^+$ and $d\bar{u}\rightarrow W^-$ are the most likely to occur because $u$ and $d$ are valence quarks in a proton. There are twice as many $u$ quarks in a proton as $d$ quarks, therefore, $W^+$ is produced twice more frequently than $W^-$. Antiquarks $\bar{d}$ and $\bar{u}$ come from sea $q\bar{q}$ pairs of the other proton.\\
+A $W$ boson in proton-proton collisions can be produced in the processes $q {\bar{q'}} \rightarrow W$ where $q$ and $\bar{q'}$ are a quark and an antiquark which have a total charge of $+1$ if producing a $W^+$ boson or $-1$ if producing a $W^-$ boson. The processes $u\bar{d}\rightarrow W^+$ and $d\bar{u}\rightarrow W^-$ are the most likely to occur because $u$ and $d$ are valence quarks in a proton. There are twice as many $u$ quarks in a proton as $d$ quarks, therefore, $W^+$ is produced twice more frequently than $W^-$. Antiquarks $\bar{d}$ and $\bar{u}$ come from sea $q\bar{q}$ pairs of the other proton.\\
 
-A $W$ boson decays immediately after being created, and we do not detect the $W$ boson itself but its decay products. Decay modes of a $W$ boson include $W^\pm \rightarrow l^\pm \nu_l ({\bar{\nu_l}})$ where $l^\pm=e^\pm$, $\mu^\pm$ or $\tau^\pm$ with branching fractions of ~11\% per a leptonic channel \cite{ref_PDG}. The rest 67\% stands for various $W\rightarrow q\bar{q'}$ decays. In this dissertation we only consider $W^\pm \rightarrow \mu^\pm \nu_\mu ({\bar{\nu_\mu}})$ and $W^\pm \rightarrow e^\pm \nu_e ({\bar{\nu_e}})$ as the cleanest channels.\\
+One created, a $W$ boson decays immediately and in an experiment one detects its decay products rather than the $W$ boson itself. Decay modes of a $W$ boson include $W^\pm \rightarrow l^\pm \nu_l ({\bar{\nu_l}})$ where $l^\pm=e^\pm$, $\mu^\pm$ or $\tau^\pm$ with branching fractions of ~11\% per a leptonic channel \cite{ref_PDG}. The remaining 67\% account for various $W\rightarrow q\bar{q'}$ decays. In this dissertation we only consider $W^\pm \rightarrow \mu^\pm \nu_\mu ({\bar{\nu_\mu}})$ and $W^\pm \rightarrow e^\pm \nu_e ({\bar{\nu_e}})$ channels.\\
 
 % MAY NOT NEED THIS
 %Mass of a $W$ boson $M_W=80$ GeV is much larger than masses of its decay products: $M_\mu=105$ MeV, $M_e=0.5$ MeV, $M_\nu<2$ eV. Therefore, almost all mass of a $W$ boson converts to the kinetic energy of the muon or electron and neutrino or antineutrino.\\
@@ -13,7 +13,7 @@ A photon can be emitted from any charged particle of the process: a quark, an an
 \begin{figure}[htb]
   \begin{center}
     {\includegraphics[width=0.90\textwidth]{../figs/WgAbout/feynmWg_LO_NLO.png}}
-    \caption{Feynman diagrams of W$\gamma$ production}
+    \caption{Feynman diagrams of W$\gamma$ production. Top: LO diagrams, bottom: several examples of NLO in QCD.}
     \label{fig:feynmWg_LO_NLO}
   \end{center}
 \end{figure}
@@ -22,14 +22,24 @@ The electroweak Lagrangian is described in Chapter~\ref{sec:WgAbout_SMEWK}. It i
 
 To represent the process graphically Feynman diagrams were invented. Also the diagrams can be used to calculate the process amplitude $M$ from Eq.~\ref{eq:FermiGoldenRule} because they are determined by Lagrangian terms relevant to the process. There is infinite number of Feynman diagrams corresponding to any specific process and the total amplitude of the process is a sum of individual amplitudes of each diagram and it is not technically possible to take into account all of them. If a coupling constant is $g \ll 1$, the perturbative approach arranges all the diagrams by orders of contribution because each vertex is assigned a coupling constant and, therefore, the Feynman diagrams with fewer vertices would give a significantly larger contribution to the amplitude. In Fig.~\ref{fig:feynmWg_LO_NLO} we have examples of the Leading Order (LO) and the Next-to-Leading Order (NLO) Feynman diagrams (top and bottom diagrams respectively).\\
 
-The W$\gamma$ process is represented by four LO Feynman diagrams including one FSR, one TGC and two ISR diagrams. Each LO diagram has three vertices. The W$\gamma$ process amplitude and cross section are long, comlicated expressions, therefore, they are not quoted in this dissertation. The first calculation of the W$\gamma$ process with necessary formulas can be found in~\cite{ref_theory_LO}.\\
+The W$\gamma$ process is represented by four LO Feynman diagrams including one FSR, one TGC and two ISR diagrams. Each LO diagram has three vertices. The first calculation of the W$\gamma$ process with necessary formulas can be found in~\cite{ref_theory_LO}.\\
 
-The NLO corrections shown in Fig.~\ref{fig:feynmWg_LO_NLO} are QCD corrections only which include gluon loops at the same quark line and exchange of a gluon between two different quark lines however QED and weak NLO diagrams are also possible. QED corrections mean radiations of extra photons by charged particles, exchange of photons between different charged particles or a photon can be radiated and absorbed by the same charged particle forming a loop. Similarly, weak corrections mean extra virtual $W$ or $Z$ bosons. But the QCD corrections are the largest because the QCD coupling constant is the largest.\\
+The NLO corrections to the amplitude of the $W\gamma$ process that are shown in Fig.~\ref{fig:feynmWg_LO_NLO} are QCD corrections only which include gluon loops at the same quark line and exchange of a gluon between two different quark lines however QED and weak NLO diagrams are also possible. QED corrections mean radiations of extra photons by charged particles, exchange of photons between different charged particles or a photon can be radiated and absorbed by the same charged particle forming a loop. Similarly, weak corrections mean extra virtual $W$ or $Z$ bosons. But the QCD corrections are the largest because the QCD coupling constant is the largest.\\
 
 The theoretical cross section in particle physics is important not only for analyzing the measurement result but also for producing the simulation which is then actively used while performing the measurement. The simulation consists of two parts: the generation of the process and the simulation of the particles paths through the detector. While the second one depends on the well-known properties of the particles and the detector configurations, the first part relies on the theory including the cross section and also all dynamics of the process.\\
 
-The most precise theoretical $W\gamma$ cross section available is the Next-to-Next-to-Leading Order (NNLO) cross section in QCD~\cite{ref_theory_NNLO}. The effect of the NNLO correction ranges from 19\% to 26\% compared to the NLO cross section depending on the selection conditions. The contributions from the higher order corrections is estimated to be $\pm$4\%. However, the NNLO theoretical result was published in 2015 only and there is still no simulation available based on that result. The simulation used in this analysis is LO + up to two hadronic jets simulation which found to give the same predictions as the NLO result.\\
+The most precise theoretical $W\gamma$ cross section available is the Next-to-Next-to-Leading Order (NNLO) cross section in QCD~\cite{ref_theory_NNLO}. The effects of the NNLO correction over the NLO correction and over the LO result are shown in Fig.~\ref{fig:Theory_NNLO_and_other} for the transverse mass of the final state particles $m_T^{l \nu \gamma}$ and for the rapidity difference between a charged lepton and a photon $\Delta_{l\gamma}$. The NNLO and NLO theoretical predictions for the photon transverse momentum $p_T^\gamma$ are overlaid with~7~TeV ATLAS result. The contributions from the higher order corrections is estimated to be $\pm$4\%. However, the NNLO theoretical result was published in 2015 only and there is still no simulation available based on that result. The simulation used in this analysis is LO + up to two hadronic jets simulation which found to give the same predictions as the NLO result.\\
 % [REFERENCE to APPENDIX?].\\
+
+\begin{figure}[htb]
+  \begin{center}
+    {\includegraphics[width=0.95\textwidth]{../figs/WgAbout/Theory_NNLO_PtGamma.png}}    
+    {\includegraphics[width=0.95\textwidth]{../figs/WgAbout/Theory_NNLO_mT_finer.png}}
+    {\includegraphics[width=0.50\textwidth]{../figs/WgAbout/Theory_NNLO_rapidity.png}}
+    \caption{Theory spectra.}
+    \label{fig:Theory_NNLO_and_other}
+  \end{center}
+\end{figure}
 
 In addition to the SM predictions, there are certain BSM theories which predict an enhancement of the contribution from the TGC diagram. The discussion of these BSM effects and how they affect the $W\gamma$ process takes place in Chapter~\ref{sec:WgAbout_ATGC}.\\ 
 
