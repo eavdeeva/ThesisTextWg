@@ -2,10 +2,9 @@
 \label{sec:Exp_CMS}
 \subsubsection{Introduction}
 
-The CMS is a general-purpose detector designed for detecting various highly energetic particles which are being produced in pp collisions at the LHC. The CMS has a broad program with goals of direct and indirect searches of the BSM physics including but not limited to supersymmetric particles. Its main feature is a huge magnet to create a magnetic field of~4T to curve charged particles in the tracking system and of~2T outside to curve muons in the muon system.\\
+The CMS is a general-purpose detector designed for detecting various highly energetic particles which are being produced in $pp$ collisions at the LHC~\cite{ref_CMS_TDR}. The CMS has a broad program with goals of direct and indirect searches of the BSM physics including but not limited to supersymmetric particles. Its main feature is a huge magnet to create a magnetic field of~4T to curve charged particles in the tracking system and of~2T outside to curve muons in the muon system.\\
 
-% ADD MORE ABOUT GEOMETRY
-The CMS detector is a cylindrically symmetric with a colliding beam as a central axis. Cartesian, cylindrical and spherical coordinates are all used to describe the CMS geometry, depending on the context. The $x$-axis of the CMS points towards the center of the LHC while the $y$-axis points vertically up. The direction of the $z$-axis corresponds to the couterclockwise direction of the LHC beam (Fig.~\ref{fig:CMScoord}, left). Cylindrical coordinates are defined as $r=\sqrt{x^2+y^2}$, $\phi=arctan(y/x)$. Instead of the polar angle $\theta$, it is more convinient to use the pseudorapidity $\eta=-\ln{\tan{\theta/2}}$. A pseudorapidity ranges from $\eta=-\infty$ to $\eta=+\infty$ for directions parallel to the beam axis with the value of $\eta=0$ for a direction perpendicular to the beamline. This variable is convinient for measurements because a distribution of a massless particle in $\eta$ is nearly flat. The acceptance of the CMS in $\eta$ is limited and varies from $|\eta|=2.4$ to $|\eta|=5.0$ depending on a subdetector.  \\ 
+The CMS detector is a cylindrically symmetric with a colliding beam as a central axis. Cartesian, cylindrical and spherical coordinates are all used to describe the CMS geometry, depending on the context. The $x$-axis of the CMS points towards the center of the LHC while the $y$-axis points vertically up. The direction of the $z$-axis corresponds to the couterclockwise direction of the LHC beam (Fig.~\ref{fig:CMScoord}, left). Cylindrical coordinates are defined as $r=\sqrt{x^2+y^2}$, $\phi=arctan(y/x)$. Instead of the polar angle $\theta$, it is more convinient to use the pseudorapidity $\eta=-\ln{\tan{\theta/2}}$. A pseudorapidity ranges from $\eta=-\infty$ to $\eta=+\infty$ for directions parallel to the beam axis with the value of $\eta=0$ for a direction perpendicular to the beamline. This variable is convinient for measurements because a distribution of a massless particle in $\eta$ is nearly flat. The acceptance of the CMS in $\eta$ is limited and varies from $|\eta|<2.4$ to $|\eta|<5.0$ depending on a subdetector (Fig.~\ref{fig:CMScoord}, right).  \\ 
 
 \begin{figure}[htb]
   \begin{center}
@@ -30,11 +29,11 @@ When a heavy particle is produced in a collision, it decays immediately, and we 
 % CMS detector geometry and variables
 
 % In this dissertation...
-All subdetectors are important for the $W\gamma$ measurement and the remainder of this chapter describes the subdetectors in greater details. Muons and electrons which we have as final state particles are both affected by CMS magnetic field allowing the tracking system and the muon system to measure their trajectory parameters and momenta. In this dissertation we use the information of the primary vertex determined by the tracking system to select our events. Also the tracker provide us the information about electrons trajectories and momenta in the electron channel and distinguishes between electrons and photons.\\
+All subdetectors are important for the $W\gamma$ measurement and the remainder of this chapter describes the subdetectors in greater details. Muons and electrons which we have as final state particles are both affected by CMS magnetic field allowing the tracking system and the muon system to measure their trajectory parameters and momenta. In this dissertation we use the information of the primary vertex determined by the tracking system to select our events. Also the tracker provide us the information about electrons trajectories and momenta in the electron channel and distinguishes between electrons and photons. The ECal is necessary to identify electrons and photons and to measure all kinematic parameters of photon. The HCal is also used for electrons and photons identification: the energy deposit in the HCal left by an electron or a photon must be very small compared to the energy deposit left in the ECal. The muon system is essential for muon reconstruction and identification.\\
 
 \subsubsection{Magnet}
 
-A magnetic field in a particle detector is necessary to measure momenta of charged particles by track curvatures. The higher the momentum is, the less a particles's path is affected by the magnetic field. In CMS it is done in the tracking system for all charged particles and in the muon system for muons.\\
+A magnetic field in a particle detector is necessary to measure momenta of charged particles by track curvatures. The higher the momentum is, the less a particle trajectory is affected by the magnetic field. In CMS a measurement of a charged particle momentum is performed in the tracking system for all charged particles and in the muon system for muons.\\
 
 The CMS magnet is placed between layers of HCal and a muon system. It creates a magnetic field of 4T inside the magnet, for the tracking system, and 2T outside the magnet, for the muon system. It is necessary to have stronger field in the tracking system because a density of tracks is much higher there than in the muon system and also the tracking system is much smaller and, therefore, more significant cuvature is necessary to measure the momentum with high precision.\\
 
@@ -120,9 +119,9 @@ If the triggers were too strict, we would select, e.g,~ten events out of one bil
 
 Thus, the challenge of the trigger system is to select the best one hundred events out of one billion and do that fast to be able to process every single event. To achive this goal, a two-level trigger system was developed consisting from the Level~1 trigger (L1T) and the high level trigger (HLT) as shown in Fig.~\ref{fig:trigger_2level}.\\
 
-L1T is a hardware based trigger (Fig.~\ref{fig:trigger_L1}). It uses information from the ECal, HCal and muon system. L1T reduces frequency of coming events from~40~MHz to~100~kHz. Events which did not pass the L1T are lost forever while events which pass the L1T are temporarily stored to get checked by the HLT.\\
+L1T is a hardware based trigger (Fig.~\ref{fig:trigger_L1}). It uses information from the ECal, HCal and muon system. L1T reduces frequency of coming events from~40~MHz to~100~kHz. Events that did not pass the L1T are lost forever while events that pass the L1T are temporarily stored to get checked by the HLT.\\
 
-HLT is a software-based trigger. It uses information from all subdetectors and runs quick reconstruction and identification algorithms to determine types of particles and their kinematics. It reduces the number of events to~100~Hz. Events which did not pass HLT are lost forever. Events which pass HLT are arranged into appropriate datasets depending on HLT selection criteria they passed and stored for physics analyses.\\
+HLT is a software-based trigger. It uses information from all subdetectors and runs quick reconstruction and identification algorithms to determine types of particles and their kinematics. It reduces the number of events to~100~Hz. Events that did not pass HLT are lost forever. Events that pass HLT are arranged into appropriate datasets depending on HLT selection criteria they passed and stored for physics analyses.\\
 
 \begin{figure}[htb]
   \begin{center}
@@ -140,8 +139,22 @@ HLT is a software-based trigger. It uses information from all subdetectors and r
   \end{center}
 \end{figure}
 
-
 \subsubsection{Particle Flow Algorithm of Event Reconstruction}
-Where to place particle reconstruction, particle flow algorithm and MET? Check other theses
+
+A particle flow algorithm is used by CMS to identify and reconstruct stable particles~\cite{ref_ParticleFlowAlg}. It processes the information from all CMS subdetectors and identifies and reconstructs each stable particle in an event individually. The list of particles include muons, electrons, photons, charged and neutral hadrons. Each type of particles leaves its own trace in CMS subdetectors as shown in Fig.~\ref{fig:CMS_slice}. After that, jets are built, missing transverse energy $E_T^{miss}$ is determined, certain short-lived particles are reconstructed based on the list of individual stable particles in the event.\\
+
+One particle can induce several different particle-flow elements in different subdetectors. The linking algorithm links these elements together producing blocks of elements. Usually there are from one to three elements in each block. Links can be connections between the tracking system and silicon strip pre-shower (PS), ECal or HCal, between PS and ECal, between ECal and HCal, and between a tracking system and a muon system.\\ 
+
+In each block, muons are considered first. A link between charged tracks in the tracking and muon systems comprise a global muon which produces one ``particle-flow muon''. The corresponding track in the tracking system is removed from the block and corresponding energy deposits are subtructed from ECal and HCal. Then electrons are reconstructed and identified using tracking system and ECal. The corresponding tracks and ECal clusters are removed from the block. Remaining tracks and clusters are considered more carefully to identify charged hadrons, neutral hadrons, and photons.\\
+
+When all particles in the event are reconstructed and identified, $E_T^{miss}$ is determined as
+
+\begin{equation}\label{eq:MET}
+  E_T^{miss} = - \sum P_T
+\end{equation}
+
+where the summation covers all visible particles in the event. $E_T^{miss}$ is used in physics analyses as a measure of $P_T$ of neutrinos and other invisible particles in the event. Fake $E_T^{miss}$ can originate from particles that did not fall into the detector acceptance, particles with very high track curvature that they did not reach the tracking system, momenta mismeasurement, particle misidentification, cosmic rays particles, and machine background.\\
+
+In the measurement of this dissertation particle flow muons, electrons, photons, and $E_T^{miss}$ are used for all the major steps of the cross section measurement including event selection, background subtruction, various corrections, and determination of phase space restrictions and bin boundaries. Each step is described in greater details in~Ch.~\ref{sec:AN_WgMeas}.\\ 
 
 %Acceptance: particles which are too collinear and go to pipe; particles which get curved too strongly
