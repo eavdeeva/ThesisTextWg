@@ -12,18 +12,45 @@
 %% phd, edd, ms, ma
 %% phd is the default
 \documentclass[print]{nuthesis}
+
+%% Needed to typset the math in this sample
+\usepackage{amsmath}
+\usepackage{amsfonts}
+%% Let's use a different font
+\usepackage[sc,osf]{mathpazo}
+
+%% Makes things look better
+\usepackage{microtype}
+
+%% Makes things look better
+\usepackage{booktabs}
+%% Gives us extra list environments
+\usepackage{paralist}
+
+%% Be able to include graphicsx
+\usepackage{graphicx}
+
+%% I like darker colors
+\usepackage{color}
+\definecolor{dark-red}{rgb}{0.6,0,0}
+\definecolor{dark-green}{rgb}{0,0.6,0}
+\definecolor{dark-blue}{rgb}{0,0,0.6}
+
+%% Needed by memoir to fix things with hyperref
+\usepackage{memhfixc}
+
 \begin{document}
 %% Start formatting the first few special pages
 %% frontmatter is needed to set the page numbering correctly
 \frontmatter
 
-\title{A Very Good Thesis}
-\author{You}
-\adviser{Professor Someone}
+\title{A Measurement of the $W\gamma$ Cross Section at $\sqrt{s}=8$~TeV in $pp$ Collisions with the CMS Detector}
+\author{Ekaterina Avdeeva}
+\adviser{Professor Ilya Kravchenko}
 \adviserAbstract{Someone}
-\major{Something}
-\degreemonth{Month}
-\degreeyear{Year}
+\major{Physics \& Astronomy}
+\degreemonth{May}
+\degreeyear{2017}
 %%
 %% For most people the defaults will be correct, so they are commented
 %% out. To manually set these, just uncomment and make the needed
@@ -83,7 +110,47 @@
 
 %% Thesis goes here
 
-\chapter{My Thesis}
+%\chapter{My Thesis}
+\include{Intro} % 7-20 pages
+\include{Intro_FundParticles}
+\include{Intro_Electroweak}
+\include{Intro_QCD}
+\include{Intro_ppCollisions}
+\include{Intro_OpenQuestions}
+
+\include{WgAbout}
+\include{WgAbout_SMEWK}
+\include{WgAbout_LumiAndCS}
+\include{WgAbout_SMproduction}
+\include{WgAbout_ATGC}
+\include{WgAbout_PastMeasurements}
+
+\chapter{Experimental Setup} % 7-20 pages
+\label{sec:Exp}
+\include{Exp_LHC}
+\include{Exp_CMS}
+
+\chapter{CMS Tracker Alignment} % 5-10 pages
+\label{sec:alignment}
+\include{Alignment_Algorithm}
+\include{Alignment_Results}
+
+\include{AN_WgMeas} % 30 pages
+%% Explain analysis outline here
+%\include{AN_WgMeas_Samples}
+%\include{AN_WgMeas_Selection}
+%\include{AN_WgMeas_Bkgr}
+%\include{AN_WgMeas_Unfolding}
+%\include{AN_WgMeas_AccXEff}
+%\include{AN_WgMeas_Syst}
+%\include{AN_WgMeas_CS}
+
+%\include{Conclusions} % 1-2 pages
+
+\include{References}
+
+% Appendices
+
 
 %% backmatter is needed at the end of the main body of your thesis to
 %% set up page numbering correctly for the remainder of the thesis

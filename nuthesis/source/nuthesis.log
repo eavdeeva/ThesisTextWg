@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=latex 2014.7.28)  30 JUN 2016 11:57
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=latex 2016.8.16)  17 JAN 2017 15:56
 entering extended mode
  %&-line parsing enabled.
 **nuthesis.ins
@@ -102,8 +102,8 @@ Codelines passed: 780
 *************************************************************
  ) 
 Here is how much of TeX's memory you used:
- 342 strings out of 256217
- 3512 string characters out of 1917095
+ 342 strings out of 256215
+ 3512 string characters out of 1917023
  53619 words of memory out of 1500000
  3718 multiletter control sequences out of 10000+200000
  3640 words of font info for 14 fonts, out of 1200000 for 2000
