@@ -29,6 +29,8 @@
 
 %% Be able to include graphicsx
 \usepackage{graphicx}
+\usepackage{caption}
+%\usepackage{subcaption}
 
 %% I like darker colors
 \usepackage{color}
@@ -127,13 +129,11 @@
 \include{WgAbout_ATGC}
 \include{WgAbout_PastMeasurements}
 
-\chapter{Experimental Setup} % 7-20 pages
-\label{sec:Exp}
+\include{Exp}% 7-20 pages
 \include{Exp_LHC}
 \include{Exp_CMS}
 
-\chapter{CMS Tracker Alignment} % 5-10 pages
-\label{sec:alignment}
+\include{Alignment}
 \include{Alignment_Algorithm}
 \include{Alignment_Results}
 
