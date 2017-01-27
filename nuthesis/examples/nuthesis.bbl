@@ -1,5 +1,10 @@
 \begin{thebibliography}{10}
 
+\bibitem{ref_AlApproved_twiki}
+Cms tracker detector performance results 2015: Alignment.
+\newblock Available at:
+  https://twiki.cern.ch/twiki/bin/view/CMSPublic/TkAlignmentPerformance2015.
+
 \bibitem{ref_ATLAS_VW_8TeV}
 ATLAS VW (V=W,Z $\rightarrow$jj) using 4.6 fb-1 of 7 TeV pp collisions JHEP 01
   (2015) 049.
@@ -76,6 +81,9 @@ Hard scattering.
 \newblock Available at:
   http://iopscience.iop.org/article/10.1088/0034-4885/70/1/R02.
 
+\bibitem{ref_HIP_Alg}
+Hip algorithm.
+
 \bibitem{ref_LEP_aTGC_comb}
 LEP Combination of WW and single W using 0.7 fb-1 per experiment of $e^+e^-$
   collisions at WW pair production energies arXiv:1302.3415.
@@ -100,6 +108,9 @@ Available at:
 
 \bibitem{ref_MCFM}
 MCFM generator.
+
+\bibitem{ref_MPII_Alg}
+Millepede ii algorithm.
 
 \bibitem{ref_NASA}
 Nasa website.
