@@ -2,7 +2,10 @@
 \label{sec:Exp_CMS}
 \subsection{Introduction}
 
-The CMS is a general-purpose detector designed for detecting various highly energetic particles which are being produced in $pp$ collisions at the LHC~\cite{ref_CMS_TDR}. The CMS has a broad program with goals of direct and indirect searches of the BSM physics including but not limited to supersymmetric particles. Its main feature is a huge magnet to create a magnetic field of~4T to curve charged particles in the tracking system and of~2T outside to curve muons in the muon system.
+The CMS is a general-purpose detector designed for detecting various highly energetic particles which are being produced in $pp$ collisions at the LHC~\cite{ref_CMS_TDR}. The CMS has a broad program with goals of direct and indirect searches of the BSM physics including but not limited to supersymmetric particles as well as precision measurements of various SM parameters. 
+
+% MAY NOT NEED THIS SENTENCE HERE
+%Its main feature is a large magnet to create a magnetic field of~4T to curve charged particles in the tracking system and of~2T outside to curve muons in the muon system.
 
 The CMS detector is a cylindrically symmetric with a colliding beam as a central axis. Cartesian, cylindrical and spherical coordinates are all used to describe the CMS geometry, depending on the context. The $x$-axis of the CMS points towards the center of the LHC while the $y$-axis points vertically up. The direction of the $z$-axis corresponds to the couterclockwise direction of the LHC beam (Fig.~\ref{fig:CMScoord}, left). Cylindrical coordinates are defined as $r=\sqrt{x^2+y^2}$, $\phi=arctan(y/x)$. Instead of the polar angle $\theta$, it is more convinient to use the pseudorapidity $\eta=-\ln{\tan{\theta/2}}$. A pseudorapidity ranges from $\eta=-\infty$ to $\eta=+\infty$ for directions parallel to the beam axis with the value of $\eta=0$ for a direction perpendicular to the beamline. This variable is convinient for measurements because a distribution of a massless particle in $\eta$ is nearly flat. The acceptance of the CMS in $\eta$ is limited and varies from $|\eta|<2.4$ to $|\eta|<5.0$ depending on a subdetector (Fig.~\ref{fig:CMScoord}, right).   
 
@@ -15,6 +18,10 @@ The CMS detector is a cylindrically symmetric with a colliding beam as a central
 \end{figure}
 
 The detector consists, from inner to outer layer,  of a tracking system, an electromagnetic calorimeter (ECal), a hadronic calorimeter (HCal), a magnet and a muon system. Having the tracking system, ECal and HCal inside of a large solenoid makes the detector compact. A segment of a CMS slice in $r-\phi$ plane is shown in Fig.~\ref{fig:CMS_slice}.
+
+EXPLAIN WHAT IS TRACK
+
+EXPLAIN WHAT IS PRIMARY VERTEX (HERE?)
 
 When a heavy particle is produced in a collision, it decays immediately, and we detect its long-living decay products including an electron, a photon, a muon, a neutral hadron or a charged hadron. Depending on the trace left by a particle in different subdetectors we can identify a particle. Electrons and positrons leave curved tracks in the tracking system and then induce showers in the electromagnetic calorimeter (ECal). Photons induce the same electromagnetic showers is ECal however, as neutral particles, they do not leave tracks in the tracking system. Hadrons normally travel through the ECal undisturbed and induce a hadronic shower in the hadronic calorimeter (HCal). Charged and neutral hadrons can be distinguished from each other by checking whether they leave a track in the tracking system or not. Muons are the only particles which penetrate through the ECal, the HCal and the magnet and leave tracks in the CMS muon system. Neutrinos are not detected by CMS.   
 
@@ -33,13 +40,23 @@ All subdetectors are important for the $W\gamma$ measurement and the remainder o
 
 \subsection{Magnet}
 
-A magnetic field in a particle detector is necessary to measure momenta of charged particles by track curvatures. The higher the momentum is, the less a particle trajectory is affected by the magnetic field. In CMS a measurement of a charged particle momentum is performed in the tracking system for all charged particles and in the muon system for muons.
+% CONTENT-WISE IS OK
 
-The CMS magnet is placed between layers of HCal and a muon system. It creates a magnetic field of 4T inside the magnet, for the tracking system, and 2T outside the magnet, for the muon system. It is necessary to have stronger field in the tracking system because a density of tracks is much higher there than in the muon system and also the tracking system is much smaller and, therefore, more significant cuvature is necessary to measure the momentum with high precision.
+A magnetic field in a particle detector is necessary to measure momenta of charged particles by track curvatures. The higher the momentum is, the less a particle trajectory is affected by the magnetic field. In CMS momenta of all charged particles are measured in the tracking system. In addition, momenta of muons are measured in the muon system. 
 
-The magnet is made of superconducting wires. An electric current flowing in the wires creates a uniform field inside the solenoid and also provides a magnetic filed of a certain configuration outside the solenoid.
+The CMS magnet is placed between layers of HCal and a muon system. The magnet is made of superconducting wires. An electric current flowing in the wires creates a uniform field of $B=4$T inside the solenoid, for the tracking system, and also provides a smaller magnetic field of a certain configuration outside the solenoid, for the muon system. Stronger field in the tracking system is necessary because of higher track density and a smaller size than those in the muon system.
 
 \subsection{Tracking System}
+
+%WHAT IS HIT
+
+%COLLISION TRACKS
+
+%"The tracker is designed in such a way that a single track hits multiple sensors."
+
+%    "Then the trajectory is reconstructed based on how much charge is collected on each sensor."
+
+%       What does it mean, exactly, each of these sentences? It is not clear to me.
 
 The tracking system measures track geometry including particles trajectories and locations of primary and secondary vertices and momenta of charged particles. It needs to disturb particles as little as possible so that they can pass through. Therefore, just a few measurements must be enough to reconstruct the track. The accuracy of a measurement of each hit is~10~$\mu$m.
 
@@ -63,11 +80,13 @@ The strip tracker is placed right after the pixel tracker and occupies the detec
 
 \subsection{Electromagnetic Calorimeter}
 
-The ECal measures energy of electrons and photons and also measures geometries of their trajectories. Electrons and photons interact with the ECal substance by inducing electromagnetic showers. Traces left by photons and electrons in the ECal are the same. To distinguish between these two particles, it is necessary to perform matching to the track in the tracking system. If there is a track, then there is an electron (or positron). If there is no track, then the particle is a photon.
-
 The ECal is a layer between the tracking system and the HCal. It is made of high-density lead tungstate crystals arranged in a barrel section and two endcap sections. The crystals work as scintillators. When electrons and photons pass through it, it produces light proportional to the particle's energy. The scintillated light then is amplified by photomultipliers producing signals on sensitive elements.
 
-It is important for the ECal to be able to distinguish between high energetic photons and pairs of lower energetic photons e.g. from a $\pi^0$ decay. It is especially difficult in the endcap sections where angle between two photon trajectories is small. ECal preshowers located in front of the endcaps which have much smaller granularity provide extra spacial precision. Their strips are~2~mm wide compared to~3~cm wide crystals in the main volume of the ECal.
+Thus, the ECal measures energy of electrons and photons and parameters of their trajectories. To distinguish between electrons and photons, it is necessary to perform matching to the track in the tracking system. If there is a track, then there is an electron (or positron). If there is no track, then the particle is a photon.
+
+It is important for the ECal to be able to distinguish between high energetic photons and pairs of lower energetic photons e.g. from a $\pi^0$ decay. It is especially difficult in the endcap sections where angle between two photon trajectories is small. For this reason, ECal preshowers which have~\~15~times smaller granularity are located in front of the endcaps. The preshowers provide extra spacial precision. 
+
+%Their strips are~2~mm wide compared to~3~cm wide crystals in the main volume of the ECal.
 
 %(Why muons and hadrons don't release their energy here?)
 %limitations
@@ -111,7 +130,7 @@ RPCs are parallel capacitors made of high-resistivity plastic plates with a spac
 
 At peak luminosity, CMS experiences one billion proton-proton collisions per second which come in bunches separated just by~25~ns from one other. New events come before the events from the previous bunch crossing left the detector. To process the information from many different collisions at the same time, data is stored in pipelines. 
 
-It is not technically possible to readout all these events. Moreover, we do not need most of these events for a physics analysis because most of these events do not have a potential to discover a new physics. We have resources to store about one hundred events out of one billion that is why we need a trigger system that quickly decides what the best one hundred events are.
+It is not technically possible to readout all these events. Moreover, we do not need most of these events for a physics measurement because most of these events do not have a potential to discover a new physics. We have resources to store about one hundred events out of one billion that is why we need a trigger system that quickly decides what the best one hundred events are.
 
 If the triggers were too loose, and we would select one hundred events too quickly, e.g., out of a hundred million events, then CMS would not be able to process the rest~90\% of events in a given set of one billion and we would lose~90\% of potentially interesting events.
 
@@ -141,7 +160,7 @@ HLT is a software-based trigger. It uses information from all subdetectors and r
 
 \subsection{Particle Flow Algorithm of Event Reconstruction}
 
-A particle flow algorithm is used by CMS to identify and reconstruct stable particles~\cite{ref_ParticleFlowAlg}. It processes the information from all CMS subdetectors and identifies and reconstructs each stable particle in an event individually. The list of particles include muons, electrons, photons, charged and neutral hadrons. Each type of particles leaves its own trace in CMS subdetectors as shown in Fig.~\ref{fig:CMS_slice}. After that, jets are built, missing transverse energy $E_T^{miss}$ is determined, certain short-lived particles are reconstructed based on the list of individual stable particles in the event.
+A particle flow algorithm is used by CMS to identify and reconstruct stable particles~\cite{ref_ParticleFlowAlg}. It processes the information from all CMS subdetectors and identifies and reconstructs each stable particle in an event individually. The list of particles include muons, electrons, photons, charged and neutral hadrons. Each type of particles leaves its own trace in CMS subdetectors as shown in Fig.~\ref{fig:CMS_slice}. After reconstruction of individual stable particles, jets are built, missing transverse energy $E_T^{miss}$ is determined, certain short-lived particles are reconstructed based on the list of individual stable particles in the event.
 
 One particle can induce several different particle-flow elements in different subdetectors. The linking algorithm links these elements together producing blocks of elements. Usually there are from one to three elements in each block. Links can be connections between the tracking system and silicon strip pre-shower (PS), ECal or HCal, between PS and ECal, between ECal and HCal, and between a tracking system and a muon system. 
 
