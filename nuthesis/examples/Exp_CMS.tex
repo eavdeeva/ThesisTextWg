@@ -131,24 +131,45 @@ The HCal is a sampling calorimeter, it consists of alternating layers of absorbe
 
 \subsection{Muon System}
 
-Muons pass through the ECal, the HCal and the magnet without interacting. They are the only particles that are registered in the muon system which is placed outside the magnet and which is the largest part of CMS detector.
+%(1) QUOTE
+%Because muons can penetrate several metres of iron without interacting, unlike most particles they are not stopped by any of CMS's calorimeters. Therefore, chambers to detect muons are placed at the very edge of the experiment where they are the only particles likely to register a signal.
+%(1) MY WORDS
+Muons, unlike other visible particles, are not stopped by CMS calorimeters. Muons are the only particles that are registered in the muon system which is placed outside the magnet and which is the largest part of CMS detector.
 
 There are four concentric layers of muon detectors (stations) and iron return yoke between them. Muons induce several hits in the muon stations which are later fitted and matched to the tracking system measurements to provide the best possible resolution in the measurements of all parameters of the muon's trajectory and momentum.
 
 There are three types of muon chambers used in the CMS muon system: drift tubes (DTs), cathode strip chambers (CSCs) and resistive plate chambers (RPCs). Overall, there are~1400~muon chambers including~250~DTs,~540~CSCs and~610~RPCs.
 
-The system of DTs measures positions of muons in the barrel. Each DT chamber is about~2~m by~2.5~m in size. It consists of~12~layers of aluminium which are arranged as groups of four. There are up to~60~drift tubes in a layer. The middle group of layers measures $z$-coordinate and two other groups determine the perpendicular coordinate.
+%DTs
+%(4) QUOTE:
+%The drift tube (DT) system measures muon positions in the barrel part of the detector. Each 4-cm-wide tube contains a stretched wire within a gas volume. When a muon or any charged particle passes through the volume it knocks electrons off the atoms of the gas. These follow the electric field ending up at the positively-charged wire.
+%By registering where along the wire electrons hit (in the diagram, the wires are going into the page) as well as by calculating the muon's original distance away from the wire (shown here as horizontal distance and calculated by multiplying the speed of an electron in the tube by the time taken) DTs give two coordinates for the muon’s position.
+%Each DT chamber, on average 2m x 2.5m in size, consists of 12 aluminium layers, arranged in three groups of four, each up with up to 60 tubes: the middle group measures the coordinate along the direction parallel to the beam and the two outside groups measure the perpendicular coordinate.
+%(4) MY WORDS:
+The system of DTs measures positions of muons in the barrel. Each DT chamber is about~2~m by~2.5~m in size. It consists of~12~layers of aluminium which are arranged as groups of four. There are up to~60~drift tubes in a layer. The middle group of layers measures $z$-coordinate and two other groups determine the perpendicular coordinate. Each drift tube is~4~cm in width, is filled with a gas and has a wire inside. When a charged particle passes through the volume, it ionizes atoms and the wire receives an electric charge. The position along the wire is registered and the disctance of the muon away from the wire is calculated providing measurements of two coordinates of the position of the muon.
 
-Each drift tube is~4~cm in width, is filled with a gas and has a wire inside. When a charged particle passes through the volume, it ionizes atoms and the wire receives an electric charge.
+%CSCs
+%(5) QUOTE:
+%Cathode strip chambers (CSC) are used in the endcap disks where the magnetic field is uneven and particle rates are high.
+%CSCs consist of arrays of positively-charged “anode” wires crossed with negatively-charged copper “cathode” strips within a gas volume. When muons pass through, they knock electrons off the gas atoms, which flock to the anode wires creating an avalanche of electrons. Positive ions move away from the wire and towards the copper cathode, also inducing a charge pulse in the strips, at right angles to the wire direction.
+%Because the strips and the wires are perpendicular, we get two position coordinates for each passing particle.
+%In addition to providing precise space and time information, the closely spaced wires make the CSCs fast detectors suitable for triggering. Each CSC module contains six layers making it able to accurately identify muons and match their tracks to those in the tracker.
+%(5) MY WORDS
 
-CSCs are placed in endcap regions. CSCs are arrays of anode wires crossed by copper cathode strips placed in a gas volume. When a charged particle penetrates the gas volume, it ionizes the gas. Electrons drift to the wires while ions move to the strips. Strips are perpendicular to wires, thus, we measure two coordinates for each particle.  
+CSCs are placed in endcap regions. CSCs are arrays of anode wires crossed by copper cathode strips placed in a gas volume. When a charged particle penetrates the gas volume, it ionizes the gas. Electrons drift to the wires while ions move to the strips, thus, charge pulses are induced on wires as well as on strips. Strips are perpendicular to wires, thus, we measure two coordinates for each particle.  
 
-RPCs are parallel capacitors made of high-resistivity plastic plates with a space between them filled with a gas. RPCs provide quick measurements of muon momenta and are used for triggering.  
+% RPCs
+%(6) QUOTE:
+%Resistive plate chambers (RPC) are fast gaseous detectors that provide a muon trigger system parallel with those of the DTs and CSCs. RPCs consist of two parallel plates, a positively-charged anode and a negatively-charged cathode, both made of a very high resistivity plastic material and separated by a gas volume.
+%When a muon passes through the chamber, electrons are knocked out of gas atoms. These electrons in turn hit other atoms causing an avalanche of electrons. The electrodes are transparent to the signal (the electrons), which are instead picked up by external metallic strips after a small but precise time delay. The pattern of hit strips gives a quick measure of the muon momentum, which is then used by the trigger to make immediate decisions about whether the data are worth keeping. RPCs combine a good spatial resolution with a time resolution of just one nanosecond (one billionth of a second).
+%(6) MY WORDS: 
+RPCs are parallel capacitors made of high-resistivity plastic plates with a space between them filled with a gas. RPCs provide quick measurements of muon momenta and are used for triggering. A muon passing through the RPC ionizes gas atoms. Releazed electrons ionize more atoms inducing an avalanche. Electrodes receive signal and pass it to external strips that provide a quick measure of the muon's momentum. 
+
 
 \begin{figure}[htb]
   \begin{center}
     \includegraphics[height=2.5 cm]{../figs/Exp/muonSystem_driftTubes.png}\quad\includegraphics[height=2.5 cm]{../figs/Exp/muonSystem_CSC.png}\quad\includegraphics[height=2.5 cm]{../figs/Exp/muonSystem_RPC.png}
-    \caption{Components of the CMS muon system. Left to right: drift tubes, cathode strip chambers (CSCs), resistive plate chambers (RPCs).}
+    \caption{Components of the CMS muon system. Left to right: drift tubes (DTs), cathode strip chambers (CSCs), resistive plate chambers (RPCs).}
     \label{fig:muonSystem}
   \end{center}
 \end{figure}
