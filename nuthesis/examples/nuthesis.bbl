@@ -1,5 +1,19 @@
 \begin{thebibliography}{10}
 
+\bibitem{ref_Frank_presentation}
+F.~Meier Aeschbacher.
+\newblock Hunting down suspicious results: recent improvements in the alignment
+  of the cms tracker detector, 2010.
+\newblock Available as an internal CMS presentation at:
+  https://indico.cern.ch/event/243940/contributions/1562955/attachments/416194%
+/578159/praesDoktorandensemi2010.pdf.
+
+\bibitem{ref_Frank_thesis}
+F.~Meier Aeschbacher.
+\newblock {\em Measurement of the $\Lambda^0_b$ baryon lifetime using the
+  Compact Muon Solenoid experiment at Cern's Large Hadron Collider}.
+\newblock PhD thesis, ETH Zurich, 2013.
+
 \bibitem{ref_AlApproved_twiki}
 Cms tracker detector performance results 2015: Alignment.
 \newblock Available at:
@@ -37,6 +51,10 @@ ATLAS Collaboration.
   higgs boson with the atlas detector at the lhc.
 \newblock {\em Phys. Lett. B}, 716(1):1--29, 2012.
 \newblock Available at: https://arxiv.org/abs/1207.7214.
+
+\bibitem{ref_Alignment}
+CMS collaboration.
+\newblock Alignment of the cms tracker with large hadron collider data.
 
 \bibitem{ref_HiggsPaperCMS}
 CMS Collaboration.
