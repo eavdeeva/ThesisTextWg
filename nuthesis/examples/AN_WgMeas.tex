@@ -1,3 +1,39 @@
 \chapter{W$\gamma$ Cross Section Measurement}
 \label{sec:AN_WgMeas}
 Place analysis outline here
+ANALYSIS OUTLINE
+
+%\subsection{Data sample}
+The data sample we use in this analysis was recorded by the CMS experiment in~2012 in the LHC $pp$ collisions at~8 TeV. The data collected by single electron and single muon triggers were used as the signal samples while double muon and double electron datasets are used for data-driven background estimation. Only runs and luminosity sections certified by CMS are considered in the measurement, which means that good functioning of all CMS sub-detectors is required.
+
+All simulation samples (often referred as Monte Carlo or MC samples) considered in this analysis are generated with MadGraph and reconstructed centrally by CMS simulation team. The simulated samples are reweighted to represent the distribution of the number of $pp$ interactions per bunch crossing (pile-up), as measured in the data. Information regarding signal and background simulated samples used for the analysis is given in Table~\ref{tab:mc_bkg_samples} alongside with the corresponding cross sections. 
+
+\begin{table}[h]
+  \scriptsize
+  \begin{center}
+    \caption{Summary of simulated background samples used in the measurement.}
+    \begin{tabular}{|l|l|l|}
+      \hline
+      Process                      & $\sigma$, pb         \\ \hline
+      $W\gamma \rightarrow l\nu\gamma$     & 553.92 (NLO)    \\
+      $W \rightarrow l\nu + jets$          & 36257.2 (NNLO)  \\ 
+      $Z \rightarrow ll + jets$            & 3503.71         \\
+      $t\bar{t} + jets+1l$                    & 99.44 (NNLO)   \\
+      $t\bar{t} + jets+2l$                    & 23.83         \\
+      $t\bar{t} + \gamma$                    & 1.444          \\
+      $Z\gamma \rightarrow ll\gamma$       & 171.62           \\
+      \hline
+    \end{tabular}
+    \label{tab:mc_bkg_samples}
+  \end{center}
+\end{table} 
+
+The NLO cross section of $W\gamma$ was calculated with the MCFM in the same phase space for which the $W\gamma$ sample was generated. The theoretical computations of the NNLO cross section are available [REFERENCE WgNNLOtheory] and its contribution is~19\%-26\%.
+
+The cross section of $Z\gamma$ was computed using as inputs MCFM cross section values as well as the precise CMS measurement [REFERENCE Zg8TeV] using the following procedure. The $Z\gamma$ cross section of $\sigma = 2073 \pm 95 \pm \11 \pm \53$~fb has been quoted in the phase space described in [REFERENCE Zg8TeV]. To determine the measured cross section in the generator phase space, the following formula was used:
+
+\begin{equation}
+\sigma_{psn}^{meas.}/\sigma_{psw}^{meas.} = \sigma_{psn}^{MCFM}/\sigma_{psw}^{MCFM},
+\end{equation}
+
+\nointent{where $psn$ is denoted for the narrow phase space, the space of the measured cross section, while $psw$ is denoted for the wide space, the phase space of the generated sample. The $\sigma_{psn}^{MCFM}$ was determined by computing how many events are falling into the narrow phase space and scaling it to $\sigma_{psw}^{MCFM}$=159.12~pb. The $\sigma_{psn}^{MCFM}$ was found to be~1933~fb and~1911~fb for the muon and electron channels respectively and the average of~1922~fb was used in the formula. The $\sigma_{psw}^{meas.}$ was found to be~171.62~pb.
