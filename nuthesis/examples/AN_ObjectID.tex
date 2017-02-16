@@ -1,8 +1,7 @@
 \section{Object and Event selection}
+
 \label{sec:ObjectSelection}
-In this Section we document the electron, muon,
-and photon identification and isolation criteria, MET criteria, and provide the
-results of comparing MC simulation with data.
+In this chapter we document the electron, muon, and photon identification and isolation criteria, $E_T^{MET}$ criteria, and provide the results of comparing simulation with data.
 %We use cut-based selection of lepton + photon + MET where lepton is either muon or electron. 
 %Photon and MET selection are a little bit different for different channels. 
 %The second lepton veto is applied.  dR(lep,pho)$>$0.7 where $dR=\sqrt{({d\phi}^2+{d\eta}^2)}$ 
@@ -12,41 +11,28 @@ results of comparing MC simulation with data.
 %The plot of total data vs MC after the selection criteria applied is shown in Fig. \ref{fig:DATAvsMC}.
 
 \subsection{Object selection}
-The muon selection includes the kinematics cuts $p_T>25$ GeV and $|\eta|<2.1$ and "Tight" muon identification and isolation
-selections as recommended by POG~\cite{muPOG}. 
-If there is the second reconstructed muon candidate with $P_T>10$ GeV and $|\eta|<2.4$ in the event, then the whole event is vetoed. 
-%No muon ID requirements on the muon to be vetoed are applied.\\
-Data to MC scale factors are applied as recommended by POG~\cite{SFmuPOG}.\\
 
-We consider electrons with $p_T>30$~GeV and passing
-the "Tight" identification and isolation selections as optimized by EGamma-POG for 2012 analysis~\cite{egmPOG}.
-%We summarize electron identification and isolation requirements in Table%~\ref{}.
-The ECAL fiducial region is defined in terms of barrel and endcap
-sections with pseudorapidity ranges of $|\eta| < 1.4442$ and  
-$1.566 < |\eta| < 2.5$, respectively. An electron is considered
-to be within this ECAL acceptance if its associated SuperCluster (SC) is
-within the ECAL acceptance.
- If there is the second reconstructed electron candidate with $p_T>10$ GeV and satisfying the "VETO" identification and isolation selections~\cite{egmPOG}
-in the event, then the whole event is vetoed.
-Data to MC scale factors are applied as recommended by POG~\cite{SFegmPOG}.
+We select events with muons and photons in the final state fro the muon channel and events with electrons and photons in the final state for the electron channel. CMS Particle Object Group (POG) provides us with their recommendation for the relevant selection criteria for any given period of data-taking. For~2012 data recommendations included two sets of muon selection criteria: "Tight" and "Loose" and four sets of electron and photon selection criteria: "Tight", "Medium", "Loose" and "Veto".
 
-Photon candidates are reconstructed as SuperClusters with 
-$p_{T} > 15$~GeV in the fiducial volume of the ECAL detector:
-barrel (EB) with $|\eta|<1.4442$ and endcap (EE) with 
-$1.566 < |\eta| < 2.5$. To reduce copious background objects from jets misidentified as photons 
-we apply the "Medium" identification and isolation selections as recommended by EGamma-POG~\cite{phoPOG}.
-Data to MC scale factors are applied as recommended by POG~\cite{SFphoPOG}.
-%Phosphor correction is not applied.\\
-PixelSeedVeto instead of ElectronConversionSafeVeto applied for the electron channel. Scale factors for PixelSeedVeto are taken from the W$\gamma\gamma$ analysis~\cite{Wgg8TeV}.
-dR(lep,pho)$>$0.7 where $dR=\sqrt{({d\phi}^2+{d\eta}^2)}$ 
-is applied to avoid divergence of ISR and FSR contributions. No restrictions applied on a number of
- photons in the event but the candidate with the hardest photon is selected in the particular event among 
-those photons which passed all the other cuts including dR. dR is also a part of the phase space selection.\\
+For the muon selection, we applied the kinematics cuts of $p_T>25$ GeV and $|\eta|<2.1$ and "Tight" identification selection criteria. To reject events with two or more muons, like $Z\gamma\rightarrow\mu\mu\gamma$ events, we rejected all events that have the second reconstructed muon candidate with $P_T>10$ GeV and $|\eta|<2.4$. Data to MC scale factors are applied as recommended by CMS POG.
+
+We consider electrons with $p_T>30$~GeV passing the "Tight" identification selection criteria and photons with $P_T>15$~GeV passing the modified "Medium" identification criteria. The modification of the photons selection criteria was studied in the $W\gamma\gamma \rightarrow l\nu\gamma\gamma$ measurement~\cite{Wgg8TeV}. 
+
+In addition, electrons and photons must be within the ECal acceptance that is defined in terms of barrel (EB) and endcap (EE) sections with pseudorapidity ranges of $|\eta| < 1.4442$ and $1.566 < |\eta| < 2.5$, respectively. To reject events with two or more final state electrons, events with the second reconstructed electron candidate with $p_T>10$ GeV and satisfying the "Veto" identification selection criteria are rejected. No restrictions on the maximum number of the final state photons is applied. 
+
+Selection criteria are applied consistently on the data sample as well as on all simulation samples. Due to various reasons, the selection efficiency may slightly differ between data and simulation. The efficiency ratios are called the scale factors. The scale factors for the selection criteria recommended by CMS POG are provided by CMS POG. For the modified photon identification criteria, the appropriate changes to the POG-recommended scale factors were applied derived by the $W\gamma\gamma$ team~\cite{Wgg8TeV}.
+
+% NEED PLOTS WITH SCALE FACTORS 
+
 
 \subsection{Event Level Selection}
-W transverse mass cut is applied of $M_T^W>40$~GeV where $M_T=\sqrt{(2 \cdot P_T^{Lep} \cdot P_T^{MET} \cdot (1-\cos{(\phi^{lep}-\phi^{MET})}))}$. MET (missing transverse energy) reconstructed with particle flow algorithm was used~\cite{pfMET}. \\
 
-Z-mass window cut is applied in electron channel to suppress DYjets background: events which fall into the Z-mass window $70$~GeV$<M_{e\gamma}<110$~GeV are rejected.\\
+$W$ transverse mass cut is applied of $M_T^W>40$~GeV where $M_T=\sqrt{(2 \cdot P_T^{Lep} \cdot P_T^{MET} \cdot (1-\cos{(\phi^{lep}-\phi^{MET})}))}$. $E_T^{miss}$ reconstructed with particle flow algorithm was used~\cite{pfMET}. 
+
+Z-mass window cut is applied in electron channel to suppress DYjets background: events which fall into the Z-mass window $70$~GeV$<M_{e\gamma}<110$~GeV are rejected.
+
+dR(lep,pho)$>$0.7 where $dR=\sqrt{({d\phi}^2+{d\eta}^2)}$ is applied to avoid divergence of ISR and FSR contributions. No restrictions applied on a number of  photons in the event but the candidate with the hardest photon is selected in the particular event among         
+those photons which passed all the other cuts including dR. dR is also a part of the phase space selection.
 
 \begin{figure}[htb]
   \begin{center}
@@ -57,7 +43,9 @@ Z-mass window cut is applied in electron channel to suppress DYjets background: 
 \end{figure}
 
 \subsection{Weights and Corrections}
-The pile up reweighting is applied. Fig. \ref{fig:DATAvsMC_nVtx} shows the distribution of the number of vertices for the Z$\gamma$ selected sample in muon channel before (left) and after (right) the pile up reweighting of the MC samples. The same procedure of the pile up reweighting is applied for the W$\gamma$ selected MC samples.
+
+The pile up reweighting is applied. Fig.~\ref{fig:DATAvsMC_nVtx} shows the distribution of the number of vertices for the $Z\gamma$ selected sample in muon channel before (left) and after (right) the pile up reweighting of the MC samples. The same procedure of the pile up reweighting is applied for the $W\gamma$ selected MC samples.
+
 \begin{figure}[htb]
   \begin{center}
    \includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/PrepareYields/c_TotalDATAvsMC_EtaCommon__nVtx_noPU.png}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/PrepareYields/c_TotalDATAvsMC_EtaCommon__nVtx.png}
@@ -66,19 +54,19 @@ The pile up reweighting is applied. Fig. \ref{fig:DATAvsMC_nVtx} shows the distr
   \end{center}
 \end{figure}
 
-This is a policy of the CMS SMP group that all the analysis must be performed in a blinded way. We discussed how to implement blinding in our case with the statistics committee [REFERENCE] and were given the following recipe:\\
+This is a policy of the CMS SMP group that all the analysis must be performed in a blinded way. We discussed how to implement blinding in our case with the statistics committee [REFERENCE] and were given the following recipe:
 \begin{itemize}
   \item use all data for $p_T^{\gamma}<p_T^{\gamma-threshold}$, where $p_T^{\gamma-threshold}$ is the value after which the analysis becomes potentially sensitive to the new physics; and
   \item for $p_T^{\gamma}>p_T^{\gamma-threshold}$, use $X\%$ of data and pick  $X\%$ in such a way that $err_{stat} \geq 3 \cdot err_{syst}$.
 \end{itemize}
 
-We decided on $p_T^{\gamma-threshold}=45~GeV$ and, relying on systematic error of ~10\%, quoted by 7 TeV measurement [REFERENCE], on X\%=5\%. Therefore, our blinding strategy is:
+We decided on $p_T^{\gamma-threshold}=45~GeV$ and, relying on systematic error of ~10\%, quoted by~7~TeV measurement [REFERENCE], on X\%=5\%. Therefore, our blinding strategy is:
 \begin{itemize}
   \item for $p_T^{\gamma}<45~GeV$: use full data; and
   \item for $p_T^{\gamma}>45~GeV$: use $5\%$ of data.
 \end{itemize}
 
-Our Wjets, DYjets and $t\bar{t}jets$ MC samples partially contain $W\gamma$, $Z\gamma$, $t\bar{t}\gamma$ events. To remove the overlap, we did the following, relying totally on the MC-truth information available in Wjets, DYjets, $t\bar{t}jets$ samples:
+Our $Wjets$, $DYjets$ and $t\bar{t}jets$ MC samples partially contain $W\gamma$, $Z\gamma$, $t\bar{t}\gamma$ events. To remove the overlap, we did the following, relying totally on the MC-truth information available in Wjets, DYjets, $t\bar{t}jets$ samples:
 \begin{itemize}
   \item loop over all gen-level photons available in the ggNtuple;
   \item the event is removed from selected sample if at least one photon satisfy the following criteria:
@@ -89,7 +77,7 @@ Our Wjets, DYjets and $t\bar{t}jets$ MC samples partially contain $W\gamma$, $Z\
   \end{itemize}
 \end{itemize}
 
-A good data vs MC agreement for the Z$\gamma$ plots in Fig. \ref{fig:DATAvsMC_nVtx} validates the procedure.
+A good data vs MC agreement for the $Z\gamma$ plots in Fig.~\ref{fig:DATAvsMC_nVtx} validates the procedure.
 
 \subsection{Selected Events}
 
@@ -102,7 +90,7 @@ Distributions of $P_T^{\gamma}$ of the selected events are shown in Fig.~\ref{fi
   \begin{center}
    \includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_WGamma/PrepareYields/c_TotalDATAvsMC_Barrel__phoEt.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/ELECTRON_WGamma/PrepareYields/c_TotalDATAvsMC_Barrel__phoEt.pdf}
    \includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_WGamma/PrepareYields/c_TotalDATAvsMC_Endcap__phoEt.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/ELECTRON_WGamma/PrepareYields/c_TotalDATAvsMC_Endcap__phoEt.pdf}
-  \caption{Data vs MC plots. Left column - muon channel, right column - electron. Top to bottom: barrel and endcap photons}
+  \caption{Data vs simulation plots. Left column - muon channel, right column - electron. Top to bottom: barrel and endcap photons.}
   \label{fig:DATAvsMC}
   \end{center}
 \end{figure}
