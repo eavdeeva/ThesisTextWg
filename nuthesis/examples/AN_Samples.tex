@@ -1,0 +1,113 @@
+\section{Data and Monte Carlo samples}
+\label{sec:DataAndMC}
+
+%\subsection{Data sample}
+The data sample we use in this analysis was recorded by the CMS experiment 
+in 2012 in the LHC pp collisions at 8 TeV. The data is collected by single electron ($p_T>27$~GeV, WP 80) 
+and single muon ($p_T>24$~GeV, $|\eta|<2.1$) triggers,
+given in Table~\ref{tab:triggers}. 
+Only certified runs and luminosity sections are considered, which 
+means that good functioning of all CMS sub-detectors is required.
+The selection of the validated run and luminosity sections are obtained from the following official JSON file:
+\begin{itemize}
+\item{\small{Cert$\_$190456$-$208686$\_$8TeV$\_$22Jan2013ReReco$\_$Collisions12$\_$JSON.txt}}
+\end{itemize}
+ The total 
+amount of data analyzed correspond to an integrated luminosity of 19.6~\fbinv.
+
+\begin{table}[htbp]
+  \begin{center}
+ {\small
+  \begin{tabular} {l|l|c}
+\hline
+  Data set & Trigger name & Description\\
+  \hline \hline
+  SingleElectron & HLT\_Ele27\_WP80*        & $p_T>27$~GeV, HLT WP80 quality cuts \\
+  \hline
+  SingleMuon & HLT\_IsoMu24\_eta2p1      & $p_T>24$~GeV, $|\eta|<2.1$, isolated muon \\
+  \hline
+  \end{tabular}
+}
+  \caption{Analysis triggers for data sample.\label{tab:triggers}}
+  \end{center}
+\end{table}
+
+The dataset used for the analysis and the corresponding run ranges are 
+listed in Table~\ref{tab:datasets}. All samples have been processed using the 
+\texttt{CMSSW\_5\_3\_2} release.\\
+
+Double muon and double electron datasets are used for data-driven background estimation to select $Z\gamma$ ISR and FSR events.\\
+
+\begin{table}[]
+  \begin{center}
+  \begin{tabular}{r|r}
+  \hline
+  Dataset name & Run range \\
+  \hline
+  /SingleElectron/Run2012A-22Jan2013-v1/AOD   &  190456-193621           \\
+  \hline
+  /SingleElectron/Run2012B-22Jan2013-v1/AOD   &   193833-196531       \\
+  \hline
+  /SingleElectron/Run2012C-22Jan2013-v1/AOD & 198022-203746\\
+  \hline
+  /SingleElectron/Run2012D-22Jan2013-v1/AOD  & 203777-208686 \\
+  \hline
+  /SingleMuon/Run2012A-22Jan2013-v1/AOD   &  190456-193621           \\
+  \hline
+  /SingleMuon/Run2012B-22Jan2013-v1/AOD   &   193833-196531       \\
+  \hline
+  /SingleMuon/Run2012C-22Jan2013-v1/AOD & 198022-203746\\
+  \hline
+  /SingleMuon/Run2012D-22Jan2013-v1/AOD  & 203777-208686 \\
+  
+  \hline
+  \hline
+  \end{tabular}
+  \end{center}
+  \caption{Summary of data samples used and run ranges of applicability.}
+  \label{tab:datasets}
+\end{table}%
+%\subsection{Monte Carlo samples}
+
+All Monte Carlo (MC) samples considered in this analysis come from the official
+``Summer12\_53X'' production.  Events from all samples were
+reconstructed making use of a \texttt{CMSSW\_5\_3\_X} release version.
+The simulated samples are reweighted to represent the distribution of the
+number of pp interactions per bunch crossing (pile-up), as measured in
+the data.
+
+
+
+Information regarding signal and background simulated MC samples used for the analysis is given in 
+Table~\ref{tab:mc_bkg_samples}.  
+The corresponding leading order (LO), next-to-leading order (NLO),
+ and next-to-next-leading order (NNLO) 
+cross sections are also listed in Table~\ref{tab:mc_bkg_samples}.
+
+
+
+\begin{table}[h]
+  \scriptsize
+  \begin{center}
+    \caption{Summary of Monte Carlo background samples used.}
+    \begin{tabular}{|l|l|l|}
+      \hline
+      Process (Summer12)                     & $\sigma$, pb        & Dataset Name (AODSIM data tier) \\ \hline
+      $W\gamma \rightarrow l\nu\gamma$     & 553.92 (NLO)         & \verb /WGToLNuG_TuneZ2star_8TeV-madgraph-tauola \\
+      $W \rightarrow l\nu + jets$          & 36257.2 (NNLO)        & \verb /WJetsToLNu_TuneZ2Star_8TeV-madgraph-tarball \\ 
+      $Z \rightarrow ll + jets$            & 3503.71         & \verb /DYJetsToLL_M-50_TuneZ2Star_8TeV-madgraph-tarball \\
+      $t\bar{t} + jets+1l$                    & 99.44 (NNLO)          & \verb /TTJets_SemiLeptMGDecays_8TeV-madgraph  \\
+      $t\bar{t} + jets+2l$                    & 23.83           & \verb /TTJets_FullLeptMGDecays_8TeV-madgraph \\
+      $t\bar{t} + \gamma$                    & 1.444           & \verb /TTGJets_8TeV-madgraph \\
+      $Z\gamma \rightarrow ll\gamma$       & 171.62          & \verb /ZGToLLG_8TeV-madgraph \\
+      \hline
+    \end{tabular}
+    \label{tab:mc_bkg_samples}
+  \end{center}
+\end{table} 
+
+The NLO cross section of W$\gamma$ was calculated with the MCFM in the same phase space for which the W$\gamma$ sample was generated. The theoretical computations of the NNLO cross section are available ~\cite{WgNNLOtheory} and its contribution is 19\%-26\%.\\
+
+The cross section of Zg was computed using as inputs MCFM cross section values as well as the precise CMS measurementt~\cite{Zg8TeV} using the following procedure. The Z$\gamma$ cross section of $\sigma = 2073 \pm 95 \pm \11 \pm \53$ fb has been quoted in the phase space described in ~\cite{Zg8TeV}. To determine the measured cross section in the generator phase space, the following formula was used:\\
+$\sigma_{narrow phase space}^{meas.}/\sigma_{wide phase space}^{meas.} = \sigma_{narrow phase space}^{MCFM}/\sigma_{wide phase space}^{MCFM}$.\\
+The $\sigma_{narrow phase space}^{MCFM}$ was determined by computing how many events are falling into the narrow phase space and scaling it to $\sigma_{wide phase space}^{MCFM}$=159.12 pb. The $\sigma_{narrow phase space}^{MCFM}$ was found to be 1933 fb and 1911 fb for the muon and electron channels respectively and the average of 1922 fb was used in the formula. The $\sigma_{wide phase space}^{meas.}$ was found to be 171.62 pb.

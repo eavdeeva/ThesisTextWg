@@ -1,0 +1,77 @@
+10
+
+dir
+337917
+svn+ssh://eavdeeva@svn.cern.ch/reps/tdr2/notes/AN-15-055/trunk/figs_v11/MUON_WGamma
+svn+ssh://eavdeeva@svn.cern.ch/reps/tdr2
+
+
+
+2016-04-09T22:05:24.769280Z
+337917
+eavdeeva
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4525493e-7705-40b1-a816-d608a930855b
+
+TemplateFits
+dir
+
+ANCHOR.txt
+file
+
+
+
+
+2016-04-09T18:09:30.473987Z
+8943c4b08fa359447e7adcddc2b53e18
+2016-04-09T22:05:24.769280Z
+337917
+eavdeeva
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+7
+
+PrepareYields
+dir
+
+MCclosureWjetsPlusWg
+dir
+
+Constants
+dir
+
+CrossSection
+dir
+

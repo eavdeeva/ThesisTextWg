@@ -1,0 +1,367 @@
+\section{Systematic Uncertainties}
+\label{sec:Systematics}
+
+\subsection{$jets\rightarrow\gamma$ Data-Driven background}
+
+The dominant systematic uncertainty is uncertainty from the $jets\rightarrow\gamma$ background estimation. The following sources contribute to the uncerntainty of  the $jets\rightarrow\gamma$ background estimation:\\
+
+\begin{itemize}
+  \item the difference between $I_{ch}$ and $\sigma_{i\eta i\eta}$ fit results;
+  \item the limited statistical power of the fake-$\gamma$ and real-$\gamma$ templates;
+  \item the uncertainty on Z$\gamma$ MC and DYjets MC normalizations when the real-$\gamma$ (fake-$\gamma$) portions are subtracted from the ISR (FSR) templates. 
+\end{itemize}
+
+The difference between $I_{ch}$ and $\sigma_{i\eta i\eta}$ is computed as (1/2)($|N_{chiso}-N_{sihih}|$) and the mean value is taken as an average between $N_{chiso}|$ and $|N_{sihih}|$.
+%The difference between $I_{ch}$ and $\sigma_{i\eta i\eta}$ is treated with the weighted average approach by the following way:
+%\begin{itemize}
+%  \item for $I_{ch}$ fits, get $X_1 \pm E_{x1}$ where $X_1$ is a signal yield predicted by fit on data
+%        and $E_{x1}$ includes
+%        \begin{itemize}
+%          \item the difference between yields predicted by fits on the MC mixture and the signal MC prediction
+%          \item the error due template statistics 
+%        \end{itemize}
+%  \item for $\sigma_{i\eta i\eta}$ fits, get $X_2 \pm E_{x2}$ similarly
+%  \item then compute the weighted average: $X = \frac{w_1 \cdot X_1 + w_2 \cdot X_2}{w_1 + w_2}$, where $w_i = \frac{1}{E_{xi}^2}$
+%  \item compute the error: $E_x^2 = \frac{1}{w_1+w_2}$
+%  \item use $X$ to compute the cross section and propagate $E_X$ as the syst error
+%\end{itemize}
+
+The error due to template statistics is computed by separately randomizing the real-$\gamma$ and the fake-$\gamma$ templates. The algorithm is the following:\\
+\begin{itemize}
+  \item randomize templates N times as mean = random.Gauss(mean,sigma), set error = sigma for each bin in a template (mean is a bin content of a given bin, sigma is determined by a statistical uncertainty of FSR(ISR) data sample for real-$\gamma$(fake-$\gamma$) templates and statistical uncertainty ofthe  leakage sample: DYjets-MC(Z$\gamma$-MC);
+  \item for each set out of N templates (separately for the real-$\gamma$ and the fake-$\gamma$ template) perform fit;
+  \item take the standard deviation of N fit results as an error;
+  \item propagate through unfolding, accXeff correction, divide over luminosity and bin width;
+  \item choose N=100 for fake-$\gamma$ templates and N=20 for real-$\gamma$ templates.
+\end{itemize}
+The statistical error of the fake-$\gamma$ template is higher than one of the real-$\gamma$ template.\\
+
+The results of the systematic error of $N_{Ich}-N_{\sigma i\eta i\eta}$ and the template statistical uncertainty are summarized in the Tab. \ref{tab:diff_ways_to_fit_muon_phoEt_BARREL}, \ref{tab:diff_ways_to_fit_muon_phoEt_ENDCAP}. Columns data chiso, data sihih, MC cl. chiso and MC cl. sihih are the yields from the fit results of $I_{ch}$ and $\sigma_{i\eta i\eta}$ fits of data and MC mixtures. The error bars include the statistical error and the error due to template statistics. %The column yield meth1 is a difference $N_{Ich}-N_{\sigma i\eta i\eta}$. The column yield meth2 is the yield and error computed with the weighted average approach. 
+
+\begin{table}[h]
+  \scriptsize
+  \begin{center}
+  \caption{Syst. due to different ways to fit. phoEt BARREL MUON}
+  \begin{tabular}{|c|c|c|c|c|c|c|}
+    bin &  MC   & data  & data  & MC cl. & MC cl. & yield\\ 
+    lims & pred & chiso & sihih & chiso  & sihih  & average \\ \hline
+    10-15 & $26250\pm240$ & $30683\pm1919$ & $26770\pm3134$ & $29657\pm2476$ & $35073\pm3726$ &$30683\pm3913\pm1865$  \\ \hline
+    15-20 & $12706\pm164$ & $14554\pm1070$ & $19575\pm1771$ & $10742\pm1079$ & $14924\pm2123$ &$14554\pm5021\pm1041$  \\ \hline
+    20-25 & $6793\pm120$ & $8364\pm711$ & $10398\pm4313$ & $7698\pm626$ & $9399\pm1741$ &$8364\pm2033\pm693$  \\ \hline
+    25-30 & $4087\pm93$ & $5505\pm685$ & $7141\pm3437$ & $4421\pm532$ & $5023\pm2094$ &$5505\pm1636\pm675$  \\ \hline
+    30-35 & $2603\pm74$ & $3409\pm500$ & $5152\pm2581$ & $3422\pm197$ & $3266\pm1156$ &$3409\pm1742\pm490$  \\ \hline
+    35-45 & $2971\pm80$ & $4990\pm466$ & $5544\pm3366$ & $4472\pm308$ & $4351\pm1632$ &$4990\pm554\pm454$  \\ \hline
+    45-55 & $1861\pm63$ & $1428\pm410$ & $2893\pm593$ & $1799\pm277$ & $2464\pm146$ &$1428\pm1464\pm402$  \\ \hline
+    55-65 & $1135\pm49$ & $1604\pm207$ & $1671\pm501$ & $1143\pm214$ & $1475\pm311$ &$1604\pm67\pm201$  \\ \hline
+    65-75 & $664\pm37$ & $866\pm43$ & $1090\pm271$ & $773\pm193$ & $680\pm162$ &$866\pm223\pm7$  \\ \hline
+    75-85 & $451\pm31$ & $710\pm34$ & $762\pm88$ & $621\pm106$ & $701\pm143$ &$710\pm52\pm0$  \\ \hline
+    85-95 & $340\pm27$ & $502\pm139$ & $502\pm175$ & $455\pm62$ & $443\pm98$ &$502\pm0\pm136$  \\ \hline
+    95-120 & $453\pm31$ & $641\pm105$ & $732\pm31$ & $714\pm113$ & $577\pm83$ &$641\pm91\pm98$  \\ \hline
+    120-500 & $546\pm34$ & $810\pm214$ & $792\pm63$ & $777\pm105$ & $678\pm191$ &$810\pm18\pm211$  \\ \hline
+  \end{tabular}
+  \label{tab:diff_ways_to_fit_phoEt_BARREL_muon}
+  \end{center}
+\end{table}
+\begin{table}[h]
+  \scriptsize
+  \begin{center}
+  \caption{Syst. due to different ways to fit. phoEt ENDCAP MUON}
+  \begin{tabular}{|c|c|c|c|c|c|c|c|}
+    bin &  MC   & data  & data  & MC cl. & MC cl. & yield \\ 
+    lims & pred & chiso & sihih & chiso  & sihih  & average\\ \hline
+    10-15 & $10823\pm154$ & $8797\pm2242$ & $7893\pm2947$ & $16512\pm2900$ & $-2675\pm1967$ &$8797\pm903\pm2184$  \\ \hline
+    15-20 & $6474\pm119$ & $4793\pm1132$ & $5053\pm1518$ & $6454\pm1142$ & $2650\pm2124$ &$4793\pm260\pm1101$  \\ \hline
+    20-25 & $3377\pm86$ & $2877\pm729$ & $4817\pm1329$ & $5393\pm578$ & $4458\pm1291$ &$2877\pm1939\pm710$  \\ \hline
+    25-30 & $2068\pm67$ & $2856\pm408$ & $3443\pm1514$ & $3137\pm356$ & $3904\pm975$ &$2856\pm586\pm394$  \\ \hline
+    30-35 & $1403\pm55$ & $2160\pm306$ & $1686\pm693$ & $1808\pm401$ & $1482\pm545$ &$2160\pm474\pm295$  \\ \hline
+    35-45 & $1489\pm57$ & $2465\pm339$ & $2937\pm1009$ & $2385\pm279$ & $2185\pm935$ &$2465\pm471\pm329$  \\ \hline
+    45-55 & $818\pm42$ & $1246\pm243$ & $1184\pm595$ & $894\pm176$ & $1139\pm226$ &$1246\pm61\pm237$  \\ \hline
+    55-65 & $550\pm34$ & $657\pm208$ & $957\pm375$ & $572\pm219$ & $320\pm260$ &$657\pm299\pm204$  \\ \hline
+    65-75 & $280\pm24$ & $304\pm169$ & $599\pm206$ & $471\pm80$ & $452\pm141$ &$304\pm295\pm166$  \\ \hline
+    75-85 & $186\pm20$ & $375\pm162$ & $374\pm91$ & $244\pm69$ & $195\pm66$ &$375\pm1\pm161$  \\ \hline
+    85-95 & $139\pm17$ & $242\pm60$ & $250\pm28$ & $318\pm19$ & $199\pm30$ &$242\pm8\pm57$  \\ \hline
+    95-120 & $208\pm21$ & $390\pm55$ & $369\pm195$ & $348\pm41$ & $168\pm54$ &$390\pm21\pm51$  \\ \hline
+    120-500 & $157\pm18$ & $255\pm88$ & $294\pm17$ & $257\pm53$ & $181\pm30$ &$255\pm38\pm85$  \\ \hline
+  \end{tabular}
+  \label{tab:diff_ways_to_fit_phoEt_ENDCAP_muon}
+  \end{center}
+\end{table}
+
+\begin{table}[h]
+  \scriptsize
+  \begin{center}
+  \caption{Syst. due to different ways to fit. phoEt BARREL ELECTRON}
+  \begin{tabular}{|c|c|c|c|c|c|c|}
+    bin &  MC   & data  & data  & MC cl. & MC cl. & yield \\ 
+    lims & pred & chiso & sihih & chiso  & sihih  & average \\ \hline
+    10-15 & $12480\pm163$ & $10994\pm1331$ & $12425\pm2000$ & $10640\pm1500$ & $14995\pm2225$ &$10994\pm1430\pm1277$  \\ \hline
+    15-20 & $5857\pm110$ & $5160\pm668$ & $7421\pm1173$ & $4124\pm602$ & $5721\pm1927$ &$5160\pm2261\pm613$  \\ \hline
+    20-25 & $2868\pm77$ & $3022\pm384$ & $3168\pm2937$ & $3390\pm258$ & $3699\pm1261$ &$3022\pm145\pm338$  \\ \hline
+    25-30 & $1411\pm54$ & $1846\pm293$ & $2250\pm1984$ & $1365\pm152$ & $1339\pm1167$ &$1846\pm404\pm273$  \\ \hline
+    30-35 & $915\pm43$ & $1283\pm193$ & $1831\pm971$ & $877\pm111$ & $891\pm278$ &$1283\pm547\pm180$  \\ \hline
+    35-45 & $1247\pm51$ & $1732\pm190$ & $1965\pm882$ & $1359\pm111$ & $1330\pm277$ &$1732\pm232\pm178$  \\ \hline
+    45-55 & $820\pm41$ & $673\pm207$ & $1199\pm485$ & $698\pm118$ & $933\pm65$ &$673\pm526\pm196$  \\ \hline
+    55-65 & $654\pm37$ & $956\pm302$ & $1010\pm157$ & $566\pm95$ & $666\pm152$ &$956\pm53\pm296$  \\ \hline
+    65-75 & $440\pm30$ & $625\pm252$ & $756\pm47$ & $357\pm99$ & $458\pm123$ &$625\pm131\pm248$  \\ \hline
+    75-85 & $295\pm25$ & $367\pm137$ & $516\pm134$ & $339\pm45$ & $285\pm84$ &$367\pm148\pm132$  \\ \hline
+    85-95 & $234\pm22$ & $364\pm29$ & $366\pm33$ & $315\pm63$ & $283\pm83$ &$364\pm1\pm2$  \\ \hline
+    95-120 & $318\pm26$ & $430\pm88$ & $555\pm66$ & $397\pm77$ & $400\pm135$ &$430\pm124\pm78$  \\ \hline
+    120-500 & $429\pm30$ & $743\pm234$ & $734\pm40$ & $568\pm54$ & $537\pm236$ &$743\pm9\pm231$  \\ \hline
+  \end{tabular}
+  \label{tab:diff_ways_to_fit_phoEt_BARREL_electron}
+  \end{center}
+\end{table}
+
+\begin{table}[h]
+  \scriptsize
+  \begin{center}
+  \caption{Syst. due to different ways to fit. phoEt ENDCAP ELECTRON}
+  \begin{tabular}{|c|c|c|c|c|c|c|c|}
+    bin &  MC   & data  & data  & MC cl. & MC cl. & yield\\ 
+    lims & pred & chiso & sihih & chiso  & sihih  & average \\ \hline
+     10-15 & $4368\pm96$ & $-1785\pm122$ & $4129\pm1180$ & $2286\pm1356$ & $-1502\pm1196$ &$-1785\pm5915\pm108$  \\ \hline
+    15-20 & $2253\pm68$ & $-241\pm537$ & $1869\pm762$ & $1541\pm483$ & $352\pm759$ &$-241\pm2110\pm506$  \\ \hline
+    20-25 & $1177\pm49$ & $637\pm298$ & $1679\pm534$ & $1308\pm192$ & $1414\pm481$ &$637\pm1042\pm277$  \\ \hline
+    25-30 & $574\pm34$ & $887\pm147$ & $1078\pm646$ & $674\pm117$ & $1125\pm370$ &$887\pm190\pm131$  \\ \hline
+    30-35 & $445\pm31$ & $731\pm107$ & $555\pm249$ & $451\pm119$ & $355\pm155$ &$731\pm176\pm96$  \\ \hline
+    35-45 & $638\pm37$ & $943\pm116$ & $1071\pm326$ & $773\pm76$ & $789\pm189$ &$943\pm127\pm104$  \\ \hline
+    45-55 & $287\pm24$ & $478\pm106$ & $449\pm449$ & $307\pm67$ & $347\pm78$ &$478\pm28\pm95$  \\ \hline
+    55-65 & $237\pm22$ & $287\pm155$ & $433\pm44$ & $225\pm51$ & $220\pm114$ &$287\pm145\pm150$  \\ \hline
+    65-75 & $194\pm21$ & $255\pm73$ & $372\pm38$ & $154\pm45$ & $37\pm87$ &$255\pm116\pm67$  \\ \hline
+    75-85 & $137\pm18$ & $210\pm47$ & $236\pm28$ & $201\pm59$ & $155\pm73$ &$210\pm25\pm40$  \\ \hline
+    85-95 & $81\pm14$ & $118\pm47$ & $128\pm30$ & $146\pm39$ & $44\pm40$ &$118\pm10\pm40$  \\ \hline
+    95-120 & $166\pm20$ & $233\pm51$ & $211\pm21$ & $224\pm21$ & $192\pm49$ &$233\pm21\pm46$  \\ \hline
+    120-500 & $145\pm18$ & $276\pm21$ & $254\pm24$ & $227\pm31$ & $194\pm46$ &$276\pm22\pm3$  \\ \hline
+  \end{tabular}
+  \label{tab:diff_ways_to_fit_phoEt_ENDCAP_electron}
+  \end{center}
+\end{table}
+
+\begin{table}[h]
+  \scriptsize
+  \begin{center}
+  \caption{Jets$\rightarrow\gamma$ background. Different ways to fit. Muon channel, Barrel}
+  \begin{tabular}{|c|c|c|c|c|c|c|c|}
+    bin &  MC   & data  & data  & MC cl. & MC cl.\\ 
+    lims & pred & chiso & sihih & chiso  & sihih \\ \hline
+10-15 & 94746$\pm$1082 & 77611$\pm$321 & 79833$\pm$250 & 88924$\pm$344 & 81301$\pm$252   \\ \hline
+15-20 & 22846$\pm$521 & 24542$\pm$143 & 21433$\pm$150 & 24276$\pm$135 & 21226$\pm$147   \\ \hline
+20-25 & 9014$\pm$319 & 9877$\pm$77 & 8465$\pm$101 & 7722$\pm$60 & 7325$\pm$90   \\ \hline
+25-30 & 4543$\pm$215 & 4402$\pm$45 & 3509$\pm$67 & 4205$\pm$40 & 3807$\pm$72   \\ \hline
+30-35 & 2649$\pm$152 & 2943$\pm$39 & 1686$\pm$48 & 1923$\pm$24 & 1892$\pm$49   \\ \hline
+35-45 & 3146$\pm$162 & 2539$\pm$33 & 1946$\pm$56 & 1541$\pm$20 & 1835$\pm$50   \\ \hline
+45-55 & 1021$\pm$92 & 1963$\pm$39 & 731$\pm$40 & 1206$\pm$21 & 528$\pm$34   \\ \hline
+55-65 & 562$\pm$73 & 362$\pm$10 & 415$\pm$25 & 539$\pm$13 & 228$\pm$28   \\ \hline
+65-75 & 331$\pm$52 & 465$\pm$18 & 176$\pm$17 & 303$\pm$11 & 319$\pm$30   \\ \hline
+75-85 & 260$\pm$50 & 238$\pm$15 & 102$\pm$12 & 95$\pm$4 & 29$\pm$12   \\ \hline
+85-95 & 98$\pm$27 & 146$\pm$10 & 75$\pm$11 & 0$\pm$0 & 2$\pm$3   \\ \hline
+95-120 & 123$\pm$28 & 319$\pm$25 & 66$\pm$10 & 48$\pm$3 & 17$\pm$8   \\ \hline
+120-500 & 150$\pm$35 & 82$\pm$6 & 27$\pm$7 & 79$\pm$7 & 70$\pm$13   \\ \hline
+  \end{tabular}
+  \label{tab:Jets_to_gamma_diff_ways_to_fit_0}
+  \end{center}
+\end{table}
+
+\begin{table}[h]
+  \scriptsize
+  \begin{center}
+  \caption{Jets$\rightarrow\gamma$ background. Different ways to fit. Muon channel, Endcap}
+  \begin{tabular}{|c|c|c|c|c|c|c|c|}
+    bin &  MC   & data  & data  & MC cl. & MC cl.\\ 
+    lims & pred & chiso & sihih & chiso  & sihih \\ \hline
+10-15 & 99522$\pm$1123 & 81161$\pm$426 & 77649$\pm$215 & 91670$\pm$482 & 122480$\pm$9   \\ \hline
+15-20 & 27226$\pm$584 & 27660$\pm$183 & 25902$\pm$142 & 27602$\pm$181 & 30218$\pm$144   \\ \hline
+20-25 & 10743$\pm$355 & 11659$\pm$101 & 10018$\pm$92 & 8623$\pm$76 & 9620$\pm$85   \\ \hline
+25-30 & 4617$\pm$227 & 4557$\pm$51 & 4061$\pm$58 & 3619$\pm$40 & 3649$\pm$56   \\ \hline
+30-35 & 2448$\pm$161 & 2267$\pm$31 & 2669$\pm$54 & 2031$\pm$29 & 2255$\pm$50   \\ \hline
+35-45 & 2354$\pm$153 & 2112$\pm$28 & 1807$\pm$44 & 1455$\pm$21 & 1550$\pm$43   \\ \hline
+45-55 & 898$\pm$94 & 935$\pm$18 & 1025$\pm$49 & 857$\pm$16 & 751$\pm$34   \\ \hline
+55-65 & 516$\pm$71 & 563$\pm$16 & 270$\pm$18 & 512$\pm$13 & 823$\pm$58   \\ \hline
+65-75 & 351$\pm$61 & 346$\pm$13 & 86$\pm$11 & 217$\pm$9 & 202$\pm$31   \\ \hline
+75-85 & 125$\pm$30 & 117$\pm$6 & 63$\pm$9 & 107$\pm$6 & 123$\pm$22   \\ \hline
+85-95 & 66$\pm$21 & 56$\pm$3 & 37$\pm$7 & 26$\pm$2 & 3$\pm$4   \\ \hline
+95-120 & 82$\pm$24 & -80$\pm$5 & 19$\pm$5 & 14$\pm$1 & 118$\pm$24   \\ \hline
+120-500 & 36$\pm$12 & 152$\pm$11 & 11$\pm$4 & 21$\pm$1 & 14$\pm$12   \\ \hline
+
+  \end{tabular}
+  \label{tab:Jets_to_gamma_diff_ways_to_fit_1}
+  \end{center}
+\end{table}
+
+
+The uncerntainty on the Z$\gamma$ MC normalization for jets$\rightarrow\gamma$ background uncertainty estimation is not taken into account for the weighted average approach. It is determined by performing the fits with the different Z$\gamma$ normalizations and propagating the spread of the results as the systematic error. The uncertainty on the Z$\gamma$ normalization is set to be 4.6\% as qouted by Z$\gamma$ 8TeV measurement.\\
+
+\subsection{Other sources of the systematic uncertainties}
+
+To estimate the systematic uncertainty due to $e\rightarrow\gamma$ data-driven background estimation for the electron channel, the statistical uncertainties of the samples involved are taken into account only. The samples are: $e\rightarrow\gamma$-enriched data sample, $e\rightarrow\gamma$-enriched DYjets MC sample, nominally selected DYjets MC sample. The uncertainty is propagated through the unfolding, accXeff correction, is divided over the luminocity and the bin width (for the differential cross section).\\
+
+For the real-$\gamma$ background subtraction, the statistical uncertainties of Z$\gamma$ and W$\gamma\rightarrow\tau\nu\gamma$ samples and their normalization uncertainties are taken into account. The normalization uncertainty applied for the Z$\gamma$ sample is 4.6\% and for the W$\gamma\rightarrow\tau\nu\gamma$ is 20\%. The Z$\gamma$ normalization uncerntainty is dominant out of the four sources to the real-$\gamma$ background subtraction.\\
+
+The signal MC statistical uncerntainty is taken into account for the unfolding uncertainty. It is done with the randomization of the migration matrix. The procedure is the following:\\
+\begin{itemize}
+  \item randomize migration matrix 100 times according with the signal MC statistical uncertainties in each $[P_T^{gen},P_T^{reco}]$ bin;
+  \item the unfolding is applied for each migration matrix;
+  \item the standard deviation out of 100 unfolding outputs is taken as a error;
+  \item the error is propagated through the accXeff correction and is divided over the luminocity and the bin width.
+\end{itemize}
+This systematic error is applied for the differential cross section only. There is no uncertainty due to unfolding for the total cross section because there is no unfolding for the total cross section.\\
+
+For the uncertainty due to the accXeff correction, the signal MC statistial power is also taken into account. To estimate this uncertainty, we take the value of $N \cdot \Delat{A} / (A^2)$, where $N$ is an yield for given bin after unfolding but before $accXeff$ correction, $A$ is value of "acceptance times efficiency" and $\Delat{A}$ is an error bar on "acceptance times efficiency". Then the uncertainty is divided over the luminosity and the bin width (for the differential cross section).\\
+
+Another source of the systematic uncertainty is the uncertainty of MET mismodeling in the MC. To estimate that contribution, we:
+\begin{itemize}
+  \item varied the $P_T$ of the photons, electrons (for the electron channel) and jets in the event which are available in the ntuple by their uncertainties as prescribed by POG;
+  \item summed up all the listed contributions as the Lorentz vectors and proparaged their variation to the variation of MET;
+  \item recalculated WMt;
+  \item recomputed accXeff and unfolding constants with the new WMt values;
+  \item recomputed the cross section values;
+  \item took the spread in the cross section between the lower, upper and nominal WMt values as a systematic error.
+\end{itemize}
+
+The contribution from the uncertainties of the efficiency scale factors are also estimated. The scale factors are varied by $\pm 1\sigma$, then the accXeff and unfolding constants are recomputed and new values of the cross section are found. The spread in the cross section between the $+1\sigma$, $-1\sigma$ and the nominal scale factor values is taken as a systematic uncertainty.\\
+
+
+%TODO:\\
+%Momentum scale and resolution (variations prescribed by POGs). Need to think more carefully how to implement technically \\
+
+The systamatic error due to pileup reweighting is estimated by variyng the pileup cross section by $\pm5\%$.\\
+
+The luminosity uncertainty is $2.6\%$.\\
+
+\subsection{Results}
+
+The relative systematic uncertainties are summarized in Tab.\ref{tab:systInPercent_MUON_WGamma} and Tab. \ref{tab:systInPercent_ELECTRON_WGamma} for the muon and electron channels respectively. The $|N_{Ich}-N_{\sigma{i\eta i\eta}}|$ stands for the portion of the jets$\rightarrow\gamma$ systematic uncertainty and is not a difference between $N_{Ich}$ and $N_{\sigma{i\eta i\eta}}$.\\
+
+\begin{table}[h]
+  \scriptsize
+  \begin{center}
+  \caption{Relative errors [\%]. MUON WGamma}
+   \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+    bin  & err & syst & Zg MC & templ & SFs & syst & syst & syst\\
+    lims  & stat & $|N_{Ich}-N_{\sigma{i\eta i\eta}}|$ & norm & stat & err & lumi & other & total\\ \hline
+    total  & 1 & 10 & 4 & 4 & 2 & 3 & 4 & 12 \\ \hline
+%    10-15 & 2 & 11 & 7 & 8 & 0 & 3 & 6 & 16 \\ \hline
+    15-20 & 2 & 31 & 12 & 10 & 3 & 3 & 6 & 35 \\ \hline
+    20-25 & 2 & 29 & 13 & 11 & 1 & 3 & 6 & 34 \\ \hline
+    25-30 & 2 & 24 & 13 & 11 & 1 & 3 & 5 & 30 \\ \hline
+    30-35 & 3 & 40 & 15 & 13 & 2 & 3 & 7 & 45 \\ \hline
+    35-45 & 2 & 11 & 12 & 8 & 2 & 3 & 6 & 19 \\ \hline
+    45-55 & 4 & 62 & 19 & 20 & 2 & 3 & 8 & 68 \\ \hline
+    55-65 & 3 & 15 & 12 & 14 & 1 & 3 & 7 & 24 \\ \hline
+    65-75 & 6 & 36 & 19 & 17 & 1 & 3 & 10 & 44 \\ \hline
+    75-85 & 4 & 6 & 11 & 16 & 1 & 3 & 10 & 21 \\ \hline
+    85-95 & 5 & 2 & 9 & 23 & 1 & 3 & 13 & 25 \\ \hline
+    95-120 & 5 & 10 & 8 & 12 & 1 & 3 & 9 & 18 \\ \hline
+    120-500 & 3 & 4 & 11 & 21 & 2 & 3 & 9 & 24 \\ \hline
+  \end{tabular}
+  \label{tab:systInPercent_MUON_WGamma}
+  \end{center}
+\end{table}
+
+
+\begin{table}[h]
+  \scriptsize
+  \begin{center}
+  \caption{Relative errors [\%]. ELECTRON WGamma}
+   \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+    bin  & err & syst & Zg MC & templ & SFs & syst & e to & syst & syst\\
+    lims  & stat & $|N_{Ich}-N_{\sigma{i\eta i\eta}}|$ & norm & stat & err & lumi & gamma & other & total\\ \hline
+    total  & 2 & 15 & 6 & 5 & 19 & 3 & 4 & 5 & 27 \\ \hline
+%    10-15 & 4 & 73 & 20 & 16 & 1 & 3 & 2 & 8 & 78 \\ \hline
+    15-20 & 8 & 80 & 27 & 19 & 17 & 3 & 18 & 11 & 90 \\ \hline
+    20-25 & 7 & 38 & 20 & 14 & 12 & 3 & 11 & 10 & 48 \\ \hline
+    25-30 & 5 & 25 & 16 & 12 & 14 & 3 & 8 & 8 & 36 \\ \hline
+    30-35 & 5 & 35 & 14 & 12 & 14 & 3 & 3 & 8 & 42 \\ \hline
+    35-45 & 3 & 14 & 13 & 8 & 18 & 3 & 2 & 7 & 28 \\ \hline
+    45-55 & 8 & 53 & 20 & 22 & 36 & 3 & 7 & 11 & 71 \\ \hline
+    55-65 & 7 & 17 & 12 & 30 & 44 & 3 & 5 & 10 & 58 \\ \hline
+    65-75 & 7 & 23 & 15 & 32 & 44 & 3 & 4 & 11 & 61 \\ \hline
+    75-85 & 8 & 32 & 17 & 27 & 44 & 3 & 6 & 13 & 64 \\ \hline
+    85-95 & 9 & 9 & 7 & 9 & 40 & 3 & 8 & 14 & 44 \\ \hline
+    95-120 & 7 & 19 & 9 & 14 & 44 & 3 & 5 & 11 & 51 \\ \hline
+    120-500 & 4 & 12 & 6 & 24 & 39 & 3 & 1 & 9 & 48 \\ \hline
+  \end{tabular}
+  \label{tab:systInPercent_ELECTRON_WGamma}
+  \end{center}
+\end{table}
+
+
+Correlation matrices for different systematic sources are plotted in Section \ref{sec:corrMatrices}
+
+\begin{table}[h]
+  \scriptsize
+  \begin{center}
+  \caption{Relative errors [\%]. MUON WGamma}
+  \begin{tabular}{|c|c|c|c|c|c|c|}
+    bin  & syst & real \gamma & accXeff & WMt & PU & unf\\
+    lims  & other & bkg & MC stat & cut & weight & MC stat\\ \hline
+    total  & 4 & 1 & 0 & 1 & 4 & 1 \\ \hline
+%    10-15 & 6 & 1 & 1 & 2 & 5 & 2 \\ \hline
+    15-20 & 6 & 2 & 1 & 1 & 4 & 2 \\ \hline
+    20-25 & 6 & 3 & 2 & 2 & 4 & 3 \\ \hline
+    25-30 & 5 & 3 & 2 & 2 & 2 & 2 \\ \hline
+    30-35 & 7 & 4 & 3 & 1 & 4 & 3 \\ \hline
+    35-45 & 6 & 3 & 3 & 2 & 3 & 2 \\ \hline
+    45-55 & 8 & 3 & 3 & 1 & 4 & 5 \\ \hline
+    55-65 & 7 & 2 & 4 & 2 & 4 & 3 \\ \hline
+    65-75 & 10 & 2 & 6 & 3 & 5 & 6 \\ \hline
+    75-85 & 10 & 1 & 7 & 3 & 3 & 5 \\ \hline
+    85-95 & 13 & 2 & 8 & 4 & 6 & 7 \\ \hline
+    95-120 & 9 & 2 & 7 & 2 & 2 & 6 \\ \hline
+    120-500 & 9 & 1 & 6 & 1 & 4 & 4 \\ \hline
+  \end{tabular}
+  \label{tab:systInPercentSmallSysts_MUON_WGamma}
+  \end{center}
+\end{table}
+
+\begin{table}[h]
+  \scriptsize
+  \begin{center}
+  \caption{Relative errors [\%]. ELECTRON WGamma}
+  \begin{tabular}{|c|c|c|c|c|c|c|}
+    bin  & syst & real \gamma & accXeff & WMt & PU & unf\\
+    lims  & other & bkg & MC stat & cut & weight & MC stat\\ \hline
+    total  & 5 & 2 & 0 & 1 & 4 & 2 \\ \hline
+%    10-15 & 8 & 4 & 1 & 1 & 5 & 4 \\ \hline
+    15-20 & 11 & 6 & 2 & 1 & 4 & 8 \\ \hline
+    20-25 & 10 & 5 & 2 & 1 & 4 & 7 \\ \hline
+    25-30 & 8 & 3 & 3 & 1 & 3 & 6 \\ \hline
+    30-35 & 8 & 2 & 4 & 1 & 3 & 6 \\ \hline
+    35-45 & 7 & 1 & 4 & 1 & 4 & 4 \\ \hline
+    45-55 & 11 & 2 & 5 & 3 & 4 & 9 \\ \hline
+    55-65 & 10 & 2 & 5 & 3 & 5 & 7 \\ \hline
+    65-75 & 11 & 1 & 6 & 1 & 4 & 8 \\ \hline
+    75-85 & 13 & 2 & 8 & 2 & 3 & 9 \\ \hline
+    85-95 & 14 & 2 & 9 & 2 & 2 & 9 \\ \hline
+    95-120 & 11 & 1 & 8 & 1 & 4 & 7 \\ \hline
+    120-500 & 9 & 1 & 7 & 2 & 3 & 4 \\ \hline
+  \end{tabular}
+  \label{tab:systInPercentSmallSysts_ELECTRON_WGamma}
+  \end{center}
+\end{table}
+
+\begin{table}[h]
+  \scriptsize
+  \begin{center}
+  \caption{Relative errors [\%]. ELECTRON WGamma}
+  \begin{tabular}{|c|c|c|c|}
+    bin  & e to & e\rightarrow\gamma  & e\rightarrow\gamma samp.\\
+    lims  & gamma & y/n WMt & stat\\ \hline
+    total  & 4 & 4 & 1 \\ \hline
+%    10-15 & 2 & 1 & 1 \\ \hline
+    15-20 & 18 & 17 & 4 \\ \hline
+    20-25 & 11 & 10 & 4 \\ \hline
+    25-30 & 8 & 7 & 3 \\ \hline
+    30-35 & 3 & 1 & 2 \\ \hline
+    35-45 & 2 & 1 & 1 \\ \hline
+    45-55 & 7 & 4 & 5 \\ \hline
+    55-65 & 5 & 3 & 4 \\ \hline
+    65-75 & 4 & 1 & 4 \\ \hline
+    75-85 & 6 & 4 & 4 \\ \hline
+    85-95 & 8 & 5 & 6 \\ \hline
+    95-120 & 5 & 3 & 4 \\ \hline
+    120-500 & 1 & 0 & 1 \\ \hline
+  \end{tabular}
+  \label{tab:systInPercentEtogamma_ELECTRON_WGamma}
+  \end{center}
+\end{table}

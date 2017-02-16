@@ -1,0 +1,24 @@
+\section{APPENDIX: Comments about our code}
+\label{sec:Code}
+ggNtuples:
+Prepared by Central Taiwan University and Kansas State University [REFERENCE]\\
+The code is available in the GIT [REFERENCE]
+Code is based on ggNtuples\\
+The code is available in the GIT: https://github.com/eavdeeva/usercode/tree/master/WGammaAnalysis\\
+The framework uses ggNtuples as input and computes total and differential cross section of W$\gamma$ and Z$\gamma$ in the muon and electron channels. Z$\gamma$ computation was added to enable opportunity to do the cross check with the Z$\gamma$ approved analysis and also the FSR events of Z$\gamma$ were used to prepare $\sigma_{i \eta i \eta}$ templates. \\
+More detailed description on how to use the code is available in the README in the repository 
+Cross checks:
+To make sure our analysis flow is correct, we are going through several cross checks:
+\begin{itemize}
+\item muon channel selection cross check, based on completely independent frameworks based on different ntuples (ggNtuples and
+SUSY ntuples. Yutaro Iiyama from Carnegie Melon University performed selection with SUSY ntuples when he had chance to contribute to W$\gamma$ analysis in the end of October,2014 - January,2015)
+\item electron channel selection cross check, based on the same ntuples (ggNtuples) but different analyzers
+\item cross check of template fit procedures for $jets \rightarrow \gamma$ background estimation which are implemented by different people for both $I_{ch}$ and $\sigma_{i \eta i \eta}$ fits
+\item Z$\gamma$ check: applying all the same methods and procedures on
+Z$\gamma$ selected events and cross-checking with approved CMS Z$\gamma$ measurement [AN-2013-280]. More details about Z$\gamma$ check are discussed in appendices \ref{sec:ZgCheck} and \ref{sec:SbVariationPlotsZg}. 
+\end{itemize}
+To compare selection, we are using event-by-event approach. Comparison in the muon channel was performed based on blinded 2012-a dataset which included ~320 events. There are few events selected by either-or analyzer and all of them were different by $M_W^T$ cut. The difference came from the fact that the ggNtuples and SUSY ntuples used were processed with different global tags and the jet energy corrections which also affect particle flow missing Et were calculated in different ways.\\
+The comparison in electron channel was performed based on full blinded 2012 dataset and also on MC datasets. Level of agreement between two analyzers is ~1.5\%.\\
+
+
+
