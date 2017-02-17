@@ -11,7 +11,7 @@ In this chapter we document the electron, muon, and photon identification and is
 %The plot of total data vs MC after the selection criteria applied is shown in Fig. \ref{fig:DATAvsMC}.
 
 \subsection{Object selection}
-
+\label{sec:AN_ObjectSelection}
 We select events with muons and photons in the final state fro the muon channel and events with electrons and photons in the final state for the electron channel. CMS Particle Object Group (POG) provides us with their recommendation for the relevant selection criteria for any given period of data-taking. For~2012 data recommendations included two sets of muon selection criteria: "Tight" and "Loose" and four sets of electron and photon selection criteria: "Tight", "Medium", "Loose" and "Veto".
 
 For the muon selection, we applied the kinematics cuts of $p_T>25$ GeV and $|\eta|<2.1$ and "Tight" identification selection criteria. To reject events with two or more muons, like $Z\gamma\rightarrow\mu\mu\gamma$ events, we rejected all events that have the second reconstructed muon candidate with $P_T>10$ GeV and $|\eta|<2.4$. Data to MC scale factors are applied as recommended by CMS POG.
@@ -27,12 +27,16 @@ Selection criteria are applied consistently on the data sample as well as on all
 
 \subsection{Event Level Selection}
 
-$W$ transverse mass cut is applied of $M_T^W>40$~GeV where $M_T=\sqrt{(2 \cdot P_T^{Lep} \cdot P_T^{MET} \cdot (1-\cos{(\phi^{lep}-\phi^{MET})}))}$. $E_T^{miss}$ reconstructed with particle flow algorithm was used~\cite{pfMET}. 
+In the $W\gamma\rightarrow l\nu\gamma$ process we have a lepton, a photon, and a neutrino as final state particle. Therefore, we select events with exactly one lepton (muon or electron), a photon, both originating from the primary vertex, and with significant $E_T^{miss}$. The object selection criteria as well as criteria for the second lepton veto are desribed in Ch.~\ref{sec:AN_ObjectSelection}.
 
-Z-mass window cut is applied in electron channel to suppress DYjets background: events which fall into the Z-mass window $70$~GeV$<M_{e\gamma}<110$~GeV are rejected.
+To select events with significant $E_T^{miss}$, we apply a cut on the transverse mass of a $W$~boson of $M_T^W>40$~GeV, where 
+\begin{equation}
+$M_T=\sqrt{(2 \cdot P_T^{Lep} \cdot P_T^{MET} \cdot (1-\cos{(\phi^{lep}-\phi^{MET})}))}$.
+\end{equation}.
 
-dR(lep,pho)$>$0.7 where $dR=\sqrt{({d\phi}^2+{d\eta}^2)}$ is applied to avoid divergence of ISR and FSR contributions. No restrictions applied on a number of  photons in the event but the candidate with the hardest photon is selected in the particular event among         
-those photons which passed all the other cuts including dR. dR is also a part of the phase space selection.
+After that, there is still signifcant background from DY+jets$\rightarrow e e \gamma$ in the electron channel that originate from one of the electrons misidentified as a photon. This background is the most significant around the invariant mass of $e\gamma$ close to the mass of the $Z$ boson. To reject this background, we apply $Z$-mass window cut: events where $70$~GeV$<M_{e\gamma}<110$~GeV are rejected.
+
+Finally, the separation $\Delta R=\sqrt{({\Delta\phi}^2+{\Delta\eta}^2)}$ between the final state lepton and photon is required to be $\Delta R(l,\gamma)>0.7$ to avoid divergence coming from the ISR and FSR contributions and also to enchance the TGC contribution. In case if there are more than one photon in the event passed all selection criteria including the $\Delta R$ cut, the candidate with the hardest photon is selected (one with the highest $P_T^{\gamma}$). 
 
 \begin{figure}[htb]
   \begin{center}
@@ -49,35 +53,28 @@ The pile up reweighting is applied. Fig.~\ref{fig:DATAvsMC_nVtx} shows the distr
 \begin{figure}[htb]
   \begin{center}
    \includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/PrepareYields/c_TotalDATAvsMC_EtaCommon__nVtx_noPU.png}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/PrepareYields/c_TotalDATAvsMC_EtaCommon__nVtx.png}
-  \caption{Plots ofnumber of vertices, Data vs MC plots. Z$\gamma$ selected sample, muon channel. Left: no PU reweighting applied, right: PU reweighting applied. }
+  \caption{Plots ofnumber of vertices, Data vs MC plots. $Z\gamma$ selected sample, muon channel. Left: no PU reweighting applied, right: PU reweighting applied. }
   \label{fig:DATAvsMC_nVtx}
   \end{center}
 \end{figure}
 
-This is a policy of the CMS SMP group that all the analysis must be performed in a blinded way. We discussed how to implement blinding in our case with the statistics committee [REFERENCE] and were given the following recipe:
-\begin{itemize}
-  \item use all data for $p_T^{\gamma}<p_T^{\gamma-threshold}$, where $p_T^{\gamma-threshold}$ is the value after which the analysis becomes potentially sensitive to the new physics; and
-  \item for $p_T^{\gamma}>p_T^{\gamma-threshold}$, use $X\%$ of data and pick  $X\%$ in such a way that $err_{stat} \geq 3 \cdot err_{syst}$.
-\end{itemize}
-
-We decided on $p_T^{\gamma-threshold}=45~GeV$ and, relying on systematic error of ~10\%, quoted by~7~TeV measurement [REFERENCE], on X\%=5\%. Therefore, our blinding strategy is:
+To avoid experimentalist's bias, all measurement was performed in a blinded way at first. Our blinded strategy was the following:
 \begin{itemize}
   \item for $p_T^{\gamma}<45~GeV$: use full data; and
   \item for $p_T^{\gamma}>45~GeV$: use $5\%$ of data.
 \end{itemize}
 
-Our $Wjets$, $DYjets$ and $t\bar{t}jets$ MC samples partially contain $W\gamma$, $Z\gamma$, $t\bar{t}\gamma$ events. To remove the overlap, we did the following, relying totally on the MC-truth information available in Wjets, DYjets, $t\bar{t}jets$ samples:
+Our $Wjets$, $DYjets$ and $t\bar{t}jets$ simulation samples partially contain $W\gamma$, $Z\gamma$, $t\bar{t}\gamma$ events. To remove the overlap, we did the following, relying totally on the generator-level (gen-level) information available in $Wjets$, $DYjets$, $t\bar{t}jets$ samples:
 \begin{itemize}
-  \item loop over all gen-level photons available in the ggNtuple;
+  \item loop over all gen-level photons available in the sample;
   \item the event is removed from selected sample if at least one photon satisfy the following criteria:
   \begin{itemize}
      \item has $P_T^{\gamma}>10~GeV$;
-     \item originates from lepton, boson or quark based on it's parentage information; and
-     \item is separated by $dR(pho,lep)>0.4$ from at least one gen-muon or gen-electron, depending on the channel.
+     \item originates from lepton, boson or quark; and
+     \item is separated by $\Delta R(\gamma,l)>0.4$ from at least one generated level muon or electron, depending on the channel.
   \end{itemize}
 \end{itemize}
-
-A good data vs MC agreement for the $Z\gamma$ plots in Fig.~\ref{fig:DATAvsMC_nVtx} validates the procedure.
+\noindent{A good data vs simulation agreement for the $Z\gamma$ plots in Fig.~\ref{fig:DATAvsMC_nVtx} validates the procedure.}
 
 \subsection{Selected Events}
 

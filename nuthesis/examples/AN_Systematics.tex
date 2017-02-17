@@ -3,7 +3,7 @@
 
 \subsection{$jets\rightarrow\gamma$ Data-Driven background}
 
-The dominant systematic uncertainty is uncertainty from the $jets\rightarrow\gamma$ background estimation. The following sources contribute to the uncerntainty of  the $jets\rightarrow\gamma$ background estimation:\\
+The dominant systematic uncertainty is uncertainty from the jets$\rightarrow\gamma$ background estimation. The following sources contribute to the uncerntainty of  the jets$\rightarrow\gamma$ background estimation:
 
 \begin{itemize}
   \item the difference between $I_{ch}$ and $\sigma_{i\eta i\eta}$ fit results;
@@ -26,7 +26,8 @@ The difference between $I_{ch}$ and $\sigma_{i\eta i\eta}$ is computed as (1/2)(
 %  \item use $X$ to compute the cross section and propagate $E_X$ as the syst error
 %\end{itemize}
 
-The error due to template statistics is computed by separately randomizing the real-$\gamma$ and the fake-$\gamma$ templates. The algorithm is the following:\\
+The error due to template statistics is computed by separately randomizing the real-$\gamma$ and the fake-$\gamma$ templates. The algorithm is the following:
+
 \begin{itemize}
   \item randomize templates N times as mean = random.Gauss(mean,sigma), set error = sigma for each bin in a template (mean is a bin content of a given bin, sigma is determined by a statistical uncertainty of FSR(ISR) data sample for real-$\gamma$(fake-$\gamma$) templates and statistical uncertainty ofthe  leakage sample: DYjets-MC(Z$\gamma$-MC);
   \item for each set out of N templates (separately for the real-$\gamma$ and the fake-$\gamma$ template) perform fit;
@@ -34,12 +35,13 @@ The error due to template statistics is computed by separately randomizing the r
   \item propagate through unfolding, accXeff correction, divide over luminosity and bin width;
   \item choose N=100 for fake-$\gamma$ templates and N=20 for real-$\gamma$ templates.
 \end{itemize}
-The statistical error of the fake-$\gamma$ template is higher than one of the real-$\gamma$ template.\\
 
-The results of the systematic error of $N_{Ich}-N_{\sigma i\eta i\eta}$ and the template statistical uncertainty are summarized in the Tab. \ref{tab:diff_ways_to_fit_muon_phoEt_BARREL}, \ref{tab:diff_ways_to_fit_muon_phoEt_ENDCAP}. Columns data chiso, data sihih, MC cl. chiso and MC cl. sihih are the yields from the fit results of $I_{ch}$ and $\sigma_{i\eta i\eta}$ fits of data and MC mixtures. The error bars include the statistical error and the error due to template statistics. %The column yield meth1 is a difference $N_{Ich}-N_{\sigma i\eta i\eta}$. The column yield meth2 is the yield and error computed with the weighted average approach. 
+The statistical error of the fake-$\gamma$ template is higher than one of the real-$\gamma$ template.
+
+The results of the systematic error of $N_{Ich}-N_{\sigma i\eta i\eta}$ and the template statistical uncertainty are summarized in the Tab.~\ref{tab:diff_ways_to_fit_muon_phoEt_BARREL},~\ref{tab:diff_ways_to_fit_muon_phoEt_ENDCAP}. Columns data chiso, data sihih, MC cl. chiso and MC cl. sihih are the yields from the fit results of $I_{ch}$ and $\sigma_{i\eta i\eta}$ fits of data and MC mixtures. The error bars include the statistical error and the error due to template statistics. %The column yield meth1 is a difference $N_{Ich}-N_{\sigma i\eta i\eta}$. The column yield meth2 is the yield and error computed with the weighted average approach. 
 
 \begin{table}[h]
-  \scriptsize
+  \tiny
   \begin{center}
   \caption{Syst. due to different ways to fit. phoEt BARREL MUON}
   \begin{tabular}{|c|c|c|c|c|c|c|}
@@ -62,8 +64,9 @@ The results of the systematic error of $N_{Ich}-N_{\sigma i\eta i\eta}$ and the 
   \label{tab:diff_ways_to_fit_phoEt_BARREL_muon}
   \end{center}
 \end{table}
+
 \begin{table}[h]
-  \scriptsize
+  \tiny
   \begin{center}
   \caption{Syst. due to different ways to fit. phoEt ENDCAP MUON}
   \begin{tabular}{|c|c|c|c|c|c|c|c|}
@@ -88,7 +91,7 @@ The results of the systematic error of $N_{Ich}-N_{\sigma i\eta i\eta}$ and the 
 \end{table}
 
 \begin{table}[h]
-  \scriptsize
+  \tiny
   \begin{center}
   \caption{Syst. due to different ways to fit. phoEt BARREL ELECTRON}
   \begin{tabular}{|c|c|c|c|c|c|c|}
@@ -113,7 +116,7 @@ The results of the systematic error of $N_{Ich}-N_{\sigma i\eta i\eta}$ and the 
 \end{table}
 
 \begin{table}[h]
-  \scriptsize
+  \tiny
   \begin{center}
   \caption{Syst. due to different ways to fit. phoEt ENDCAP ELECTRON}
   \begin{tabular}{|c|c|c|c|c|c|c|c|}
@@ -138,7 +141,7 @@ The results of the systematic error of $N_{Ich}-N_{\sigma i\eta i\eta}$ and the 
 \end{table}
 
 \begin{table}[h]
-  \scriptsize
+  \tiny
   \begin{center}
   \caption{Jets$\rightarrow\gamma$ background. Different ways to fit. Muon channel, Barrel}
   \begin{tabular}{|c|c|c|c|c|c|c|c|}
@@ -163,7 +166,7 @@ The results of the systematic error of $N_{Ich}-N_{\sigma i\eta i\eta}$ and the 
 \end{table}
 
 \begin{table}[h]
-  \scriptsize
+  \tiny
   \begin{center}
   \caption{Jets$\rightarrow\gamma$ background. Different ways to fit. Muon channel, Endcap}
   \begin{tabular}{|c|c|c|c|c|c|c|c|}
@@ -189,26 +192,29 @@ The results of the systematic error of $N_{Ich}-N_{\sigma i\eta i\eta}$ and the 
 \end{table}
 
 
-The uncerntainty on the Z$\gamma$ MC normalization for jets$\rightarrow\gamma$ background uncertainty estimation is not taken into account for the weighted average approach. It is determined by performing the fits with the different Z$\gamma$ normalizations and propagating the spread of the results as the systematic error. The uncertainty on the Z$\gamma$ normalization is set to be 4.6\% as qouted by Z$\gamma$ 8TeV measurement.\\
+The uncerntainty on the Z$\gamma$ MC normalization for jets$\rightarrow\gamma$ background uncertainty estimation is determined by performing the fits with the different Z$\gamma$ normalizations and propagating the spread of the results as the systematic error. The uncertainty on the Z$\gamma$ normalization is set to be~4.6\% as qouted by Z$\gamma$ 8TeV measurement~[REFERENCE].
 
 \subsection{Other sources of the systematic uncertainties}
 
-To estimate the systematic uncertainty due to $e\rightarrow\gamma$ data-driven background estimation for the electron channel, the statistical uncertainties of the samples involved are taken into account only. The samples are: $e\rightarrow\gamma$-enriched data sample, $e\rightarrow\gamma$-enriched DYjets MC sample, nominally selected DYjets MC sample. The uncertainty is propagated through the unfolding, accXeff correction, is divided over the luminocity and the bin width (for the differential cross section).\\
+To estimate the systematic uncertainty due to $e\rightarrow\gamma$ data-driven background estimation for the electron channel, the statistical uncertainties of the samples involved are taken into account only. The samples are: $e\rightarrow\gamma$-enriched data sample, $e\rightarrow\gamma$-enriched DYjets MC sample, nominally selected DYjets MC sample. The uncertainty is propagated through the unfolding, accXeff correction, is divided over the luminocity and the bin width (for the differential cross section).
 
-For the real-$\gamma$ background subtraction, the statistical uncertainties of Z$\gamma$ and W$\gamma\rightarrow\tau\nu\gamma$ samples and their normalization uncertainties are taken into account. The normalization uncertainty applied for the Z$\gamma$ sample is 4.6\% and for the W$\gamma\rightarrow\tau\nu\gamma$ is 20\%. The Z$\gamma$ normalization uncerntainty is dominant out of the four sources to the real-$\gamma$ background subtraction.\\
+For the real-$\gamma$ background subtraction, the statistical uncertainties of Z$\gamma$ and W$\gamma\rightarrow\tau\nu\gamma$ samples and their normalization uncertainties are taken into account. The normalization uncertainty applied for the Z$\gamma$ sample is~4.6\% and for the W$\gamma\rightarrow\tau\nu\gamma$ is~20\%. The Z$\gamma$ normalization uncerntainty is dominant out of the four sources to the real-$\gamma$ background subtraction.
 
-The signal MC statistical uncerntainty is taken into account for the unfolding uncertainty. It is done with the randomization of the migration matrix. The procedure is the following:\\
+The signal MC statistical uncerntainty is taken into account for the unfolding uncertainty. It is done with the randomization of the migration matrix. The procedure is the following:
+
 \begin{itemize}
   \item randomize migration matrix 100 times according with the signal MC statistical uncertainties in each $[P_T^{gen},P_T^{reco}]$ bin;
   \item the unfolding is applied for each migration matrix;
   \item the standard deviation out of 100 unfolding outputs is taken as a error;
   \item the error is propagated through the accXeff correction and is divided over the luminocity and the bin width.
 \end{itemize}
-This systematic error is applied for the differential cross section only. There is no uncertainty due to unfolding for the total cross section because there is no unfolding for the total cross section.\\
 
-For the uncertainty due to the accXeff correction, the signal MC statistial power is also taken into account. To estimate this uncertainty, we take the value of $N \cdot \Delat{A} / (A^2)$, where $N$ is an yield for given bin after unfolding but before $accXeff$ correction, $A$ is value of "acceptance times efficiency" and $\Delat{A}$ is an error bar on "acceptance times efficiency". Then the uncertainty is divided over the luminosity and the bin width (for the differential cross section).\\
+This systematic error is applied for the differential cross section only. There is no uncertainty due to unfolding for the total cross section because there is no unfolding for the total cross section.
+
+For the uncertainty due to the accXeff correction, the signal MC statistial power is also taken into account. To estimate this uncertainty, we take the value of $N \cdot \Delat{A} / (A^2)$, where $N$ is an yield for given bin after unfolding but before $accXeff$ correction, $A$ is value of "acceptance times efficiency" and $\Delat{A}$ is an error bar on "acceptance times efficiency". Then the uncertainty is divided over the luminosity and the bin width (for the differential cross section).
 
 Another source of the systematic uncertainty is the uncertainty of MET mismodeling in the MC. To estimate that contribution, we:
+
 \begin{itemize}
   \item varied the $P_T$ of the photons, electrons (for the electron channel) and jets in the event which are available in the ntuple by their uncertainties as prescribed by POG;
   \item summed up all the listed contributions as the Lorentz vectors and proparaged their variation to the variation of MET;
@@ -218,19 +224,18 @@ Another source of the systematic uncertainty is the uncertainty of MET mismodeli
   \item took the spread in the cross section between the lower, upper and nominal WMt values as a systematic error.
 \end{itemize}
 
-The contribution from the uncertainties of the efficiency scale factors are also estimated. The scale factors are varied by $\pm 1\sigma$, then the accXeff and unfolding constants are recomputed and new values of the cross section are found. The spread in the cross section between the $+1\sigma$, $-1\sigma$ and the nominal scale factor values is taken as a systematic uncertainty.\\
-
+The contribution from the uncertainties of the efficiency scale factors are also estimated. The scale factors are varied by $\pm 1\sigma$, then the accXeff and unfolding constants are recomputed and new values of the cross section are found. The spread in the cross section between the $+1\sigma$, $-1\sigma$ and the nominal scale factor values is taken as a systematic uncertainty.
 
 %TODO:\\
 %Momentum scale and resolution (variations prescribed by POGs). Need to think more carefully how to implement technically \\
 
-The systamatic error due to pileup reweighting is estimated by variyng the pileup cross section by $\pm5\%$.\\
+The systamatic error due to pileup reweighting is estimated by variyng the pileup cross section by $\pm5\%$.
 
-The luminosity uncertainty is $2.6\%$.\\
+The luminosity uncertainty is~$2.6\%$.
 
 \subsection{Results}
 
-The relative systematic uncertainties are summarized in Tab.\ref{tab:systInPercent_MUON_WGamma} and Tab. \ref{tab:systInPercent_ELECTRON_WGamma} for the muon and electron channels respectively. The $|N_{Ich}-N_{\sigma{i\eta i\eta}}|$ stands for the portion of the jets$\rightarrow\gamma$ systematic uncertainty and is not a difference between $N_{Ich}$ and $N_{\sigma{i\eta i\eta}}$.\\
+The relative systematic uncertainties are summarized in Tab.~\ref{tab:systInPercent_MUON_WGamma} and Tab.~\ref{tab:systInPercent_ELECTRON_WGamma} for the muon and electron channels respectively. The $|N_{Ich}-N_{\sigma{i\eta i\eta}}|$ stands for the portion of the jets$\rightarrow\gamma$ systematic uncertainty and is not a difference between $N_{Ich}$ and $N_{\sigma{i\eta i\eta}}$.
 
 \begin{table}[h]
   \scriptsize
@@ -239,7 +244,7 @@ The relative systematic uncertainties are summarized in Tab.\ref{tab:systInPerce
    \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
     bin  & err & syst & Zg MC & templ & SFs & syst & syst & syst\\
     lims  & stat & $|N_{Ich}-N_{\sigma{i\eta i\eta}}|$ & norm & stat & err & lumi & other & total\\ \hline
-    total  & 1 & 10 & 4 & 4 & 2 & 3 & 4 & 12 \\ \hline
+    total  & 1 & 10 & 24 & 4 & 2 & 3 & 4 & 27 \\ \hline
 %    10-15 & 2 & 11 & 7 & 8 & 0 & 3 & 6 & 16 \\ \hline
     15-20 & 2 & 31 & 12 & 10 & 3 & 3 & 6 & 35 \\ \hline
     20-25 & 2 & 29 & 13 & 11 & 1 & 3 & 6 & 34 \\ \hline
@@ -266,7 +271,7 @@ The relative systematic uncertainties are summarized in Tab.\ref{tab:systInPerce
    \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
     bin  & err & syst & Zg MC & templ & SFs & syst & e to & syst & syst\\
     lims  & stat & $|N_{Ich}-N_{\sigma{i\eta i\eta}}|$ & norm & stat & err & lumi & gamma & other & total\\ \hline
-    total  & 2 & 15 & 6 & 5 & 19 & 3 & 4 & 5 & 27 \\ \hline
+    total  & 2 & 15 & 35 & 5 & 19 & 3 & 4 & 5 & 44 \\ \hline
 %    10-15 & 4 & 73 & 20 & 16 & 1 & 3 & 2 & 8 & 78 \\ \hline
     15-20 & 8 & 80 & 27 & 19 & 17 & 3 & 18 & 11 & 90 \\ \hline
     20-25 & 7 & 38 & 20 & 14 & 12 & 3 & 11 & 10 & 48 \\ \hline

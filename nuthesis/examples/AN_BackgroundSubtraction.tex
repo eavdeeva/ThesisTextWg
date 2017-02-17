@@ -2,33 +2,34 @@
 \label{sec:BackgroundSubtraction}
 
 \subsection{Fake Photon (from Jets) background estimation and subtraction}
-The selected sample is dominated by W+jets background and we do not see any way to significantly reduce it without reducing W$\gamma$ as well. The photon ID helps to reduce W+jets to a certain level but there is still a significant number of jets which are reconstructed as photons and pass all the photon ID criteria. DY+jets is another source of $jets \rightarrow \gamma$ background but this one is significantly suppressed by W transverse mass cut in both channels and Z-mass window cut in the electron channel.\\
 
-The template method is used to estimate $jets \rightarrow \gamma$ background. The method requires real-$\gamma$ template ($T_{true}$) and fake-$\gamma$ template ($T_{fake}$). Then the fit is performed according to: \\
-\begin{center}
-$F(V_{fit})=N_{true} \cdot T_{true}(V_{fit}) + N_{fake} \cdot T_{fake}(V_{fit})$,
-\end{center}
-where $V_{fit}$ is a fit variable, $N_{true}$ and $N_{fake}$ are numbers of real and fake photons in the data sample respectively. \\
+The selected sample is dominated by W+jets background and we do not see any way to significantly reduce it without reducing W$\gamma$ as well. The photon ID helps to reduce W+jets to a certain level but there is still a significant number of jets which are reconstructed as photons and pass all the photon ID criteria. DY+jets is another source of jets$\rightarrow \gamma$ background but this one is significantly suppressed by $M_W^T$ cut in both channels and $Z$-mass window cut in the electron channel.
 
-We use $V_{fit}=I_{ch}^{\gamma}$ and $V_{fit}=\sigma_{i\eta i\eta}^{\gamma}$. Real-$\gamma$ templates $T_{true}$ are taken from the FSR-selected events of Z$\gamma\rightarrow\mu\mu\gamma$. The FSR selection has looser $\Delta R_{min}(\mu,\gamma)$ cut of $\Delta R_{min}(\mu,\gamma)>0.4$ (while the nominal cut is $\Delta R_{min}(\mu,\gamma)>0.7$) and has three-particle invariant mass cut $M_{\gamma\mu\mu}<101$~GeV. The FSR sample does not have enough number of events for high $P_{T}^{\gamma}$ bins but the distribution of $I_{ch}^{\gamma}$ of real photons does not depend on $P_{T}^{\gamma}$ and therefore events for $P_{T}^{\gamma}>15~GeV$ are all merged to prepare templates. Distributions of $\sigma_{i\eta i\eta}^{\gamma}$ do depend on $P_T^{\gamma}$. Only events of $P_T^{\gamma}>30~GeV$ are merged together to prepare templates for all $P_T^{\gamma}>30~GeV$ bins. Templates for barrel and endcap photons are prepared separately.\\
+The template method is used to estimate $jets \rightarrow \gamma$ background. The method requires real-$\gamma$ template ($T_{true}$) and fake-$\gamma$ template ($T_{fake}$). Then the fit is performed according to: 
+\begin{equation}
+F(V_{fit})=N_{true} \cdot T_{true}(V_{fit}) + N_{fake} \cdot T_{fake}(V_{fit}),
+\end{equation}
+\noident{where $V_{fit}$ is a fit variable, $N_{true}$ and $N_{fake}$ are numbers of real and fake photons in the data sample respectively.}
 
-Fake-$\gamma$ templates are taken from the Z$\gamma$(ISR)-selected dataset. Such sample consists of Z$\gamma$+DYjets events. DYjets events are needed to construct a fake photon template. Non-negligible real-$\gamma$ contribution is subtracted using Z$\gamma$ MC predictions. ISR events were selected using nominal Z$\gamma$ selection and $M_{ll\gamma}>101$~GeV, $\Delta{R_{min}}(\mu,\gamma)>1.0$ cuts. \\
+We use $V_{fit}=I_{ch}^{\gamma}$ and $V_{fit}=\sigma_{i\eta i\eta}^{\gamma}$. Real-$\gamma$ templates $T_{true}$ are taken from the FSR-selected events of Z$\gamma\rightarrow\mu\mu\gamma$. The FSR selection has looser $\Delta R_{min}(\mu,\gamma)$ cut of $\Delta R_{min}(\mu,\gamma)>0.4$ (while the nominal cut is $\Delta R_{min}(\mu,\gamma)>0.7$) and has three-particle invariant mass cut $M_{\gamma\mu\mu}<101$~GeV. The FSR sample does not have enough number of events for high $P_{T}^{\gamma}$ bins but the distribution of $I_{ch}^{\gamma}$ of real photons does not depend on $P_{T}^{\gamma}$ and therefore events for $P_{T}^{\gamma}>15~GeV$ are all merged to prepare templates. Distributions of $\sigma_{i\eta i\eta}^{\gamma}$ do depend on $P_T^{\gamma}$. Only events of $P_T^{\gamma}>30~GeV$ are merged together to prepare templates for all $P_T^{\gamma}>30~GeV$ bins. Templates for barrel and endcap photons are prepared separately.
 
-FSR and ISR selections are illustrated in \ref{sec:ZgFSRandISRplots}. Distributions of $M_{ll\gamma}$ and $M_{ll}$ for nominally selected Z$\gamma$ dataset are shown in Fig. \ref{fig:Zg_Mleplep_and_Mpholeplep}. Distributions of $\Delta{R}(l,\gamma)$ for ISR and FSR Z$\gamma$ events are shown in Fig. \ref{fig:Zg_ISRandFSR_dR}. Distributions of $P_{T}^{\gamma}$ for ISR and FSR Z$\gamma$ events are shown in Fig. \ref{fig:Zg_ISRandFSR_phoEt}. High $P_{T}^{\gamma}$ bins have higher real-$\gamma$ contamination but even the very last bin has large enough number of events to prepare a template.\\ 
+Fake-$\gamma$ templates are taken from the $Z\gamma$(ISR)-selected dataset. Such sample consists of $Z\gamma$+DYjets events. DY+jets events are needed to construct a fake photon template. Non-negligible real-$\gamma$ contribution is subtracted using $Z\gamma$ MC predictions. ISR events were selected using nominal $Z\gamma$ selection and $M_{ll\gamma}>101$~GeV, $\Delta{R_{min}}(\mu,\gamma)>1.0$ cuts. 
 
-The $P_{T}^{\gamma}$ dependence of the real-$\gamma$ and fake-$\gamma$ templates are shown in Fig. \ref{fig:compareTemplatesTruePtDep}-\ref{fig:compareTemplatesFakePtDep} in the appendix \ref{sec:CompareTemplatesPlots}. 
+FSR and ISR selections are illustrated in~\ref{sec:ZgFSRandISRplots}. Distributions of $M_{ll\gamma}$ and $M_{ll}$ for nominally selected $Z\gamma$ dataset are shown in Fig.~\ref{fig:Zg_Mleplep_and_Mpholeplep}. Distributions of $\Delta{R}(l,\gamma)$ for ISR and FSR $Z\gamma$ events are shown in Fig.~\ref{fig:Zg_ISRandFSR_dR}. Distributions of $P_{T}^{\gamma}$ for ISR and FSR $Z\gamma$ events are shown in Fig.~\ref{fig:Zg_ISRandFSR_phoEt}. High $P_{T}^{\gamma}$ bins have higher real-$\gamma$ contamination but even the very last bin has large enough number of events to prepare a template. 
 
-The real-$\gamma$ and fake-$\gamma$ templates are the same for muon and electron channels for all four cases for all $P_{T}^{\gamma}$ bins. Fig. \ref{fig:compareTemplatesTruePtDep}-\ref{fig:compareTemplatesFakePtDep} demonstrate that real-$\gamma$ templates are not $P_{T}^{\gamma}$ dependent while fake-$\gamma$ templates are.\\
+The $P_{T}^{\gamma}$ dependence of the real-$\gamma$ and fake-$\gamma$ templates are shown in Fig.~\ref{fig:compareTemplatesTruePtDep}-\ref{fig:compareTemplatesFakePtDep} in the appendix~\ref{sec:CompareTemplatesPlots}. 
 
-To extract yield from the $N_{true}$, efficiency of the $V_{fit}$ is applied on the extracted yield based on the distribution of events which are used to prepare a true-$\gamma$ template. To extract yield from the $N_{fake}$, efficiency of the $V_{fit}$ is applied on the extracted yield based on the distribution of events which are used to prepare a fake-$\gamma$ template. Fits are performed on a blinded dataset (only 5\% of data are used to fit for $P_T^{\gamma}>45~GeV$) and therefore the background estimates are also blinded.\\
+The real-$\gamma$ and fake-$\gamma$ templates are the same for muon and electron channels for all four cases for all $P_{T}^{\gamma}$ bins. Fig.~\ref{fig:compareTemplatesTruePtDep}-\ref{fig:compareTemplatesFakePtDep} demonstrate that real-$\gamma$ templates are not $P_{T}^{\gamma}$ dependent while fake-$\gamma$ templates are.
 
-Plots of the template fits are available in Sec. \ref{sec:TemplateFitPlots} for fits on data and \ref{sec:TemplateFitPlotsMCclosure} for fits on the MC mixtures (muon channel only).
+To extract yield from the $N_{true}$, efficiency of the $V_{fit}$ is applied on the extracted yield based on the distribution of events which are used to prepare a true-$\gamma$ template. To extract yield from the $N_{fake}$, efficiency of the $V_{fit}$ is applied on the extracted yield based on the distribution of events which are used to prepare a fake-$\gamma$ template. Fits are performed on a blinded dataset (only 5\% of data are used to fit for $P_T^{\gamma}>45~GeV$) and therefore the background estimates are also blinded.
+
+Plots of the template fits are available in Sec.~\ref{sec:TemplateFitPlots} for fits on data and~\ref{sec:TemplateFitPlotsMCclosure} for fits on the MC mixtures (muon channel only).
 
 \subsection{Fake Photon (from Electron) Data Driven Background for Electron Channel}
-For the electron channel, DYjets is the main source of the $e \rightarrow \gamma$ background. The Z-mass window cut of $70$~GeV
-$<M_{e\gamma}<110$~GeV manages to significantly suppress this background. \\
 
-Data-driven contribution of $e\rightarrow\gamma$ is estimated separately for each $P_{T}^{\gamma}$ bin and separately for barrel and endcap using the following expression:$N_{data-nom}^{e\rightarrow\gamma} = N_{MC-nom}^{e\rightarrow\gamma} \cdot N_{data-Zpeak}^{e\rightarrow\gamma}/N_{MC-Zpeak}^{e\rightarrow\gamma}$ \\
+For the electron channel, DYjets is the main source of the $e \rightarrow \gamma$ background. The $Z$-mass window cut of $70$~GeV$<M_{e\gamma}<110$~GeV manages to significantly suppress this background. 
+
+Data-driven contribution of $e\rightarrow\gamma$ is estimated separately for each $P_{T}^{\gamma}$ bin and separately for barrel and endcap using the following expression:$N_{data-nom}^{e\rightarrow\gamma} = N_{MC-nom}^{e\rightarrow\gamma} \cdot N_{data-Zpeak}^{e\rightarrow\gamma}/N_{MC-Zpeak}^{e\rightarrow\gamma}$ 
 
 \begin{itemize}
   \item Get $N_{MC-Zpeak}^{e\rightarrow\gamma}$ (number of $e\rightarrow\gamma$ events under the Z-peak based on the MC prediction); done by counting
@@ -72,14 +73,17 @@ Fit model: $N_{sig} \cdot (RooNDKeysPdf~x~Gaussian) +  N_{bkg} \cdot (RooCMSShap
 
 
 \subsection{Other Backgrounds}
+
 In addition to the backgrounds discussed before, there are several more sources:
+
 \begin{itemize}
    \item true $\gamma$ background. Main sources of the true $\gamma$ background are Z$\gamma$ and W$\gamma \rightarrow \tau \nu \gamma$. The MC-based estimation is used to subtract these backgrounds.
    \item $e \rightarrow \gamma$ background for muon channel. Sources of these backgrounds could be WW ($W \rightarrow \mu\nu_{\mu}$ + $W \rightarrow e\nu_e$), WZ ($W \rightarrow \mu\nu_{\mu}$ + $Z \rightarrow ee$ or $W \rightarrow e\nu_{\mu}$ + $Z \rightarrow \mu\mu$) or ZZ ($Z \rightarrow \mu\mu$ + $Z \rightarrow ee$). This background is neglected.
    \item $jets \rightarrow lepton$ + $true \gamma$ ($\gamma$+jets and $\gamma\gamma$+jets events). Neglected.
    \item $jets \rightarrow lepton$ + $jets \rightarrow \gamma$. Neglected. 
 \end{itemize}
-The result from running the selection on data samples from old reprocessing in muon channel as presented on the SMP-VV meeting on July 5th of 2013 shows that total contribution of WW+WZ+ZZ+($\gamma\gamma$+jets)+($\gamma+jets$)+$W\gamma \rightarrow \tau\nu_{\tau}\gamma$ without $M_T^W$ cut is \~2.2\% of total MC and \~8\% of $W\gamma \rightarrow \mu\nu_{\mu}\gamma$ [REFERENCE]. ($\gamma\gamma$+jets) and ($\gamma+jets$) showed $\sim 1$ event passing selection criteria and therefore these backgrounds were not considered in more recent iterations. WW, WZ and ZZ contributions are shown to be negligible compared to $W\gamma \rightarrow \tau\nu_{\tau}\gamma$ and $WW\gamma$ and are not shown at the plots too.\\
+
+The result from running the selection on data samples from old reprocessing in muon channel as presented on the SMP-VV meeting on July 5th of 2013 shows that total contribution of WW+WZ+ZZ+($\gamma\gamma$+jets)+($\gamma+jets$)+$W\gamma \rightarrow \tau\nu_{\tau}\gamma$ without $M_T^W$ cut is \~2.2\% of total MC and \~8\% of $W\gamma \rightarrow \mu\nu_{\mu}\gamma$ [REFERENCE]. ($\gamma\gamma$+jets) and ($\gamma+jets$) showed $\sim 1$ event passing selection criteria and therefore these backgrounds were not considered in more recent iterations. WW, WZ and ZZ contributions are shown to be negligible compared to $W\gamma \rightarrow \tau\nu_{\tau}\gamma$ and $WW\gamma$ and are not shown at the plots too.
 
 
 
@@ -87,9 +91,9 @@ The result from running the selection on data samples from old reprocessing in m
 
 \begin{figure}[htb]
   \begin{center}
-   \includegraphics[width=0.45\textwidth]{figs_v11/MUON_WGamma/PrepareYields/c_DATAvsBkgPlusSigMCc_MUON_WGamma_TEMPL_CHISO_UNblind__Barrel__phoEt.pdf}\includegraphics[width=0.45\textwidth]{figs_v11/MUON_WGamma/PrepareYields/c_DATAvsBkgPlusSigMCc_MUON_WGamma_TEMPL_SIHIH_UNblind__Barrel__phoEt.pdf}  \\
-   \includegraphics[width=0.45\textwidth]{figs_v11/MUON_WGamma/PrepareYields/c_DATAvsBkgPlusSigMCc_MUON_WGamma_TEMPL_CHISO_UNblind__Endcap__phoEt.pdf}\includegraphics[width=0.45\textwidth]{figs_v11/MUON_WGamma/PrepareYields/c_DATAvsBkgPlusSigMCc_MUON_WGamma_TEMPL_SIHIH_UNblind__Endcap__phoEt.pdf}  \\
-\includegraphics[width=0.45\textwidth]{figs_v11/MUON_WGamma/PrepareYields/c_BkgSubtrDATAvsSIGMC_c_MUON_WGamma__UNblind__Barrel__phoEt.pdf}\includegraphics[width=0.45\textwidth]{figs_v11/MUON_WGamma/PrepareYields/c_BkgSubtrDATAvsSIGMC_c_MUON_WGamma__UNblind__Endcap__phoEt.pdf}\\
+   \includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_WGamma/PrepareYields/c_DATAvsBkgPlusSigMCc_MUON_WGamma_TEMPL_CHISO_UNblind__Barrel__phoEt.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_WGamma/PrepareYields/c_DATAvsBkgPlusSigMCc_MUON_WGamma_TEMPL_SIHIH_UNblind__Barrel__phoEt.pdf}  \\
+   \includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_WGamma/PrepareYields/c_DATAvsBkgPlusSigMCc_MUON_WGamma_TEMPL_CHISO_UNblind__Endcap__phoEt.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_WGamma/PrepareYields/c_DATAvsBkgPlusSigMCc_MUON_WGamma_TEMPL_SIHIH_UNblind__Endcap__phoEt.pdf}  \\
+\includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_WGamma/PrepareYields/c_BkgSubtrDATAvsSIGMC_c_MUON_WGamma__UNblind__Barrel__phoEt.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_WGamma/PrepareYields/c_BkgSubtrDATAvsSIGMC_c_MUON_WGamma__UNblind__Endcap__phoEt.pdf}\\
   \caption{Top and middle: data vs fake-$\gamma$ background derived from the template method + real-$\gamma$ background predicted by dedicated MC samples + signal MC, with $I_{ch}$ and $\sigma_{i\etai\eta}$ used as fit variables. Bottom: data yields after full background subtraction vs signal MC. $I_{ch}$ vs $\sigma_{i\etai\eta}$ fit results. }
   \label{fig:DDvsMC_Wg_Data_MUON}
   \end{center}
@@ -97,16 +101,16 @@ The result from running the selection on data samples from old reprocessing in m
 
 \begin{figure}[htb]
   \begin{center}
-   \includegraphics[width=0.45\textwidth]{figs_v11/ELECTRON_WGamma/PrepareYields/c_DATAvsBkgPlusSigMCc_ELECTRON_WGamma_TEMPL_CHISO_UNblind__Barrel__phoEt.pdf}\includegraphics[width=0.45\textwidth]{figs_v11/ELECTRON_WGamma/PrepareYields/c_DATAvsBkgPlusSigMCc_ELECTRON_WGamma_TEMPL_SIHIH_UNblind__Barrel__phoEt.pdf}  \\
-   \includegraphics[width=0.45\textwidth]{figs_v11/ELECTRON_WGamma/PrepareYields/c_DATAvsBkgPlusSigMCc_ELECTRON_WGamma_TEMPL_CHISO_UNblind__Endcap__phoEt.pdf}\includegraphics[width=0.45\textwidth]{figs_v11/ELECTRON_WGamma/PrepareYields/c_DATAvsBkgPlusSigMCc_ELECTRON_WGamma_TEMPL_SIHIH_UNblind__Endcap__phoEt.pdf}  \\
-\includegraphics[width=0.45\textwidth]{figs_v11/ELECTRON_WGamma/PrepareYields/c_BkgSubtrDATAvsSIGMC_c_ELECTRON_WGamma__UNblind__Barrel__phoEt.pdf}\includegraphics[width=0.45\textwidth]{figs_v11/ELECTRON_WGamma/PrepareYields/c_BkgSubtrDATAvsSIGMC_c_ELECTRON_WGamma__UNblind__Endcap__phoEt.pdf}\\
+   \includegraphics[width=0.45\textwidth]{../figs/figs_v11/ELECTRON_WGamma/PrepareYields/c_DATAvsBkgPlusSigMCc_ELECTRON_WGamma_TEMPL_CHISO_UNblind__Barrel__phoEt.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/ELECTRON_WGamma/PrepareYields/c_DATAvsBkgPlusSigMCc_ELECTRON_WGamma_TEMPL_SIHIH_UNblind__Barrel__phoEt.pdf}  \\
+   \includegraphics[width=0.45\textwidth]{../figs/figs_v11/ELECTRON_WGamma/PrepareYields/c_DATAvsBkgPlusSigMCc_ELECTRON_WGamma_TEMPL_CHISO_UNblind__Endcap__phoEt.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/ELECTRON_WGamma/PrepareYields/c_DATAvsBkgPlusSigMCc_ELECTRON_WGamma_TEMPL_SIHIH_UNblind__Endcap__phoEt.pdf}  \\
+\includegraphics[width=0.45\textwidth]{../figs/figs_v11/ELECTRON_WGamma/PrepareYields/c_BkgSubtrDATAvsSIGMC_c_ELECTRON_WGamma__UNblind__Barrel__phoEt.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/ELECTRON_WGamma/PrepareYields/c_BkgSubtrDATAvsSIGMC_c_ELECTRON_WGamma__UNblind__Endcap__phoEt.pdf}\\
   \caption{Top and middle: data vs fake-$\gamma$ background derived from the template method + real-$\gamma$ background predicted by dedicated MC samples + signal MC, with $I_{ch}$ and $\sigma_{i\etai\eta}$ used as fit variables. Bottom: data yields after full background subtraction vs signal MC. $I_{ch}$ vs $\sigma_{i\etai\eta}$ fit results. }
   \label{fig:DDvsMC_Wg_Data_ELECTRON}
   \end{center}
 \end{figure}
 
 \begin{table}[h]
-  \scriptsize
+  \tiny
   \begin{center}
   \caption{Data, signal and background yields. WGamma MUON Barrel}
   \begin{tabular}{|c|c|c|c|c|c|c|c|}
@@ -131,7 +135,7 @@ The result from running the selection on data samples from old reprocessing in m
 \end{table}
 
 \begin{table}[h]
-  \scriptsize
+  \tiny
   \begin{center}
   \caption{Data, signal and background yields. WGamma MUON Endcap}
   \begin{tabular}{|c|c|c|c|c|c|c|c|}
@@ -156,7 +160,7 @@ The result from running the selection on data samples from old reprocessing in m
 \end{table}
 
 \begin{table}[h]
-  \scriptsize
+  \tiny
   \begin{center}
   \caption{Data, signal and background yields. WGamma ELECTRON Barrel}
   \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
@@ -181,7 +185,7 @@ The result from running the selection on data samples from old reprocessing in m
 \end{table}
 
 \begin{table}[h]
-  \scriptsize
+  \tiny
   \begin{center}
   \caption{Data, signal and background yields. WGamma ELECTRON Endcap}
   \begin{tabular}{|c|c|c|c|c|c|c|c|c|}

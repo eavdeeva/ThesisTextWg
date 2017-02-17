@@ -1,18 +1,27 @@
 \section{Cross Section}
 \label{sec:CrossSection}
 \subsection {MC-based Cross Section}
+
 The MC-based cross section was computed with MCFM [REFERENCE] in NLO and is for the dedicated signal MC sample $\sigma(sample)$=553.92 pb. The MC sample was generated with \MADGRAPH [REFERENCE] and the cross section in our selected phase space was computed as 
+
 \begin{center}
 $\sigma(phase space) = \sigma(sample) \cdot N_{phase space} / N_{sample}$, 
 \end{center} 
+
 where  $N_{phase space}$ and $N_{sample}$ are numbers of events falling into selected phase space and generated in the whole MC sample respectively. For the differential cross section, $N_{phase space}$ is number of events falling into specific pt bin and to compute 
+
 \begin{center}
 $d\sigma / dP_T^{\gamma}$, 
 \end{center} 
+
 we divide over the bin width.
+
 The algorithm of hw it was decided whether an event falls into the phase space is described in \ref{sec:AccXEff}.
+
 \subsection {Cross Section Measurement}
+
 The cross section calculation is performed with the following analysis flow
+
 \begin{itemize}
   \item cut-based  event selection
   \item $jets \rightarrow \gamma$ data driven background subtraction
@@ -32,7 +41,7 @@ The cross section calculation is performed with the following analysis flow
   \begin{tabular}{|c|c|c|}
     bin & $d\sigma/dP_{T}$ &$d\sigma/dP_{T}$ \\ 
     lims & MC based &    meas.       \\ \hline
-    total & 9139 & $10949 \pm 91 \pm 1358$ \\ \hline
+    total & 9139 & $10949 \pm 91 \pm 2959$ \\ \hline
 %    10-15 & 1545 & $1765 \pm 33 \pm 278$ \\ \hline
     15-20 & 754 & $747 \pm 17 \pm 260$ \\ \hline
     20-25 & 382 & $419 \pm 10 \pm 142$ \\ \hline
@@ -58,7 +67,7 @@ The cross section calculation is performed with the following analysis flow
   \begin{tabular}{|c|c|c|}
     bin & $d\sigma/dP_{T}$ &$d\sigma/dP_{T}$ \\ 
     lims & MC based &    meas.       \\ \hline
-    total & 9064 & $9146 \pm 185 \pm 2437$ \\ \hline
+    total & 9064 & $9146 \pm 185 \pm 3981$ \\ \hline
 %    10-15 & 1550 & $889 \pm 40 \pm 691$ \\ \hline
     15-20 & 749 & $440 \pm 35 \pm 396$ \\ \hline
     20-25 & 375 & $338 \pm 23 \pm 163$ \\ \hline
@@ -80,8 +89,8 @@ The cross section calculation is performed with the following analysis flow
  
 \begin{figure}[htb]
   \begin{center}
-   \includegraphics[width=0.5\textwidth]{figs_v11/ChannelsMERGED_WGamma/CrossSection/compareCSWGamma.pdf}\includegraphics[width=0.5\textwidth]{figs_v11/ChannelsMERGED_WGamma/CrossSection/compareCSratioTheoryWGamma.pdf}
-      \includegraphics[width=0.48\textwidth]{figs_v11/MUON_WGamma/CrossSection/c_CS_MUON_WGamma_UNblind.png} \includegraphics[width=0.48\textwidth]{figs_v11/ELECTRON_WGamma/CrossSection/c_CS_ELECTRON_WGamma_UNblind.png}
+   \includegraphics[width=0.5\textwidth]{../figs/figs_v11/ChannelsMERGED_WGamma/CrossSection/compareCSWGamma.pdf}\includegraphics[width=0.5\textwidth]{../figs/figs_v11/ChannelsMERGED_WGamma/CrossSection/compareCSratioTheoryWGamma.pdf}
+      \includegraphics[width=0.48\textwidth]{../figs/figs_v11/MUON_WGamma/CrossSection/c_CS_MUON_WGamma_UNblind.png} \includegraphics[width=0.48\textwidth]{../figs/figs_v11/ELECTRON_WGamma/CrossSection/c_CS_ELECTRON_WGamma_UNblind.png}
   \caption{W$\gamma$ differential cross section. }
   \label{fig:CS_Wg}
  \end{center}
