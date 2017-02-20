@@ -1,39 +1,44 @@
 \section{Detector Resolution Unfolding}
 \label{sec:Unfolding}
 
-Unfolding constants are derived from signal MC sample ($W\gamma\rightarrow\mu\nu_{\mu}\gamma$/$W\gamma\rightarrow{e}\nu_{e}\gamma$) with D'Agostini method using RooUnfold package [REFERENCE].
+% EXPLAIN WHAT IS Detector Resolution UNFOLDING
 
-Unfolding stands for detector resolution only.
+%QUOTE
+%The effect of detector resolution leads to a migration of events from bin i of the true
+%invariant mass distribution to bin k of the reconstructed mass distribution. For a
+%better comparison of observed dilepton spectra with theory, this effect of migration
+%is corrected through unfolding. The procedure uses the yield distribution determined
+%from simulation by mapping it onto the measured one to obtain the true distribu-
+%tion. The unfolding procedures for differential and double-differential cross section
+%calculations are described below.
 
-Migration matrix (Fig. \ref{fig:migrMatrices_Wg}) which is passed to RooUnfold is prepared the following way:
-\begin{itemize}
-  \item in fully selected signal MC sample, each event has a reconstructed level photon with $P_T^{\gamma(reco)}$ and matched generator level photon with $P_T^{\gamma(gen)}$
-  \item $i_r$ - bin number determined by $P_T^{\gamma(reco)}$, $i_g$ - bin number determined by $P_T^{\gamma(gen)}$
-  \item element $M_{i_g,i_r}$ of a migration matrix is weighted number of events in corresponding $[P_T^{\gamma(gen)},P_T^{\gamma(reco)}]$ bin
-\end{itemize}
+%My words:
+The non-zero detector resolution in $P_T^\gamma$ causes the bin-by-bin migration. The reconstructed $P_T^{\gamma(reco)}$ may not coincide with the true $P_T^{\gamma(real)}$, and, therefore, the event reconstructed in a $P_T^{\gamma}$ bin $i_{reco}$ may, in fact, belong to the bin $i_{true} \neq i_{reco}$. To recover true $P_T^{\gamma}$ spectrum, we apply the procedure of the detector resolution unfolding.
 
-Response matrix (Fig. \ref{fig:respMatrices_Wg}) is a migration matrix normalized to each $i_r$ bin.
-$N^{reco}_j = R_{ji} N^{gen}_i$
+Unfolding constants are derived from the signal MC sample ($W\gamma\rightarrow\mu\nu_{\mu}\gamma$/$W\gamma\rightarrow{e}\nu_{e}\gamma$) where both true (gen-level) and reconstructed $P_T^\gamma$ spectum are known. We use the D'Agostini method~\cite{ref_DAgostini} which unfoldes the reconstructed spectrum iteratively.  
 
-In data, we only have $N^{reco}_j$ which is our $P_T^{\gamma}$ spectrum fully selected and background subtracted. Using $R_{ji}$ determined by signal MC, it is needed to determine $N^{truth}_i$ in data now. Inversion method inverts $R_{ji}$ to determine $N^{truth}_i$.
+% WHAT IS MIGRATION MATRIX, WHAT IS RESPONSE MATRIX
 
-After $P_T^{\gamma}$ spectrum is unfolded, measurements in different $P_T^{\gamma}$ bins are no longer independent. RooUnfold provides a covariance matrix.
+Using the MC samples, we prepare the migration matrix (Fig.~\ref{fig:migrMatrices_Wg}) which has the number of selected signal events in each ($i_{reco}$,$i_{gen}$) bin. The migration matrix is then normalized in each $i_{reco}$ bin, and we receive the response matrix $R_{ji}$ which relates reconstructed and gen-level spectra as $N^{reco}_j = R_{ji} N^{gen}_i$.
 
-A correlation matrix (Fig. \ref{fig:corrMatrices_Wg}) is derived from covariance matrix as:
-$M^{corr}_{ij} = \frac{C_i \cdot C_j}{\sqrt{(C_{ii} \cdot C_{jj})}} $ where $C_{ij}$ is a matrix element of a covariance matrix.
+%\begin{itemize}
+%  \item in fully selected signal MC sample, each event has a reconstructed level photon with $P_T^{\gamma(reco)}$ and matched generator level photon with $P_T^{\gamma(gen)}$
+%  \item $i_r$ - bin number determined by $P_T^{\gamma(reco)}$, $i_g$ - bin number determined by $P_T^{\gamma(gen)}$
+%  \item element $M_{i_g,i_r}$ of a migration matrix is weighted number of events in corresponding $[P_T^{\gamma(gen)},P_T^{\gamma(reco)}]$ bin
+%\end{itemize}
+%\noindent{The response matrix (Fig.~\ref{fig:respMatrices_Wg}) is the migration matrix normalized to each $i_r$ bin.}
 
-%Checked that D'Agostini and simple inversion matrix give the same result (yields are the same, errors are different). Also checked that privately implemented unfolding gives the same result as RooUnfold. Also the MC closure test is routinely performed every time when unfolding is applied on data. \\
-%Migration 
-%TODO: switch to more recent version of RooUnfold\\
-%TODO: present table: data yields; unfolded data yields; MC yeidls; unfolded MC yields; gen MC yields\\
-%TODO: think whether additional eff reco is needed here\\
-%Unfolding recommendations for SMP \\
+In data, we only have $N^{reco}_j$ which is our fully selected and background subtracted $P_T^{\gamma}$ spectrum. The $R_{ji}$ determined by signal MC is used to determine $N^{true}_i$ in data.
+
+After $P_T^{\gamma}$ spectrum is unfolded, measurements in different $P_T^{\gamma}$ bins become correlated. A correlation matrix is shown in Fig.~\ref{fig:corrMatrices_Wg}.
+
+%$M^{corr}_{ij} = \frac{C_i \cdot C_j}{\sqrt{(C_{ii} \cdot C_{jj})}} $, where $C_{ij}$ is a matrix element of a covariance matrix.
 
 \begin{figure}[htb]
   \begin{center}
    \includegraphics[width=0.90\textwidth]{../figs/figs_v11/MUON_WGamma/Constants/cMigrMatrix_MUON_WGamma__yield_pm_stat.pdf}\\
 \includegraphics[width=0.90\textwidth]{../figs/figs_v11/ELECTRON_WGamma/Constants/cMigrMatrix_ELECTRON_WGamma__yield_pm_stat.pdf}
-  \caption{Migration matrix derived from signal MC with matrix inversion method.}
+  \caption{Migration matrix derived from the signal MC.}
   \label{fig:migrMatrices_Wg}
   \end{center}
 \end{figure}
@@ -42,7 +47,7 @@ $M^{corr}_{ij} = \frac{C_i \cdot C_j}{\sqrt{(C_{ii} \cdot C_{jj})}} $ where $C_{
   \begin{center}
    \includegraphics[width=0.90\textwidth]{../figs/figs_v11/MUON_WGamma/Constants/cResponseMatr_MUON_WGamma__yield_pm_stat.pdf}\\
 \includegraphics[width=0.90\textwidth]{../figs/figs_v11/ELECTRON_WGamma/Constants/cResponseMatr_ELECTRON_WGamma__yield_pm_stat.pdf}
-  \caption{Response matrix derived from signal MC with matrix inversion method.}
+  \caption{Response matrix derived from the signal MC.}
   \label{fig:respMatrices_Wg}
   \end{center}
 \end{figure}
@@ -51,7 +56,7 @@ $M^{corr}_{ij} = \frac{C_i \cdot C_j}{\sqrt{(C_{ii} \cdot C_{jj})}} $ where $C_{
   \begin{center}
    \includegraphics[width=0.90\textwidth]{../figs/figs_v11/MUON_WGamma/Constants/matrCorrelation_yield_pm_stat.pdf}\\
 \includegraphics[width=0.90\textwidth]{../figs/figs_v11/ELECTRON_WGamma/Constants/matrCorrelation_yield_pm_stat.pdf}
-  \caption{Correlation Matrices as provided by RooUnfold right after unfolding is applied.}
+  \caption{Correlation Matrices.}
   \label{fig:corrMatrices_Wg}
   \end{center}
 \end{figure}
@@ -59,7 +64,11 @@ $M^{corr}_{ij} = \frac{C_i \cdot C_j}{\sqrt{(C_{ii} \cdot C_{jj})}} $ where $C_{
 %[1] https://indico.cern.ch/event/322577/ 
 %[2] https://twiki.cern.ch/twiki/bin/view/CMS/TwikiSMP-GENRecommendations\#Unfolding\_How\_to
 
-The results of the MC closure check are summarized in Tab. \ref{tab:unf_mc_closure_MUON_WGamma}-\ref{tab:unf_mc_closure_ELECTRON_WGamma} for the muon and electron channels respectively. Gen-level and rec yields in the tables are generator level and reconstructed $P_T^{\gamma}$ yields in the signal MC. Then reconstructed yields are smeared with Gaussian according to the errors on the yields. Then the Matrix Inversion and D'Agostini unfoldings are applied using RooUnfold. The unfolded yields with any method show reasonable agreement to the gen-level yields except the underflow bin (10-15 GeV). The disagreement in the underflow bin may be due to events with $P_T^{\gamma}<10$ GeV which are not available.  
+% WHAT IS MC CLOSURE CHECK
+
+To validate the detector resolution unfolding procedure, we perform the MC closure check. Gen-level and reconstructed yields are prepared using the signal MC. Then reconstructed yields are smeared by the Gaussian distribution according to the errors on the yields. The smeared yields are unfolded and compared to the gen-level yields. In addition to the D'Agostini method, we check the performance of the matrix inversion method for the unfolding which recovers the true yields as $N^{true}_j = (R_{ji})^{-1} N^{reco}_i$. 
+
+The results of the MC closure check are summarized in Tab.~\ref{tab:unf_mc_closure_MUON_WGamma}-\ref{tab:unf_mc_closure_ELECTRON_WGamma} for the muon and electron channels respectively. The unfolded yields show reasonable agreement to the gen-level yields except the underflow bin (10-15 GeV). The disagreement in the underflow bin may be caused by events with $P_T^{\gamma}<10$ GeV which are not available in our sample.  
 
 \begin{table}[h]
   \scriptsize
@@ -112,28 +121,3 @@ The results of the MC closure check are summarized in Tab. \ref{tab:unf_mc_closu
   \label{tab:unf_mc_closure_ELECTRON_WGamma}
   \end{center}
 \end{table}
-
-%Comparison of the Inversion and d'Agostini methods on data.
-
-%\begin{table}[h]
-%  \scriptsize
-%  \begin{center}
-%  \caption{Unfolding on data. Stat. error. ELECTRON WGamma}
-%  \begin{tabular}{|c|c|c|c|c|c|}
-%Yields & sign. MC & sign. MC & data & data unf. & data unf.\\
-%       & gen-level & rec.    & input & inversion & D'Agostini\\ \hline
-%  \label{tab:unf_data_ELECTRON_WGamma}
-%  \end{center}
-%\end{table}
-
-%\begin{table}[h]
-%  \scriptsize
-%  \begin{center}
-%  \caption{Unfolding on data. Stat. error. MUON WGamma}
-%  \begin{tabular}{|c|c|c|c|c|c|}
-%Yields & sign. MC & sign. MC & data & data unf.& data unf.\\
-%       & gen-level & rec.    & input & inversion & D'Agostini\\ \hline
-%  \end{tabular}
-%  \label{tab:unf_data_MUON_WGamma}
-%  \end{center}
-%\end{table}
