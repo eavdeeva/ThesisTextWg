@@ -14,7 +14,7 @@ The goal of the physics measurement is to measure the total and differential cro
 %\subsection{Data sample}
 The data sample we use in this analysis was recorded by the CMS experiment in~2012 in the LHC $pp$ collisions at~8 TeV. The data collected by single electron and single muon triggers were used as the signal samples while double muon and double electron datasets are used for data-driven background estimation. Only runs and luminosity sections certified by CMS are considered in the measurement, which means that good functioning of all CMS sub-detectors is required.
 
-All simulation samples (often referred as Monte Carlo or MC samples) considered in this analysis are generated with MadGraph and reconstructed centrally by CMS simulation team. The simulated samples are reweighted to represent the distribution of the number of $pp$ interactions per bunch crossing (pile-up), as measured in the data. Information regarding signal and background simulated samples used for the analysis is given in Table~\ref{tab:mc_bkg_samples} alongside with the corresponding cross sections. 
+All simulation samples (often referred as Monte Carlo or MC samples) considered in this analysis are generated with MadGraph and reconstructed centrally by CMS simulation team. The simulated samples are reweighted to represent the distribution of the number of $pp$ interactions per bunch crossing (pile-up), as measured in the data. Information regarding signal and background simulated samples used for the analysis is given in Table~\ref{tab:mc_bkg_samples} alongside with the corresponding cross sections. The $Z$+jets process is often referred as Drell Yan + jets or DY+jets.
 
 \begin{table}[h]
   \scriptsize
@@ -25,7 +25,7 @@ All simulation samples (often referred as Monte Carlo or MC samples) considered 
       Process                      & $\sigma$, pb         \\ \hline
       $W\gamma \rightarrow l\nu\gamma$     & 553.92 (NLO)    \\
       $W$+jets$ \rightarrow l\nu + jets$          & 36257.2 (NNLO)  \\ 
-      DY+jets$ \rightarrow ll + jets$            & 3503.71         \\
+      $Z$+jets$ \rightarrow ll + jets$            & 3503.71         \\
       $t\bar{t}$ + jets+1l                    & 99.44 (NNLO)   \\
       $t\bar{t}$ + jets+2l                    & 23.83         \\
       $t\bar{t} + \gamma$                    & 1.444          \\
@@ -36,7 +36,7 @@ All simulation samples (often referred as Monte Carlo or MC samples) considered 
   \end{center}
 \end{table} 
 
-The NLO cross section of $W\gamma$ was calculated with the MCFM in the same phase space for which the $W\gamma$ sample was generated. The theoretical computations of the NNLO cross section are available [REFERENCE WgNNLOtheory] and its contribution is~19\%-26\%.
+The NLO cross section of $W\gamma$ was calculated with the MCFM in the same phase space for which the $W\gamma$ sample was generated. The NNLO contribution is estimated to be~19\%-26\%~\cite{ref_theory_NNLO}.
 
 The cross section of $Z\gamma$ was computed using as inputs MCFM cross section values as well as the precise CMS measurement [REFERENCE Zg8TeV] using the following procedure. The $Z\gamma$ cross section of $\sigma = 2073 \pm 95 \pm \11 \pm \53$~fb has been quoted in the phase space described in [REFERENCE Zg8TeV]. To determine the measured cross section in the generator phase space, the following formula was used:
 
@@ -45,3 +45,10 @@ The cross section of $Z\gamma$ was computed using as inputs MCFM cross section v
 \end{equation}
 
 \nointent{where $psn$ is denoted for the narrow phase space, the space of the measured cross section, while $psw$ is denoted for the wide space, the phase space of the generated sample. The $\sigma_{psn}^{MCFM}$ was determined by computing how many events are falling into the narrow phase space and scaling it to $\sigma_{psw}^{MCFM}$=159.12~pb. The $\sigma_{psn}^{MCFM}$ was found to be~1933~fb and~1911~fb for the muon and electron channels respectively and the average of~1922~fb was used in the formula. The $\sigma_{psw}^{meas.}$ was found to be~171.62~pb.
+
+To avoid experimentalist's bias, all measurement was performed in a blinded way at first. Our blinded strategy was the following:
+\begin{itemize}
+  \item for $p_T^{\gamma}<45~GeV$: use full data; and
+  \item for $p_T^{\gamma}>45~GeV$: use $5\%$ of data.
+\end{itemize}
+\noindent{After the whole measurement was performed, and the procedure was fully determined, we unblinded the measurement. All plots shown in this dissertation are prepared with unblided data. }

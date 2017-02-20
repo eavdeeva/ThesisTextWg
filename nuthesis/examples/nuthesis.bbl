@@ -56,6 +56,14 @@ ATLAS Collaboration.
 CMS collaboration.
 \newblock Alignment of the cms tracker with large hadron collider data.
 
+\bibitem{ref_WWg8TeV}
+CMS collaboration.
+\newblock Wgg, 8 tev.
+
+\bibitem{ref_Zg8TeV}
+CMS collaboration.
+\newblock Zg, 8 tev.
+
 \bibitem{ref_HiggsPaperCMS}
 CMS Collaboration.
 \newblock Observation of a new boson at a mass of~125~gev with cms experiment
