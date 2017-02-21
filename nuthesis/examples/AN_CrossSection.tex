@@ -1,43 +1,31 @@
 \section{Cross Section}
 \label{sec:AN_CrossSection}
-\subsection {MC-based Cross Section}
 
-The MC-based cross section was computed with MCFM [REFERENCE] in NLO and is for the dedicated signal MC sample $\sigma(sample)$=553.92 pb. The MC sample was generated with \MADGRAPH [REFERENCE] and the cross section in our selected phase space was computed as 
+The cross section is computed as described in the beginning of Ch.~\ref{sec:AN_WgMeas}. For comparison purposes, in addition to the measured cross section, we also estimate the cross section beased on the signal MC sample.
+
+
+The cross section of the whole simulated sample was computed with MCFM~\cite{ref_MCFM} in NLO and is for the dedicated signal MC sample $\sigma(sample)$=553.92 pb. The MC sample was generated with MadGraph~\cite{ref_MadGraph}, and the cross section in our selected phase space was computed as 
 
 \begin{center}
 $\sigma(phase space) = \sigma(sample) \cdot N_{phase space} / N_{sample}$, 
 \end{center} 
 
-where  $N_{phase space}$ and $N_{sample}$ are numbers of events falling into selected phase space and generated in the whole MC sample respectively. For the differential cross section, $N_{phase space}$ is number of events falling into specific pt bin and to compute 
+\noindent{where  $N_{phase space}$ and $N_{sample}$ are numbers of events falling into selected phase space and generated in the whole MC sample respectively. For the differential cross section, $N_{phase space}$ is number of events falling into specific $P_T^{\gamma}$ bin and to compute }
 
 \begin{center}
 $d\sigma / dP_T^{\gamma}$, 
 \end{center} 
 
-we divide over the bin width.
+\noindent{we divide over the bin width.} 
 
-The algorithm of hw it was decided whether an event falls into the phase space is described in \ref{sec:AccXEff}.
+Tables~\ref{tab:sc_mc_vs_meas_MUON_WGamma}-\ref{tab:sc_mc_vs_meas_ELECTRON_WGamma} and Fig.~\ref{fig:CS_Wg} summarize the results. The measured cross section agrees with the MC-based cross section within the estimated errors. The measurement is sytematically-dominated. 
 
-\subsection {Cross Section Measurement}
-
-The cross section calculation is performed with the following analysis flow
-
-\begin{itemize}
-  \item cut-based  event selection
-  \item $jets \rightarrow \gamma$ data driven background subtraction
-  \item $e \rightarrow \gamma $ and true $\gamma$ MC-based background subtraction
-  \item NOTE: data-driven $e \rightarrow \gamma$ background estimation for electron channel is well in progress but not yet incorporated into the main analysis flow
-  \item detector resolution unfolding correction (for differential cross section only)
-  \item acceptance x efficiency correction (bin-by-bin)
-  \item divide over luminosity (19.5 $fb^{-1}$)
-  \item divide over bin width (for differential cross section only)
-  \item estimate systematic errors
-\end{itemize}
+For additional cross check, we estimated cross section of $Z\gamma$ and compared the result with the published CMS result for $Z\gamma$ at~$8$~TeV. The summary of this $Z\gamma$ check is available in App.~\ref{sec:ZgCheck}.
 
 \begin{table}[h]
   \scriptsize
   \begin{center}
-  \caption{Cross section and errors. W$\gamma$, MUON}
+  \caption{Cross section and errors. $W\gamma$, MUON}
   \begin{tabular}{|c|c|c|}
     bin & $d\sigma/dP_{T}$ &$d\sigma/dP_{T}$ \\ 
     lims & MC based &    meas.       \\ \hline
@@ -63,7 +51,7 @@ The cross section calculation is performed with the following analysis flow
 \begin{table}[h]
   \scriptsize
   \begin{center}
-  \caption{Cross section and errors. W$\gamma$, ELECTRON}
+  \caption{Cross section and errors. $W\gamma$, ELECTRON}
   \begin{tabular}{|c|c|c|}
     bin & $d\sigma/dP_{T}$ &$d\sigma/dP_{T}$ \\ 
     lims & MC based &    meas.       \\ \hline
@@ -91,7 +79,7 @@ The cross section calculation is performed with the following analysis flow
   \begin{center}
    \includegraphics[width=0.5\textwidth]{../figs/figs_v11/ChannelsMERGED_WGamma/CrossSection/compareCSWGamma.pdf}\includegraphics[width=0.5\textwidth]{../figs/figs_v11/ChannelsMERGED_WGamma/CrossSection/compareCSratioTheoryWGamma.pdf}
       \includegraphics[width=0.48\textwidth]{../figs/figs_v11/MUON_WGamma/CrossSection/c_CS_MUON_WGamma_UNblind.png} \includegraphics[width=0.48\textwidth]{../figs/figs_v11/ELECTRON_WGamma/CrossSection/c_CS_ELECTRON_WGamma_UNblind.png}
-  \caption{W$\gamma$ differential cross section. }
+  \caption{$W\gamma$ differential cross section. }
   \label{fig:CS_Wg}
  \end{center}
 \end{figure}
