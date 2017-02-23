@@ -1,14 +1,26 @@
-\section{APPENDIX: Template Fit Plots MC closure ZGamma}
-\label{sec:TemplateFitPlotsMCclosure}
+\section{APPENDIX: Template Fit Plots, $Z\gamma$, MC closure}
+\label{sec:TemplateFitPlotsMCclosure_ZGamma}
 
-Fit results of $jets \rightarrow \gamma$ data-driven estimation. On all the plots, black is data, green is $T_{true}$, blue is $T_{fake}$, and red is $F_{fit}$. Cyan is a histogram of Wjets MC of a given channel. The $\Chi^2/{NDF}$ quoted on the plots is computed as the $\Chi^2$ value provided by RooFit tools (RooChi2Var chi2("chi2","chi2",fullPdf,dataHist)) divided over $N_{bins}-2$ where $N_{bins}$ is the number of bins in the histogram used for fit.
- 
+This appendix contains fit results of jets$\rightarrow \gamma$ data-driven estimation performed on pseudodata prepared as MC samples DY+jets and $Z\gamma$ with $Z\gamma$ selection conditions applied. The samples are appropriately weighted and mixed together. 
+
+Results of fits of $I_{ch}^{\gamma}$ and $\sigma_{i\eta i\eta}$ templates are shown in Fig.~\ref{fig:templateFits_MCclosure_CHISO_MUON_ZGamma_0}-\ref{fig:templateFits_MCclosure_CHISO_ELECTRON_ZGamma_3} and Fig.~\ref{fig:templateFits_MCclosure_SIHIH_MUON_ZGamma_0}-\ref{fig:templateFits_MCclosure_SIHIH_ELECTRON_ZGamma_3} respectively. On all the plots, black is pseudodata, green is real-$\gamma$ template, blue is fake-$\gamma$ template, and red is the fit function. Cyan is a histogram of DY+jets MC sample in a given channel. The fits on pseudodata is performed for MC closure check. 
+
+%The $\Chi^2/{NDF}$ quoted on the plots is computed as the $\Chi^2$ value provided by RooFit tools (RooChi2Var chi2("chi2","chi2",fullPdf,dataHist)) divided over $N_{bins}-2$ where $N_{bins}$ is the number of bins in the histogram used for fit.
+  
 
 \begin{figure}[htb]
   \begin{center}
    \includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_CHISO_UNblind__phoEt10to15__Barrel__RooFit_MCclosure.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_CHISO_UNblind__phoEt10to15__Endcap__RooFit_MCclosure.pdf}\\
   \label{fig:templateFits_MCclosure_CHISO_MUON_ZGamma_0}
-  \caption{Template fits, MC closure, Z$\gamma$, muon channel, underflow bin}
+  \caption{Fits of $I_{ch}^{\gamma}$ templates, pseudodata (MC mixtures), $Z\gamma$, muon channel, underflow bin ($10-15$~GeV).}
+  \end{center}
+\end{figure}
+
+\begin{figure}[htb]
+  \begin{center}
+   \includegraphics[width=0.45\textwidth]{../figs/figs_v11/ELECTRON_ZGamma/TemplateFits/c_TEMPL_CHISO_UNblind__phoEt10to15__Barrel__RooFit_MCclosure.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/ELECTRON_ZGamma/TemplateFits/c_TEMPL_CHISO_UNblind__phoEt10to15__Endcap__RooFit_MCclosure.pdf}\\
+  \label{fig:templateFits_MCclosure_CHISO_ELECTRON_ZGamma_0}
+  \caption{Fits of $I_{ch}^{\gamma}$ templates, pseudodata (MC mixtures), $Z\gamma$, electron channel, underflow bin ($10-15$~GeV).}
   \end{center}
 \end{figure}
 
@@ -19,7 +31,7 @@ Fit results of $jets \rightarrow \gamma$ data-driven estimation. On all the plot
    \includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_CHISO_UNblind__phoEt25to30__Barrel__RooFit_MCclosure.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_CHISO_UNblind__phoEt25to30__Endcap__RooFit_MCclosure.pdf}\\
    \includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_CHISO_UNblind__phoEt30to35__Barrel__RooFit_MCclosure.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_CHISO_UNblind__phoEt30to35__Endcap__RooFit_MCclosure.pdf}\\
   \label{fig:templateFits_MCclosure_CHISO_MUON_ZGamma_1}
-  \caption{Template fits, MC closure, MC closure, Z$\gamma$, muon channel}
+  \caption{Fits of $I_{ch}^{\gamma}$ templates, pseudodata (MC mixtures), $Z\gamma$, muon channel.}
   \end{center}
 \end{figure}
 
@@ -30,7 +42,7 @@ Fit results of $jets \rightarrow \gamma$ data-driven estimation. On all the plot
    \includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_CHISO_UNblind__phoEt55to65__Barrel__RooFit_MCclosure.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_CHISO_UNblind__phoEt55to65__Endcap__RooFit_MCclosure.pdf}\\
    \includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_CHISO_UNblind__phoEt65to75__Barrel__RooFit_MCclosure.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_CHISO_UNblind__phoEt65to75__Endcap__RooFit_MCclosure.pdf}\\
   \label{fig:templateFits_MCclosure_CHISO_MUON_ZGamma_2}
-  \caption{Template fits, MC closure, MC closure, Z$\gamma$, muon channel}
+  \caption{Fits of $I_{ch}^{\gamma}$ templates, pseudodata (MC mixtures), $Z\gamma$, muon channel.}
   \end{center}
 \end{figure}
 
@@ -41,68 +53,7 @@ Fit results of $jets \rightarrow \gamma$ data-driven estimation. On all the plot
    \includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_CHISO_UNblind__phoEt95to120__Barrel__RooFit_MCclosure.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_CHISO_UNblind__phoEt95to120__Endcap__RooFit_MCclosure.pdf}\\
    \includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_CHISO_UNblind__phoEt120to500__Barrel__RooFit_MCclosure.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_CHISO_UNblind__phoEt120to500__Endcap__RooFit_MCclosure.pdf}\\
   \label{fig:templateFits_MCclosure_CHISO_MUON_ZGamma_3}
-  \caption{Template fits, MC closure, MC closure, Z$\gamma$, muon channel}
-  \end{center}
-\end{figure}
-
-\begin{figure}[htb]
-  \begin{center}
-   \includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt10to15__Barrel__RooFit_MCclosure.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt10to15__Endcap__RooFit_MCclosure.pdf}\\
-  \label{fig:templateFits_MCclosure_SIHIH_MUON_ZGamma_0}
-  \caption{Template fits, MC closure, MC closure, Z$\gamma$, muon channel, underflow bin}
-  \end{center}
-\end{figure}
-
-\
-
-\begin{figure}[htb]
-  \begin{center}
-   \includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt15to20__Barrel__RooFit_MCclosure.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt15to20__Endcap__RooFit_MCclosure.pdf}\\
-   \includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt20to25__Barrel__RooFit_MCclosure.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt20to25__Endcap__RooFit_MCclosure.pdf}\\
-   \includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt25to30__Barrel__RooFit_MCclosure.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt25to30__Endcap__RooFit_MCclosure.pdf}\\
-   \includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt30to35__Barrel__RooFit_MCclosure.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt30to35__Endcap__RooFit_MCclosure.pdf}\\
-  \label{fig:templateFits_MCclosure_SIHIH_MUON_ZGamma_1}
-  \caption{Template fits, MC closure, MC closure, Z$\gamma$, muon channel}
-  \end{center}
-\end{figure}
-
-\begin{figure}[htb]
-  \begin{center}
-   \includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt35to45__Barrel__RooFit_MCclosure.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt35to45__Endcap__RooFit_MCclosure.pdf}\\
-   \includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt45to55__Barrel__RooFit_MCclosure.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt45to55__Endcap__RooFit_MCclosure.pdf}\\
-   \includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt55to65__Barrel__RooFit_MCclosure.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt55to65__Endcap__RooFit_MCclosure.pdf}\\
-   \includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt65to75__Barrel__RooFit_MCclosure.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt65to75__Endcap__RooFit_MCclosure.pdf}\\
-  \label{fig:templateFits_MCclosure_SIHIH_MUON_ZGamma_2}
-  \caption{Template fits, MC closure, MC closure, Z$\gamma$, muon channel}
-  \end{center}
-\end{figure}
-
-\begin{figure}[htb]
-  \begin{center}
-   \includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt75to85__Barrel__RooFit_MCclosure.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt75to85__Endcap__RooFit_MCclosure.pdf}\\
-   \includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt85to95__Barrel__RooFit_MCclosure.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt85to95__Endcap__RooFit_MCclosure.pdf}\\
-   \includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt95to120__Barrel__RooFit_MCclosure.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt95to120__Endcap__RooFit_MCclosure.pdf}\\
-   \includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt120to500__Barrel__RooFit_MCclosure.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt120to500__Endcap__RooFit_MCclosure.pdf}\\
-  \label{fig:templateFits_MCclosure_SIHIH_MUON_ZGamma_3}
-  \caption{Template fits, MC closure, MC closure, Z$\gamma$, muon channel}
-  \end{center}
-\end{figure}
-
-
-
-
-
-
-
-
-
-
-
-\begin{figure}[htb]
-  \begin{center}
-   \includegraphics[width=0.45\textwidth]{../figs/figs_v11/ELECTRON_ZGamma/TemplateFits/c_TEMPL_CHISO_UNblind__phoEt10to15__Barrel__RooFit_MCclosure.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/ELECTRON_ZGamma/TemplateFits/c_TEMPL_CHISO_UNblind__phoEt10to15__Endcap__RooFit_MCclosure.pdf}\\
-  \label{fig:templateFits_MCclosure_CHISO_ELECTRON_ZGamma_0}
-  \caption{Template fits, MC closure, Z$\gamma$, electron channel, underflow bin}
+  \caption{Fits of $I_{ch}^{\gamma}$ templates, pseudodata (MC mixtures), $Z\gamma$, muon channel.}
   \end{center}
 \end{figure}
 
@@ -113,7 +64,7 @@ Fit results of $jets \rightarrow \gamma$ data-driven estimation. On all the plot
    \includegraphics[width=0.45\textwidth]{../figs/figs_v11/ELECTRON_ZGamma/TemplateFits/c_TEMPL_CHISO_UNblind__phoEt25to30__Barrel__RooFit_MCclosure.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/ELECTRON_ZGamma/TemplateFits/c_TEMPL_CHISO_UNblind__phoEt25to30__Endcap__RooFit_MCclosure.pdf}\\
    \includegraphics[width=0.45\textwidth]{../figs/figs_v11/ELECTRON_ZGamma/TemplateFits/c_TEMPL_CHISO_UNblind__phoEt30to35__Barrel__RooFit_MCclosure.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/ELECTRON_ZGamma/TemplateFits/c_TEMPL_CHISO_UNblind__phoEt30to35__Endcap__RooFit_MCclosure.pdf}\\
   \label{fig:templateFits_MCclosure_CHISO_ELECTRON_ZGamma_1}
-  \caption{Template fits, MC closure, MC closure, Z$\gamma$, electron channel}
+  \caption{Fits of $I_{ch}^{\gamma}$ templates, pseudodata (MC mixtures), $Z\gamma$, electron channel.}
   \end{center}
 \end{figure}
 
@@ -124,7 +75,7 @@ Fit results of $jets \rightarrow \gamma$ data-driven estimation. On all the plot
    \includegraphics[width=0.45\textwidth]{../figs/figs_v11/ELECTRON_ZGamma/TemplateFits/c_TEMPL_CHISO_UNblind__phoEt55to65__Barrel__RooFit_MCclosure.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/ELECTRON_ZGamma/TemplateFits/c_TEMPL_CHISO_UNblind__phoEt55to65__Endcap__RooFit_MCclosure.pdf}\\
    \includegraphics[width=0.45\textwidth]{../figs/figs_v11/ELECTRON_ZGamma/TemplateFits/c_TEMPL_CHISO_UNblind__phoEt65to75__Barrel__RooFit_MCclosure.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/ELECTRON_ZGamma/TemplateFits/c_TEMPL_CHISO_UNblind__phoEt65to75__Endcap__RooFit_MCclosure.pdf}\\
   \label{fig:templateFits_MCclosure_CHISO_ELECTRON_ZGamma_2}
-  \caption{Template fits, MC closure, MC closure, Z$\gamma$, electron channel}
+  \caption{Fits of $I_{ch}^{\gamma}$ templates, pseudodata (MC mixtures), $Z\gamma$, electron channel.}
   \end{center}
 \end{figure}
 
@@ -135,7 +86,15 @@ Fit results of $jets \rightarrow \gamma$ data-driven estimation. On all the plot
    \includegraphics[width=0.45\textwidth]{../figs/figs_v11/ELECTRON_ZGamma/TemplateFits/c_TEMPL_CHISO_UNblind__phoEt95to120__Barrel__RooFit_MCclosure.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/ELECTRON_ZGamma/TemplateFits/c_TEMPL_CHISO_UNblind__phoEt95to120__Endcap__RooFit_MCclosure.pdf}\\
    \includegraphics[width=0.45\textwidth]{../figs/figs_v11/ELECTRON_ZGamma/TemplateFits/c_TEMPL_CHISO_UNblind__phoEt120to500__Barrel__RooFit_MCclosure.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/ELECTRON_ZGamma/TemplateFits/c_TEMPL_CHISO_UNblind__phoEt120to500__Endcap__RooFit_MCclosure.pdf}\\
   \label{fig:templateFits_MCclosure_CHISO_ELECTRON_ZGamma_3}
-  \caption{Template fits, MC closure, MC closure, Z$\gamma$, electron channel}
+  \caption{Fits of $I_{ch}^{\gamma}$ templates, pseudodata (MC mixtures), $Z\gamma$, electron channel.}
+  \end{center}
+\end{figure}
+
+\begin{figure}[htb]
+  \begin{center}
+   \includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt10to15__Barrel__RooFit_MCclosure.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt10to15__Endcap__RooFit_MCclosure.pdf}\\
+  \label{fig:templateFits_MCclosure_SIHIH_MUON_ZGamma_0}
+  \caption{Fits of $\sigma_{i \eta i \eta}$ templates, pseudodata (MC mixtures), $Z\gamma$, muon channel, underflow bin ($10-15$~GeV).}
   \end{center}
 \end{figure}
 
@@ -143,11 +102,42 @@ Fit results of $jets \rightarrow \gamma$ data-driven estimation. On all the plot
   \begin{center}
    \includegraphics[width=0.45\textwidth]{../figs/figs_v11/ELECTRON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt10to15__Barrel__RooFit_MCclosure.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/ELECTRON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt10to15__Endcap__RooFit_MCclosure.pdf}\\
   \label{fig:templateFits_MCclosure_SIHIH_ELECTRON_ZGamma_0}
-  \caption{Template fits, MC closure, MC closure, Z$\gamma$, electron channel, underflow bin}
+  \caption{Fits of $\sigma_{i \eta i \eta}$ templates, pseudodata (MC mixtures), $Z\gamma$, electron channel, underflow bin ($10-15$~GeV).}
   \end{center}
 \end{figure}
 
-\
+\begin{figure}[htb]
+  \begin{center}
+   \includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt15to20__Barrel__RooFit_MCclosure.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt15to20__Endcap__RooFit_MCclosure.pdf}\\
+   \includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt20to25__Barrel__RooFit_MCclosure.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt20to25__Endcap__RooFit_MCclosure.pdf}\\
+   \includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt25to30__Barrel__RooFit_MCclosure.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt25to30__Endcap__RooFit_MCclosure.pdf}\\
+   \includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt30to35__Barrel__RooFit_MCclosure.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt30to35__Endcap__RooFit_MCclosure.pdf}\\
+  \label{fig:templateFits_MCclosure_SIHIH_MUON_ZGamma_1}
+  \caption{Fits of $\sigma_{i \eta i \eta}$ templates, pseudodata (MC mixtures), $Z\gamma$, muon channel.}
+  \end{center}
+\end{figure}
+
+\begin{figure}[htb]
+  \begin{center}
+   \includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt35to45__Barrel__RooFit_MCclosure.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt35to45__Endcap__RooFit_MCclosure.pdf}\\
+   \includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt45to55__Barrel__RooFit_MCclosure.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt45to55__Endcap__RooFit_MCclosure.pdf}\\
+   \includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt55to65__Barrel__RooFit_MCclosure.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt55to65__Endcap__RooFit_MCclosure.pdf}\\
+   \includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt65to75__Barrel__RooFit_MCclosure.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt65to75__Endcap__RooFit_MCclosure.pdf}\\
+  \label{fig:templateFits_MCclosure_SIHIH_MUON_ZGamma_2}
+  \caption{Fits of $\sigma_{i \eta i \eta}$ templates, pseudodata (MC mixtures), $Z\gamma$, muon channel.}
+  \end{center}
+\end{figure}
+
+\begin{figure}[htb]
+  \begin{center}
+   \includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt75to85__Barrel__RooFit_MCclosure.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt75to85__Endcap__RooFit_MCclosure.pdf}\\
+   \includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt85to95__Barrel__RooFit_MCclosure.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt85to95__Endcap__RooFit_MCclosure.pdf}\\
+   \includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt95to120__Barrel__RooFit_MCclosure.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt95to120__Endcap__RooFit_MCclosure.pdf}\\
+   \includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt120to500__Barrel__RooFit_MCclosure.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt120to500__Endcap__RooFit_MCclosure.pdf}\\
+  \label{fig:templateFits_MCclosure_SIHIH_MUON_ZGamma_3}
+  \caption{Fits of $\sigma_{i \eta i \eta}$ templates, pseudodata (MC mixtures), $Z\gamma$, muon channel.}
+  \end{center}
+\end{figure}
 
 \begin{figure}[htb]
   \begin{center}
@@ -156,7 +146,7 @@ Fit results of $jets \rightarrow \gamma$ data-driven estimation. On all the plot
    \includegraphics[width=0.45\textwidth]{../figs/figs_v11/ELECTRON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt25to30__Barrel__RooFit_MCclosure.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/ELECTRON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt25to30__Endcap__RooFit_MCclosure.pdf}\\
    \includegraphics[width=0.45\textwidth]{../figs/figs_v11/ELECTRON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt30to35__Barrel__RooFit_MCclosure.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/ELECTRON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt30to35__Endcap__RooFit_MCclosure.pdf}\\
   \label{fig:templateFits_MCclosure_SIHIH_ELECTRON_ZGamma_1}
-  \caption{Template fits, MC closure, MC closure, W$\gamma$, electron channel}
+  \caption{Fits of $\sigma_{i \eta i \eta}$ templates, pseudodata (MC mixtures), $Z\gamma$, electron channel.}
   \end{center}
 \end{figure}
 
@@ -167,7 +157,7 @@ Fit results of $jets \rightarrow \gamma$ data-driven estimation. On all the plot
    \includegraphics[width=0.45\textwidth]{../figs/figs_v11/ELECTRON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt55to65__Barrel__RooFit_MCclosure.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/ELECTRON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt55to65__Endcap__RooFit_MCclosure.pdf}\\
    \includegraphics[width=0.45\textwidth]{../figs/figs_v11/ELECTRON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt65to75__Barrel__RooFit_MCclosure.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/ELECTRON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt65to75__Endcap__RooFit_MCclosure.pdf}\\
   \label{fig:templateFits_MCclosure_SIHIH_ELECTRON_ZGamma_2}
-  \caption{Template fits, MC closure, MC closure, W$\gamma$, electron channel}
+  \caption{Fits of $\sigma_{i \eta i \eta}$ templates, pseudodata (MC mixtures), $Z\gamma$, electron channel.}
   \end{center}
 \end{figure}
 
@@ -178,6 +168,9 @@ Fit results of $jets \rightarrow \gamma$ data-driven estimation. On all the plot
    \includegraphics[width=0.45\textwidth]{../figs/figs_v11/ELECTRON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt95to120__Barrel__RooFit_MCclosure.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/ELECTRON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt95to120__Endcap__RooFit_MCclosure.pdf}\\
    \includegraphics[width=0.45\textwidth]{../figs/figs_v11/ELECTRON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt120to500__Barrel__RooFit_MCclosure.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/ELECTRON_ZGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt120to500__Endcap__RooFit_MCclosure.pdf}\\
   \label{fig:templateFits_MCclosure_SIHIH_ELECTRON_ZGamma_3}
-  \caption{Template fits, MC closure, MC closure, W$\gamma$, electron channel}
+  \caption{Fits of $\sigma_{i \eta i \eta}$ templates, pseudodata (MC mixtures), $Z\gamma$, electron channel.}
   \end{center}
 \end{figure}
+
+
+
