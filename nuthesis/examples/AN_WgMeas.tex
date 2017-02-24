@@ -1,60 +1,67 @@
-\chapter{W$\gamma$ Cross Section Measurement}
+\chapter{$W\gamma$ Cross Section Measurement}
 \label{sec:AN_WgMeas}
 
-The goal of the physics measurement is to measure the total and differential cross section of $pp \rightarrow l\nu\gamma + X$ in bins of the photon transverse momentum using CMS data collected in~2012 at~$\sqrt{s}=8$~TeV center-of-mass collision energy. 
+The goal of the physics measurement of this dissertation is to measure the total and differential cross section of $pp \rightarrow l\nu\gamma + X$ in bins of the photon transverse momentum $P_T^\gamma$ using CMS data collected in~2012 at~$\sqrt{s}=8$~TeV center-of-mass collision energy. 
 
-% MAYBE ADD FORMULA
-The analysis strategy includes the following steps:
-\begin{itemize}
-  \item event selection;
-  \item background subtraction;
-  \item detector resolution unfolding correction (for differential cross section only);
-  \item acceptance and efficiency correction;
-  \item divide over luminosity (19.5 $fb^{-1}$);
-  \item divide over bin width (for differential cross section only);
-  \item estimate systematic errors.
-\end{itemize}
-\noindent{Chapters~\ref{sec:AN_Selection}-\ref{sec:AN_CrossSection} describe each step. A brief description of the software tools used for the measurement is available in App.~\ref{sec:Code}.}
+In the physics experiments we measure a number of events of the specific process, and determine the cross section in a certain kinematic phase space as
+
+\begin{equation}
+  \sigma = N/L,
+\end{equation}
+\noindent{where $N$ is the estimated number of events of the process of our interest in the given phase space, and $L$ is the luminosity of our collider. The measurement strategy can be represented as a chain of steps that is summarized in Tab.~\ref{tab:analysisOutline}. Chapters~\ref{sec:AN_Selection}-\ref{sec:AN_CrossSection} describe each step in details.}
+
+\begin{table}[h]
+  \small
+  \begin{center}
+  \caption{Measurement steps. The first column is the name of the step, the second and the third columns are algebraic representations of the steps for the differential and total cross section measurements respectively. }
+  \begin{tabular}{|c|c|c|}
+    \hline
+    Step & $d\sigma/dP_{T}$ & $\sigma$ \\ \hline
+    select events & $N_{sel}^j$ &    $N_{sel}$       \\ \hline
+    subtract background & $N_{sign}^j = N_{sel}^j - N_{bkg}^j$ &    $N_{sign}=N_{sel}-N_{bkg}$       \\ \hline
+    unfold   & $N_{acc}^i = U_{ij} \cdot N_{sign}^j$ &    $-$       \\ \hline
+    correct for the acceptance and efficiency & $N_{true}^i = \frac{N_{acc}}{(A \times\epsilon)^i}$ &  $N_{true}=\frac{N_{sign}}{A\times\epsilon}$       \\ \hline
+    divide over luminosity and bin width & $ \left( \frac{d\sigma}{dP_{T}^\gamma} \right) ^i = \frac{N_{true}^i}{L \cdot (\Delta P_T^\gamma)^i}$  &  $\sigma = N_{true}/L$       \\ \hline
+    estimate systematic uncertainties &  &         \\ \hline
+  \end{tabular}
+  \label{tab:analysisOutline}
+  \end{center}
+\end{table}
 
 %\subsection{Data sample}
-The data sample we use in this analysis was recorded by the CMS experiment in~2012 in the LHC $pp$ collisions at~8 TeV. The data collected by single electron and single muon triggers were used as the signal samples while double muon and double electron datasets are used for data-driven background estimation. Only runs and luminosity sections certified by CMS are considered in the measurement, which means that good functioning of all CMS sub-detectors is required.
+The data sample we use in this analysis was recorded by the CMS experiment in~2012 in the LHC $pp$ collisions at~8 TeV. The data collected by single electron and single muon triggers are used as the signal samples while double muon and double electron datasets are used for data-driven background estimation. Only runs and luminosity sections certified by CMS are considered in the measurement, which means that good functioning of all CMS sub-detectors is required.
 
 All simulation samples (often referred as Monte Carlo or MC samples) considered in this analysis are generated with MadGraph and reconstructed centrally by CMS simulation team. The simulated samples are reweighted to represent the distribution of the number of $pp$ interactions per bunch crossing (pile-up), as measured in the data. Information regarding signal and background simulated samples used for the analysis is given in Tab.~\ref{tab:mc_bkg_samples} alongside with the corresponding cross sections. The $Z$+jets process is often referred as Drell Yan + jets or DY+jets.
 
 \begin{table}[h]
-  \scriptsize
+  \small
   \begin{center}
     \caption{Summary of simulated background samples used in the measurement.}
     \begin{tabular}{|l|l|l|}
       \hline
       Process                      & $\sigma$, pb         \\ \hline
-      $W\gamma \rightarrow l\nu\gamma$     & 553.92 (NLO)    \\
-      $W$+jets$ \rightarrow l\nu + jets$          & 36257.2 (NNLO)  \\ 
-      $Z$+jets$ \rightarrow ll + jets$            & 3503.71         \\
-      $t\bar{t}$ + jets+1l                    & 99.44 (NNLO)   \\
-      $t\bar{t}$ + jets+2l                    & 23.83         \\
-      $t\bar{t} + \gamma$                    & 1.444          \\
-      $Z\gamma \rightarrow ll\gamma$       & 171.62           \\
-      \hline
+      $W\gamma \rightarrow l\nu\gamma$     & 553.92 (NLO)    \\ \hline
+      $W$+jets$ \rightarrow l\nu + jets$          & 36257.2 (NNLO)  \\  \hline
+      $Z$+jets$ \rightarrow ll + jets$            & 3503.71         \\ \hline
+      $t\bar{t}$+jets$\rightarrow 1$l+X         & 99.44 (NNLO)   \\ \hline
+      $t\bar{t}$+jets$\rightarrow 2$l+X         & 23.83         \\ \hline
+      $t\bar{t}\gamma$                    & 1.444          \\ \hline
+      $Z\gamma \rightarrow ll\gamma$       & 171.62           \\ \hline
     \end{tabular}
     \label{tab:mc_bkg_samples}
   \end{center}
 \end{table} 
 
-The NLO cross section of $W\gamma$ was calculated with the MCFM in the same phase space for which the $W\gamma$ sample was generated. The NNLO contribution is estimated to be~19\%-26\%~\cite{ref_theory_NNLO}.
+The NLO cross section of $W\gamma$ was calculated with the MCFM in the same phase space for which the $W\gamma$ sample was generated. The NNLO contribution is estimated to be~19\%-26\% of the NLO value~\cite{ref_theory_NNLO}.
 
-The cross section of $Z\gamma$ was computed using as inputs MCFM cross section values as well as the precise CMS measurement [REFERENCE Zg8TeV] using the following procedure. The $Z\gamma$ cross section of $\sigma = 2073 \pm 95 \pm \11 \pm \53$~fb has been quoted in the phase space described in [REFERENCE Zg8TeV]. To determine the measured cross section in the generator phase space, the following formula was used:
+The cross section of $Z\gamma$ measured by CMS is taken~\cite{ref_Zg8TeV} and expanded to the phase space of the $Z\gamma$ generated MC sample. The resulting cross section is found to be~$171.62$~pb.
 
-\begin{equation}
-\sigma_{psn}^{meas.}/\sigma_{psw}^{meas.} = \sigma_{psn}^{MCFM}/\sigma_{psw}^{MCFM},
-\end{equation}
-
-\nointent{where $psn$ is denoted for the narrow phase space, the space of the measured cross section, while $psw$ is denoted for the wide space, the phase space of the generated sample. The $\sigma_{psn}^{MCFM}$ was determined by computing how many events are falling into the narrow phase space and scaling it to $\sigma_{psw}^{MCFM}$=159.12~pb. The $\sigma_{psn}^{MCFM}$ was found to be~1933~fb and~1911~fb for the muon and electron channels respectively and the average of~1922~fb was used in the formula. The $\sigma_{psw}^{meas.}$ was found to be~171.62~pb.
-
-To avoid experimentalist's bias, all measurement was performed in a blinded way at first. Our blinded strategy was the following:
+To avoid experimentalist's bias, the whole measurement was performed in a blinded way at first. Our blinded strategy was the following:
 \begin{itemize}
   \item for $p_T^{\gamma}<45~GeV$: use full data; and
   \item for $p_T^{\gamma}>45~GeV$: use $5\%$ of data.
 \end{itemize}
-\noindent{After the whole measurement was performed, and the procedure was fully determined, we unblinded the measurement. All plots shown in this dissertation are prepared with unblided data. }
+\noindent{After the whole measurement procedure was fully established, we unblinded the measurement. All plots shown in this dissertation are prepared with unblided data.}
+
+The measurement was performed using advanced computing resources. A brief description of the software tools used and developed for the measurement is available in App.~\ref{sec:Code}.
 
