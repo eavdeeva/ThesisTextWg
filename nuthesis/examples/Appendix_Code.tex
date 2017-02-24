@@ -7,32 +7,18 @@
 % my code
 
 % CMSSW
-The CMS software (CMSSW) [REFERENCE] is the tool developed to process all CMS responses, reconstruct particles and prepare data in a condition convinient for the final physics measurements. All CMS physics measurements use CMSSW.
+The CMS software (CMSSW)~\cite{ref_CMSSW} is the tool developed to process all CMS responses, reconstruct particles and prepare data in a condition convinient for the final physics measurements. CMSSW is mostly written on C++ and python programming languages. It has hundreds of contributors that use GITHUB~\cite{ref_GITHUB} to share their work. All CMS physics measurements use CMSSW.
 
 The procedure of the tracker alignment and validation described in Ch.~\ref{sec:alignment} is also part of the CMSSW although the Millepede-II algorithm itself is implemented in the external software tool.
 
+%ROOT, RooFit
+The samples for the physics measurements are stored in a format of ROOT trees. The ROOT tree stores mulpiple parameters for each entry and allows easy access to all parameters. These properties makes it conviniet to use ROOT trees for physics measurement where, usually, one entry corresponds to one event. The ROOT trees proveded by reconstruction algorithms of CMSSW are refered as ``tuples''. Tuples are further processed by different large physics subgroups that prepare ``ntuples''. Ntuples store only information that is necessary for a specific class of measurements and arrange it in a more convinient way for this specifical class of measurements.  
+
 % ggNtuples
-ggNtuples:
-Prepared by Central Taiwan University and Kansas State University [REFERENCE]\\
-The code is available in the GIT [REFERENCE]
+The author of this dissertation used ntuples prepared by Central Taiwan University and Kansas State University groups mostly for various diboson and triboson measurements. The code of the program that prepares the ntuples is available in the GITHUB~\cite{ref_ggNtuplizer} .
 
 % my code
-Code is based on ggNtuples\\
-The code is available in the GIT: https://github.com/eavdeeva/usercode/tree/master/WGammaAnalysis\\
-The framework uses ggNtuples as input and computes total and differential cross section of W$\gamma$ and Z$\gamma$ in the muon and electron channels. Z$\gamma$ computation was added to enable opportunity to do the cross check with the Z$\gamma$ approved analysis and also the FSR events of Z$\gamma$ were used to prepare $\sigma_{i \eta i \eta}$ templates. \\
-More detailed description on how to use the code is available in the README in the repository 
-Cross checks:
-To make sure our analysis flow is correct, we are going through several cross checks:
-\begin{itemize}
-\item muon channel selection cross check, based on completely independent frameworks based on different ntuples (ggNtuples and
-SUSY ntuples. Yutaro Iiyama from Carnegie Melon University performed selection with SUSY ntuples when he had chance to contribute to W$\gamma$ analysis in the end of October,2014 - January,2015)
-\item electron channel selection cross check, based on the same ntuples (ggNtuples) but different analyzers
-\item cross check of template fit procedures for $jets \rightarrow \gamma$ background estimation which are implemented by different people for both $I_{ch}$ and $\sigma_{i \eta i \eta}$ fits
-\item Z$\gamma$ check: applying all the same methods and procedures on
-Z$\gamma$ selected events and cross-checking with approved CMS Z$\gamma$ measurement [AN-2013-280]. More details about Z$\gamma$ check are discussed in appendices \ref{sec:ZgCheck} and \ref{sec:SbVariationPlotsZg}. 
-\end{itemize}
-To compare selection, we are using event-by-event approach. Comparison in the muon channel was performed based on blinded 2012-a dataset which included ~320 events. There are few events selected by either-or analyzer and all of them were different by $M_W^T$ cut. The difference came from the fact that the ggNtuples and SUSY ntuples used were processed with different global tags and the jet energy corrections which also affect particle flow missing Et were calculated in different ways.\\
-The comparison in electron channel was performed based on full blinded 2012 dataset and also on MC datasets. Level of agreement between two analyzers is ~1.5\%.\\
+The code for the CMS $W\gamma$ measurement at $\sqrt{s}=8$~TeV was written by the author of this dissertation using C++ language, ROOT and RooFit~\cite{ref_RooFit} packages, and RooUnfold~\cite{ref_RooUnfold} class for the detector resolution unfolding. Shell scripts are used to run the chain of C++ programs corresponding to separate physics measurement steps. The code is available at GITHUB~\cite{ref_GITHUB}.
 
-
-
+% cross checks
+Several cross check were performed with other collaborators to make sure the code is free of major errors. Especially the event selection and background estimation for the electron channel is fully implemented by both Kansas State University group and the author of this dissertation in separate frameworks. These procedures are carefully cross checked between two developers.  
