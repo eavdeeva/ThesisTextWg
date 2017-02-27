@@ -1,9 +1,9 @@
 \section{Systematic Uncertainties}
 \label{sec:Systematics}
 
-\subsection{Jets$\rightarrow\gamma$ Data-Driven background}
+\subsection{Uncertainties due to Jets$\rightarrow\gamma$ Data-Driven Background Estimation}
 
-The dominant systematic uncertainty is uncertainty from the jets$\rightarrow\gamma$ background estimation. The following sources contribute to the uncerntainty of  the jets$\rightarrow\gamma$ background estimation:
+The dominant systematic uncertainty is uncertainty due to jets$\rightarrow\gamma$ background estimation. The following sources contribute to the uncerntainty of  the jets$\rightarrow\gamma$ background estimation:
 
 \begin{itemize}
   \item the difference between fit results of $I_{ch}^\gamma$ and $\sigma_{i\eta i\eta}^\gamma$ templates;
@@ -11,20 +11,16 @@ The dominant systematic uncertainty is uncertainty from the jets$\rightarrow\gam
   \item the limited statistical power of the fake-$\gamma$ and real-$\gamma$ templates.
 \end{itemize}
 
-The systematic uncertainty due to the difference between fit results of $I_{ch}$ and $\sigma_{i\eta i\eta}$ templates is computed as (1/2)($|N_{Ich}-N_{\sigma i\eta i\eta}|$). The mean value is taken as an average between $N_{Ich}}$ and $N_{\sigma{i\eta i\eta}}$.
+The systematic uncertainty due to the difference between fit results of $I_{ch}$ and $\sigma_{i\eta i\eta}$ templates is computed as 
 
-The error due to template statistics is computed by separately randomizing the real-$\gamma$ and the fake-$\gamma$ templates. The algorithm is the following:
-\begin{itemize}
-% MAYBE, DESCRIPTION IS TOO TECHNICAL
-  \item randomize templates N times as mean = random.Gauss(mean,sigma), set error = sigma for each bin in a template (mean is a bin content of a given bin, sigma is determined by a statistical uncertainty of FSR(ISR) data sample for real-$\gamma$(fake-$\gamma$) templates and statistical uncertainty ofthe  leakage sample: DY+jets-MC($Z\gamma$-MC);
-  \item for each set out of N templates (separately for the real-$\gamma$ and the fake-$\gamma$ template) perform fit;
-  \item take the standard deviation of N fit results as an error;
-  \item propagate through unfolding, $A \times \epsilon$ correction, divide over luminosity and bin width;
-  \item choose $N=100$ for fake-$\gamma$ templates and $N=20$ for real-$\gamma$ templates.
-\end{itemize}
-\noindent{The statistical error of the fake-$\gamma$ template is larger than one of the real-$\gamma$ template.}
+\begin{equation}
+\frac{1}{2}|N_{Ich}-N_{\sigma i\eta i\eta}|.
+\end{equation}
+\noindent{ The mean value is taken as an average between $N_{Ich}}$ and $N_{\sigma{i\eta i\eta}}$.}
 
-The results of the systematic error of $|N_{Ich}-N_{\sigma i\eta i\eta}|$ and the template statistical uncertainty are summarized in the Tab.~\ref{tab:diff_ways_to_fit_muon_phoEt_BARREL},~\ref{tab:diff_ways_to_fit_muon_phoEt_ENDCAP}. Columns data $I_{ch}^{\gamma}$, data $\sigma_{i\eta i\eta}^\gamma$ , MC cl. $I_{ch}^{\gamma}$ and MC cl. $\sigma_{i\eta i\eta}^\gamma$  are the yields from the fit results of $I_{ch}^{\gamma}$ and $\sigma_{i\eta i\eta}^{\gamma}$ fits of data and MC mixtures. The errors include the statistical errors and the errors due to template statistics.
+The error due to template statistics is computed by separately randomizing the real-$\gamma$ and the fake-$\gamma$ templates, we prepare $20$ real-$\gamma$ and $100$ fake-$\gamma$ templates by randomizing our nominal templates with the Gaussian distribution. Then we perform fits with new templates and take the standard deviation of the fit results as a error. The errors are computed separately for the real-$\gamma$ and the fake-$\gamma$ templates. The statistical error of the fake-$\gamma$ template is larger.
+
+The results of the systematic error of $|N_{Ich}-N_{\sigma i\eta i\eta}|$ and the template statistical uncertainty are summarized in the Tab.~\ref{tab:diff_ways_to_fit_phoEt_BARREL_muon}-\ref{tab:diff_ways_to_fit_phoEt_ENDCAP_electron}. Columns data $I_{ch}^{\gamma}$, data $\sigma_{i\eta i\eta}^\gamma$ , MC cl. $I_{ch}^{\gamma}$ and MC cl. $\sigma_{i\eta i\eta}^\gamma$  are the yields from the fit results of $I_{ch}^{\gamma}$ and $\sigma_{i\eta i\eta}^{\gamma}$ fits of data and MC mixtures. The errors include the statistical errors and the errors due to template statistics.
 
 \begin{table}[h]
   \tiny
@@ -126,59 +122,8 @@ The results of the systematic error of $|N_{Ich}-N_{\sigma i\eta i\eta}|$ and th
   \end{center}
 \end{table}
 
-\begin{table}[h]
-  \tiny
-  \begin{center}
-  \caption{Jets$\rightarrow\gamma$ background. Different ways to fit. Muon channel, Barrel}
-  \begin{tabular}{|c|c|c|c|c|c|c|c|}
-    bin &  MC   & data  & data  & MC cl. & MC cl.\\ 
-    lims & pred & $I_{ch}^{\gamma}$ & $\sigma_{i\eta i\eta}^\gamma$  & $I_{ch}^{\gamma}$  & $\sigma_{i\eta i\eta}^\gamma$  \\ \hline
-10-15 & 94746$\pm$1082 & 77611$\pm$321 & 79833$\pm$250 & 88924$\pm$344 & 81301$\pm$252   \\ \hline
-15-20 & 22846$\pm$521 & 24542$\pm$143 & 21433$\pm$150 & 24276$\pm$135 & 21226$\pm$147   \\ \hline
-20-25 & 9014$\pm$319 & 9877$\pm$77 & 8465$\pm$101 & 7722$\pm$60 & 7325$\pm$90   \\ \hline
-25-30 & 4543$\pm$215 & 4402$\pm$45 & 3509$\pm$67 & 4205$\pm$40 & 3807$\pm$72   \\ \hline
-30-35 & 2649$\pm$152 & 2943$\pm$39 & 1686$\pm$48 & 1923$\pm$24 & 1892$\pm$49   \\ \hline
-35-45 & 3146$\pm$162 & 2539$\pm$33 & 1946$\pm$56 & 1541$\pm$20 & 1835$\pm$50   \\ \hline
-45-55 & 1021$\pm$92 & 1963$\pm$39 & 731$\pm$40 & 1206$\pm$21 & 528$\pm$34   \\ \hline
-55-65 & 562$\pm$73 & 362$\pm$10 & 415$\pm$25 & 539$\pm$13 & 228$\pm$28   \\ \hline
-65-75 & 331$\pm$52 & 465$\pm$18 & 176$\pm$17 & 303$\pm$11 & 319$\pm$30   \\ \hline
-75-85 & 260$\pm$50 & 238$\pm$15 & 102$\pm$12 & 95$\pm$4 & 29$\pm$12   \\ \hline
-85-95 & 98$\pm$27 & 146$\pm$10 & 75$\pm$11 & 0$\pm$0 & 2$\pm$3   \\ \hline
-95-120 & 123$\pm$28 & 319$\pm$25 & 66$\pm$10 & 48$\pm$3 & 17$\pm$8   \\ \hline
-120-500 & 150$\pm$35 & 82$\pm$6 & 27$\pm$7 & 79$\pm$7 & 70$\pm$13   \\ \hline
-  \end{tabular}
-  \label{tab:Jets_to_gamma_diff_ways_to_fit_0}
-  \end{center}
-\end{table}
 
-\begin{table}[h]
-  \tiny
-  \begin{center}
-  \caption{Jets$\rightarrow\gamma$ background. Different ways to fit. Muon channel, Endcap}
-  \begin{tabular}{|c|c|c|c|c|c|c|c|}
-    bin &  MC   & data  & data  & MC cl. & MC cl.\\ 
-    lims & pred & $I_{ch}^{\gamma}$ & $\sigma_{i\eta i\eta}^\gamma$  & $I_{ch}^{\gamma}$  & $\sigma_{i\eta i\eta}^\gamma$  \\ \hline
-10-15 & 99522$\pm$1123 & 81161$\pm$426 & 77649$\pm$215 & 91670$\pm$482 & 122480$\pm$9   \\ \hline
-15-20 & 27226$\pm$584 & 27660$\pm$183 & 25902$\pm$142 & 27602$\pm$181 & 30218$\pm$144   \\ \hline
-20-25 & 10743$\pm$355 & 11659$\pm$101 & 10018$\pm$92 & 8623$\pm$76 & 9620$\pm$85   \\ \hline
-25-30 & 4617$\pm$227 & 4557$\pm$51 & 4061$\pm$58 & 3619$\pm$40 & 3649$\pm$56   \\ \hline
-30-35 & 2448$\pm$161 & 2267$\pm$31 & 2669$\pm$54 & 2031$\pm$29 & 2255$\pm$50   \\ \hline
-35-45 & 2354$\pm$153 & 2112$\pm$28 & 1807$\pm$44 & 1455$\pm$21 & 1550$\pm$43   \\ \hline
-45-55 & 898$\pm$94 & 935$\pm$18 & 1025$\pm$49 & 857$\pm$16 & 751$\pm$34   \\ \hline
-55-65 & 516$\pm$71 & 563$\pm$16 & 270$\pm$18 & 512$\pm$13 & 823$\pm$58   \\ \hline
-65-75 & 351$\pm$61 & 346$\pm$13 & 86$\pm$11 & 217$\pm$9 & 202$\pm$31   \\ \hline
-75-85 & 125$\pm$30 & 117$\pm$6 & 63$\pm$9 & 107$\pm$6 & 123$\pm$22   \\ \hline
-85-95 & 66$\pm$21 & 56$\pm$3 & 37$\pm$7 & 26$\pm$2 & 3$\pm$4   \\ \hline
-95-120 & 82$\pm$24 & -80$\pm$5 & 19$\pm$5 & 14$\pm$1 & 118$\pm$24   \\ \hline
-120-500 & 36$\pm$12 & 152$\pm$11 & 11$\pm$4 & 21$\pm$1 & 14$\pm$12   \\ \hline
-
-  \end{tabular}
-  \label{tab:Jets_to_gamma_diff_ways_to_fit_1}
-  \end{center}
-\end{table}
-
-
-The uncerntainty on the $Z\gamma$ MC normalization for jets$\rightarrow\gamma$ background uncertainty estimation is determined by performing the fits with the different $Z\gamma$ normalizations and propagating the spread of the results as the systematic error. The uncertainty on the $Z\gamma$ normalization is set to be~$4.6\%$ as qouted by $Z\gamma$~$8$~TeV measurement~\cite{ref_Zg8TeV}.
+The uncerntainty on the $Z\gamma$ MC normalization for jets$\rightarrow\gamma$ background estimation is determined by performing the fits with the different $Z\gamma$ normalizations and propagating the spread of the results as the systematic error. The uncertainty on the $Z\gamma$ normalization is set to be~$4.6\%$ as qouted by $Z\gamma$~$8$~TeV measurement~\cite{ref_Zg8TeV}.
 
 \subsection{Other sources of the systematic uncertainties}
 \label{sec:Systematics_OtherSources}
