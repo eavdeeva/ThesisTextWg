@@ -35,6 +35,9 @@ CMS 8 TeV WW lnulnu.
 \bibitem{ref_CMSschemView}
 Available at: https://inspirehep.net/record/837874/plots.
 
+\bibitem{ref_CMSSW}
+Cmssw.
+
 \bibitem{ref_CMS_VW_7TeV}
 CMS VW (V=W,Z $\rightarrow$jj) using 5.0 fb-1 of 7 TeV pp collisions
   Eur.Phys.J. C73 (2013) 2283.
@@ -56,7 +59,7 @@ ATLAS Collaboration.
 CMS collaboration.
 \newblock Alignment of the cms tracker with large hadron collider data.
 
-\bibitem{ref_WWg8TeV}
+\bibitem{ref_Wgg8TeV}
 CMS collaboration.
 \newblock Wgg, 8 tev.
 
@@ -80,6 +83,9 @@ Wikipedia article. cross section (physics).
 D0 Combination of W$\gamma$, WW, WZ and VW using 8.6 fb-1 of 2 TeV $p\bar{p}$
   collisions Phys.Lett. B718 (2012) 451-459.
 
+\bibitem{ref_DAgostini}
+D'agostini unfolding.
+
 \bibitem{ref_fig_CERNacceleratorComplex}
 website: http://cds.cern.ch/record/1621583/files/.
 
@@ -89,6 +95,12 @@ Available at: https://twiki.cern.ch/twiki/bin/view/CMSPublic/LumiPublicResults.
 \bibitem{ref_fig_LHCsectors}
 Available at:
   http://cds.cern.ch/journal/CERNBulletin/2014/24/News\%20Articles/1706606.
+
+\bibitem{ref_ggNtuplizer}
+ggntuplizer.
+
+\bibitem{ref_GITHUB}
+Github.
 
 \bibitem{ref_Lindsey_thesis}
 L.~Gray.
@@ -135,11 +147,17 @@ Available at:
   https://www-d0.fnal.gov/results/publications\_talks/thesis/snyder/html/node1%
 7.html.
 
+\bibitem{ref_MadGraph}
+MadGraph generator.
+
 \bibitem{ref_MCFM}
 MCFM generator.
 
 \bibitem{ref_MPII_Alg}
 Millepede ii algorithm.
+
+\bibitem{ref_myCode}
+mycode.
 
 \bibitem{ref_NASA}
 Nasa website.
@@ -179,6 +197,15 @@ website: https://inspirehep.net/record/1235541/files/LHC\_all.png.
 
 \bibitem{ref_fig_LHC_totalCS}
 website: https://muon.files.wordpress.com/2014/01/cms-sigma-vs-e.png.
+
+\bibitem{ref_RooFit}
+Roofit.
+
+\bibitem{ref_ROOT}
+Root.
+
+\bibitem{ref_RooUnfold}
+Roounfold.
 
 \bibitem{ref_Senka_thesis}
 PhD thesis.
