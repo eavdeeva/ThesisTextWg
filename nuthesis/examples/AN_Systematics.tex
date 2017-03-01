@@ -25,7 +25,7 @@ The results of the systematic error of $|N_{Ich}-N_{\sigma i\eta i\eta}|$ and th
 \begin{table}[h]
   \tiny
   \begin{center}
-  \caption{Syst. due to different ways to fit. $P_T^{\gamma}$ BARREL MUON}
+  \caption{Syst. due to different ways to fit. $W\gamma$, muon channel, barrel photons.}
   \begin{tabular}{|c|c|c|c|c|c|c|}
     bin &  MC   & data  & data  & MC cl. & MC cl. & yield\\ 
     lims & pred & $I_{ch}^{\gamma}$ & $\sigma_{i\eta i\eta}^\gamma$  & $I_{ch}^{\gamma}$  & $\sigma_{i\eta i\eta}^\gamma$   & average \\ \hline
@@ -50,7 +50,7 @@ The results of the systematic error of $|N_{Ich}-N_{\sigma i\eta i\eta}|$ and th
 \begin{table}[h]
   \tiny
   \begin{center}
-  \caption{Syst. due to different ways to fit. $P_T^{\gamma}$ ENDCAP MUON}
+  \caption{Syst. due to different ways to fit. $W\gamma$, muon channel, endcap photons.}
   \begin{tabular}{|c|c|c|c|c|c|c|c|}
     bin &  MC   & data  & data  & MC cl. & MC cl. & yield \\ 
     lims & pred & $I_{ch}^{\gamma}$ & $\sigma_{i\eta i\eta}^\gamma$  & $I_{ch}^{\gamma}$  & $\sigma_{i\eta i\eta}^\gamma$   & average\\ \hline
@@ -75,7 +75,7 @@ The results of the systematic error of $|N_{Ich}-N_{\sigma i\eta i\eta}|$ and th
 \begin{table}[h]
   \tiny
   \begin{center}
-  \caption{Syst. due to different ways to fit. $P_T^{\gamma}$ BARREL ELECTRON}
+  \caption{Syst. due to different ways to fit. $W\gamma$, electron channel, barrel photons.}
   \begin{tabular}{|c|c|c|c|c|c|c|}
     bin &  MC   & data  & data  & MC cl. & MC cl. & yield \\ 
     lims & pred & $I_{ch}^{\gamma}$ & $\sigma_{i\eta i\eta}^\gamma$  & $I_{ch}^{\gamma}$  & $\sigma_{i\eta i\eta}^\gamma$   & average \\ \hline
@@ -100,7 +100,7 @@ The results of the systematic error of $|N_{Ich}-N_{\sigma i\eta i\eta}|$ and th
 \begin{table}[h]
   \tiny
   \begin{center}
-  \caption{Syst. due to different ways to fit. $P_T^{\gamma}$ ENDCAP ELECTRON}
+  \caption{Syst. due to different ways to fit. $W\gamma$, electron channel, endcap photons.}
   \begin{tabular}{|c|c|c|c|c|c|c|c|}
     bin &  MC   & data  & data  & MC cl. & MC cl. & yield\\ 
     lims & pred & $I_{ch}^{\gamma}$ & $\sigma_{i\eta i\eta}^\gamma$  & $I_{ch}^{\gamma}$  & $\sigma_{i\eta i\eta}^\gamma$   & average \\ \hline
@@ -129,9 +129,11 @@ The uncerntainty on the $Z\gamma$ MC normalization for jets$\rightarrow\gamma$ b
 \label{sec:Systematics_OtherSources}
 % e to gamma
 
-The next significant uncerntainty after the uncerntainty due to jets$\rightarrow\gamma$ background estimation in the electron channel is the uncertainty due to $e\rightarrow\gamma$ background estimation. The uncertainty due to fit errors is taking into account by fitting $Z$-peak of a fully selected dataset except $Z$-mass window cut and of a dataset selected without $M_T^W$ cut. The fits plots of the datasets with and without $M_W^T$ cut applied are shown in App.~\ref{sec:EtogammaFitPlots} and~\ref{sec:EtogammaFitPlotsNoWMtCut} respectively.
+The next significant uncerntainty after the uncerntainty due to jets$\rightarrow\gamma$ background estimation in the electron channel is the uncertainty due to $e\rightarrow\gamma$ background estimation. This uncertainty is comprised of a fit bias and a statistical power of the MC samples used for this background estimation. 
 
-To other source of uncertainty comes from the limited statistics of all MC samples involved in the $e\rightarrow\gamma$ background estimation. The uncertainty is propagated through the unfolding, $A \times \epsilon$ correction, is divided over the luminosity and the bin width (for the differential cross section). Values of $e\rightarrow\gamma$ uncertainties from both sources are summarized in Tab.~\ref{tab:systInPercentEtogamma_ELECTRON_WGamma}.
+The uncertainty due to fit bias is taken into account by fitting $Z$-peak before and after $M_T^W$ cut is applied. Other selection cuts are applied except $Z$-mass window cut. The fits plots of the datasets before and after $M_W^T$ cut applied are shown in App.~\ref{sec:EtogammaFitPlotsNoWMtCut} and~\ref{sec:EtogammaFitPlots} respectively.
+
+Another source of uncertainty comes from the limited statistics of all MC samples involved in the $e\rightarrow\gamma$ background estimation. The uncertainty is propagated through the unfolding, $A \times \epsilon$ correction, is divided over the luminosity and the bin width (for the differential cross section). Values of $e\rightarrow\gamma$ uncertainties from both sources are summarized in Tab.~\ref{tab:systInPercentEtogamma_ELECTRON_WGamma}.
 
 % real gamma
 
@@ -144,19 +146,23 @@ For differential cross section, the statistical uncerntainty on the signal MC sa
   \item randomize migration matrix $100$ times according with the signal MC statistical uncertainties in each $[P_T^{gen},P_T^{reco}]$ bin;
   \item the unfolding is applied for each migration matrix;
   \item the standard deviation out of $100$ unfolding outputs is taken as a error;
-  \item the error is propagated through the $A\imes\epsilon$ correction and is divided over the luminosity and the bin width.
+  \item the error is propagated through the $A\times\epsilon$ correction and is divided over the luminosity and the bin width.
 \end{itemize}
 
 % Acc X Eff
 
-For the uncertainty due to the $A \times \epsilon$ correction, the signal MC statistial power is also taken into account. To estimate this uncertainty, we take the value of $N \cdot \Delat{(A\times \epsilon)} / ((A\times \epsilon)^2)$, where $N$ is an yield for given bin after unfolding but before $A \times \epsilon$ correction. Then the uncertainty is divided over the luminosity and the bin width (for the differential cross section).
+For the uncertainty due to the $A \times \epsilon$ correction, the signal MC statistial power is also taken into account. To estimate this uncertainty, we take the value of 
+\begin{equation}
+\Delta N_{true}^i= N_{acc}^i \cdot \frac{\Delta{(A\times \epsilon)^i}} { ((A\times \epsilon)^{i2})}, 
+\end{equation}
+\noindent{where $N_{acc}$ is an yield for given bin after unfolding but before $A \times \epsilon$ correction. Then the uncertainty is divided over the luminosity and the bin width (for the differential cross section).}
 
 % MET
 
 Another source of the systematic uncertainty is the uncertainty of $E_T^{miss}$ mismodeling in the MC. To estimate this uncertainty, we:
 \begin{itemize}
-  \item vary the $P_T$ of the photons, electrons (for the electron channel) and jets in the event which are available in the ntuple by their uncertainties as prescribed by POG;
-  \item summ up all the listed contributions as the Lorentz vectors and proparage their variation to the variation of $E_T^{miss}$;
+  \item vary the $P_T$ of the photons, electrons (for the electron channel) and jets in the event by their uncertainties as prescribed by POG;
+  \item sum up all the listed contributions as the Lorentz vectors and proparage their variations to the variation of $E_T^{miss}$;
   \item recalculate $M_T^{W}$;
   \item recompute $A \times \epsilon$ and unfolding constants with the new $M_T^{W}$ values;
   \item recompute the cross section values;
@@ -170,24 +176,18 @@ The contribution from the uncertainties of the efficiency scale factors are also
 %TODO:\\
 %Momentum scale and resolution (variations prescribed by POGs). Need to think more carefully how to implement technically \\
 
-% PU
+% PU, Lumi
 
-The systamatic error due to pileup reweighting is estimated by variyng the pileup cross section by $\pm5\%$.
-
-% Lumi
-
-The luminosity uncertainty is~$2.6\%$.
+The systamatic error due to pileup reweighting is estimated by variyng the pileup cross section by $\pm5\%$. The luminosity uncertainty is~$2.6\%$.
 
 \subsection{Results}
 
-The relative systematic uncertainties are summarized in Tab.~\ref{tab:systInPercent_MUON_WGamma} and Tab.~\ref{tab:systInPercent_ELECTRON_WGamma} for the muon and electron channels respectively. The $|N_{Ich}-N_{\sigma{i\eta i\eta}}|$ stands for the portion of the jets$\rightarrow\gamma$ systematic uncertainty and is not a difference between $N_{Ich}$ and $N_{\sigma{i\eta i\eta}}$.
-
-When systematic uncertainties are propagated through unfolding, a correlation matrix appears for each such uncertainty. Correlation matrices for different systematic uncertainties are plotted in App.~\ref{sec:corrMatrices}.
+The relative systematic uncertainties are summarized in Tab.~\ref{tab:systInPercent_MUON_WGamma} and Tab.~\ref{tab:systInPercent_ELECTRON_WGamma} for the muon and electron channels respectively. When systematic uncertainties are propagated through unfolding, a correlation matrix appears for each such uncertainty. Correlation matrices for different systematic uncertainties are plotted in App.~\ref{sec:corrMatrices}.
 
 \begin{table}[h]
   \scriptsize
   \begin{center}
-  \caption{Relative errors [\%]. MUON $W\gamma$}
+  \caption{Relative errors [\%]. $W\gamma$, muon channel. The details of the ``syst other'' column are provided in Tab.~\ref{tab:systInPercentSmallSysts_MUON_WGamma}. }
    \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
     bin  & err & syst & $Z\gamma$ MC & templ & SFs & syst & syst & syst\\
     lims  & stat & $|N_{Ich}-N_{\sigma{i\eta i\eta}}|$ & norm & stat & err & lumi & other & total\\ \hline
@@ -214,7 +214,7 @@ When systematic uncertainties are propagated through unfolding, a correlation ma
 \begin{table}[h]
   \scriptsize
   \begin{center}
-  \caption{Relative errors [\%]. ELECTRON $W\gamma$}
+  \caption{Relative errors [\%]. $W\gamma$, electron channel. The details of the ``syst other'' and ``$e\rightarrow\gamma$''column are provided in Tab.~\ref{tab:systInPercentSmallSysts_ELECTRON_WGamma} and~\ref{tab:systInPercentEtogamma_ELECTRON_WGamma} respectively. }
    \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
     bin  & err & syst & $Z\gamma$ MC & templ & SFs & syst & $e\rightarrow\gamma$ & syst & syst\\
     lims  & stat & $|N_{Ich}-N_{\sigma{i\eta i\eta}}|$ & norm & stat & err & lumi &  & other & total\\ \hline
@@ -241,7 +241,7 @@ When systematic uncertainties are propagated through unfolding, a correlation ma
 \begin{table}[h]
   \scriptsize
   \begin{center}
-  \caption{Relative systematic uncertainties [\%] of smaller contributions. MUON $W\gamma$}
+  \caption{Relative systematic uncertainties [\%] of smaller contributions. $W\gamma$, muon channel.}
   \begin{tabular}{|c|c|c|c|c|c|c|}
     bin  & syst & real-$\gamma$ & $A\times\epsilon$ & $M_T^W$ & PU & unf\\
     lims  & other & bkg & MC stat & cut & weight & MC stat\\ \hline
@@ -267,7 +267,7 @@ When systematic uncertainties are propagated through unfolding, a correlation ma
 \begin{table}[h]
   \scriptsize
   \begin{center}
-  \caption{Relative systematic uncertainties [\%] of smaller contributions. ELECTRON $W\gamma$}
+  \caption{Relative systematic uncertainties [\%] of smaller contributions. $W\gamma$, electron channel.}
   \begin{tabular}{|c|c|c|c|c|c|c|}
     bin  & syst & real-$\gamma$ & $A\times\epsilon$ & $M_T^W$ & PU & unf\\
     lims  & other & bkg & MC stat & cut & weight & MC stat\\ \hline
@@ -293,7 +293,7 @@ When systematic uncertainties are propagated through unfolding, a correlation ma
 \begin{table}[h]
   \scriptsize
   \begin{center}
-  \caption{Relative systematic uncertainties [\%] of $e\rightarrow\gamma$ background estimation. ELECTRON $W\gamma$}
+  \caption{Relative systematic uncertainties [\%] of $e\rightarrow\gamma$ background estimation. $W\gamma$, electron channel.}
   \begin{tabular}{|c|c|c|c|}
     bin  & $e\rightarrow\gamma$ & $e\rightarrow\gamma$  & $e\rightarrow\gamma$ samp.\\
     lims  &  & y/n $M_T^W$ cut & stat\\ \hline

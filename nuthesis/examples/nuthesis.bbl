@@ -59,6 +59,12 @@ ATLAS Collaboration.
 CMS collaboration.
 \newblock Alignment of the cms tracker with large hadron collider data.
 
+\bibitem{ref_trackerPerformance}
+CMS collaboration.
+\newblock Description and performance of track and primary-vertex
+  reconstruction with the cms tracker.
+\newblock Available at: https://arxiv.org/abs/1405.6569.
+
 \bibitem{ref_Wgg8TeV}
 CMS collaboration.
 \newblock Wgg, 8 tev.

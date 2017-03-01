@@ -20,7 +20,7 @@ In the physics experiments we measure a number of events of the specific process
     select events & $N_{sel}^j$ &    $N_{sel}$       \\ \hline
     subtract background & $N_{sign}^j = N_{sel}^j - N_{bkg}^j$ &    $N_{sign}=N_{sel}-N_{bkg}$       \\ \hline
     unfold   & $N_{acc}^i = U_{ij} \cdot N_{sign}^j$ &    $-$       \\ \hline
-    correct for the acceptance and efficiency & $N_{true}^i = \frac{N_{acc}}{(A \times\epsilon)^i}$ &  $N_{true}=\frac{N_{sign}}{A\times\epsilon}$       \\ \hline
+    correct for the acceptance and efficiency & $N_{true}^i = \frac{N_{acc}^i}{(A \times\epsilon)^i}$ &  $N_{true}=\frac{N_{sign}}{A\times\epsilon}$       \\ \hline
     divide over luminosity and bin width & $ \left( \frac{d\sigma}{dP_{T}^\gamma} \right) ^i = \frac{N_{true}^i}{L \cdot (\Delta P_T^\gamma)^i}$  &  $\sigma = N_{true}/L$       \\ \hline
     estimate systematic uncertainties &  &         \\ \hline
   \end{tabular}
