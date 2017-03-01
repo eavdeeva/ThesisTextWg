@@ -9,7 +9,7 @@
 
 % DOUBLE CHECK WITH FRANK'S PRESENTATION
 % MAKE SURE THERE IS NO PLAGIARISM
-The concept of track-based alignment can be illustrated in the example of the alignment of a toy tracker (Fig.~\ref{fig:toyTracker_part1}-\ref{fig:toyTracker_part2}). A charged particle crosses a toy tracker of six flat equidistant modules. Because real geometry of the tracker differs from the ideal one, hits are recorded at the places different from the design ideal places. A large number of tracks is recorded and processes to determine positions and tilts of the modules.
+The concept of track-based alignment can be illustrated in the example of the alignment of a toy tracker (Fig.~\ref{fig:toyTracker_part1}-\ref{fig:toyTracker_part2}). A charged particle crosses a toy tracker of six flat equidistant modules. Because real geometry of the tracker differs from the ideal one, hits are recorded at the places different from the design ideal places. We record and process a large number of tracks to determine positions and orientations of the modules.
 
 \begin{figure}[htb]
     \begin{center}
@@ -51,7 +51,7 @@ In CMS, we have two alignment algorithms: Millepede-II~\cite{ref_MPII_Alg} and H
 
 We can align the large substructures with respect to the global CMS coordinate system and individual modules with respect to the coordinate systems of their substructures. The parameters to align large substructures include three coordinates to determine location and three angles to determine orientation of the substracture. At the module level, we align positions and rotations with respect to the positions and angles of the corresponding large structure (Fig.~\ref{fig:alignmentParameters}). Also at the module level, we align for surface deformations which are described by three parameters per sensor (Fig.~\ref{fig:surfaceDeformations}). 
 
-In addition to particles originating from $pp$ collisions of the LHC, CMS also detects muons that originate from interactions of cosmic particles with the Earth's atmosphere. Tracks left by these two types of particles in the tracking system are referred as collision and cosmic tracks respectively. Both types of tracks are necessary for the alignment. %Cosmic tracks pass through the detector vertically and do not allow us to connect different subdetectors to one another. Collision tracks originate from the collision point and go in all directions. However, those tracks which cross TEC are all almost collinear and, therefore, it is difficult to measure $z$-coordinate of TEC modules with collision tracks only.
+In addition to particles originating from $pp$ collisions of the LHC, CMS also detects muons that originate from interactions of cosmic particles with the Earth's atmosphere. Tracks left by these two types of particles in the tracking system are referred as collision and cosmic tracks respectively. We need both types of tracks for the alignment. %Cosmic tracks pass through the detector vertically and do not allow us to connect different subdetectors to one another. Collision tracks originate from the collision point and go in all directions. However, those tracks which cross TEC are all almost collinear and, therefore, it is difficult to measure $z$-coordinate of TEC modules with collision tracks only.
 
 \begin{figure}[htb]
     \begin{center}
@@ -69,9 +69,9 @@ In addition to particles originating from $pp$ collisions of the LHC, CMS also d
     \label{fig:surfaceDeformations}
 \end{figure}
 
-It is necessary to align a part of the tracking system whenever we suspect a physical change in a location or an orientation this part. First of all, whenever a part of the CMS tracker is taken out and placed back, all large structures are disturbed and, therefore, need to be realigned. Also whenever a magnet is turned on and off, different parts of tracking system shift with respect to one another. Pixel half barrels are not screwed firmly. They are moving along each other on rails and, therefore, need to be realigned every~15 minutes. Realignment on the module level is necessary when modules are replaced. Also, module deformations change when the temperature changes. 
+It is necessary to align a part of the tracking system whenever we suspect a physical change in a location or an orientation of this part. First of all, whenever a part of the CMS tracker is taken out and placed back, we need to realign it. Also whenever a magnet is turned on and off, different parts of the tracking system shift with respect to one another. Pixel half barrels are not screwed firmly, and are moving along each other on rails, therefore, they need to be aligned every~15 minutes. Realignment is also necessary when modules are replaced or when the temperature changes. %because it causes the module deformations. 
 
-After the procedure of the tracking system alignment is performed, it is necessary to validate the results. Chapter~\ref{sec:alignmentResults} discusses various tools of alignment validation using the example of the tracking system alignment based on the~2015 data.   
+After the procedure of the tracking system alignment is performed, we validate the results. Chapter~\ref{sec:alignmentResults} discusses various tools of alignment validation using the example of the tracking system alignment based on the~2015 data.   
 
 %\begin{figure}[htb]
 %    \begin{center}
