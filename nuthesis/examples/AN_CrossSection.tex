@@ -1,31 +1,31 @@
 \section{Cross Section}
 \label{sec:AN_CrossSection}
 
-The cross section is computed as described in the beginning of Ch.~\ref{sec:AN_WgMeas}. For comparison purposes, in addition to the measured cross section, we also estimate the cross section beased on the signal MC sample.
+The cross section is computed as described in the beginning of Ch.~\ref{sec:AN_WgMeas}. For comparison purposes, in addition to the measured cross section, we also estimate the cross section based on the signal MC sample which is referred as the MC-based cross section.
 
 
-The cross section of the whole simulated sample was computed with MCFM~\cite{ref_MCFM} in NLO and is for the dedicated signal MC sample $\sigma(sample)$=553.92 pb. The MC sample was generated with MadGraph~\cite{ref_MadGraph}, and the cross section in our selected phase space was computed as 
+The cross section of the whole simulated sample was computed with MCFM in NLO and is for the dedicated signal MC sample $\sigma_1=553.92$~pb. The MC sample was generated with MadGraph, and the cross section in our selected phase space was computed as 
 
 \begin{center}
-$\sigma(phase space) = \sigma(sample) \cdot N_{phase space} / N_{sample}$, 
+$\sigma_2 = \sigma_1 \cdot N_2 / N_1$, 
 \end{center} 
 
-\noindent{where  $N_{phase space}$ and $N_{sample}$ are numbers of events falling into selected phase space and generated in the whole MC sample respectively. For the differential cross section, $N_{phase space}$ is number of events falling into specific $P_T^{\gamma}$ bin and to compute }
+\noindent{where  $N_2$ and $N_1$ are numbers of events falling into selected phase space and generated in the whole MC sample respectively. For the differential cross section, $N_2$ is number of events falling into specific $P_T^{\gamma}$ bin and to compute }
 
 \begin{center}
-$d\sigma / dP_T^{\gamma}$, 
+\frac{d\sigma }{ dP_T^{\gamma}}, 
 \end{center} 
 
 \noindent{we divide over the bin width.} 
 
 Tables~\ref{tab:sc_mc_vs_meas_MUON_WGamma}-\ref{tab:sc_mc_vs_meas_ELECTRON_WGamma} and Fig.~\ref{fig:CS_Wg} summarize the results. The measured cross section agrees with the MC-based cross section within the estimated errors. The measurement is sytematically-dominated. 
 
-For additional cross check, we estimated cross section of $Z\gamma$ and compared the result with the published CMS result for $Z\gamma$ at~$8$~TeV. The summary of this $Z\gamma$ check is available in App.~\ref{sec:ZgCheck}.
+For additional validation of the measurement procedure, we estimate the cross section of $Z\gamma$ and compare the result with the published CMS result for $Z\gamma$ at~$8$~TeV. The summary of this $Z\gamma$ check is available in App.~\ref{sec:ZgCheck}.
 
 \begin{table}[h]
   \scriptsize
   \begin{center}
-  \caption{Cross section and errors. $W\gamma$, MUON}
+  \caption{Cross section and errors. $W\gamma$, muon channel.}
   \begin{tabular}{|c|c|c|}
     bin & $d\sigma/dP_{T}$ &$d\sigma/dP_{T}$ \\ 
     lims & MC based &    meas.       \\ \hline
@@ -51,7 +51,7 @@ For additional cross check, we estimated cross section of $Z\gamma$ and compared
 \begin{table}[h]
   \scriptsize
   \begin{center}
-  \caption{Cross section and errors. $W\gamma$, ELECTRON}
+  \caption{Cross section and errors. $W\gamma$, electron channel.}
   \begin{tabular}{|c|c|c|}
     bin & $d\sigma/dP_{T}$ &$d\sigma/dP_{T}$ \\ 
     lims & MC based &    meas.       \\ \hline
