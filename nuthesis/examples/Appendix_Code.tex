@@ -9,16 +9,16 @@
 % CMSSW
 The CMS software (CMSSW)~\cite{ref_CMSSW} is the tool developed to process all CMS responses, reconstruct particles and prepare data in a condition convinient for the final physics measurements. CMSSW is mostly written on C++ and python programming languages. It has hundreds of contributors that use GITHUB~\cite{ref_GITHUB} to share their work. All CMS physics measurements use CMSSW.
 
-The procedure of the tracker alignment and validation described in Ch.~\ref{sec:alignment} is also part of the CMSSW although the Millepede-II algorithm itself is implemented in the external software tool.
+The procedure of the tracker alignment and validation described in Ch.~\ref{sec:alignment} is also a part of the CMSSW although the Millepede-II algorithm itself is implemented in the external software tool.
 
 %ROOT, RooFit
-The samples for the physics measurements are stored in a format of ROOT trees. The ROOT tree stores mulpiple parameters for each entry and allows easy access to all parameters. These properties makes it conviniet to use ROOT trees for physics measurement where, usually, one entry corresponds to one event. The ROOT trees proveded by reconstruction algorithms of CMSSW are refered as ``tuples''. Tuples are further processed by different large physics subgroups that prepare ``ntuples''. Ntuples store only information that is necessary for a specific class of measurements and arrange it in a more convinient way for this specifical class of measurements.  
+The samples for the physics measurements are stored in a format of ROOT trees. The ROOT tree contains mulpiple parameters for each entry and allows easy access to all parameters. These properties makes it convinient to use ROOT trees for particle physics measurements where, usually, one entry corresponds to one event. The ROOT trees proveded by reconstruction algorithms of CMSSW are refered as ``tuples''. Tuples are further processed by different large physics subgroups that prepare ``ntuples''. Ntuples store only information that is necessary for a specific class of measurements and arrange it in a more convinient way for this specifical class of measurements.  
 
 % ggNtuples
-The author of this dissertation used ntuples prepared by Central Taiwan University and Kansas State University groups mostly for various diboson and triboson measurements. The code of the program that prepares the ntuples is available in the GITHUB~\cite{ref_ggNtuplizer} .
+The author of this dissertation used ntuples prepared by Central Taiwan University and Kansas State University groups mostly for various diboson and triboson measurements. The code of the program that prepares the ntuples is available at~\cite{ref_ggNtuplizer}.
 
 % my code
-The code for the CMS $W\gamma$ measurement at $\sqrt{s}=8$~TeV was written by the author of this dissertation using C++ language, ROOT and RooFit~\cite{ref_RooFit} packages, and RooUnfold~\cite{ref_RooUnfold} class for the detector resolution unfolding. Shell scripts are used to run the chain of C++ programs corresponding to separate physics measurement steps. The code is available at GITHUB~\cite{ref_GITHUB}.
+The code for the CMS $W\gamma$ measurement at $\sqrt{s}=8$~TeV was written by the author of this dissertation using C++ language, ROOT and RooFit~\cite{ref_RooFit} packages, $RooUnfold$~\cite{ref_RooUnfold} class for the detector resolution unfolding, and $RooCMSShapePdf$~\cite{ref_RooCMSShapePdf} for $e\rightarrow\gamma$ background estimation. Auxilary shell scripts are used to run the chain of C++ programs corresponding to separate physics measurement steps. The code is available at~\cite{ref_GITHUB}.
 
 % cross checks
 Several cross check were performed with other collaborators to make sure the code is free of major errors. Especially the event selection and background estimation for the electron channel is fully implemented by both Kansas State University group and the author of this dissertation in separate frameworks. These procedures are carefully cross checked between two developers.  
