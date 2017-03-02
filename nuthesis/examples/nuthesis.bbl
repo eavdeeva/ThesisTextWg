@@ -204,6 +204,9 @@ website: https://inspirehep.net/record/1235541/files/LHC\_all.png.
 \bibitem{ref_fig_LHC_totalCS}
 website: https://muon.files.wordpress.com/2014/01/cms-sigma-vs-e.png.
 
+\bibitem{ref_RooCMSShapePdf}
+Roocmsshapepdf.
+
 \bibitem{ref_RooFit}
 Roofit.
 
