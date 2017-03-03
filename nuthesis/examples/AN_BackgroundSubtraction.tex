@@ -15,7 +15,7 @@ F(V_{fit})=N_{true} \cdot T_{true}(V_{fit}) + N_{fake} \cdot T_{fake}(V_{fit}),
 \noident{where $V_{fit}$ is a fit variable, $N_{true}$ and $N_{fake}$ are numbers of real and fake photons in the data sample respectively, and $F(V_{fit})$ is a fit function.}
 
 % EXPLAIN WHAT IS I_{CH}^{\gamma} and WHAT IS SIHIH
-We use $V_{fit}=I_{ch}^{\gamma}$ and $V_{fit}=\sigma_{i\eta i\eta}^{\gamma}$. To prepare templates, we use $Z\gamma$-selected dataset. Real-$\gamma$ templates $T_{true}$ are taken from the FSR events of $Z\gamma\rightarrow\mu\mu\gamma$ while fake-$\gamma$ templates are taken from the ISR events of $Z\gamma\rightarrow\mu\mu\gamma$.
+We use charged hadron isolation $I_{ch}^{\gamma}$ and a shower shape variable $\sigma_{i\eta i\eta}^{\gamma}$ as $V_{fit}$. To prepare templates, we use $Z\gamma$-selected dataset. Real-$\gamma$ templates $T_{true}$ are taken from the FSR events of $Z\gamma\rightarrow\mu\mu\gamma$ while fake-$\gamma$ templates are taken from the ISR events of $Z\gamma\rightarrow\mu\mu\gamma$.
 
 The FSR $Z\gamma$ selection has looser muon-photon separation cut of $\Delta R_{min}(\mu,\gamma)>0.4$ (while the nominal separation cut is $\Delta R_{min}(\mu,\gamma)>0.7$ for both $Z\gamma$ and $W\gamma$ selections) and has three-particle invariant mass cut of $M_{\gamma\mu\mu}<101$~GeV. The FSR sample does not have enough number of events for high $P_{T}^{\gamma}$ bins but the distribution of $I_{ch}^{\gamma}$ of real photons does not depend on $P_{T}^{\gamma}$ and, therefore, events for $P_{T}^{\gamma}>15$~GeV are all merged to prepare templates. Distributions of $\sigma_{i\eta i\eta}^{\gamma}$ do depend on $P_T^{\gamma}$. Only events of $P_T^{\gamma}>30$~GeV are merged together to prepare templates for all $P_T^{\gamma}>30$~GeV bins. Templates for barrel and endcap photons are prepared separately.
 
@@ -65,11 +65,6 @@ window cut. After that, numbers of events in DY+jets MC samples $N_{MC-Zpeak}^{e
 
 %  \item templates for RooNDKeysPdf: $e\rightarrow\gamma$ portion of the DYjets MC separately for each pt-eta bin
 %  \item $e\rightarrow\gamma$ portion of the DYjets MC: a photon has a gen-level electron within dR=0.4 
-
-
-
-
-
 
 
 \subsection{Other Backgrounds}

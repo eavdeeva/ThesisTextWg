@@ -15,18 +15,11 @@
 %My words:
 The non-zero detector resolution in $P_T^\gamma$ causes the bin-by-bin migration. The reconstructed $P_T^{\gamma(reco)}$ may not coincide with the true $P_T^{\gamma(true)}$, and, therefore, the event reconstructed in a $P_T^{\gamma}$ bin $i_{reco}$ may, in fact, belong to the bin $i_{true} \neq i_{reco}$. To recover true $P_T^{\gamma}$ spectrum, we apply the procedure of the detector resolution unfolding.
 
-Unfolding constants are derived from the signal MC sample ($W\gamma\rightarrow\mu\nu_{\mu}\gamma$/$W\gamma\rightarrow{e}\nu_{e}\gamma$) where both true (gen-level) and reconstructed $P_T^\gamma$ spectum are known. We use the D'Agostini method~\cite{ref_DAgostini} which unfoldes the reconstructed spectrum iteratively.  
+Unfolding constants are derived from the signal MC sample ($W\gamma\rightarrow\mu\nu_{\mu}\gamma$/$W\gamma\rightarrow{e}\nu_{e}\gamma$) where both true (gen-level) and reconstructed $P_T^\gamma$ spectrum are known. We use the D'Agostini method~\cite{ref_DAgostini} which unfolds the reconstructed spectrum iteratively.  
 
 % WHAT IS MIGRATION MATRIX, WHAT IS RESPONSE MATRIX
 
 Using the MC samples, we prepare the migration matrix (Fig.~\ref{fig:migrMatrices_Wg}) which has the number of selected signal events in each ($i_{reco}$,$i_{gen}$) bin. The migration matrix is then normalized in each $i_{reco}$ bin, and we receive the response matrix $R_{ji}$  (Fig.~\ref{fig:respMatrices_Wg}) which relates reconstructed and gen-level spectra as $N^{reco}_j = R_{ji} N^{gen}_i$.
-
-%\begin{itemize}
-%  \item in fully selected signal MC sample, each event has a reconstructed level photon with $P_T^{\gamma(reco)}$ and matched generator level photon with $P_T^{\gamma(gen)}$
-%  \item $i_r$ - bin number determined by $P_T^{\gamma(reco)}$, $i_g$ - bin number determined by $P_T^{\gamma(gen)}$
-%  \item element $M_{i_g,i_r}$ of a migration matrix is weighted number of events in corresponding $[P_T^{\gamma(gen)},P_T^{\gamma(reco)}]$ bin
-%\end{itemize}
-%\noindent{The response matrix (Fig.~\ref{fig:respMatrices_Wg}) is the migration matrix normalized to each $i_r$ bin.}
 
 In data, we only have $N^{reco}_j$ which is our fully selected and background subtracted $P_T^{\gamma}$ spectrum. The $R_{ji}$ determined by signal MC is used to determine $N^{true}_i$ in data.
 
@@ -34,7 +27,7 @@ After $P_T^{\gamma}$ spectrum is unfolded, measurements in different $P_T^{\gamm
 
 To validate the detector resolution unfolding procedure, we perform the MC closure check. Gen-level and reconstructed yields are prepared using the signal MC. Then reconstructed yields are smeared by the Gaussian distribution according to the errors on the yields. The smeared yields are unfolded and compared to the gen-level yields. In addition to the D'Agostini method, we check the performance of the matrix inversion method for the unfolding which recovers the true yields as $N^{true}_i = (R_{ji})^{-1} N^{reco}_j$. 
 
-The results of the MC closure check are summarized in Tab.~\ref{tab:unf_mc_closure_MUON_WGamma}-\ref{tab:unf_mc_closure_ELECTRON_WGamma} for the muon and electron channels respectively. The unfolded yields show reasonable agreement to the gen-level yields except the underflow bin (10-15 GeV). The disagreement in the underflow bin may be caused by events with $P_T^{\gamma}<10$ GeV which are not available in our sample. 
+The results of the MC closure check are summarized in Tab.~\ref{tab:unf_mc_closure_MUON_WGamma}-\ref{tab:unf_mc_closure_ELECTRON_WGamma} for the muon and electron channels respectively. The unfolded yields show reasonable agreement to the gen-level yields except the underflow bin ($10-15$~GeV). The disagreement in the underflow bin may be caused by events with $P_T^{\gamma}<10$~GeV which are not available in our sample. 
 
 %$M^{corr}_{ij} = \frac{C_i \cdot C_j}{\sqrt{(C_{ii} \cdot C_{jj})}} $, where $C_{ij}$ is a matrix element of a covariance matrix.
 
@@ -73,7 +66,7 @@ The results of the MC closure check are summarized in Tab.~\ref{tab:unf_mc_closu
 \begin{table}[h]
   \scriptsize
   \begin{center}
-  \caption{Unfolding, MC closure test. MUON WGamma}
+  \caption{Unfolding, MC closure test. $W\gamma$, muon channel.}
   \begin{tabular}{|c|c|c|c|c|}
   bin &  yields &   yields &  unfolded &  unfolded \\ \hline
    limits &  gen-level & rec &  inversion &  D'Agostini \\ \hline
@@ -99,7 +92,7 @@ The results of the MC closure check are summarized in Tab.~\ref{tab:unf_mc_closu
 \begin{table}[h]
   \scriptsize
   \begin{center}
-  \caption{Unfolding, MC closure test. ELECTRON WGamma}
+  \caption{Unfolding, MC closure test. $W\gamma$, electron channel.}
   \begin{tabular}{|c|c|c|c|c|}
   bin &  yields &   yields &  unfolded &  unfolded \\ \hline
    limits &  gen-level & rec &  inversion &  D'Agostini \\ \hline
