@@ -13,11 +13,19 @@ To select events with significant $E_T^{miss}$, we apply a cut on the transverse
 \begin{equation}
 $M_T^W=\sqrt{(2 \cdot P_T^{l} \cdot E_T^{miss} \cdot (1-\cos{(\phi^{l}-\phi^{miss})}))}$,
 \end{equation}
-\noindent{where $P_T^l$ is a lepton transverse momentum, $\phi^{l}$ is an azimuthal angle of the lepton momentum, and $\phi^{miss}$ is an azimuthal angle of the missing transverse momentum.}
+\noindent{where $P_T^l$ is a lepton transverse momentum, $\phi^{l}$ is an azimuthal angle of the lepton momentum, and $\phi^{miss}$ is an azimuthal angle of the missing transverse momentum. The $M_T^W$ distribution is shown in Fig.~\ref{fig:DATAvsMC_WMt}.}
 
 After that, the significant background from DY+jets$\rightarrow e e \gamma$ in the electron channel remains. This background is caused by one of the electrons misidentified as a photon. Its contribution is the most significant around the invariant mass of the electron-photon system $M_{e\gamma}$ is close to the mass of the $Z$ boson as shown in the $M_{e\gamma}$ distribution (Fig.~\ref{fig:DATAvsMC_Mpholep1}).  To reject this background, we apply $Z$-mass window cut: events with $70$~GeV$<M_{e\gamma}<110$~GeV are rejected. 
 
 Finally, the separation $\Delta R=\sqrt{({\Delta\phi}^2+{\Delta\eta}^2)}$ between the final state lepton and photon is required to be $\Delta R(l,\gamma)>0.7$ to avoid divergence coming from the ISR and FSR contributions and also to enhance the TGC contribution. In case if there are more than one photon in the event passed all selection criteria including the $\Delta R$ cut, the candidate with the hardest photon is selected (one with the highest~$P_T^{\gamma}$). 
+
+\begin{figure}[htb]
+  \begin{center}
+   \includegraphics[width=0.5\textwidth]{../figs/figs_v11/MUON_WGamma/PrepareYields/c_TotalDATAvsMC_EtaCommon__WMtVERY_PRELIMINARY.pdf}\includegraphics[width=0.5\textwidth]{../figs/figs_v11/ELECTRON_WGamma/PrepareYields/c_TotalDATAvsMC_EtaCommon__WMtVERY_PRELIMINARY.pdf}
+  \caption{Data vs MC plots, $M_T^W$. Left: muon channel, right: electron channel. All selection criteria except $M_{T}^W$ cut are applied on these plots. $15$~GeV$<P_T^{\gamma}<45$~GeV. Events with $M_{T}^W>40$~GeV are selected in both channels.}
+  \label{fig:DATAvsMC_WMt}
+  \end{center}
+\end{figure}
 
 \begin{figure}[htb]
   \begin{center}
