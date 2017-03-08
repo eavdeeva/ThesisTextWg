@@ -19,7 +19,7 @@ Unfolding constants are derived from the signal MC sample ($W\gamma\rightarrow\m
 
 % WHAT IS MIGRATION MATRIX, WHAT IS RESPONSE MATRIX
 
-Using the MC samples, we prepare the migration matrix (Fig.~\ref{fig:migrMatrices_Wg}) which has the number of selected signal events in each ($i_{reco}$,$i_{gen}$) bin. The migration matrix is then normalized in each $i_{reco}$ bin, and we receive the response matrix $R_{ji}$  (Fig.~\ref{fig:respMatrices_Wg}) which relates reconstructed and gen-level spectra as $N^{reco}_j = R_{ji} N^{gen}_i$.
+Using the MC samples, we prepare the migration matrix which has the number of selected signal events in each ($i_{reco}$,$i_{gen}$) bin. The migration matrix is then normalized in each $i_{reco}$ bin, and we receive the response matrix $R_{ji}$  (Fig.~\ref{fig:respMatrices_Wg}) which relates reconstructed and gen-level spectra as $N^{reco}_j = R_{ji} N^{gen}_i$.
 
 In data, we only have $N^{reco}_j$ which is our fully selected and background subtracted $P_T^{\gamma}$ spectrum. The $R_{ji}$ determined by signal MC is used to determine $N^{true}_i$ in data.
 
@@ -31,14 +31,14 @@ The results of the MC closure check are summarized in Tab.~\ref{tab:unf_mc_closu
 
 %$M^{corr}_{ij} = \frac{C_i \cdot C_j}{\sqrt{(C_{ii} \cdot C_{jj})}} $, where $C_{ij}$ is a matrix element of a covariance matrix.
 
-\begin{figure}[htb]
-  \begin{center}
-   \includegraphics[width=0.90\textwidth]{../figs/figs_v11/MUON_WGamma/Constants/cMigrMatrix_MUON_WGamma__yield_pm_stat.pdf}\\
-\includegraphics[width=0.90\textwidth]{../figs/figs_v11/ELECTRON_WGamma/Constants/cMigrMatrix_ELECTRON_WGamma__yield_pm_stat.pdf}
-  \caption{Migration matrix derived from the signal MC.}
-  \label{fig:migrMatrices_Wg}
-  \end{center}
-\end{figure}
+%\begin{figure}[htb]
+%  \begin{center}
+%   \includegraphics[width=0.90\textwidth]{../figs/figs_v11/MUON_WGamma/Constants/cMigrMatrix_MUON_WGamma__yield_pm_stat.pdf}\\
+%\includegraphics[width=0.90\textwidth]{../figs/figs_v11/ELECTRON_WGamma/Constants/cMigrMatrix_ELECTRON_WGamma__yield_pm_stat.pdf}
+%  \caption{Migration matrix derived from the signal MC.}
+%  \label{fig:migrMatrices_Wg}
+%  \end{center}
+%\end{figure}
 
 \begin{figure}[htb]
   \begin{center}

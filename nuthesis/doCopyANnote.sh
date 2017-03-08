@@ -1,4 +1,4 @@
-#cp -r /home/hep/eavdeeva2/releases-GIT/cms_notes/notes/AN-15-055/trunk/figs_v11 /home/hep/eavdeeva2/ThesisTextWg/nuthesis/figs/
+cp -r /home/hep/eavdeeva2/releases-GIT/cms_notes/notes/AN-15-055/trunk/figs_v11 /home/hep/eavdeeva2/ThesisTextWg/nuthesis/figs/
 
 #cp -r /home/hep/eavdeeva2/releases-GIT/cms_notes/notes/AN-15-055/trunk/figs_v8/MUON_ZGamma/PrepareYields/*FSR*pdf /home/hep/eavdeeva2/ThesisTextWg/nuthesis/figs/figs_v11/MUON_ZGamma/PrepareYields/	
 #cp -r /home/hep/eavdeeva2/releases-GIT/cms_notes/notes/AN-15-055/trunk/figs_v8/MUON_ZGamma/PrepareYields/*Mpholeplep*pdf /home/hep/eavdeeva2/ThesisTextWg/nuthesis/figs/figs_v11/MUON_ZGamma/PrepareYields/
