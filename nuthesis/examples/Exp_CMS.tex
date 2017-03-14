@@ -90,21 +90,9 @@ It is important for the ECal to be able to distinguish between high energy photo
 %limitations
 
 \subsection{Hadron Calorimeter}
- % MY ORIGINAL TEXT
-%The HCal is placed right after the ECal and is the last subdetector within the magnet. The HCal measures energies of charged and neutral hadrons. In addition, the HCal determines the trajectory parameters. Match to the tracking system has to be done: if a matching track found, then it is a chagred hadron otherwise it is a neutral hadron. 
 
-%The HCal consists of alternate layers of absorbers and scintillators. Hadrons hit brass or steel plate of absorber producing secondary particles. When emerge into the scintillator, the particles induce hadronic and electromagnetic showers. All hadrons must be stopped inside the layers of the HCal.
-
-% CMS website
-
-%(1) QUOTE:
-%The Hadron Calorimeter (HCAL) measures the energy of “hadrons”, particles made of quarks and gluons (for example protons, neutrons, pions and kaons). Additionally it provides indirect measurement of the presence of non-interacting, uncharged particles such as neutrinos. Measuring these particles is important as they can tell us if new particles such as the Higgs boson or supersymmetric particles (much heavier versions of the standard particles we know) have been formed.
-%(1) MY WORDS:
 The HCal measures the energy of charged and neutral hadrons. Also, it plays a key role in the indirect detection of invisible particles like neutrinos. 
 
-%(2) QUOTE:
-%As these particles decay they may produce new particles that do not leave record of their presence in any part of the CMS detector. To spot these the HCAL must be “hermetic”, that is make sure it captures, to the extent possible, every particle emerging from the collisions. This way if we see particles shoot out one side of the detector, but not the other, with an imbalance in the momentum and energy (measured in the sideways “transverse” direction relative to the beam line), we can deduce that we’re producing “invisible” particles.
-%(2) MY WORDS:
 Invisible particles leave no record in CMS detector. They are detected by missing transverse energy ($E_T^{miss}$) that is determined as 
 \begin{equation}\label{eq:MET}
   E_T^{miss} = - | \sum \mathbf{P_T} |,
@@ -113,31 +101,16 @@ Invisible particles leave no record in CMS detector. They are detected by missin
 
 The HCal consists of the barrel, endcap and forward parts: HB, HE and HF in Fig.~\ref{fig:CMSschemView}, top, respectively. Its acceptance extends to $|\eta|=3.0$ for endcaps and to $|\eta|=5.3$ for forward HCal.
 
-%(3) QUOTE:
-%To ensure that we’re seeing something new, rather than just letting familiar particles escape undetected, layers of the HCAL were built in a staggered fashion so that there are no gaps in direct lines that a familiar particle might escape through. The HCAL is a sampling calorimeter [see explanation below] meaning it finds a particle’s position, energy and arrival time using alternating layers of “absorber” and fluorescent “scintillator” materials that produce a rapid light pulse when the particle passes through. Special optic fibres collect up this light and feed it into readout boxes where photodetectors amplify the signal.   When the amount of light in a given region is summed up over many layers of tiles in depth, called a “tower”, this total amount of light is a measure of a particle’s energy.
-%(3) MY WORDS:
 The HCal is a sampling calorimeter. It consists of alternating layers of absorbers and scintillators. When a hadron hits an absorber, it induces a hadronic shower. The light produced by the shower is collected on optic fibers and passed to the readout system. The total amount of light released in a certain region of the HCal is a measure of hadron's energy. In addition to the energy, the HCal also reconstructs the trajectory of the hadron.   
-
-%(4) QUOTE:
-%As the HCAL is massive and thick, fitting it into “compact” CMS was a challenge, as the cascades of particles produced when a hadron hits the dense absorber material (known as showers) are large, and the minimum amount of material needed to contain and measure them is about one metre.   
-%(4) MY WORDS:
-
-%(5) QUOTE:
-%To accomplish this feat, the HCAL is organised into barrel (HB and HO), endcap (HE) and forward (HF) sections. There are 36 barrel “wedges”, each weighing 26 tonnes. These form the last layer of detector inside the magnet coil whilst a few additional layers, the outer barrel (HO), sit outside the coil, ensuring no energy leaks out the back of the HB undetected.  Similarly, 36 endcap wedges measure particle energies as they emerge through the ends of the solenoid magnet.
-%(5) MY WORDS:
-% (Higher) The HCal consists of barrel, endcap and forward parts.  
-
-%Lastly, the two hadronic forward calorimeters (HF) are positioned at either end of CMS, to pick up the myriad particles coming out of the collision region at shallow angles relative to the beam line. These receive the bulk of the particle energy contained in the collision so must be very resistant to radiation and use different materials to the other parts of the HCAL. 
-
 
 \subsection{Muon System}
 
 %(1) QUOTE
 %Because muons can penetrate several metres of iron without interacting, unlike most particles they are not stopped by any of CMS's calorimeters. Therefore, chambers to detect muons are placed at the very edge of the experiment where they are the only particles likely to register a signal.
 %(1) MY WORDS
-Muons, unlike other visible particles, are not stopped by CMS calorimeters. Muons are the only particles that are registered in the muon system which is placed outside the magnet and which is the largest part of the CMS detector.
+Muons, unlike other visible particles, are not stopped by CMS calorimeters. The muon system, which is placed outside the magnet and which is the largest part of the CMS detector, is designed to register muons.
 
-There are four concentric layers of muon detectors (stations) and iron return yoke between them. Muons induce several hits in the muon stations which are later fitted and matched to the tracking system measurements to provide the best possible resolution in the measurements of the muon's trajectory and momentum.
+There are four concentric layers of muon detectors (stations) and the iron return yoke between them. Muons induce several hits in the muon stations which are later fitted and matched to the tracking system measurements to provide the best possible resolution in the measurements of the muon's trajectory and momentum.
 
 There are three types of muon chambers used in the CMS muon system: drift tubes (DTs), cathode strip chambers (CSCs) and resistive plate chambers (RPCs) (Fig.~\ref{fig:muonSystem}). Overall, there are~1400~muon chambers including~250~DTs,~540~CSCs and~610~RPCs.
 
@@ -178,7 +151,7 @@ RPCs are parallel capacitors made of high-resistivity plastic plates with a spac
 
 \subsection{Triggering and Data Aquisition}
 
-At peak luminosity, CMS experiences forty million proton-proton collisions per second that come in bunches separated by~25~ns. It is not technically feasible to readout all these events. Moreover, we do not need most of these events for a physics measurement because most of them have not resulted from interesting physics process. We have resources to store about one hundred events out of forty million, and that is why we need a trigger system that quickly decides what the best one hundred events are.
+At peak luminosity, CMS experiences~40~million proton-proton collisions per second that come in bunches separated by~25~ns. It is not technically feasible to read out all these events. Moreover, we do not need most of these events for a physics measurement because most of them have not resulted from interesting physics process. We have resources to store about one hundred events out of forty million, and that is why we need a trigger system that quickly decides what the best one hundred events are.
 
 %New events come before the events from the previous bunch crossing left the detector. To process the information from many different collisions at the same time, data is stored in pipelines.
 
@@ -188,9 +161,9 @@ If the triggers were too strict, we would select, e.g.,~ten events per second, n
 
 Thus, the challenge of the trigger system is to select the best one hundred events per second and do so quickly to be able to process every single event. To achieve this goal, a two-level trigger system was developed consisting of the Level~1 trigger (L1T) and the High Level Trigger (HLT) as shown in Fig.~\ref{fig:trigger_2level}.
 
-L1T is a hardware based trigger (Fig.~\ref{fig:trigger_L1}). It uses information from the ECal, HCal and muon system. L1T reduces the frequency of coming events from~40~MHz to~100~kHz. Events that did not pass the L1T are lost forever while events that pass the L1T are temporarily stored to get checked by the HLT.
+L1T is a hardware based trigger (Fig.~\ref{fig:trigger_L1}). It uses information from the ECal, HCal and muon system. L1T reduces the frequency of coming events from~40~MHz to~100~kHz. Events that did not pass the L1T are lost forever while events that pass the L1T are temporarily stored to be checked by the HLT.
 
-HLT is a software-based trigger. It uses information from all subdetectors and runs quick reconstruction and identification algorithms to determine types of particles and their kinematics. It reduces the number of events to~100~Hz. Events that did not pass HLT are lost forever. Events that pass HLT are arranged into appropriate datasets depending on HLT selection criteria they passed and stored for physics measurements.
+HLT is a software-based trigger. It uses information from all subdetectors and runs fast reconstruction and identification algorithms to determine types of particles and their kinematics. It reduces the event rate to~100~Hz. Events that did not pass HLT are lost forever. Events that pass HLT are arranged into appropriate datasets depending on HLT selection criteria they passed and stored for physics measurements.
 
 \begin{figure}[htb]
   \begin{center}
@@ -216,7 +189,10 @@ One particle can induce several different particle-flow elements in different su
 
 In each block, muons are considered first. A link between charged tracks in the tracking and muon systems comprise a global muon which produces one ``particle-flow muon''. The corresponding track in the tracking system is removed from the block and corresponding energy deposits are subtracted from ECal and HCal. Then electrons are reconstructed and identified using the tracking system and ECal. The corresponding tracks and ECal clusters are removed from the block. Remaining tracks and clusters are considered more carefully to identify charged hadrons, neutral hadrons, and photons.
 
-When all particles in the event are reconstructed and identified, $E_T^{miss}$ is determined. $E_T^{miss}$ is used in physics measurements as a measure of $P_T$ of neutrinos and other invisible particles in the event. Fake $E_T^{miss}$ can originate from particles that did not fall into the detector acceptance, particles that they did not reach the tracking system because their momenta was too low and, therefore, track curvature was too high, momenta mismeasurement, particle misidentification, cosmic rays particles, and machine background.
+When all particles in the event are reconstructed and identified, $E_T^{miss}$ is determined. 
+
+
+$E_T^{miss}$ is used in physics measurements as a measure of $P_T$ of neutrinos and other invisible particles in the event. Fake $E_T^{miss}$ can originate from particles that did not fall into the detector acceptance, particles that they did not reach the tracking system because their momenta was too low and, therefore, track curvature was too high, momenta mismeasurement, particle misidentification, cosmic rays particles, and machine background.
 
 In the measurement of this dissertation particle flow muons, electrons, photons, and $E_T^{miss}$ are used for all the major steps of the cross section measurement including event selection, background subtraction, various corrections, and determination of phase space restrictions and bin boundaries. Each step is described in greater details in~Ch.~\ref{sec:AN_WgMeas}. 
 
