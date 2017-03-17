@@ -7,7 +7,9 @@
 % MAY NOT NEED THIS SENTENCE HERE
 %Its main feature is a large magnet to create a magnetic field of~4T to curve charged particles in the tracking system and of~2T outside to curve muons in the muon system.
 
-CMS is a general-purpose detector designed for detecting various highly energetic particles which are produced in $pp$ collisions at the LHC~\cite{ref_CMS_TDR}. The CMS detector is cylindrically symmetric with the particle beam as the axis. Cartesian, cylindrical and spherical coordinates are all used to describe the CMS geometry, depending on the context. The $x$-axis of the CMS points towards the center of the LHC ring while the $y$-axis points vertically up. The orientaion of the $z$-axis corresponds to the counterclockwise direction of the LHC beam (Fig.~\ref{fig:CMScoord}). Cylindrical coordinates are defined as $r=\sqrt{x^2+y^2}$, $\phi=\arctan(y/x)$. Instead of the polar angle $\theta$, it is more convenient to use the pseudorapidity $\eta=-\ln{\tan{\theta/2}}$. A pseudorapidity ranges from $\eta=-\infty$ to $\eta=+\infty$ with $\eta=\pm \infty$ for directions parallel to the beam axis and $\eta=0$ for a direction perpendicular to the beamline. This variable is convenient for measurements because for typical physics process in $pp$ collisions the created particles tend to be distributed uniformly in $\eta$. The acceptance of the CMS in $\eta$ is limited and varies from $|\eta|<2.4$ to $|\eta|<5.3$ depending on a subdetector (Fig.~\ref{fig:CMSschemView}, top).   
+CMS is a general-purpose detector designed to register particles with energies of tens and hundreds~GeV which are produced in $pp$ collisions at the LHC~\cite{ref_CMS_TDR}. The CMS detector is cylindrically symmetric with the particle beam as the axis. Cartesian, cylindrical and spherical coordinates are all used to describe the CMS geometry, depending on the context. The $x$-axis of the CMS points towards the center of the LHC ring while the $y$-axis points vertically up. The orientaion of the $z$-axis corresponds to the counterclockwise direction of the LHC beam (Fig.~\ref{fig:CMScoord}). Cylindrical coordinates are defined as $r=\sqrt{x^2+y^2}$, $\phi=\arctan(y/x)$. Instead of the polar angle $\theta$, it is more convenient to use the pseudorapidity $\eta=-\ln{\tan{\theta/2}}$. A pseudorapidity ranges from $\eta=-\infty$ to $\eta=+\infty$ with $\eta=\pm \infty$ for directions parallel to the beam axis and $\eta=0$ for a direction perpendicular to the beamline. This variable is convenient for measurements because for typical physics process in $pp$ collisions the created particles tend to be distributed uniformly in $\eta$. 
+
+Certain particles produced in a collision cannot be registered by CMS due to geometrical limitations of the detector. Charged particles with very low momenta have very large track curvature and cannot leave the beam pipe. Particles that have trajectories close to parallel to the beamline also cannot be registered by CMS. The range of geometrical and kinematic parameters of a particle that allows it to be registered by the detector is called the detector acceptance. The acceptance of the CMS in $\eta$ is limited and varies from $|\eta|<2.4$ to $|\eta|<5.3$ depending on a subdetector (Fig.~\ref{fig:CMSschemView}, top).   
 
 \begin{figure}[htb]
   \begin{center}
@@ -18,10 +20,6 @@ CMS is a general-purpose detector designed for detecting various highly energeti
   \end{center}
 \end{figure}
 
-The detector consists, from the inner to the outer layer,  of a tracking system, an electromagnetic calorimeter (ECal), a hadronic calorimeter (HCal), a magnet and a muon system. Having the tracking system, ECal, and HCal inside of a large solenoid makes the detector compact. A slice of CMS in the $r$-$\phi$ plane is shown in Fig.~\ref{fig:CMS_slice}.
-
-Most heavy particles produced in a collision decay immediately, and we detect its long-lived decay products including electrons, photons, muons, neutral or charged hadrons. Depending on the trace left by the particle in different subdetectors we can identify the particle type. Electrons and positrons leave curved tracks, trajectories of charged particles, in the tracking system and then induce showers in the ECal. Photons induce the same electromagnetic showers in the ECal, however, as neutral particles, they do not leave tracks in the tracking system. Hadrons normally travel through the ECal undisturbed and induce a hadronic shower in the HCal. Charged and neutral hadrons can be distinguished from each other by checking whether they leave a track in the tracking system or not. Muons are the only particles which penetrate through the ECal, the HCal and the magnet and leave tracks in the CMS muon system. Neutrinos are not directly detected by CMS.   
-
 \begin{figure}[htb]
   \begin{center}
     {\includegraphics[width=0.98\textwidth]{../figs/Exp/CMSview1.png}\\
@@ -31,6 +29,13 @@ Most heavy particles produced in a collision decay immediately, and we detect it
   \end{center}
 \end{figure}
 
+The detector consists, from the inner to the outer layer,  of a tracking system, an electromagnetic calorimeter (ECal), a hadronic calorimeter (HCal), a magnet and a muon system. A slice of CMS in the $r$-$\phi$ plane is shown in Fig.~\ref{fig:CMS_slice}.
+
+Most heavy particles produced in a collision decay immediately, and we detect its long-lived decay products including electrons, photons, muons, neutral or charged hadrons. Particles which can be detected by CMS are referred as ``visible'' particles in contrast to ``invisible'' particles which cannot be detected by CMS. The SM example of an invisible particle is a neutrino.
+
+Depending on the trace left by the particle in different subdetectors we can identify the particle type. Charged particles interact with the substance of the tracking system which performs several position measurements of the particles. The sequence of these position measurements is called a track. Neutral particles do not leave any trace in the tracking system. 
+
+Thus, electrons and positrons leave tracks in the tracking system while photons do not. Both these types of particles induce showers in the ECal of the same shapes, and are distinguished by linking or not linking to the tracks. Hadrons normally travel through the ECal undisturbed and induce a hadronic shower in the HCal. Charged and neutral hadrons are distinguished from each other by linking or not linking to the tracks, similarly how electrons are distinguished from photons. Muons are the only particles which penetrate through the ECal, the HCal and the magnet and leave tracks in the CMS muon system. Neutrinos are not directly detected by CMS.   
 
 \begin{figure}[htb]
   \begin{center}
@@ -40,7 +45,9 @@ Most heavy particles produced in a collision decay immediately, and we detect it
   \end{center}
 \end{figure}
 
-All subdetectors are essential for the $W\gamma$ measurement, and the remainder of this chapter describes the subdetectors in greater details. Muons and electrons, which we have as final state particles in the $W\gamma$ measurement, are both affected by the CMS magnetic field, allowing the tracking system and the muon system to measure their trajectory parameters and momenta. In this dissertation we use the information of the primary vertex, the collision point, determined by the tracking system, to select our events. The tracking system also provides us information about electron and muon trajectories and momenta and is used to distinguish between electrons and photons. The ECal is necessary to identify electrons and photons and to measure all kinematic parameters of photons. The HCal is also used for electron and photon identification: the energy deposit in the HCal left by an electron or a photon must be very small compared to the energy deposit left in the ECal. The muon system is essential for muon reconstruction and identification.
+All subdetectors are essential for the $W\gamma$ measurement, and the remainder of this chapter describes the subdetectors in greater details. Muons and electrons, which we have as final state particles in the $W\gamma$ measurement, are both affected by the CMS magnetic field, allowing the tracking system and the muon system to measure their trajectory parameters and momenta. In this dissertation we use the information of the primary vertex, the collision point, determined by the tracking system, to select our events. The tracking system also provides us information about electron and muon trajectories and momenta and is used for distinguishing between electrons and photons. The ECal is necessary to identify electrons and photons and to measure all kinematic parameters of photons. The HCal is also used for electron and photon identification: the energy deposit in the HCal left by an electron or a photon must be very small compared to the energy deposit left in the ECal. The muon system is essential for muon reconstruction and identification.
+
+\clearpage
 
 \subsection{Magnet}
 % CONTENT-WISE IS OK
@@ -54,15 +61,15 @@ The CMS magnet is placed between the HCal and the muon system. The magnet is mad
 %    "Then the trajectory is reconstructed based on how much charge is collected on each sensor."
 %       What does it mean, exactly, each of these sentences? It is not clear to me.
 
-The tracking system measures track geometry including particle trajectories, locations of primary and secondary vertices, and momenta of charged particles. It is designed to disturb particles as little as possible so that they pass through. Therefore, just a few measurements must be enough to reconstruct the track. The accuracy of each position measurement, a ``hit'', is~10~$\mu$m.
+The tracking system measures track geometry including particle trajectories, locations of primary and secondary vertices, and momenta of charged particles. It is designed to disturb particles as little as possible so that they pass through. Therefore, CMS algorithms must be capable of reconstructing a trajectory with just a few position measurements (``hits''). The accuracy of each hit is~10~$\mu$m.
 
-The tracking system consists of silicon pixels and silicon strips (Fig.~\ref{fig:tracker_slice}). Tracks that originate from proton collisions, collision tracks, start at the center and then cross the layers of the tracking system. Tracks are straight in the $r-z$ plane and curved by the magnetic field in the $r-\phi$ plane. The acceptance of the tracker system in the $r-z$ plane is geometrically limited by the absolute value of the pseudorapidity $|\eta| \leq 2.5$.
+The tracking system consists of silicon pixels and silicon strips (Fig.~\ref{fig:tracker_slice}). Tracks that originate from proton collisions, collision tracks, start at the center and then cross the layers of the tracking system. Tracks are straight in the $r-z$ plane and curved by the magnetic field in the $r$-$\phi$ plane. The acceptance of the tracker system in the $r$-$z$ plane is geometrically limited by the absolute value of the pseudorapidity $|\eta| \leq 2.5$.
 
 The pixel tracker is the closest subsystem of CMS to the collision point. Thus it experiences the largest particle flux: at~8~cm from the collision point the flux is about~10~million/(cm$^2$s), and the pixel detector with its~65~million sensors is capable of reconstructing all these tracks. It consists of three cylindrical layers of pixel sensors in the barrel with radii of~4~cm,~7~cm and~11~cm which are referred as barrel pixel subdetectors (BPIX) and four disks in the endcap, two disks at each side, which are referred as forward pixel subdetector (FPIX). 
 
 %The tracker is designed in such a way that a single track hits multiple sensors. Then the trajectory is reconstructed based on how much charge is collected on each sensor. This allows us to reach a spacial resolution of~15-20~$\mu$m which is much smaller than a distance between sensors.
 
-The strip tracker is placed right outside the pixel tracker and occupies the detector volume up to~130~cm around the beam axis. The strip tracker consists of four parts: the tracker inner barrel (TIB), the tracker inner disks (TID), the tracker outer barrel (TOB) and the tracker endcap (TEC) as shown in Fig.~\ref{fig:tracker_slice}. In the strip tracker, there are over~15,000 sensitive modules with a total number of~10~million strips. Each sensitive module consists of a set of sensors, its support structure, and readout elements.
+The strip tracker is placed right outside the pixel tracker and occupies the detector volume up to~130~cm around the beam axis. The strip tracker consists of four parts: the tracker inner barrel (TIB), the tracker inner disks (TID), the tracker outer barrel (TOB) and the tracker endcap (TEC) as shown in Fig.~\ref{fig:tracker_slice}. The endcap region in CMS starts at $|\eta|=1.5$. %In the strip tracker, there are over~15,000 sensitive modules with a total number of~10~million strips. Each sensitive module consists of a set of sensors, its support structure, and readout elements.
 
 %electric charge and amplification
 
@@ -71,7 +78,7 @@ The strip tracker is placed right outside the pixel tracker and occupies the det
 \begin{figure}[htb]
   \begin{center}
     {\includegraphics[width=0.8\textwidth]{../figs/Exp/tracker_slice.png}}
-    \caption{Slice of the CMS tracking system in the $r-z$ plane.}
+    \caption{Slice of the CMS tracking system in the $r$-$z$ plane.}
     \label{fig:tracker_slice}
   \end{center}
 \end{figure}
@@ -91,15 +98,7 @@ It is important for the ECal to be able to distinguish between a single energy p
 
 \subsection{Hadron Calorimeter}
 
-The HCal measures the energy of charged and neutral hadrons. Also, it plays a key role in the indirect detection of invisible particles like neutrinos. 
-
-Invisible particles leave no record in CMS detector. They are detected by missing transverse energy ($E_T^{miss}$) that is determined as 
-\begin{equation}\label{eq:MET}
-  E_T^{miss} = - | \sum \mathbf{P_T} |,
-\end{equation}
-\noindent{where the summation covers all visible particles in the event. Therefore, for precise measurement of $E_T^{miss}$ it is important to capture the full energy release of all visible particles. For this purpose, HCal is designed to stop all hadrons passing through.}
-
-The HCal consists of the barrel, endcap and forward parts: HB, HE and HF in Fig.~\ref{fig:CMSschemView}, top, respectively. Its acceptance extends to $|\eta|=3.0$ for endcaps and to $|\eta|=5.3$ for forward HCal.
+The HCal measures the energy of charged and neutral hadrons. It consists of the barrel, endcap and forward parts: HB, HE and HF in Fig.~\ref{fig:CMSschemView}, top, respectively. HCal is designed to stop all hadrons passing through, thus, it extends to $|\eta|=5.3$ for forward HCal.
 
 The HCal is a sampling calorimeter. It consists of alternating layers of absorbers and scintillators. When a hadron hits an absorber, it induces a hadronic shower. The light produced by the shower is collected on optic fibers and passed to the readout system. The total amount of light released in a certain region of the HCal is a measure of hadron's energy. In addition to the energy, the HCal also reconstructs the trajectory of the hadron.   
 
@@ -120,7 +119,7 @@ There are three types of muon chambers used in the CMS muon system: drift tubes 
 %By registering where along the wire electrons hit (in the diagram, the wires are going into the page) as well as by calculating the muon's original distance away from the wire (shown here as horizontal distance and calculated by multiplying the speed of an electron in the tube by the time taken) DTs give two coordinates for the muon’s position.
 %Each DT chamber, on average 2m x 2.5m in size, consists of 12 aluminium layers, arranged in three groups of four, each up with up to 60 tubes: the middle group measures the coordinate along the direction parallel to the beam and the two outside groups measure the perpendicular coordinate.
 %(4) MY WORDS:
-The system of DTs measures positions of muons in the barrel. Each DT chamber is about~2~m by~2.5~m in size. A chamber consists of~12~layers of aluminum which are arranged in groups of four. There are up to~60~DTs in a layer. The middle group of layers measures $z$-coordinate and two other groups determine the perpendicular coordinate. The DT's volume is filled with a gas, and there is a wire inside. The DT's width is~4~cm. When a charged particle passes through the volume, it ionizes atoms, and the wire receives an electric charge. The position along the wire is registered, and the distance of the muon away from the wire is calculated providing measurements of two coordinates of the position of the muon.
+The system of DTs measures positions of muons in the barrel. Each DT chamber is about~2~m by~2.5~m in size. A chamber consists of~12~layers of aluminum which are arranged in groups of four. There are up to~60~DTs in a layer. The middle group of layers measures $z$-coordinate and two other groups determine the perpendicular coordinate. The DT's volume is filled with a gas, and there is a wire inside. When a charged particle passes through the volume, it ionizes atoms. Releazed electrons drift in the electric field to the positively-charged wire. The position along the wire is registered, and the distance of the muon away from the wire is calculated providing measurements of two coordinates of the position of the muon.
 
 %CSCs
 %(5) QUOTE:
@@ -137,7 +136,7 @@ CSCs are placed in the endcap regions. CSCs are arrays of anode wires crossed by
 %Resistive plate chambers (RPC) are fast gaseous detectors that provide a muon trigger system parallel with those of the DTs and CSCs. RPCs consist of two parallel plates, a positively-charged anode and a negatively-charged cathode, both made of a very high resistivity plastic material and separated by a gas volume.
 %When a muon passes through the chamber, electrons are knocked out of gas atoms. These electrons in turn hit other atoms causing an avalanche of electrons. The electrodes are transparent to the signal (the electrons), which are instead picked up by external metallic strips after a small but precise time delay. The pattern of hit strips gives a quick measure of the muon momentum, which is then used by the trigger to make immediate decisions about whether the data are worth keeping. RPCs combine a good spatial resolution with a time resolution of just one nanosecond (one billionth of a second).
 %(6) MY WORDS: 
-RPCs are parallel capacitors made of high-resistivity plastic plates with a space between them filled with gas. RPCs provide quick measurements of muon momenta and are used for triggering. A muon passing through the RPC ionizes gas atoms. Released electrons ionize more atoms inducing an avalanche. Electrodes receive signal and pass it to external strips that provide a quick measure of the muon's momentum. 
+RPCs are parallel capacitors made of high-resistivity plastic plates with a space between them filled with gas. RPCs provide quick measurements of muon momenta and are used for triggering. A muon passing through the RPC ionizes gas atoms. Released electrons ionize more atoms inducing an avalanche in the electric field. Electrodes receive signal and pass it to external strips that provide a quick measurement of the muon's position which is subsequently transformed to the momentum measurement by the trigger's electronics. 
 
 
 \begin{figure}[htb]
@@ -155,7 +154,7 @@ At peak luminosity, CMS experiences~40~million proton-proton collisions per seco
 
 %New events come before the events from the previous bunch crossing left the detector. To process the information from many different collisions at the same time, data is stored in pipelines.
 
-If the triggers were too loose, and we would select one hundred events too quickly, e.g., in~1/10~s, then CMS would not be able to process the remaining~90\% of events provided by LHC in a given second and we would lose~90\% of potentially interesting events.
+If the triggers were not strick enough, and we would select one hundred events too quickly, e.g., in~1/10~s, then CMS would not be able to process the remaining~90\% of events provided by LHC in a given second and we would lose~90\% of potentially interesting events.
 
 If the triggers were too strict, we would select, e.g.,~ten events per second, not one hundred and lose CMS's potential to store and process data by~90\% which would significantly reduce our chances for discovery and increase statistical uncertainties for precision measurements.
 
@@ -189,8 +188,11 @@ One particle can induce several different particle-flow elements in different su
 
 In each block, muons are considered first. A link between charged tracks in the tracking and muon systems comprise a global muon which produces one ``particle-flow muon''. The corresponding track in the tracking system is removed from the block and corresponding energy deposits are subtracted from ECal and HCal. Then electrons are reconstructed and identified using the tracking system and ECal. The corresponding tracks and ECal clusters are removed from the block. Remaining tracks and clusters are considered more carefully to identify charged hadrons, neutral hadrons, and photons.
 
-When all particles in the event are reconstructed and identified, $E_T^{miss}$ is determined. 
-
+When all particles in the event are reconstructed and identified, the algorithm determines missing transverse energy $E_T^{miss}$ as 
+\begin{equation}\label{eq:MET}
+  E_T^{miss} = - | \sum \mathbf{P_T} |,
+\end{equation}
+\noindent{where the summation covers all visible particles in the event. For precise measurement of $E_T^{miss}$ it is important to capture the full energy release of all visible particles.}
 
 $E_T^{miss}$ is used in physics measurements as a measure of $P_T$ of neutrinos and other invisible particles in the event. Fake $E_T^{miss}$ can originate from particles that did not fall into the detector acceptance, particles that they did not reach the tracking system because their momenta was too low and, therefore, track curvature was too high, momenta mismeasurement, particle misidentification, cosmic rays particles, and machine background.
 
