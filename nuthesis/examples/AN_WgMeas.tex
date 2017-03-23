@@ -1,14 +1,9 @@
 \chapter{$W\gamma$ Cross Section Measurement}
 \label{sec:AN_WgMeas}
 
-The goal of the physics measurement of this dissertation is to measure the total and differential cross section of $pp \rightarrow l\nu\gamma + X$ in bins of the photon transverse momentum $P_T^\gamma$ using CMS data collected in~2012 at~$\sqrt{s}=8$~TeV center-of-mass collision energy. 
+The goal of this research is to measure the total and differential cross section of the $W\gamma$ production in $pp$ collisions as a function of the photon transverse momentum $P_T^\gamma$ at~$\sqrt{s}=8$~TeV center-of-mass collision energy. Decay channels $W\rightarrow\mu\nu$ and $W\rightarrow e\nu$ are considered. The measurement is performed using CMS data collected in~2012.
 
-In the physics experiments, we measure a number of events of the specific process and determine the cross section in a certain kinematic phase space as
-
-\begin{equation}
-  \sigma = N/L,
-\end{equation}
-\noindent{where $N$ is the estimated number of events of the process of our interest in the given phase space, and $L$ is the luminosity of our collider. The measurement strategy can be represented as a chain of steps that is summarized in Tab.~\ref{tab:analysisOutline}. Chapters~\ref{sec:AN_Selection}-\ref{sec:AN_CrossSection} describe each step in details.}
+The measurement strategy can be represented as a chain of steps that is summarized in Tab.~\ref{tab:analysisOutline}. First, we select events and obtain number of selected events. In Tab.~\ref{tab:analysisOutline} the total number of selected events is $N_{sel}$ and numbers of selected events in $P_T^{\gamma}$ bins are $N_{sel}^j$, where $j$ is a bin number. In the selected sample, we have events of our signal as well as background events. Our next step is to subtract the background. This step gives us background subtracted numbers of signal events $N_{sign}$ and $N_{sign}^j$. After that, we perform the detector resolution unfolding (Ch.~\ref{sec:Unfolding}) and obtain yields within acceptance: $N_{acc}^i = U_{ij} \cdot N_{sign}^j$, where $U_{ij}$ is the unfolding operator. Then we apply acceptance and efficiency corrections (Ch.~\ref{sec:AccXEff}). Finally, we divide measured number of events by intergated luminosity recorded by CMS and, in case of the differential cross section, by the width of $P_T^{\gamma}$ bin. This gives us total and differential cross section. Each step has its systematic uncerntainties associated with it and we estimate their contributions to the final results. The remainder of this Chapter describe each measurement step in detail.
 
 \begin{table}[h]
   \small
@@ -21,47 +16,20 @@ In the physics experiments, we measure a number of events of the specific proces
     subtract background & $N_{sign}^j = N_{sel}^j - N_{bkg}^j$ &    $N_{sign}=N_{sel}-N_{bkg}$       \\ \hline
     unfold   & $N_{acc}^i = U_{ij} \cdot N_{sign}^j$ &    $-$       \\ \hline
     correct for the acceptance and efficiency & $N_{true}^i = \frac{N_{acc}^i}{(A \times\epsilon)^i}$ &  $N_{true}=\frac{N_{sign}}{A\times\epsilon}$       \\ \hline
-    divide over luminosity and bin width & $ \left( \frac{d\sigma}{dP_{T}^\gamma} \right) ^i = \frac{N_{true}^i}{L \cdot (\Delta P_T^\gamma)^i}$  &  $\sigma = N_{true}/L$       \\ \hline
+    divide by luminosity and bin width & $ \left( \frac{d\sigma}{dP_{T}^\gamma} \right) ^i = \frac{N_{true}^i}{L \cdot (\Delta P_T^\gamma)^i}$  &  $\sigma = N_{true}/L$       \\ \hline
     estimate systematic uncertainties &  &         \\ \hline
   \end{tabular}
   \label{tab:analysisOutline}
   \end{center}
 \end{table}
 
-%\subsection{Data sample}
-The data sample we use in this analysis was recorded by the CMS experiment in~2012 in the LHC $pp$ collisions at~8 TeV. The data collected by single electron and single muon triggers are used as the signal samples while double muon and double electron datasets are used for data-driven background estimation. Only runs and luminosity sections certified by CMS are considered in the measurement, which means that good functioning of all CMS sub-detectors is required.
-
-All simulation samples (often referred as Monte Carlo or MC samples) considered in this analysis are generated with MadGraph and reconstructed centrally by CMS simulation team. The simulated samples are reweighted to represent the distribution of the number of $pp$ interactions per bunch crossing (pileup or PU), as measured in the data. Information regarding signal and background simulated samples used for the analysis is given in Tab.~\ref{tab:mc_bkg_samples} alongside with the corresponding cross sections. The $Z$+jets process is often referred as Drell-Yan + jets or DY+jets.
-
-\begin{table}[h]
-  \small
-  \begin{center}
-    \caption{Summary of simulated background samples used in the measurement.}
-    \begin{tabular}{|l|l|l|}
-      \hline
-      Process                      & $\sigma$, pb         \\ \hline
-      $W\gamma \rightarrow l\nu\gamma$     & 553.92 (NLO)    \\ \hline
-      $W$+jets$ \rightarrow l\nu + jets$          & 36257.2 (NNLO)  \\  \hline
-      $Z$+jets$ \rightarrow ll + jets$            & 3503.71         \\ \hline
-      $t\bar{t}$+jets$\rightarrow 1$l+X         & 99.44 (NNLO)   \\ \hline
-      $t\bar{t}$+jets$\rightarrow 2$l+X         & 23.83         \\ \hline
-      $t\bar{t}\gamma$                    & 1.444          \\ \hline
-      $Z\gamma \rightarrow ll\gamma$       & 171.62           \\ \hline
-    \end{tabular}
-    \label{tab:mc_bkg_samples}
-  \end{center}
-\end{table} 
-
-The NLO cross section of $W\gamma$ was calculated with the MCFM in the same phase space for which the $W\gamma$ sample was generated. The NNLO contribution is estimated to be~19\%-26\% of the NLO value~\cite{ref_theory_NNLO}.
-
-The cross section of $Z\gamma$ measured by CMS is taken~\cite{ref_Zg8TeV} and expanded to the phase space of the $Z\gamma$ generated MC sample. The resulting cross section is found to be~$171.62$~pb.
-
-To avoid experimentalist's bias, the whole measurement was performed in a blinded way at first. Our blinded strategy was the following:
+At first, we perform the measurement in a blinded way. It is done to avoid unintended biasing of our results in any direction. Our blinded strategy is the following:
 \begin{itemize}
-  \item for $p_T^{\gamma}<45~GeV$: use full data; and
-  \item for $p_T^{\gamma}>45~GeV$: use $5\%$ of data.
+  \item for $p_T^{\gamma}<45$~GeV: use $100\%$ of data; and
+  \item for $p_T^{\gamma}>45$~GeV: use $5\%$ of data (every 20$^{th}$ event).
 \end{itemize}
-\noindent{After the whole measurement procedure was fully established, we unblinded the measurement. All plots shown in this dissertation are prepared with unblinded data.}
+\noindent{The threshold of $p_T^{\gamma}=45$~GeV is chosen because below that we do not expect any new physics, and the persantage of~$5\%$ is chosen because these amount of data gives us such a large statistical uncertainty so that we would not notice new physics if it was there. After the measurement procedure is fully established, we perform the measurement using our full dataset (``unblinded'' measurement). All plots shown in this dissertation are prepared in the unblinded manner.}
 
-The measurement was performed using advanced computing resources. A brief description of the software tools used and developed for the measurement is available in App.~\ref{sec:Code}.
+% REPHRASE THE UNBLINDING STUFF
 
+%A brief description of the software tools used and developed for the measurement is available in App.~\ref{sec:Code}.
