@@ -1,18 +1,18 @@
 \section{Background Subtraction}
 \label{sec:BackgroundSubtraction}
 
-In the selected sample we have our signal events as well as events coming from various backgrounds. To compute cross section, we need to subtract background and estimate how many events in each $P_T^\gamma$ bin originate from the $W\gamma$ process. This chapter describes the methods used for the background subtraction and provides plots and tables with the results.
+The selected sample contains signal events as well as events coming from various backgrounds. To compute the cross section, we need to subtract background and estimate how many events in each $P_T^\gamma$ bin originate from the $W\gamma$ process. This chapter describes the methods used for the background subtraction and provides the results.
 
 \subsection{Jets$\rightarrow\gamma$ Background Estimation and Subtraction}
 \label{sec:BackgroundSubtraction_jtog}
 
-After passing through all selection criteria, the selected sample is dominated by $W$+jets background and this background cannot be further significantly reduced without reducing our signal sample $W\gamma$ as well. The photon~ID cut helps to reduce $W$+jets to a certain level but there is still a significant number of jets which are reconstructed as photons and pass all the photon~ID criteria. DY+jets is another source of jets$\rightarrow \gamma$ background but this one is significantly suppressed by $M_W^T$ cut in both channels and by the $Z$-mass window cut in the electron channel.
+The selected sample is dominated by the $W$+jets background which cannot be further significantly reduced without reducing our signal sample $W\gamma$ as well. The photon~ID selection criteria help to reduce $W$+jets background to a certain level but there is still a significant number of jets which are reconstructed as photons and pass all the photon~ID criteria. DY+jets is another source of the jets$\rightarrow \gamma$ background but this source is significantly suppressed by the $M_W^T$ selection criterion in both channels and by the $Z$-mass window cut in the electron channel.
 
 The template method is used to estimate jets$ \rightarrow \gamma$ background. The method requires real-$\gamma$ template ($T_{true}$) and fake-$\gamma$ template ($T_{fake}$). Then the fit is performed according to: 
 \begin{equation}
 F(V_{fit})=N_{true} \cdot T_{true}(V_{fit}) + N_{fake} \cdot T_{fake}(V_{fit}),
 \end{equation}
-\noindent{where $V_{fit}$ is a fit variable, $N_{true}$ and $N_{fake}$ are numbers of real and fake photons in the data sample respectively, and $F(V_{fit})$ is a fit function. The fit variable must be a discriminative photon varibale. We use the charged hadron isolation $I_{ch}^{\gamma}$ and a shower shape variable $\sigma_{i\eta i\eta}^{\gamma}$ as $V_{fit}$.}
+\noindent{where $V_{fit}$ is a fit variable, $N_{true}$ and $N_{fake}$ are numbers of real and fake photons in the data sample, respectively, and $F(V_{fit})$ is a fit function. The fit variable must be a discriminative photon variable. We use the charged hadron isolation $I_{ch}^{\gamma}$ and a shower shape variable $\sigma_{i\eta i\eta}^{\gamma}$ as $V_{fit}$.}
 
 % EXPLAIN WHAT IS I_{CH}^{\gamma} and WHAT IS SIHIH
 The $I_{ch}^{\gamma}$ is defined as
@@ -37,21 +37,21 @@ FSR and ISR selections are illustrated in App.~\ref{sec:ZgFSRandISRplots}. Distr
 
 To extract real-$\gamma$ yield from the $N_{true}$, efficiency of the $V_{fit}$ is applied on the value derived from fit based on the distribution of events which are used to prepare the real-$\gamma$ template. To extract fake-$\gamma$ yield from the $N_{fake}$, efficiency of the $V_{fit}$ is applied on the value derived from fit based on the distribution of events which are used to prepare a fake-$\gamma$ template. Plots of the template fits are available in App.~\ref{sec:TemplateFitPlots}. 
 
-Two MC closure checks are performed to validate the procedure. For the first check all MC samples that pass $W\gamma$ selection are mixed together with appropriate weights assigned. Then fits on this sample of pseudodata is performed as on real data and the fit results are superimposed with MC samples. The results of the MC closure check are reported in App.~\ref{sec:MCclosureCheck} and the fit plots are shown in App.~\ref{sec:TemplateFitPlotsMCclosure}. 
+Two MC closure checks are performed to validate the procedure. For the first check all MC samples that pass $W\gamma$ selection are mixed together with appropriate weights assigned. Then fits on this sample of pseudodata are performed as on real data and the fit results are superimposed with MC samples. The results of the MC closure check are reported in App.~\ref{sec:MCclosureCheck} and the fit plots are shown in App.~\ref{sec:TemplateFitPlotsMCclosure}. 
 
 For the second MC closure check, the pseudodata sample is prepared from $W$+jets and $W\gamma$ samples only. The results are reported in App.~\ref{sec:TemplateFitPlotsMCclosureWjetsPlusWg}. 
 
 \subsection{$e\rightarrow\gamma$ Background Estimation and Subtraction for the Electron Channel}
 \label{sec:BackgroundSubtraction_etog}
 
-For the electron channel, DY+jets is the main source of the $e \rightarrow \gamma$ background. The $Z$-mass window cut of $70$~GeV$<M_{e\gamma}<110$~GeV significantly suppresses this background, however, the remaining contribution is non-negligible. 
+For the electron channel, DY+jets is the main source of the $e \rightarrow \gamma$ background. The $Z$-mass window cut of ($M_{e\gamma}<70$~GeV or $M_{e\gamma}>110$~GeV) significantly suppresses this background, however, the remaining contribution is non-negligible. 
 
 The contribution of $e\rightarrow\gamma$ is estimated separately for each $P_{T}^{\gamma}$ bin and separately for barrel and endcap photons using the following expression: 
 
 \begin{equation}
 N_{data-nom}^{e\rightarrow\gamma} = N_{MC-nom}^{e\rightarrow\gamma} \cdot \frac{N_{data-Zpeak}^{e\rightarrow\gamma}}{N_{MC-Zpeak}^{e\rightarrow\gamma}}, 
 \end{equation}
-\noindent{where $N_{data-nom}^{e\rightarrow\gamma}$ and $N_{MC-nom}^{e\rightarrow\gamma}$ are the numbers of $e\rightarrow\gamma$ events in the nominally selected of data and DY+jets MC sample respectively, $N_{data-Zpeak}^{e\rightarrow\gamma}$ and $N_{MC-Zpeak}^{e\rightarrow\gamma}$ are the numbers of $e\rightarrow\gamma$ events under the $Z$-peak data and DY+jets MC sample respectively. }
+\noindent{where $N_{data-nom}^{e\rightarrow\gamma}$ and $N_{MC-nom}^{e\rightarrow\gamma}$ are the numbers of $e\rightarrow\gamma$ events in the nominally selected of data and DY+jets MC sample, respectively, $N_{data-Zpeak}^{e\rightarrow\gamma}$ and $N_{MC-Zpeak}^{e\rightarrow\gamma}$ are the numbers of $e\rightarrow\gamma$ events under the $Z$-peak data and DY+jets MC sample respectively. }
 
 To estimate number of events under $Z$-peak, $e\rightarrow\gamma$-enriched data and DY+jets MC samples are prepared by inverting the $Z$-mass
 window cut. After that, numbers of events in DY+jets MC samples $N_{MC-Zpeak}^{e\rightarrow\gamma}$ and $N_{MC-nom}^{e\rightarrow\gamma}$ are estimated by counting with appropriate weights. The number $N_{data-Zpeak}^{e\rightarrow\gamma}$ is extracted from fitting the $M_{e\gamma}$ in the $Z$-peak region (App.~\ref{sec:EtogammaFitPlots}). The fits are performed separately in each $P_T^\gamma$ bin in fine $\eta^\gamma$ binning:
@@ -92,7 +92,7 @@ In addition to the backgrounds discussed before, there are several more contribu
 
 \subsection{$P_T^{\gamma}$ Spectra before and after the Background Subtraction}
 
-The results of the background estimation and subtraction procedure are summarized in Fig.~\ref{fig:DDvsMC_Wg_Data_MUON}-\ref{fig:DDvsMC_Wg_Data_ELECTRON} and in Tab.~\ref{tab:yields_Wg_to_munu__Barrel_}-\ref{tab:yields_Wg_to_enu__Endcap_}. Top and middle plots in in Fig.~\ref{fig:DDvsMC_Wg_Data_MUON}-\ref{fig:DDvsMC_Wg_Data_ELECTRON} shows the $P_T^\gamma$ spectrum in data superimposed with the signal MC and background estimates that includes jets$\rightarrow\gamma$ and real-$\gamma$ backgrounds in both channels and $e\rightarrow\gamma$ background in the electron channel. The bottom plots show data yields after full background subtraction superimposed with signal MC. 
+The results of the background estimation and subtraction procedure are summarized in Fig.~\ref{fig:DDvsMC_Wg_Data_MUON}-\ref{fig:DDvsMC_Wg_Data_ELECTRON} and in Tab.~\ref{tab:yields_Wg_to_munu__Barrel_}-\ref{tab:yields_Wg_to_enu__Endcap_}. Top and middle plots in Fig.~\ref{fig:DDvsMC_Wg_Data_MUON}-\ref{fig:DDvsMC_Wg_Data_ELECTRON} shows the $P_T^\gamma$ spectrum in data superimposed with the signal MC and background estimates that includes jets$\rightarrow\gamma$ and real-$\gamma$ backgrounds in both channels and $e\rightarrow\gamma$ background in the electron channel. The bottom plots show data yields after full background subtraction superimposed with signal MC. 
 
 Jets$\rightarrow\gamma$ background is estimated by two methods. The results provided by two methods differ significantly, and the difference contributes to the systematic uncertainty.
 
