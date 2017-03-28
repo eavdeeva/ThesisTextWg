@@ -13,11 +13,13 @@ To select events with significant $E_T^{miss}$, we require the transverse mass o
 \begin{equation}
 $M_T^W=\sqrt{(2  P_T^{l}  E_T^{miss}  (1-\cos{(\phi^{l}-\phi^{miss})}))}$,
 \end{equation}
-\noindent{where $P_T^l$ is a lepton transverse momentum, $\phi^{l}$ is an azimuthal angle of the lepton momentum, and $\phi^{miss}$ is an azimuthal angle of the missing transverse momentum. The $M_T^W$ distribution is shown in Fig.~\ref{fig:DATAvsMC_WMt}.}
+\noindent{where $P_T^l$ is a lepton transverse momentum, $\phi^{l}$ is an azimuthal angle of the lepton momentum, and $\phi^{miss}$ is an azimuthal angle of the missing transverse momentum. The $M_T^W$ distribution is shown in Fig.~\ref{fig:DATAvsMC_WMt}. Photons with $P_T^{\gamma}<45$~GeV are selected for this plot because for such photons we do not expect them to be result of a new physics process.}
 
 After the listed selection criteria are applied, significant background from DY+jets in the electron channel remains. This background is caused by one of the electrons misidentified as a photon. Its contribution is the most significant around the invariant mass of the electron-photon system $M_{e\gamma}$ close to the mass of the $Z$ boson as shown in the $M_{e\gamma}$ distribution (Fig.~\ref{fig:DATAvsMC_Mpholep1}).  To reduce this background, we apply $Z$-mass window selection criterion, more specifically, events with $70$~GeV$<M_{e\gamma}<110$~GeV are rejected. 
 
-Finally, the separation $\Delta R=\sqrt{({\Delta\phi}^2+{\Delta\eta}^2)}$ between the final state lepton and photon is required to be $\Delta R(l,\gamma)>0.7$ to avoid divergence coming from the ISR and FSR contributions and also to enhance the TGC contribution. In case if there is more than one photon in the event passed all selection criteria including the $\Delta R$ requirement, the candidate with the photon of the highest~$P_T^{\gamma}$ is selected. 
+Finally, the separation $\Delta R=\sqrt{({\Delta\phi}^2+{\Delta\eta}^2)}$ between the final state lepton and photon is required to be $\Delta R(l,\gamma)>0.7$ to avoid divergence coming from the ISR and FSR contributions and also to enhance the TGC contribution. In case if there is more than one photon in the selected event, the candidate with the photon of the highest~$P_T^{\gamma}$ is selected. 
+
+Data and MC in Fig.~\ref{fig:DATAvsMC_WMt}-\ref{fig:DATAvsMC_Mpholep1} significantly disagree. Thus, a data-driven method is necessary to estimate the backgrounds.
 
 \begin{figure}[htb]
   \begin{center}
@@ -38,7 +40,7 @@ Finally, the separation $\Delta R=\sqrt{({\Delta\phi}^2+{\Delta\eta}^2)}$ betwee
 \subsection{Object Selection}
 \label{sec:AN_ObjectSelection}
 
-We select events with muons and photons in the final state for the muon channel and events with electrons and photons in the final state for the electron channel. CMS Particle Object Group (POG) provides all CMS physics measurement groups with their recommendation for object identification~(ID) criteria for any given period of data-taking. Recommendations for~2012 data include two sets of muon~ID criteria: "Tight" and "Loose" and four sets of electron and photon~ID criteria: "Tight", "Medium", "Loose" and "Veto".
+We select events with a muon and a photon in the final state for the muon channel and events with an electron and a photon in the final state for the electron channel. CMS Particle Object Group (POG) provides their recommendations for object identification~(ID) criteria for any given period of data collection. Recommendations for~2012 data include two sets of muon~ID criteria: "Tight" and "Loose" and four sets of electron and photon~ID criteria: "Tight", "Medium", "Loose" and "Veto".
 
 For the muon selection, we applied the kinematics cuts of $p_T>25$ GeV and $|\eta|<2.1$ and "Tight"~ID criteria. To reduce backgrounds from the process with two or more muons, such as $Z\gamma\rightarrow\mu\mu\gamma$ process, we reject all events that have the second reconstructed muon candidate with $P_T>10$ GeV and $|\eta|<2.4$. 
 
