@@ -1,12 +1,35 @@
 \begin{thebibliography}{10}
 
-\bibitem{ref_Frank_presentation}
-F.~Meier Aeschbacher.
-\newblock Hunting down suspicious results: recent improvements in the alignment
-  of the cms tracker detector, 2010.
-\newblock Available as an internal CMS presentation at:
-  https://indico.cern.ch/event/243940/contributions/1562955/attachments/416194%
-/578159/praesDoktorandensemi2010.pdf.
+\bibitem{ref_PDG}
+Particle data group.
+\newblock Available at: pdg.lbl.gov.
+
+\bibitem{ref_Senka_thesis}
+PhD thesis.
+\newblock Senka's thesis, CMS Wg->munug, 7 TeV.
+
+\bibitem{ref_twiki_SMP_ATGC}
+Available at:
+  https://twiki.cern.ch/twiki/bin/view/CMSPublic/PhysicsResultsSMPaTGC\#Figure%
+\_1\_Limits\_on\_WWgamma\_aTGC.
+
+\bibitem{ref_7TeV_CMS}
+7TeV Wg CMS paper.
+
+\bibitem{ref_7TeV_ATLAS}
+7TeV Wg ATLAS paper.
+
+\bibitem{ref_fig_CERNacceleratorComplex}
+website: http://cds.cern.ch/record/1621583/files/.
+
+\bibitem{ref_fig_LHC_totalCS}
+website: https://muon.files.wordpress.com/2014/01/cms-sigma-vs-e.png.
+
+\bibitem{ref_fig_LHClumi}
+Available at: https://twiki.cern.ch/twiki/bin/view/CMSPublic/LumiPublicResults.
+
+\bibitem{ref_CMSschemView}
+Available at: https://inspirehep.net/record/837874/plots.
 
 \bibitem{ref_Frank_thesis}
 F.~Meier Aeschbacher.
@@ -14,64 +37,13 @@ F.~Meier Aeschbacher.
   Compact Muon Solenoid experiment at Cern's Large Hadron Collider}.
 \newblock PhD thesis, ETH Zurich, 2013.
 
-\bibitem{ref_AlApproved_twiki}
-Cms tracker detector performance results 2015: Alignment.
-\newblock Available at:
-  https://twiki.cern.ch/twiki/bin/view/CMSPublic/TkAlignmentPerformance2015.
-
-\bibitem{ref_ATLAS_VW_8TeV}
-ATLAS VW (V=W,Z $\rightarrow$jj) using 4.6 fb-1 of 7 TeV pp collisions JHEP 01
-  (2015) 049.
-
-\bibitem{ref_CMS_TDR}
-CMS TDR.
-
-\bibitem{ref_CMS_7TeV_Zgnunug}
-CMS 7 TeV Zg nunug.
-
-\bibitem{ref_CMS_8TeV_WW}
-CMS 8 TeV WW lnulnu.
-
-\bibitem{ref_CMSschemView}
-Available at: https://inspirehep.net/record/837874/plots.
-
-\bibitem{ref_CMSSW}
-Cmssw.
-
-\bibitem{ref_CMS_VW_7TeV}
-CMS VW (V=W,Z $\rightarrow$jj) using 5.0 fb-1 of 7 TeV pp collisions
-  Eur.Phys.J. C73 (2013) 2283.
-
-\bibitem{ref_CMS_WW_7TeV}
-CMS WW using 4.9 fb-1 of 7 TeV pp collisions Eur. Phys. J. C 73 (2013) 2610.
-
-\bibitem{ref_CMS_WW_8TeV}
-CMS WW using 19.4 fb-1 of 8 TeV pp collisions Submitted to EPJC.
-
-\bibitem{ref_HiggsPaperATLAS}
-ATLAS Collaboration.
-\newblock Observation of a new particle in the search for the standard model
-  higgs boson with the atlas detector at the lhc.
-\newblock {\em Phys. Lett. B}, 716(1):1--29, 2012.
-\newblock Available at: https://arxiv.org/abs/1207.7214.
-
 \bibitem{ref_Alignment}
 CMS collaboration.
 \newblock Alignment of the cms tracker with large hadron collider data.
 
-\bibitem{ref_trackerPerformance}
-CMS collaboration.
-\newblock Description and performance of track and primary-vertex
-  reconstruction with the cms tracker.
-\newblock Available at: https://arxiv.org/abs/1405.6569.
-
-\bibitem{ref_Wgg8TeV}
-CMS collaboration.
-\newblock Wgg, 8 tev.
-
-\bibitem{ref_Zg8TeV}
-CMS collaboration.
-\newblock Zg, 8 tev.
+\bibitem{ref_LHC_brochure}
+CERN brochure,
+  http://cds.cern.ch/record/1165534/files/CERN-Brochure-2009-003-Eng.pdf.
 
 \bibitem{ref_HiggsPaperCMS}
 CMS Collaboration.
@@ -80,44 +52,35 @@ CMS Collaboration.
 \newblock {\em Phys. Lett. B}, 716(1):30--61, 2012.
 \newblock Available at: https://arxiv.org/abs/1207.7235.
 
-\bibitem{ref_CS_wiki}
-Wikipedia article. cross section (physics).
+\bibitem{ref_HiggsPaperATLAS}
+ATLAS Collaboration.
+\newblock Observation of a new particle in the search for the standard model
+  higgs boson with the atlas detector at the lhc.
+\newblock {\em Phys. Lett. B}, 716(1):1--29, 2012.
+\newblock Available at: https://arxiv.org/abs/1207.7214.
+
+\bibitem{ref_NASA}
+Nasa website.
 \newblock Available at:
-  https://en.wikipedia.org/wiki/Cross\_section\_\%28physics\%29.
+  https://science.nasa.gov/astrophysics/focus-areas/what-is-dark-energy.
 
-\bibitem{ref_D0_aTGC_comb}
-D0 Combination of W$\gamma$, WW, WZ and VW using 8.6 fb-1 of 2 TeV $p\bar{p}$
-  collisions Phys.Lett. B718 (2012) 451-459.
-
-\bibitem{ref_DAgostini}
-D'agostini unfolding.
-
-\bibitem{ref_fig_CERNacceleratorComplex}
-website: http://cds.cern.ch/record/1621583/files/.
-
-\bibitem{ref_fig_LHClumi}
-Available at: https://twiki.cern.ch/twiki/bin/view/CMSPublic/LumiPublicResults.
-
-\bibitem{ref_fig_LHCsectors}
-Available at:
-  http://cds.cern.ch/journal/CERNBulletin/2014/24/News\%20Articles/1706606.
-
-\bibitem{ref_ggNtuplizer}
-ggntuplizer.
-
-\bibitem{ref_GITHUB}
-Github.
-
-\bibitem{ref_Lindsey_thesis}
-L.~Gray.
-\newblock {\em A measurement of the Z$\gamma$ Cross Section and Limits on
-  anomalous Gauge Couplings at $\sqrt{s}=7$~TeV Using CMS}.
-\newblock PhD thesis, University of Wisconsin - Madison, 8 2012.
+\bibitem{ref_Pich}
+A.~Pich.
+\newblock {\em The Standard Model of Electroweak Interactions}, 2007.
+\newblock Updated version of the lectures given at the 2006 European School of
+  High Energy Physics (Aronsborg, Sweden, 18 June - 1 July 2006) and at the 4th
+  CERN - CLAF School of High Energy Physics (Vina del Mar, Chile, 18 February -
+  3 March 2007). Available at: https://arxiv.org/abs/0705.4264.
 
 \bibitem{ref_Griffiths}
 D.~Griffiths.
 \newblock {\em Introduction to Elementary Particles}.
 \newblock WILEY-VCH, 2008.
+
+\bibitem{ref_fnal_LumiCS}
+Available at:
+  https://www-d0.fnal.gov/results/publications\_talks/thesis/snyder/html/node1%
+7.html.
 
 \bibitem{ref_Halzen_Martin}
 Martin Halzen.
@@ -128,19 +91,42 @@ Hard scattering.
 \newblock Available at:
   http://iopscience.iop.org/article/10.1088/0034-4885/70/1/R02.
 
-\bibitem{ref_HIP_Alg}
-Hip algorithm.
+\bibitem{ref_theory_LO}
+LO (1969) theory paper.
+
+\bibitem{ref_theory_NNLO}
+NNLO theory paper.
+
+\bibitem{ref_theory_aTGC}
+aTGC paper, LEP parametrization.
+
+\bibitem{ref_D0_aTGC_comb}
+D0 Combination of W$\gamma$, WW, WZ and VW using 8.6 fb-1 of 2 TeV $p\bar{p}$
+  collisions Phys.Lett. B718 (2012) 451-459.
 
 \bibitem{ref_LEP_aTGC_comb}
 LEP Combination of WW and single W using 0.7 fb-1 per experiment of $e^+e^-$
   collisions at WW pair production energies arXiv:1302.3415.
 
-\bibitem{ref_LHC_brochure}
-CERN brochure,
-  http://cds.cern.ch/record/1165534/files/CERN-Brochure-2009-003-Eng.pdf.
+\bibitem{ref_ATLAS_WW_8TeV}
+ATLAS WW using 20.3 fb-1 of 8 TeV pp collisions Submitted to JHEP.
 
-\bibitem{ref_LHClumi_twiki}
-Available at: https://twiki.cern.ch/twiki/bin/view/CMSPublic/LumiPublicResults.
+\bibitem{ref_CMS_WW_7TeV}
+CMS WW using 4.9 fb-1 of 7 TeV pp collisions Eur. Phys. J. C 73 (2013) 2610.
+
+\bibitem{ref_CMS_WW_8TeV}
+CMS WW using 19.4 fb-1 of 8 TeV pp collisions Submitted to EPJC.
+
+\bibitem{ref_ATLAS_VW_8TeV}
+ATLAS VW (V=W,Z $\rightarrow$jj) using 4.6 fb-1 of 7 TeV pp collisions JHEP 01
+  (2015) 049.
+
+\bibitem{ref_CMS_VW_7TeV}
+CMS VW (V=W,Z $\rightarrow$jj) using 5.0 fb-1 of 7 TeV pp collisions
+  Eur.Phys.J. C73 (2013) 2283.
+
+\bibitem{ref_MCFM}
+MCFM generator.
 
 \bibitem{ref_LHC_TDR}
 LHC TDR.
@@ -148,77 +134,64 @@ LHC TDR.
 \bibitem{ref_LHC_website}
 Available at: http://home.cern/topics/large-hadron-collider.
 
-\bibitem{ref_fnal_LumiCS}
-Available at:
-  https://www-d0.fnal.gov/results/publications\_talks/thesis/snyder/html/node1%
-7.html.
+\bibitem{ref_LHClumi_twiki}
+Available at: https://twiki.cern.ch/twiki/bin/view/CMSPublic/LumiPublicResults.
 
-\bibitem{ref_MadGraph}
-MadGraph generator.
-
-\bibitem{ref_MCFM}
-MCFM generator.
-
-\bibitem{ref_MPII_Alg}
-Millepede ii algorithm.
-
-\bibitem{ref_myCode}
-mycode.
-
-\bibitem{ref_NASA}
-Nasa website.
-\newblock Available at:
-  https://science.nasa.gov/astrophysics/focus-areas/what-is-dark-energy.
-
-\bibitem{ref_PDG}
-Particle data group.
-\newblock Available at: pdg.lbl.gov.
+\bibitem{ref_CMS_TDR}
+CMS TDR.
 
 \bibitem{ref_ParticleFlowAlg}
 https://inspirehep.net/record/925379/files/PFT-09-001-pas.pdf.
 
-\bibitem{ref_Peskin}
-Schroeder Peskin.
-\newblock {\em Introduction to Quantum Field Theory}.
+\bibitem{ref_trackerPerformance}
+CMS collaboration.
+\newblock Description and performance of track and primary-vertex
+  reconstruction with the cms tracker.
+\newblock Available at: https://arxiv.org/abs/1405.6569.
 
-\bibitem{ref_Pich}
-A.~Pich.
-\newblock {\em The Standard Model of Electroweak Interactions}, 2007.
-\newblock Updated version of the lectures given at the 2006 European School of
-  High Energy Physics (Aronsborg, Sweden, 18 June - 1 July 2006) and at the 4th
-  CERN - CLAF School of High Energy Physics (Vina del Mar, Chile, 18 February -
-  3 March 2007). Available at: https://arxiv.org/abs/0705.4264.
+\bibitem{ref_MPII_Alg}
+Millepede ii algorithm.
 
-\bibitem{ref_7TeV_ATLAS}
-7TeV Wg ATLAS paper.
+\bibitem{ref_HIP_Alg}
+Hip algorithm.
 
-\bibitem{ref_7TeV_CMS}
-7TeV Wg CMS paper.
+\bibitem{ref_AlApproved_twiki}
+Cms tracker detector performance results 2015: Alignment.
+\newblock Available at:
+  https://twiki.cern.ch/twiki/bin/view/CMSPublic/TkAlignmentPerformance2015.
 
-\bibitem{ref_ATLAS_WW_8TeV}
-ATLAS WW using 20.3 fb-1 of 8 TeV pp collisions Submitted to JHEP.
+\bibitem{ref_MadGraph}
+MadGraph generator.
 
-\bibitem{ref_fig_LHC_CS_WandZ}
-website: https://inspirehep.net/record/1235541/files/LHC\_all.png.
+\bibitem{ref_Zg8TeV}
+CMS collaboration.
+\newblock Zg, 8 tev.
 
-\bibitem{ref_fig_LHC_totalCS}
-website: https://muon.files.wordpress.com/2014/01/cms-sigma-vs-e.png.
+\bibitem{ref_Wgg8TeV}
+CMS collaboration.
+\newblock Wgg, 8 tev.
 
-\bibitem{ref_RooCMSShapePdf}
-Roocmsshapepdf.
+\bibitem{ref_DAgostini}
+D'agostini unfolding.
 
 \bibitem{ref_RooFit}
 Roofit.
 
-\bibitem{ref_ROOT}
-Root.
+\bibitem{ref_RooCMSShapePdf}
+Roocmsshapepdf.
+
+\bibitem{ref_CMSSW}
+Cms software.
+\newblock Available at: http://cms-sw.github.io/index.html.
+
+\bibitem{ref_GITHUB}
+Github.
+
+\bibitem{ref_ggNtuplizer}
+ggntuplizer.
 
 \bibitem{ref_RooUnfold}
 Roounfold.
-
-\bibitem{ref_Senka_thesis}
-PhD thesis.
-\newblock Senka's thesis, CMS Wg->munug, 7 TeV.
 
 \bibitem{ref_fig_SM}
 UNKNOWN [TEMPORARY].
@@ -226,21 +199,49 @@ UNKNOWN [TEMPORARY].
 \newblock Available at:
   http://www.isgtw.org/spotlight/go-particle-quest-first-cern-hackfest.
 
-\bibitem{ref_theory_aTGC}
-aTGC paper, LEP parametrization.
+\bibitem{ref_Peskin}
+Schroeder Peskin.
+\newblock {\em Introduction to Quantum Field Theory}.
 
-\bibitem{ref_theory_LO}
-LO (1969) theory paper.
+\bibitem{ref_Lindsey_thesis}
+L.~Gray.
+\newblock {\em A measurement of the Z$\gamma$ Cross Section and Limits on
+  anomalous Gauge Couplings at $\sqrt{s}=7$~TeV Using CMS}.
+\newblock PhD thesis, University of Wisconsin - Madison, 8 2012.
+
+\bibitem{ref_CS_wiki}
+Wikipedia article. cross section (physics).
+\newblock Available at:
+  https://en.wikipedia.org/wiki/Cross\_section\_\%28physics\%29.
 
 \bibitem{ref_theory_NLO}
 NLO theory paper.
 
-\bibitem{ref_theory_NNLO}
-NNLO theory paper.
+\bibitem{ref_CMS_8TeV_WW}
+CMS 8 TeV WW lnulnu.
 
-\bibitem{ref_twiki_SMP_ATGC}
+\bibitem{ref_CMS_7TeV_Zgnunug}
+CMS 7 TeV Zg nunug.
+
+\bibitem{ref_fig_LHC_CS_WandZ}
+website: https://inspirehep.net/record/1235541/files/LHC\_all.png.
+
+\bibitem{ref_fig_LHCsectors}
 Available at:
-  https://twiki.cern.ch/twiki/bin/view/CMSPublic/PhysicsResultsSMPaTGC\#Figure%
-\_1\_Limits\_on\_WWgamma\_aTGC.
+  http://cds.cern.ch/journal/CERNBulletin/2014/24/News\%20Articles/1706606.
+
+\bibitem{ref_Frank_presentation}
+F.~Meier Aeschbacher.
+\newblock Hunting down suspicious results: recent improvements in the alignment
+  of the cms tracker detector, 2010.
+\newblock Available as an internal CMS presentation at:
+  https://indico.cern.ch/event/243940/contributions/1562955/attachments/416194%
+/578159/praesDoktorandensemi2010.pdf.
+
+\bibitem{ref_ROOT}
+Root.
+
+\bibitem{ref_myCode}
+mycode.
 
 \end{thebibliography}
