@@ -1,7 +1,7 @@
 \section{Data and Monte Carlo Samples}
 \label{sec:DataAndMC}
 
-The data sample we use in this analysis was recorded by the CMS experiment in~2012 in LHC $pp$ collisions at $\sqrt{s}=8$~TeV. To select $W\gamma$ events, we use data collected by single muon and single electron triggers. The single muon trigger requires that in each event there is at least one reconstructed muon with $P_T^{\mu}>24$~GeV and $|\eta|<2.1$ which also satisfies certain requirement of isolation from other particles. The single electron trigger requires at least one reconstructed electron with $P_T^{e}>27$~GeV which also passes a certain set of identification requiremets.
+The data sample we use in this analysis was recorded by the CMS experiment in~2012 in LHC $pp$ collisions at $\sqrt{s}=8$~TeV. To select $W\gamma$ events, we use data collected by single muon and single electron triggers. The single muon trigger requires that in each event there is at least one reconstructed muon with $P_T^{\mu}>24$~GeV and $|\eta|<2.1$ which also satisfies certain requirement of isolation from other particles. The single electron trigger requires at least one reconstructed electron with $P_T^{e}>27$~GeV which also passes a certain set of identification requiremets, including isolation. Such trigger choice maximize our chances to select $W\gamma$ events out of dominant multijets events.
 
 In addition to $W\gamma$-selected data sample, we also prepare $Z\gamma$-selected data sample which is used for the background estimation (Ch.~\ref{sec:BackgroundSubtraction}) and for cross checking purpose (App.~\ref{sec:ZgCheck}). To select $Z\gamma$ events, we use double muon and double electron triggers. The double muon trigger requires a presence of at least two reconstructed muons with $P_T^{\mu}>17$~GeV and $P_T^{\mu}>8$~GeV per event. The double electron trigger requires a presence of at least two reconstructed electrons with $P_T^{e}>17$~GeV and $P_T^{e}>8$~GeV which also satisfy several other criteria of electron's quality.
 
@@ -17,9 +17,11 @@ In addition to $W\gamma$-selected data sample, we also prepare $Z\gamma$-selecte
 % which means that good functioning of all CMS sub-detectors is required.
 
 %THE IDEAS FROM THIS PARAGRAPH NEED TO BE REPACKAGED
-All simulated samples (often referred as Monte Carlo or MC samples) used in this measurement are generated with MadGraph~\cite{ref_MadGraph} and reconstructed centrally by the CMS simulation team. Information regarding signal and background simulated samples used for our measurement is given in Tab.~\ref{tab:mc_bkg_samples} alongside with the corresponding cross sections. The $Z$+jets process is often referred as Drell-Yan + jets or DY+jets.
+All simulated samples (often referred as Monte Carlo or MC samples) used in this measurement are generated with MadGraph~\cite{ref_MadGraph} and reconstructed centrally by the CMS simulation team. Information regarding MC samples used for our measurement is given in Tab.~\ref{tab:mc_bkg_samples} alongside with the corresponding cross sections. $W\gamma \rightarrow l\nu\gamma$ contains $W\gamma \rightarrow \mu\nu\gamma$ and $W\gamma \rightarrow e\nu\gamma$ which are our signal samples and $W\gamma \rightarrow \tau\nu\gamma$ which is our background sample. The other samples listed in Tab.~\ref{tab:mc_bkg_samples} are all background samples. They are used for background estimation and cross checking as explained in detail in the remainder of the chapter.
 
-Samples $W$+jets, DY+jets and $t\bar{t}$+jets are prepared in a waya they do not overlap with $W\gamma$, $Z\gamma$, $t\bar{t}\gamma$ samples.
+The $Z$+jets$ \rightarrow ll $+jets process is interchangeably used in this dissertation as Drell-Yan + jets$ \rightarrow ll $+jets or DY+jets$ \rightarrow ll $+jets. The requirement on the invariant mass of the final state lepton pair is $M_{ll}>50$~GeV. 
+
+Samples $W$+jets and DY+jets are prepared in a way they do not overlap with $W\gamma$ and $Z\gamma$ samples.
 
 \begin{table}[h]
   \small
@@ -28,21 +30,21 @@ Samples $W$+jets, DY+jets and $t\bar{t}$+jets are prepared in a waya they do not
     \begin{tabular}{|l|l|l|}
       \hline
       Process                              & Type & $\sigma$, pb  \\ \hline
-      $W\gamma \rightarrow l\nu\gamma$     & signal & 553.92   \\ \hline %(NLO)
-      $W$+jets$ \rightarrow l\nu + jets$   & background & 36257.2  \\ \hline %(NNLO)
-      $Z$+jets$ \rightarrow ll + jets$     & background & 3503.71  \\ \hline
-      $t\bar{t}$+jets$\rightarrow 1$l+X    & background & 99.44    \\ \hline %(NNLO)
-      $t\bar{t}$+jets$\rightarrow 2$l+X    & background & 23.83    \\ \hline
-      $t\bar{t}\gamma$                     & background & 1.444    \\ \hline
-      $Z\gamma \rightarrow ll\gamma$       & background & 171.62   \\ \hline
+      $W\gamma \rightarrow l\nu\gamma$     & signal & 554   \\ \hline %(NLO)
+      $W$+jets$ \rightarrow l\nu $+jets   & background & 36257  \\ \hline %(NNLO)
+      $Z$+jets$ \rightarrow ll $+jets     & background & 3504  \\ \hline
+      $t\bar{t}$+jets$\rightarrow 1l$+X    & background & 99    \\ \hline %(NNLO)
+      $t\bar{t}$+jets$\rightarrow 2l$+X    & background & 24    \\ \hline
+%      $t\bar{t}\gamma$                     & background & 1    \\ \hline
+      $Z\gamma \rightarrow ll\gamma$       & background & 172   \\ \hline
     \end{tabular}
     \label{tab:mc_bkg_samples}
   \end{center}
 \end{table} 
 
-The NLO cross section of $W\gamma$ was calculated with the MCFM in the same phase space for which the $W\gamma$ sample was generated. The NNLO contribution is estimated to be~19\%-26\% of the NLO value~\cite{ref_theory_NNLO}.
+The NLO cross section of $W\gamma$ was calculated with the MCFM in the same phase space for which the $W\gamma$ sample was generated. The NNLO contribution is estimated to be~19\%-26\% of the NLO value~\cite{ref_theory_NNLO}. We use an NLO cross section value, and the NNLO estimate is used as an systematic uncertainty of the $W\gamma$ sample when it is applicable. 
 
-The cross section of $Z\gamma$ measured by CMS is taken~\cite{ref_Zg8TeV} and expanded to the phase space of the $Z\gamma$ generated MC sample. The resulting cross section is found to be~$171.62$~pb.
+The uncertainty on normalization of the $Z\gamma$ sample gives a significant contribution to the uncertainty of a the measurement because $Z\gamma$ MC sample is used to estimate the most significant background (Ch.~\ref{sec:BackgroundSubtraction_jtog}). MCFN provdes a value of the cross section with uncertainty of 20\%. To minimize the uncertainty, we use a cross section of $Z\gamma$ measured by CMS~\cite{ref_Zg8TeV} and recalculated it for the phase space of the generated $Z\gamma$ MC sample. The resulting cross section is found to be~$172$~pb. Uncertainties on normalizations of other samples do not contribute significantly to the uncertainty of the measurement, therefore, we use MCFN values for them.
 
 At the instantaneous luminosities of LHC in~2012, as a rule, multiple $pp$ interactions occured per bunch crossings. Multiple interactions are also simulated in the MC samples. However, MC samples are usually produced before data collection is finished, and in the end have to be rewithed so that the distribution of the number of interactions in simulated sample matches the data.
 

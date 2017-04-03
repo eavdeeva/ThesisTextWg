@@ -22,17 +22,28 @@ Selection criteria are applied consistently on the data sample as well as on all
 
 In the final state of the $W\gamma\rightarrow l\nu\gamma$ process, there is a lepton, a photon, and a neutrino. Because of that, we select events with exactly one lepton (muon or electron), a photon, both originating from the primary vertex, and with the significant missing transverse energy $E_T^{miss}$. The selection criteria for the individual electrons, muons and photons are described in Ch.~\ref{sec:AN_ObjectSelection}.
 
-To select events with significant $E_T^{miss}$, we introduce a selection requirement on the transverse mass of a $W$~boson $M_T^W$ which is related to $E_T^{miss}$ as: 
+The standard tool to detec a particle that decays is to reconstruct its invariant mass out of its decay products. Decay products of a $W$ boson are a charged lepton and a neutrino. CMS does not detect neutrino, it only measures the missing momentum in the plane, transverse to the beamline, which can be partially associated with a neutrino. The transverse momentum is described by two parameters: $E_T^{miss}$ and $\phi^{miss}$. Because we do not have an estimate of the longitudial component of a neutrino, we cannot construct an invariant mass of a $W$ boson. Instead, we construct its transverse mass:
 \begin{equation}
 M_T^W=\sqrt{(2  P_T^{l}  E_T^{miss}  (1-\cos{(\phi^{l}-\phi^{miss})}))},
 \end{equation}
-\noindent{where $P_T^l$ is a lepton transverse momentum, $\phi^{l}$ is an azimuthal angle of the lepton momentum, and $\phi^{miss}$ is an azimuthal angle of the missing transverse momentum. The requirement is $M_T^W>40$~GeV. The $M_T^W$ distribution is shown in Fig.~\ref{fig:DATAvsMC_WMt}. Photons with $P_T^{\gamma}<45$~GeV are selected for this plot because for such photons we do not expect them to be result of a new physics process.}
+\noindent{where $P_T^l$ is a lepton transverse momentum, $\phi^{l}$ is an azimuthal angle of the lepton momentum, and $\phi^{miss}$ is an azimuthal angle of the missing transverse momentum. To enchance contribution from $W\gamma$ compared to background processes without a final state neutrino, we require $M_T^W>40$~GeV. Value of $40$~GeV was recommended by the CMS Standard Model Physics (SMP) group because the same requirement was used in $W\gamma\gamma$ measurement. The $M_T^W$ distribution is shown in Fig.~\ref{fig:DATAvsMC_WMt}. Photons with $P_T^{\gamma}<45$~GeV are selected for this plot because for such photons we do not expect them to be result of a new physics process.}
 
 After the listed selection criteria are applied, significant background from DY+jets in the electron channel remains. This background is caused by one of the electrons misidentified as a photon. Its contribution is the most significant around the invariant mass of the electron-photon system $M_{e\gamma}$ close to the mass of the $Z$ boson (Fig.~\ref{fig:DATAvsMC_Mpholep1})because the distribution of $M_{ee}$ in the $Z\rightarrow e e$ decay is peaking at the value of the Z boson mass. To reduce this background, we apply $Z$-mass window selection criterion, more specifically, events with $70$~GeV$<M_{e\gamma}<110$~GeV are rejected. 
 
+In addition to $W\gamma$-selected datasets, we also prepare $Z\gamma$-selected datasets in muon and electron channels. Selection requirements include at least two muons (or electrons) and at least one photon in the final state. Kinematis and identification requirements on the objects are the same as for the $W\gamma$ selection. Unlike in $W\gamma$, in $Z\gamma$ selection in the electron channel, photons are required to pass ``Medium'' ID without any modifications. Invariant mass of the final state lepton pair is required to be $M_{ll}>50$~GeV. Finally, a separation between photon and each lepton must be $\Delta R>0.7$.
+
 Finally, the separation $\Delta R=\sqrt{({\Delta\phi}^2+{\Delta\eta}^2)}$ between the final state lepton and photon is required to be $\Delta R(l,\gamma)>0.7$ to enhance the TGC contribution. In case if there is more than one photon in the selected event, the candidate with the photon of the highest~$P_T^{\gamma}$ is selected. 
 
-Data and MC in Fig.~\ref{fig:DATAvsMC_WMt}-\ref{fig:DATAvsMC_Mpholep1} significantly disagree. Thus, a data-driven method is necessary to estimate the backgrounds.
+In addition to $W\gamma$-selected datasets, we also prepare $Z\gamma$-selected datasets in muon and electron channels. Selection requirements include at least two muons (or electrons) and at least one photon in the final state. Kinematis and identification requirements on the objects are the same as for the $W\gamma$ selection. Unlike in $W\gamma$, in $Z\gamma$ selection in the electron channel, photons are required to pass ``Medium'' ID without any modifications. Invariant mass of the final state lepton pair is required to be $M_{ll}>50$~GeV. Finally, a separation between photon and each lepton is required to be the same as in the $W\gamma$ selection: $\Delta R>0.7$. 
+
+\subsection{Selected Events}
+
+%Distributions of $P_T^{\gamma}$ and $M_T^W$ of the selected events are shown in Fig. \ref{fig:DATAvsMC} and \ref{fig:DATAvsMC_WMt}. 
+%The is a large discrepancies in all the distributions and therefore the data-driven background estimates are necessary.\\
+
+After the selection procedure, 175889 and 85643 events survived in the muon and electron channels, respectively. These events are used for the total and differential cross setion measurements with respect to $P_T^{\gamma}$. Distributions of $P_T^{\gamma}$ of the selected events are shown in Fig.~\ref{fig:DATAvsMC} and documented in Tab.~\ref{tab:yields_Wg_to_munu__Barrel_}-\ref{tab:yields_Wg_to_enu__Endcap_}. The plots and tables include information about the underflow $P_T^{\gamma}$ bin ($10-15$~GeV). The measurement in this bin is used for the detector resolution unfolding (Ch.~\ref{sec:Unfolding}). 
+
+There are large discrepancies in all the distributions as shown in Fig.~\ref{fig:DATAvsMC_WMt}-\ref{fig:DATAvsMC}. Therefore, the data-driven background estimates are necessary.
 
 \begin{figure}[htb]
   \begin{center}
@@ -49,15 +60,6 @@ Data and MC in Fig.~\ref{fig:DATAvsMC_WMt}-\ref{fig:DATAvsMC_Mpholep1} significa
   \label{fig:DATAvsMC_Mpholep1}
   \end{center}
 \end{figure}
-
-In addition to $W\gamma$-selected datasets, we also prepare $Z\gamma$-selected datasets which are used for background estimation (Ch.~\ref{sec:BackgroundSubtraction}) and for cross checking (App.~\ref{sec:ZgCheck}). We select $Z\gamma$ events in muon and electron channels. Selection requirements include at least two muons (or electrons) and at least one photon in the final state. Kinematis and identification requirements on the objects are the same as for the $W\gamma$ selection. Unlike in $W\gamma$, in $Z\gamma$ selection in the electron channel, photons are required to pass ``Medium'' ID without any modifications. Invariant mass of the final state lepton pair is required to be $M_{ll}>50$~GeV. Finally, a separation between photon and each lepton must be $\Delta R>0.7$. 
-
-\subsection{Selected Events}
-
-%Distributions of $P_T^{\gamma}$ and $M_T^W$ of the selected events are shown in Fig. \ref{fig:DATAvsMC} and \ref{fig:DATAvsMC_WMt}. 
-%The is a large discrepancies in all the distributions and therefore the data-driven background estimates are necessary.\\
-
-Distributions of $P_T^{\gamma}$ of the selected events are shown in Fig.~\ref{fig:DATAvsMC}. The are large discrepancies in all the distributions and therefore the data-driven background estimates are necessary.
 
 \begin{figure}[htb]
   \begin{center}
