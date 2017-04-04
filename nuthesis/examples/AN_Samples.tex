@@ -61,14 +61,19 @@ The resulting $Z\gamma$ cross section is found to be~$172$~pb. Uncertainties on 
 %$\sigma_{narrow phase space}^{meas.}/\sigma_{wide phase space}^{meas.} = \sigma_{narrow phase space}^{MCFM}/\sigma_{wide phase space}^{MCFM}$.\\
 %The $\sigma_{narrow phase space}^{MCFM}$ was determined by computing how many events are falling into the narrow phase space and scaling it to $\sigma_{wide phase space}^{MCFM}$=159.12 pb. The $\sigma_{narrow phase space}^{MCFM}$ was found to be 1933 fb and 1911 fb for the muon and electron channels respectively and the average of 1922 fb was used in the formula. The $\sigma_{wide phase space}^{meas.}$ was found to be 171.62 pb.
 
-At the instantaneous luminosities of LHC in~2012, as a rule, multiple $pp$ interactions occured per bunch crossings. Multiple interactions are also simulated in the MC samples. However, MC samples are usually produced before data collection is finished, and in the end have to be rewithed so that the distribution of the number of interactions in simulated sample matches the data.
+%EXPLAIN THE NEED FOR REQEIGHTING
+At the instantaneous luminosities of LHC in~2012, as a rule, multiple $pp$ interactions occured per bunch crossings. Multiple interactions are also simulated in the MC samples. However, MC samples are usually produced before data collection is finished, and in the end have to be reweithed so that the distribution of the number of interactions (pileip or PU) in simulated sample matches the data. The PU weights are assigned on each event in each MC sample to make the PU distribution in MC accurately describe PU in data.
 
-The pileup (PU) weights are assigned on each event in each MC sample. Figure~\ref{fig:DATAvsMC_nVtx} shows the distribution of the number of vertices of the $Z\gamma$-selected dataset overlaid with $Z\gamma$ and DY+jets MC samples in the muon channel before (left) and after (right) the PU reweighting of the MC samples. The $Z\gamma$-selected dataset is composed mainly of two sources and the $Z\gamma$ cross section is already measured and published by CMS~\cite{ref_Zg8TeV}, thus, we understand the distributions of $Z\gamma$-selected samples better the distributions of the $W\gamma$-selected samples. Thus, we use $Z\gamma$-selected dataset to validate the procedure of PU reweighting which is the same for $Z\gamma$-selected and $W\gamma$-selected MC samples.
+%EXPLAIN THE PROCEDURE OF REWEIGHTING (last sentence in previous paragraph)
+
+
+%EXPLAIN THE VALIDATION OF REWEIGHTING
+To validate the procedure of the PU reweighting, we check the agreement between data and MC in the distribution of the number of vertices in $Z\gamma\rightarrow\mu\mu\gamma$-selected datasets (Fig.~\ref{fig:DATAvsMC_nVtx}). We choose $Z\gamma$ selected datasets instead of $W\gamma$-selected datasets because the sample composition for $Z\gamma$ selection is understood better and normalizations of the MC samples that pass $Z\gamma$ selection are known better. The $Z\gamma$ selection is explained in Ch.~\ref{sec:AN_Selection} alongside with the $W\gamma$ selection.
 
 \begin{figure}[htb]
   \begin{center}
    \includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/PrepareYields/c_TotalDATAvsMC_EtaCommon__nVtx_noPU.png}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_ZGamma/PrepareYields/c_TotalDATAvsMC_EtaCommon__nVtx.png}
-  \caption{Number of vertices of $Z\gamma$ candidates in the muon channel. Data vs MC. Left: no PU reweighting applied, right: PU reweighting applied. }
+  \caption{Number of vertices of $Z\gamma$ candidates in the muon channel. Data vs MC. Left: no PU reweighting applied, right: PU reweighting applied. Ratio plot in the bottom shows data yields divided over total MC yields.}
   \label{fig:DATAvsMC_nVtx}
   \end{center}
 \end{figure}
