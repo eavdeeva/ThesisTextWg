@@ -1,20 +1,71 @@
 \chapter{APPENDIX: Efficiency Scale Factors}
 \label{sec:SFsTables}
 
-
-
 \begin{table}[h]
-  \scriptsize
+  \footnotesize
   \begin{center}
-  \caption{Muon Scale Factors} 
-   \begin{tabular}{|c|c|c|c|c|c|c|}
- bin  & DY+jets    & Data                      & DY+jets & scale & $e\rightarrow\gamma$ & SigMC\\ 
- lims & nom. sel. & $e\rightarrow\gamma$ enr. & $e\rightarrow\gamma$ enr. & & yield & ($W\gamma\rightarrow e\nu\gamma$)\\ \hline
-%10-15 & 2922$\pm$79 & 6784$\pm$307 & 3875$\pm$91 & 1.75$\pm$0.0896& 2922$\pm$79& 12480$\pm$163 \\ \hline
-15-20 & 1917$\pm$63 & 6395$\pm$149 & 3300$\pm$83 & 1.94$\pm$0.0667& 3715$\pm$177& 5857$\pm$110 \\ \hline
-20-25 & 1175$\pm$49 & 5141$\pm$235 & 2987$\pm$79 & 1.72$\pm$0.091& 2023$\pm$137& 2868$\pm$77 \\ \hline
+  \caption{Muon Isolation Scale Factors as Recommended by POG} 
+   \begin{tabular}{|c|c|c|}
+ $P_T^{\gamma}$  & $|\eta|< 0.9$   & $0.9<|\eta|< 1.2$    & $1.2<|\eta|< 2.1$ \\ \hline
+25-30          & 0.999$\pm$0.001   & 1.002$\pm$0.001    & 1.002$\pm$0.001     \\ \hline
+30-35          & 0.999$\pm$0.000   & 1.002$\pm$0.001    & 1.003$\pm$0.000        \\ \hline
+35-40          & 0.999$\pm$0.000   & 1.001$\pm$0.001    & 1.002$\pm$0.000        \\ \hline
+40-45          & 0.998$\pm$0.000   & 1.000$\pm$0.000    & 1.000$\pm$0.000        \\ \hline
+45-50          & 1.000$\pm$0.000   & 1.000$\pm$0.000    & 1.000$\pm$0.000        \\ \hline
+50-60          & 0.999$\pm$0.000   & 1.000$\pm$0.000    & 1.000$\pm$0.000        \\ \hline
+60-90          & 1.000$\pm$0.000   & 1.001$\pm$0.001    & 1.000$\pm$0.000        \\ \hline
+90-140         & 1.001$\pm$0.001   & 1.001$\pm$0.001    & 1.000$\pm$0.001        \\ \hline
+$>$140         & 1.001$\pm$0.002   & 1.004$\pm$0.005    & 0.997$\pm$0.002        \\ \hline
   \end{tabular}
-  \label{tab:EtoGAMMA_0}
+  \label{tab:SFs_MuonIso}
   \end{center}
 \end{table}
 
+\begin{table}[h]
+  \footnotesize
+  \begin{center}
+  \caption{Electron ``Tight''~ID Scale Factors as Recommended by POG} 
+   \begin{tabular}{|c|c|c|c|c|}
+ $P_T^{e}$  & $|\eta|\leq 0.80$ & $0.80<|\eta|\leq 1.44$ & $1.57<|\eta|\leq 2.00$ & $|\eta|> 2.00$\\ \hline
+$\leq$40       & 0.978$\pm$0.001   & 0.958$\pm$0.002        & 0.909$\pm$0.003        & 0.987$\pm$0.004 \\ \hline
+40-50          & 0.981$\pm$0.001   & 0.969$\pm$0.001        & 0.942$\pm$0.002        & 0.991$\pm$0.003 \\ \hline
+$>$50            & 0.982$\pm$0.002   & 0.969$\pm$0.002        & 0.957$\pm$0.004        & 0.999$\pm$0.005 \\ \hline
+  \end{tabular}
+  \label{tab:SFs_ElectronID}
+  \end{center}
+\end{table}
+
+\begin{table}[h]
+  \footnotesize
+  \begin{center}
+  \caption{Photon ``Medium''~ID Scale Factors as Recommended by POG} 
+   \begin{tabular}{|c|c|c|c|c|}
+ $P_T^{\gamma}$  & $|\eta|\leq 0.80$ & $0.80<|\eta|\leq 1.44$ & $1.57<|\eta|\leq 2.00$ & $|\eta|> 2.00$\\ \hline
+15-20          & 0.95$\pm$0.02   & 0.99$\pm$0.02        & 1.00$\pm$0.02        & 1.02$\pm$0.02 \\ \hline
+20-30          & 0.96$\pm$0.01   & 0.97$\pm$0.01        & 0.98$\pm$0.01        & 1.00$\pm$0.01 \\ \hline
+30-40          & 0.98$\pm$0.01   & 0.98$\pm$0.01        & 0.99$\pm$0.01        & 1.00$\pm$0.01 \\ \hline
+40-50          & 0.98$\pm$0.01   & 0.98$\pm$0.01        & 1.00$\pm$0.01        & 1.01$\pm$0.01 \\ \hline
+$>$50          & 0.98$\pm$0.01   & 0.98$\pm$0.01        & 1.00$\pm$0.01        & 1.01$\pm$0.01 \\ \hline
+  \end{tabular}
+  \label{tab:SFs_PhotonID}
+  \end{center}
+\end{table}
+
+\begin{table}[h]
+  \footnotesize
+  \begin{center}
+  \caption{Additional Photon Scale Factors for ``PixelSeedVeto'' as Derived in $W\gamma\gamma$ Measurement} 
+   \begin{tabular}{|c|c|c|}
+ $P_T^{\gamma}$  & barrel              & endcap \\ \hline
+15-20          & 0.996$\pm$0.020     & 0.960$\pm$0.041 \\ \hline
+20-25          & 0.994$\pm$0.024     & 0.977$\pm$0.051 \\ \hline
+25-30          & 0.996$\pm$0.030     & 0.951$\pm$0.062 \\ \hline
+30-40          & 0.999$\pm$0.033     & 1.029$\pm$0.081 \\ \hline
+40-50          & 1.009$\pm$0.073     & 0.971$\pm$0.150 \\ \hline
+50-70          & 0.993$\pm$0.128     & 0.965$\pm$0.294 \\ \hline
+$>$70          & 1.047$\pm$0.111     & 1.145$\pm$0.371 \\ \hline
+
+  \end{tabular}
+  \label{tab:SFs_PhotonPixelSeedVeto}
+  \end{center}
+\end{table}
