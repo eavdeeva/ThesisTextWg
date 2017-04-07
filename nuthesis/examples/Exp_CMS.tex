@@ -182,7 +182,7 @@ HLT is a software-based trigger. It uses information from all subdetectors and r
 
 \subsection{Particle Flow Algorithm of Event Reconstruction}
 
-A particle flow algorithm is used by CMS to identify and reconstruct stable particles~\cite{ref_ParticleFlowAlg}. It processes the information from all CMS subdetectors and identifies and reconstructs each stable particle in an event individually. The list of particles include muons, electrons, photons, charged and neutral hadrons. Each type of particles leaves its specific trace in the CMS detector as shown in Fig.~\ref{fig:CMS_slice}. After reconstruction of individual stable particles, jets are built, missing transverse energy $E_T^{miss}$ is determined, certain short-lived particles are reconstructed based on the list of individual stable particles in the event.
+A particle flow (PF) algorithm is used by CMS to identify and reconstruct stable particles~\cite{ref_ParticleFlowAlg}. It processes the information from all CMS subdetectors and identifies and reconstructs each stable particle in an event individually. The list of particles include muons, electrons, photons, charged and neutral hadrons. Each type of particles leaves its specific trace in the CMS detector as shown in Fig.~\ref{fig:CMS_slice}. After reconstruction of individual stable particles, jets are built, missing transverse energy $E_T^{miss}$ is determined, certain short-lived particles are reconstructed based on the list of individual stable particles in the event.
 
 One particle can induce several different particle-flow elements in different subdetectors. The linking algorithm links these elements together producing blocks of elements. Usually, a block has between one and three elements. Links can be connections between the tracking system and PS, ECal or HCal, between PS and ECal, between ECal and HCal, and between a tracking system and a muon system. 
 
@@ -196,6 +196,6 @@ When all particles in the event are reconstructed and identified, the algorithm 
 
 $E_T^{miss}$ is used in physics measurements as a measure of $P_T$ of neutrinos and other invisible particles in the event. Fake $E_T^{miss}$ can originate from particles that did not fall into the detector acceptance, particles that they did not reach the tracking system because their momenta was too low and, therefore, track curvature was too high, momenta mismeasurement, particle misidentification, cosmic rays particles, and machine background.
 
-In the measurement of this dissertation particle flow muons, electrons, photons, and $E_T^{miss}$ are used for all the major steps of the cross section measurement including event selection, background subtraction, various corrections, and determination of phase space restrictions and bin boundaries. Each step is described in greater details in~Ch.~\ref{sec:AN_WgMeas}. 
+In the measurement of this dissertation PF muons, electrons, photons, and $E_T^{miss}$ are used for all the major steps of the cross section measurement including event selection, background subtraction, various corrections, and determination of phase space restrictions and bin boundaries. Each step is described in greater details in~Ch.~\ref{sec:AN_WgMeas}. 
 
 %Acceptance: particles which are too collinear and go to pipe; particles which get curved too strongly

@@ -9,20 +9,34 @@ We select events with a muon and a photon in the final state for the muon channe
 
 We apply selection requirements on transverse momenta of $P_T^{\mu}>25$ GeV on muons,  $P_T^e>30$~GeV on electrons and $P_T^{\gamma}>15$~GeV on photons. In addition, electrons and photons must be within barrel (EB) or endcap (EE) sections of the Ecal which corresponds to pseudorapidity ranges of $|\eta^{e,\gamma}| < 1.4442$ and $1.566 < |\eta^{e,\gamma}| < 2.5$, respectively. Muons must be within $|\eta^{\mu}|<2.1$. Selection requirements on $P_T^{\mu}$, $\eta^{\mu}$, and $P_T^e$ are determined by the trigger requirements, $\eta^{e,\gamma}$ criteria are determined by the geometrical limitations of the detector acceptance, and $P_T^{\gamma}>15$~GeV is the phase space requirement.
 
-CMS Particle Object Group (POG) provides their recommendations for object identification~(ID) criteria for any given period of data collection. Recommendations for~2012 data include two sets of muon~ID criteria: ``Tight'' and ``Loose'' and four sets of electron and photon~ID criteria: ``Tight'', ``Medium'', ``Loose'' and ``Veto''. 
+CMS Particle Object Group (POG) provides their recommendations for object identification~(ID) criteria for any given period of data collection. Recommendations for~2012 data include two sets of muon~ID criteria: ``Tight'' and ``Loose'', and four sets of electron and photon~ID criteria: ``Tight'', ``Medium'', ``Loose'' and ``Veto''. 
 
-For muon and electron selection, we apply ``Tight''~ID criteria. For photon selection, we apply ``Medium''~ID criteria in the muon channel and a modified ``Medium''~ID in the electron channel. The modification of the photon~ID criteria was studied in the $W\gamma\gamma \rightarrow l\nu\gamma\gamma$ measurement~\cite{ref_Wgg8TeV}.  %No restrictions on the maximum number of the final state photons are applied, however, 
+% Muon ID
+% https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuideMuonId#Tight_Muon
+To satisfy a muon~ID criteria, objects, first of all, must be reconstructed as muons by the PF algorithm. Quality requirements are applied on tracks reconstructed in both the tracking system and the muon system. These two tracks must match. An isolation from the other nearby PF objects is also required. 
 
-To reduce backgrounds from the process with two or more leptons, such as $Z\gamma\rightarrow l l \gamma$ process, in the muon channel, we reject all events that have the second reconstructed muon candidate with $P_T^{\mu}>10$ GeV and $|\eta|^{\mu}<2.4$, and in the electron channel, we reject events which have the second reconstructed electron candidate with $p_T^e>10$ GeV and satisfying the "Veto"~ID criteria.
+% Electron ID
+% https://twiki.cern.ch/twiki/bin/viewauth/CMS/EgammaCutBasedIdentification
+% Photon ID
+% https://twiki.cern.ch/twiki/bin/viewauth/CMS/CutBasedPhotonID2012
+The electron~ID and photon~ID criteria include requirements on the shower shape, on ratio of energies releazed in ECal and HCal. The electron~ID also includes requirements on the track quality. Similarly to muons, electrons and photons must be isolated from the nearby PF objects. For the photon~ID, the isolation consists on three parts: charged hadron, neutral hadron, and photon isolation. To reject electron reconstructed as photons, ``conversion safe electron veto'' (CSEV) is recommended as a part of any photon~ID.
 
-Selection criteria are applied consistently on the data sample as well as on all MC samples. The selection efficiency may differ between data and MC. The ratios data and MC efficiencies are called the scale factors. The scale factors for the selection criteria recommended are provided by CMS POG. For the modified photon~ID criteria, the appropriate changes to the POG-recommended scale factors were applied derived by the $W\gamma\gamma$ team~\cite{ref_Wgg8TeV}.
+% [Almost] QUOTE from Wgg AN:
+%A conversion save electron veto (CSEV) CSEV rejects photons that have an associated track that is not identified as resulting from a converted photon. Pixel seed veto (PSV) requires that there is no track seed identified in the pixel detector from back-propagating from the measured supercluster. This cut removes some conversion photons, but also reduces the background from electron.
+
+For the muon and electron selection, we apply ``Tight''~ID criteria. For photon selection, we apply ``Medium''~ID criteria, however, in the electron channel, CSEV is substituted with ``pixel seed veto'' (PSV) as recommended by CMS $W\gamma\gamma \rightarrow l\nu\gamma\gamma$ measurement team~\cite{ref_Wgg8TeV}. CSEV rejects photons with associated track originated from a converted photon. Such tracks are not identified, thus, such particle is reconstracted as a photon rather than an electron. But some of such tracks can originate from real electrons, and be requiring CSEV, we reject this background. PSV rejects photons that have any track seed in the pixel detector that can match to the measured ECal supercluster. PSV is tighter requirement that CSEV and, therefore, is used in the electron channel only where we have much larger background from electrons misidentified as photons. %No restrictions on the maximum number of the final state photons are applied, however, 
+
+To reduce backgrounds from the process with two or more leptons, such as $Z\gamma\rightarrow l l \gamma$ process, in the muon channel, we reject all events that have the second reconstructed muon candidate with $P_T^{\mu}>10$~GeV and $|\eta|^{\mu}<2.4$, and, in the electron channel, we reject events that have the second reconstructed electron candidate with $p_T^e>10$~GeV and satisfying the ``Veto''~ID criteria.
+
+% SCALE FACTORS MAY MOVE TO ACCxEFF CHAPTER
+Selection criteria are applied on the data sample as well as on all MC samples. The selection efficiency may differ between data and MC. The ratios between data and MC efficiencies are called the scale factors. The scale factors for the selection criteria recommended are provided by CMS POG. For the modified photon~ID criteria, additional scale factors were applied as derived by the $W\gamma\gamma$ team~\cite{ref_Wgg8TeV}. All scale factors are listed in App.~\ref{sec:SFsTables}.
 
 \subsection{Event Level Selection}
 \label{sec:AN_Selection_EventLevel}
 
 In the final state of the $W\gamma\rightarrow l\nu\gamma$ process, there is a lepton, a photon, and a neutrino. Because of that, we select events with exactly one lepton (muon or electron), a photon, both originating from the primary vertex, and with the significant missing transverse energy $E_T^{miss}$. The selection criteria for the individual electrons, muons and photons are described in Ch.~\ref{sec:AN_ObjectSelection}.
 
-The standard tool to detec a particle that decays is to reconstruct its invariant mass out of its decay products. Decay products of a $W$ boson are a charged lepton and a neutrino. CMS does not detect neutrino, it only measures the missing momentum in the plane, transverse to the beamline, which can be partially associated with a neutrino. The transverse momentum is described by two parameters: $E_T^{miss}$ and $\phi^{miss}$. Because we do not have an estimate of the longitudial component of a neutrino, we cannot construct an invariant mass of a $W$ boson. Instead, we construct its transverse mass:
+The standard tool to detec a particle that decays is to reconstruct its invariant mass out of its decay products. Decay products of a $W$ boson are a charged lepton and a neutrino. CMS does not detect neutrino, it only measures the missing momentum in the plane, transverse to the beamline, which can be partially associated with a neutrino. The transverse momentum is described by two parameters: $E_T^{miss}$ and $\phi^{miss}$. Because we do not have an estimate of the longitudial component of a neutrino, we cannot construct an invariant mass of a $W$~boson. Instead, we construct its transverse mass:
 \begin{equation}
 M_T^W=\sqrt{(2  P_T^{l}  E_T^{miss}  (1-\cos{(\phi^{l}-\phi^{miss})}))},
 \end{equation}
@@ -38,17 +52,16 @@ In addition to $W\gamma$-selected datasets, we also prepare $Z\gamma$-selected d
 
 \subsection{Selected Events}
 
-%Distributions of $P_T^{\gamma}$ and $M_T^W$ of the selected events are shown in Fig. \ref{fig:DATAvsMC} and \ref{fig:DATAvsMC_WMt}. 
-%The is a large discrepancies in all the distributions and therefore the data-driven background estimates are necessary.\\
-
 After the selection procedure, 175889 and 85643 events survived in the muon and electron channels, respectively. These events are used for the total and differential cross setion measurements with respect to $P_T^{\gamma}$. Distributions of $P_T^{\gamma}$ of the selected events are shown in Fig.~\ref{fig:DATAvsMC} and documented in Tab.~\ref{tab:yields_Wg_to_munu__Barrel_}-\ref{tab:yields_Wg_to_enu__Endcap_}. The plots and tables include information about the underflow $P_T^{\gamma}$ bin ($10-15$~GeV). The measurement in this bin is used for the detector resolution unfolding (Ch.~\ref{sec:Unfolding}). 
 
-There are large discrepancies in all the distributions as shown in Fig.~\ref{fig:DATAvsMC_WMt}-\ref{fig:DATAvsMC}. Therefore, the data-driven background estimates are necessary.
+Selected samples are dominated by $W$+jets events. The main mechanism of a jet to be misidentified as a photon is a $\pi^0 \rightarrow \gamma\gamma$ decay. Photon~ID requirements rejects most of such fragmentation photons, however, a $W$+jets event has much larger probability to be produced in a $pp$ collision than a $W\gamma$ event, and, therefore, even a small fraction of fragmentation photons from $W$+jets events becomes a significant background to $W\gamma$.  
+
+There are large discrepancies between data and MC predictions in all the distributions as shown in Fig.~\ref{fig:DATAvsMC_WMt}-\ref{fig:DATAvsMC}. Possible reasons for the discrepancies include but are not limited to uncerntainties in the normalizations of all MC samples involved and difficulties in modeling jet fragmentation. Therefore, the data-driven background estimates are necessary (Ch.~\ref{sec:BackgroundSubtraction}).
 
 \begin{figure}[htb]
   \begin{center}
    \includegraphics[width=0.5\textwidth]{../figs/figs_v11/MUON_WGamma/PrepareYields/c_TotalDATAvsMC_EtaCommon__WMtVERY_PRELIMINARY.pdf}\includegraphics[width=0.5\textwidth]{../figs/figs_v11/ELECTRON_WGamma/PrepareYields/c_TotalDATAvsMC_EtaCommon__WMtVERY_PRELIMINARY.pdf}
-  \caption{ $M_T^W$ of $W\gamma$ candidates. Data vs MC plots. Left: muon channel, right: electron channel. All selection criteria except $M_{T}^W$ requirement are applied on these plots. $15$~GeV$<P_T^{\gamma}<45$~GeV. }
+  \caption{ $M_T^W$ distribution of $W\gamma$ candidates. Data vs MC plots. Left: muon channel, right: electron channel. All selection criteria except $M_{T}^W$ requirement are applied on these plots. $15$~GeV$<P_T^{\gamma}<45$~GeV. }
   \label{fig:DATAvsMC_WMt}
   \end{center}
 \end{figure}
@@ -56,7 +69,7 @@ There are large discrepancies in all the distributions as shown in Fig.~\ref{fig
 \begin{figure}[htb]
   \begin{center}
    \includegraphics[width=0.7\textwidth]{../figs/figs_v11/ELECTRON_WGamma/PrepareYields/c_TotalDATAvsMC_EtaCommon__Mpholep1PRELIMINARY_FOR_E_TO_GAMMA_WITH_PSV_CUT_pt15to500_.pdf}
-  \caption{$M_{l\gamma}$ of $W\gamma$ candidates in the electron channel. Data vs MC plots. All selection criteria except $Z$-mass window are applied on this plot. $P_T^{\gamma}>15$~GeV. }
+  \caption{$M_{l\gamma}$ distribution of $W\gamma$ candidates in the electron channel. Data vs MC plots. All selection criteria except $Z$-mass window are applied on this plot. $P_T^{\gamma}>15$~GeV. }
   \label{fig:DATAvsMC_Mpholep1}
   \end{center}
 \end{figure}
@@ -65,18 +78,7 @@ There are large discrepancies in all the distributions as shown in Fig.~\ref{fig
   \begin{center}
    \includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_WGamma/PrepareYields/c_TotalDATAvsMC_Barrel__phoEt.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/ELECTRON_WGamma/PrepareYields/c_TotalDATAvsMC_Barrel__phoEt.pdf}
    \includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_WGamma/PrepareYields/c_TotalDATAvsMC_Endcap__phoEt.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/ELECTRON_WGamma/PrepareYields/c_TotalDATAvsMC_Endcap__phoEt.pdf}
-  \caption{$P_T^{\gamma}$ of $W\gamma$ candidates. Data vs MC plots. Left column: muon channel, right column: electron channel. Top to bottom: photons in EB and EE of ECal.}
+  \caption{$P_T^{\gamma}$ distribution of $W\gamma$ candidates. Data vs MC plots. Left column: muon channel, right column: electron channel. Top to bottom: photons in EB and EE of ECal.}
   \label{fig:DATAvsMC}
   \end{center}
 \end{figure}
-
-
-
-%\begin{figure}[htb]
-%  \begin{center}
-%   \includegraphics[width=0.45\textwidth]{figs_v8/MUON_WGamma/PrepareYields/c_TotalDATAvsMC_Barrel__WMtVERY_PRELIMINARY.pdf}\includegraphics[width=0.45\textwidth]{figs_v8/ELECTRON_WGamma/PrepareYields/c_TotalDATAvsMC_Barrel__WMtVERY_PRELIMINARY.pdf}
-%   \includegraphics[width=0.45\textwidth]{figs_v8/MUON_WGamma/PrepareYields/c_TotalDATAvsMC_Endcap__WMtVERY_PRELIMINARY.pdf}\includegraphics[width=0.45\textwidth]{figs_v8/ELECTRON_WGamma/PrepareYields/c_TotalDATAvsMC_Endcap__WMtVERY_PRELIMINARY.pdf}
-%  \caption{Data vs MC plots, $M_T^W$. Left column - muon channel, right column - electron. Top to bottom: barrel and endcap photons. All selection criteria except $M_T^W$ cut on these plots. $15$~GeV$<P_T^{\gamma}<45$~GeV. The analysis cut of $M_T^W>40$~GeV is selected.}
-%  \label{fig:DATAvsMC_WMt}
-%  \end{center}
-%\end{figure}
