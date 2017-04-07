@@ -1,6 +1,25 @@
 \chapter{APPENDIX: Efficiency Scale Factors}
 \label{sec:SFsTables}
 
+This appendix summarize efficiency SF that were applied on MC events to make selection efficiency in MC match the selection efficiency in data. Tables~\ref{tab:SFs_MuonIso}-{tab:SFs_MuonIso} contain muon~ID ($\rho^{\mu}_{ID}$) and muon isolation SF ($\rho^{\mu}_{iso}$). A full SF on a muon object is a multiplication of~ID and isolation SF. Electron~ID SF are listed in Tab.~\ref{tab:SFs_ElectronID} ($\rho^{e}_{ID}$). Photon~ID ($\rho^{\gamma}_{ID}$) and PSV ($\rho^{\gamma}_{PSV}$) SF are summarized in Tab.~\ref{tab:SFs_PhotonID} and Tab.~\ref{tab:SFs_PhotonPixelSeedVeto}.
+
+For each $W\gamma$ candidate in MC we apply a lepton and a photon SF. PSV SF is used in the electron channel only. For each $Z\gamma$ candidate in MC we apply two lepton and one photon SF. Full SF for each type of candidate are summarized in Tab.~\ref{tab:SFs_Applied}.
+
+\begin{table}[h]
+  \footnotesize
+  \begin{center}
+  \caption{Scale Factors Applied} 
+   \begin{tabular}{|c|c|}
+ candidates                          & SF\\ \hline
+ $W\gamma\rightarrow\mu\nu\gamma$   &   $\rho^{\mu}_{ID} \times \rho^{\mu}_{iso} \times \rho^{\gamma}_{ID}$    \\ \hline
+ $W\gamma\rightarrow e\nu\gamma$    &   $\rho^{\e}_{ID} \times \rho^{\gamma}_{ID}\times \rho^{\gamma}_{PSV}$       \\ \hline
+ $Z\gamma\rightarrow\mu\mu\gamma$   &   $\rho^{\mu1}_{ID} \times \rho^{\mu1}_{iso} \times \rho^{\mu2}_{ID} \times \rho^{\mu2}_{iso} \times \rho^{\gamma}_{ID}$      \\ \hline
+ $Z\gamma\rightarrow ee\gamma$      &   $\rho^{\e1}_{ID} \times \rho^{\e2}_{ID} \times \rho^{\gamma}_{ID}$      \\ \hline
+  \end{tabular}
+  \label{tab:SFs_Applied}
+  \end{center}
+\end{table}
+
 \begin{table}[h]
   \footnotesize
   \begin{center}
