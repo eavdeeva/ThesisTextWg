@@ -21,18 +21,18 @@ After the cosmic ray data collection periods, the magnetic field was turned off 
 % (3) MY WORDS
 To validate results of tracking system alignment, the following tools are used:
 \begin{itemize}
-  \item include geometry comparison tool (Ch.~\ref{sec:AlRes_GCP});
+  \item geometry comparison tool (Ch.~\ref{sec:AlRes_GCP});
   \item validation using distribution of median residuals (Ch.~\ref{sec:AlRes_DMRs});
   \item cosmic track splitting validation (Ch.~\ref{sec:AlRes_trackSplit});
   \item primary vertex validation (Ch.~\ref{sec:AlRes_PVvalid}). 
 \end{itemize}
-\noindent{Full results of the first alignment with Run~II data are available at~\cite{ref_AlApproved_twiki}}.
+\noindent{The full results of the first alignment with Run~II data are available at~\cite{ref_AlApproved_twiki}}.
 
 \subsection{Geometry Comparison}
 \label{sec:AlRes_GCP}
 
 % (4) MY WORDS:
-Geometry comparison visualizes differences in positions of modules between two different geometries of the CMS tracking system. Figure~\ref{fig:GCP_FPIX} shows the comparison between positions of the FPIX modules between Run~I and Run~II geometries. Each dot in the figure corresponds to one module. Four clusters of red dots (Fig.~\ref{fig:GCP_FPIX}, left) and shifted parts at ($\phi<-\pi/2$, $\phi>\pi/2$) and ($-\pi/2<\phi<\pi/2$) (Fig.~\ref{fig:GCP_FPIX}, right) represent displacements of four half-disks by~$4.5$ and~$5.5$~mm at the $-z$ side of the FPIX. At the $+z$ side of the FPIX small relative movements of individual modules are observed only. For more intuitive visualization, the three-dimensional plot of the pixel detector is produced (Fig.~\ref{fig:GCP_3D}).     
+The geometry comparison visualizes differences in positions of modules between two different geometries of the CMS tracking system. Figure~\ref{fig:GCP_FPIX} shows the comparison between positions of the FPIX modules between Run~I and Run~II geometries. Each dot in the figure corresponds to one module. Four clusters of red dots (Fig.~\ref{fig:GCP_FPIX}, left) and shifted parts at ($\phi<-\pi/2$, $\phi>\pi/2$) and ($-\pi/2<\phi<\pi/2$) (Fig.~\ref{fig:GCP_FPIX}, right) represent displacements of four half-disks by~$4.5$ and~$5.5$~mm at the $-z$ side of the FPIX. At the $+z$ side of the FPIX small relative movements of individual modules are observed only. For more intuitive visualization, the three-dimensional plot of the pixel detector is produced (Fig.~\ref{fig:GCP_3D}).     
 
 \begin{figure}[htb]
     \begin{center}
@@ -50,13 +50,15 @@ Geometry comparison visualizes differences in positions of modules between two d
     \label{fig:GCP_3D}
 \end{figure}
 
+\clearpage
+
 \subsection{Distributions of Medians of Unbiased Track-Hit Residuals}
 \label{sec:AlRes_DMRs}
 
 %(5) ALMOST QUOTE:
 % Besides geometry comparison, we also have distributions of medians of unbiased track-hit residuals (DMR) validation tool. Each track is refitted using the alignment constants under consideration, and the hit prediction for each module is obtained from all of the other track hits. The median of the distribution of unbiased hit residuals is then taken for each module and is histogrammed. The width of this DMR is a measure of the statistical precision of alignment results; deviations from zero indicate possible biases. The width also has an intrinsic component due to the limited number of tracks, meaning that distributions can only be compared if they are produced with the same number of tracks, as is the case within each set of plots here. 
 % (5) MY WORDS:
-Besides geometry comparison, we also have distributions of medians of unbiased track-hit residuals (DMR) validation tool. Each track from a given dataset is refitted using prepared alignment constants, and the hit for each module is predicted from all other hits of the track. After that, DMRs of all modules in a given subdetector are plotted on the same histogram. The width of the prepared DMR is a measure of the statistical precision of the derived alignment results. 
+Besides the geometry comparison, we also have the distributions of medians of unbiased track-hit residuals (DMR) validation tool. Each track from a given dataset is refitted using prepared alignment constants, and the hit for each module is predicted from all other hits of the track. After that, DMRs of all modules in a given subdetector are plotted on the same histogram. The width of the prepared DMR is a measure of the statistical precision of the derived alignment results. 
 
 %(6) NO PLAGIARISM DETECTED
 %The DMRs in the transverse and longitudinal planes are studied in bins of track azimuth angle $\phi$ and pseudorapidity $\eta$. Random misalignments of the modules affect only the resolution of the unbiased track-vertex residual, increasing the width of the distributions, but without biasing their mean. Systematic movements of the modules will bias the distributions in a way that depends on the nature and size of the misalignment and the and of the selected tracks.
