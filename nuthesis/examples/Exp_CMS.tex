@@ -54,20 +54,24 @@ All subdetectors are essential for the $W\gamma$ measurement, and the remainder 
 \subsection{Magnet}
 % CONTENT-WISE IS OK
 
-A magnetic field in a particle detector is necessary to measure momenta of charged particles by track curvatures. The higher the momentum is, the less a particle trajectory is affected by the magnetic field. In CMS, the tracking system measures  momenta of all charged particles. Also, the muon system measures momenta of muons. 
+A magnetic field in a particle detector is necessary to measure momenta of charged particles by track curvatures. The higher the momentum is, the less a particle trajectory is affected by the magnetic field. In the plane, transverse to the beamline, this relation is:
+\begin{equation}
+  R=\frac{P_T}{qB},
+\end{equation} 
+\noindent{where $R$ is a radius of a projection of a charged particle's trajectory to the transverse plane, $P_T$ and $q$ are the particle's transverse momentum and electric charge, and $B$ is the magnetic field. In CMS, the tracking system measures  momenta of all charged particles. Also, the muon system measures momenta of muons. }
 
-The CMS magnet is placed between the HCal and the muon system. The magnet is made of superconducting wires. An electric current flowing in the wires creates a uniform field of $B=4$T inside the solenoid, for the tracking system, and also provides a smaller magnetic field of a certain configuration outside the solenoid, for the muon system. The stronger field in the tracking system is necessary because of higher track density and smaller size relative to the muon system.
+The CMS magnet is placed between the HCal and the muon system. The magnet is made of superconducting wires that are cooled to~$-268.5^0$C by a cryogenic system based on a liquid helium flow~\cite{ref_MagnetCryo}. An electric current flowing in the wires creates a uniform field of $B=4$T inside the solenoid, for the tracking system, and also provides a smaller magnetic field of a certain configuration outside the solenoid, for the muon system. The stronger field in the tracking system is necessary because of higher track density and smaller size relative to the muon system.
 
 \subsection{Tracking System}
 %"The tracker is designed in such a way that a single track hits multiple sensors."
 %    "Then the trajectory is reconstructed based on how much charge is collected on each sensor."
 %       What does it mean, exactly, each of these sentences? It is not clear to me.
 
-The tracking system measures track geometry including particle trajectories, locations of primary and secondary vertices, and momenta of charged particles. It is designed to disturb particles as little as possible so that they pass through. Therefore, CMS algorithms must be capable of reconstructing a trajectory with just a few position measurements (``hits''). The accuracy of each hit is~10~$\mu$m.
+The tracking system measures parameters of particle trajectories, locations of primary and secondary vertices, and momenta of charged particles. It is designed to disturb particles as little as possible so that they pass through. CMS algorithms must be capable of reconstructing a trajectory with just a few position measurements (``hits''). The accuracy of each hit is~10~$\mu$m.
 
-The tracking system consists of silicon pixels and silicon strips (Fig.~\ref{fig:tracker_slice}). Tracks that originate from proton collisions, collision tracks, start at the center and then cross the layers of the tracking system. Tracks are straight in the $r-z$ plane and curved by the magnetic field in the $r$-$\phi$ plane. The acceptance of the tracker system in the $r$-$z$ plane is geometrically limited by the absolute value of the pseudorapidity $|\eta| \leq 2.5$.
+Tracks that originate from proton collisions, collision tracks, start at the center and then cross the layers of the tracking system. Charged particles take helical paths in the magnetic field. Tracks are straight in the $r-z$ plane and curved by the magnetic field in the $r$-$\phi$ plane. The acceptance of the tracker system in the $r$-$z$ plane is geometrically limited by the absolute value of the pseudorapidity $|\eta| \leq 2.5$.
 
-The pixel tracker is the closest subsystem of CMS to the collision point. Thus it experiences the largest particle flux: at~8~cm from the collision point the flux is about~10~million/(cm$^2$s), and the pixel detector with its~65~million sensors is capable of reconstructing all these tracks. It consists of three cylindrical layers of pixel sensors in the barrel with radii of~4~cm,~7~cm and~11~cm which are referred as barrel pixel subdetectors (BPIX) and four disks in the endcap, two disks at each side, which are referred as forward pixel subdetector (FPIX). 
+The tracking system consists of silicon pixels and silicon strips (Fig.~\ref{fig:tracker_slice}). The pixel tracker is the closest subsystem of CMS to the collision point. Thus it experiences the largest particle flux: at~8~cm from the collision point the flux is about~10~million/(cm$^2$s), and the pixel detector with its~65~million sensors is capable of reconstructing all these tracks. It consists of three cylindrical layers of pixel sensors in the barrel with radii of~4~cm,~7~cm and~11~cm which are referred as barrel pixel subdetectors (BPIX) and four disks in the endcap, two disks at each side, which are referred as forward pixel subdetector (FPIX). 
 
 %The tracker is designed in such a way that a single track hits multiple sensors. Then the trajectory is reconstructed based on how much charge is collected on each sensor. This allows us to reach a spacial resolution of~15-20~$\mu$m which is much smaller than a distance between sensors.
 
@@ -89,7 +93,7 @@ The strip tracker is placed right outside the pixel tracker and occupies the det
 
 The ECal is placed between the tracking system and the HCal. It is made of high-density lead tungstate crystals arranged in a barrel section and two endcap sections. The crystals are scintillators. When electrons and photons pass through the scintillators, they produce light proportional to the particle's energy. The scintillated light is then amplified by photomultipliers. After that, signals are digitized and taken away by fiber optic cables.
 
-The ECal measures the energy of electrons and photons and parameters of their trajectories. In order to distinguish between electrons and photons, it is necessary to perform matching to the track in the tracking system. If there is a track, then the particle is an electron (or positron), otherwise the particle is a photon.
+The ECal measures the energy of electrons and photons and parameters of their trajectories. In order to distinguish between electrons and photons, it is necessary to perform spatial matching to the track in the tracking system. If there is a track, then the particle is an electron (or positron), otherwise the particle is a photon.
 
 It is important for the ECal to be able to distinguish between a single energy photons of high energy and pairs of almost collinear photons of lower energy e.g. from a $\pi^0$ decay. It is especially difficult in the endcap sections where the angle between two photon trajectories is small. It is achieved with ECal preshower detectors (PS) which have~$\sim$15~times smaller granularity are located in front of the endcaps. The preshowers provide extra spatial precision. 
 
@@ -121,7 +125,7 @@ There are three types of muon chambers used in the CMS muon system: drift tubes 
 %By registering where along the wire electrons hit (in the diagram, the wires are going into the page) as well as by calculating the muon's original distance away from the wire (shown here as horizontal distance and calculated by multiplying the speed of an electron in the tube by the time taken) DTs give two coordinates for the muon’s position.
 %Each DT chamber, on average 2m x 2.5m in size, consists of 12 aluminum layers, arranged in three groups of four, each up with up to 60 tubes: the middle group measures the coordinate along the direction parallel to the beam and the two outside groups measure the perpendicular coordinate.
 %(4) MY WORDS:
-The system of DTs measures positions of muons in the barrel. Each DT chamber is about~2~m by~2.5~m in size. A chamber consists of~12~layers of aluminum which are arranged in groups of four. There are up to~60~DTs in a layer. The middle group of layers measures $z$-coordinate and two other groups determine the perpendicular coordinate. The DT's volume is filled with a gas, and there is a wire inside. When a charged particle passes through the volume, it ionizes atoms. Releazed electrons drift in the electric field to the positively-charged wire. The position along the wire is registered, and the distance of the muon away from the wire is calculated providing measurements of two coordinates of the position of the muon.
+The system of DTs measures positions of muons in the barrel. Each DT chamber is about~2~m by~2.5~m in size. A chamber consists of~12~layers of aluminum which are arranged in groups of four. There are up to~60~DTs in a layer. The middle group of layers measures $z$-coordinate and two other groups determine the perpendicular coordinate. The DT's volume is filled with a gas, and there is a wire inside. When a charged particle passes through the volume, it ionizes atoms. Released electrons drift in the electric field to the positively-charged wire. The position along the wire is registered, and the distance of the muon away from the wire is calculated providing measurements of two coordinates of the position of the muon.
 
 %CSCs
 %(5) QUOTE:
@@ -152,7 +156,7 @@ RPCs are parallel capacitors made of high-resistivity plastic plates with a spac
 
 \subsection{Triggering and Data Acquisition}
 
-At peak luminosity, CMS experiences~40~million proton-proton collisions per second that come in bunches separated by~25~ns. It is not technically feasible to read out all these events. Moreover, we do not need most of these events for a physics measurement because most of them have not resulted from interesting physics process. We have resources to store about one hundred events out of forty million, and that is why we need a trigger system that quickly decides what the best one hundred events are.
+At peak luminosity, CMS experiences~40~million proton-proton collisions per second that come in bunches separated by~25~ns. It is not technically feasible to read out all these events. Moreover, we do not need most of these events for a physics measurement because most of them have not resulted from an interesting physics process. We have resources to store about one hundred events out of forty million, and that is why we need a trigger system that quickly decides what the best one hundred events are.
 
 %New events come before the events from the previous bunch crossing left the detector. To process the information from many different collisions at the same time, data is stored in pipelines.
 
