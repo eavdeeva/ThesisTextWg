@@ -143,14 +143,26 @@ CMS TDR.
 \bibitem{ref_MagnetCryo}
 https://cds.cern.ch/record/345832/files/lhc-project-report-165.pdf.
 
-\bibitem{ref_ParticleFlowAlg}
-https://inspirehep.net/record/925379/files/PFT-09-001-pas.pdf.
-
 \bibitem{ref_trackerPerformance}
 CMS collaboration.
 \newblock Description and performance of track and primary-vertex
   reconstruction with the cms tracker.
 \newblock Available at: https://arxiv.org/abs/1405.6569.
+
+\bibitem{ref_ECalResolution}
+CMS collaboration.
+\newblock Energy calibration and resolution of the cms electromagnetic
+  calorimeter in pp collisions at sqrt(s) = 7 tev.
+\newblock Available at: https://arxiv.org/abs/1306.2016.
+
+\bibitem{ref_MuonSystemPerformance}
+CMS collaboration.
+\newblock The performance of the cms muon detector in proton–proton
+  collisions at √s=7 tev at the lhc.
+\newblock Available at: https://arxiv.org/pdf/1306.6905.pdf.
+
+\bibitem{ref_ParticleFlowAlg}
+https://inspirehep.net/record/925379/files/PFT-09-001-pas.pdf.
 
 \bibitem{ref_MPII_Alg}
 Millepede ii algorithm.

@@ -113,7 +113,7 @@ The ECal energy resolution depends on photon or electron energy and of the ECal 
 \label{sec:Exp_CMS_HCal}
 The HCal measures the energy of charged and neutral hadrons. It consists of the barrel, endcap and forward parts: HB, HE and HF in Fig.~\ref{fig:CMSschemView}, top, respectively. HCal is designed to stop all hadrons passing through, thus, it extends to $|\eta|=5.3$ for forward HCal.
 
-The HCal is a sampling calorimeter. It consists of alternating layers of brass and steel bsorbers and plastic scintillators. When a hadron hits an absorber, it induces a hadronic shower. The light produced by the shower is collected on optic fibers and passed to the readout system. The total amount of light released in a certain region of the HCal is a measure of hadron's energy. In addition to the energy, the HCal also reconstructs the trajectory of the hadron.   
+The HCal is a sampling calorimeter. It consists of alternating layers of brass absorbers and plastic scintillators. When a hadron hits an absorber, it induces a hadronic shower. The light produced by the shower is collected on optic fibers and passed to the readout system. The total amount of light released in a certain region of the HCal is a measure of hadron's energy. In addition to the energy, the HCal also reconstructs the trajectory of the hadron.   
 
 \subsection{Muon System}
 
@@ -151,6 +151,8 @@ CSCs are placed in the endcap regions. CSCs are arrays of anode wires crossed by
 %(6) MY WORDS: 
 RPCs are parallel capacitors made of high-resistivity plastic plates with a space between them filled with gas. RPCs provide quick measurements of muon momenta. A muon passing through the RPC ionizes gas atoms. Released electrons ionize more atoms inducing an avalanche in the electric field. Electrodes receive signal and pass it to external strips that provide a quick measurement of the muon's position which is subsequently transformed to the momentum measurement by the trigger's electronics. 
 
+The momentum resolution of the muon system is $\sim 10$\% for muons with $P_T^{\gamma}=10~$GeV, however, in a conjunction with the tracking system it improves to $\sim 1$\%. A detailed documentation of the muon system performance is available at~\cite{ref_MuonSystemPerformance}. 
+
 
 \begin{figure}[htb]
   \begin{center}
@@ -163,41 +165,26 @@ RPCs are parallel capacitors made of high-resistivity plastic plates with a spac
 
 \subsection{Triggering and Data Acquisition}
 
-At peak luminosity, CMS experiences~40~million proton-proton collisions per second that come in bunches separated by~25~ns. It is not technically feasible to read out all these events. Moreover, we do not need most of these events for a physics measurement because most of them have not resulted from an interesting physics process. We have resources to store about one hundred events out of forty million, and that is why we need a trigger system that quickly decides what the best one hundred events are.
+At peak luminosity, CMS experiences~40~million proton-proton bunch crossings per second that come in bunches separated by~25~ns. It is not technically feasible to read out all these events. Moreover, we do not need most of these events for a physics measurement because most of them have not resulted from an interesting physics process. We have resources to store about~400 events out of~40~million, and that is why we need a trigger system that quickly decides what the best~400 events are.
 
 %New events come before the events from the previous bunch crossing left the detector. To process the information from many different collisions at the same time, data is stored in pipelines.
 
-If the triggers were not strict enough, and we would select one hundred events too quickly, e.g., in~1/10~s, then CMS would not be able to process the remaining~90\% of events provided by LHC in a given second and we would lose~90\% of potentially interesting events.
+If the triggers were not strict enough, and we would select~400 events too quickly, e.g., in~1/10~s, then we would not process the remaining~90\% of events provided by LHC in a given second and we would lose~90\% of potentially interesting events.
 
-If the triggers were too strict, we would select, e.g.,~ten events per second, not one hundred and lose CMS's potential to store and process data by~90\% which would significantly reduce our chances for discovery and increase statistical uncertainties for precision measurements.
+If the triggers were too strict, we would select, e.g.,~40 events per second, not~400 and lose the potential to store and process data by~90\% which would significantly reduce our chances for discovery and increase statistical uncertainties for precision measurements.
 
-Thus, the challenge of the trigger system is to select the best one hundred events per second and do so quickly to be able to process every single event. To achieve this goal, a two-level trigger system was developed consisting of the Level~1 trigger (L1T) and the High Level Trigger (HLT) as shown in Fig.~\ref{fig:trigger_2level}.
+Thus, the challenge of the trigger system is to select the best one hundred events per second and do so quickly to be able to process every single event. To achieve this goal, a two-level trigger system was developed consisting of the Level~1 trigger (L1T) and the High Level Trigger (HLT)~\cite{ref_TriggerSystem}.
 
-L1T is a hardware based trigger (Fig.~\ref{fig:trigger_L1}). It uses information from the ECal, HCal and muon system. L1T reduces the frequency of coming events from~40~MHz to~100~kHz. Events that did not pass the L1T are lost forever while events that pass the L1T are temporarily stored to be checked by the HLT.
+L1T is a hardware based trigger. It uses information from the ECal, HCal and muon system. L1T reduces the frequency of coming events from~40~MHz to~100~kHz. Events that did not pass the L1T are lost forever while events that pass the L1T are temporarily stored to be checked by the HLT.
 
-HLT is a software-based trigger. It uses information from all subdetectors and runs fast reconstruction and identification algorithms to determine types of particles and their kinematics. It reduces the event rate to~100~Hz. Events that did not pass HLT are lost forever. Events that pass HLT are arranged into appropriate datasets depending on HLT selection criteria they passed and stored for physics measurements.
+HLT is a software-based trigger. It uses information from all subdetectors and runs fast reconstruction and identification algorithms to determine types of particles and their kinematics. It reduces the event rate to~400~Hz. Events that did not pass HLT are lost forever. Events that pass HLT are arranged into appropriate datasets depending on HLT selection criteria they passed and stored for physics measurements.
 
-\begin{figure}[htb]
-  \begin{center}
-    \includegraphics[width=0.8\textwidth]{../figs/Exp/trigger_2level.png}
-    \caption{Two-level CMS trigger system.}
-    \label{fig:trigger_2level}
-  \end{center}
-\end{figure}
-
-\begin{figure}[htb]
-  \begin{center}
-    \includegraphics[width=0.8\textwidth]{../figs/Exp/trigger_L1.png}
-    \caption{Level~1 CMS trigger system.}
-    \label{fig:trigger_L1}
-  \end{center}
-\end{figure}
 
 \subsection{Particle Flow Algorithm of Event Reconstruction}
 
-A particle flow (PF) algorithm is used by CMS to identify and reconstruct stable particles~\cite{ref_ParticleFlowAlg}. It processes the information from all CMS subdetectors and identifies and reconstructs each stable particle in an event individually. The list of particles include muons, electrons, photons, charged and neutral hadrons. Each type of particles leaves its specific trace in the CMS detector as shown in Fig.~\ref{fig:CMS_slice}. After reconstruction of individual stable particles, jets are built, missing transverse energy $E_T^{miss}$ is determined, certain short-lived particles are reconstructed based on the list of individual stable particles in the event.
+A particle flow (PF) algorithm is used by CMS to identify and reconstruct stable particles~\cite{ref_ParticleFlowAlg}. It processes the information from all CMS subdetectors and identifies and reconstructs each stable particle in an event individually. The list of particles include muons, electrons, photons, charged and neutral hadrons. Each type of particles leaves its specific trace in the CMS detector as shown in Fig.~\ref{fig:CMS_slice}. After reconstruction of individual stable particles, jets are built, missing transverse energy $E_T^{miss}$ is determined, and certain short-lived particles are reconstructed based on the list of individual stable particles in the event.
 
-One particle can induce several different particle-flow elements in different subdetectors. The linking algorithm links these elements together producing blocks of elements. Usually, a block has between one and three elements. Links can be connections between the tracking system and PS, ECal or HCal, between PS and ECal, between ECal and HCal, and between a tracking system and a muon system. 
+One particle can induce several different particle-flow elements in different subdetectors. Examples of elements include a track in the tracking or muon sytems, or a calorimeter cluster. The linking algorithm checks each pairs of elements in an event and produces blocks of elements if the distance between two elements is small and, therefore, they are considered to be linked. Usually, a block has between one and three elements. Links can be connections between the tracking system and PS, ECal or HCal, between PS and ECal, between ECal and HCal, and between a tracking system and a muon system. 
 
 In each block, muons are considered first. A link between charged tracks in the tracking and muon systems comprise a global muon which produces one ``particle-flow muon''. The corresponding track in the tracking system is removed from the block and corresponding energy deposits are subtracted from ECal and HCal. Then electrons are reconstructed and identified using the tracking system and ECal. The corresponding tracks and ECal clusters are removed from the block. Remaining tracks and clusters are considered more carefully to identify charged hadrons, neutral hadrons, and photons.
 
@@ -207,8 +194,8 @@ When all particles in the event are reconstructed and identified, the algorithm 
 \end{equation}
 \noindent{where the summation covers all visible particles in the event. For precise measurement of $E_T^{miss}$ it is important to capture the full energy release of all visible particles.}
 
-$E_T^{miss}$ is used in physics measurements as a measure of $P_T$ of neutrinos and other invisible particles in the event. Fake $E_T^{miss}$ can originate from particles that did not fall into the detector acceptance, particles that they did not reach the tracking system because their momenta was too low and, therefore, track curvature was too high, momenta mismeasurement, particle misidentification, cosmic rays particles, and machine background.
+$E_T^{miss}$ is used in physics measurements as a measure of $P_T$ of neutrinos and other invisible particles in the event. Fake $E_T^{miss}$ can originate from particles that did not fall into the detector acceptance, particles that did not reach the tracking system because their momenta was too low and, therefore, track curvature was too high, momenta mismeasurement, particle misidentification, cosmic rays particles, and machine background.
 
-In the measurement of this dissertation PF muons, electrons, photons, and $E_T^{miss}$ are used for all the major steps of the cross section measurement including event selection, background subtraction, various corrections, and determination of phase space restrictions and bin boundaries. Each step is described in greater details in~Ch.~\ref{sec:AN_WgMeas}. 
+In the measurement of this dissertation PF muons, electrons, photons, and $E_T^{miss}$ are used for all the major steps of the cross section measurement including event selection, background subtraction, various corrections, and determination of phase space restrictions and bin boundaries. Each step is described in greater detail in~Ch.~\ref{sec:AN_WgMeas}. 
 
 %Acceptance: particles which are too collinear and go to pipe; particles which get curved too strongly
