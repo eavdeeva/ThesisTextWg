@@ -161,8 +161,14 @@ CMS collaboration.
   collisions at √s=7 tev at the lhc.
 \newblock Available at: https://arxiv.org/pdf/1306.6905.pdf.
 
+\bibitem{ref_TriggerSystem}
+CMS collaboration.
+\newblock The cms trigger system.
+\newblock Available at: https://arxiv.org/pdf/1609.02366.pdf.
+
 \bibitem{ref_ParticleFlowAlg}
-https://inspirehep.net/record/925379/files/PFT-09-001-pas.pdf.
+CMS collaboration.
+\newblock https://inspirehep.net/record/925379/files/PFT-09-001-pas.pdf.
 
 \bibitem{ref_MPII_Alg}
 Millepede ii algorithm.

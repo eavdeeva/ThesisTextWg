@@ -186,7 +186,7 @@ A particle flow (PF) algorithm is used by CMS to identify and reconstruct stable
 
 One particle can induce several different particle-flow elements in different subdetectors. Examples of elements include a track in the tracking or muon sytems, or a calorimeter cluster. The linking algorithm checks each pairs of elements in an event and produces blocks of elements if the distance between two elements is small and, therefore, they are considered to be linked. Usually, a block has between one and three elements. Links can be connections between the tracking system and PS, ECal or HCal, between PS and ECal, between ECal and HCal, and between a tracking system and a muon system. 
 
-In each block, muons are considered first. A link between charged tracks in the tracking and muon systems comprise a global muon which produces one ``particle-flow muon''. The corresponding track in the tracking system is removed from the block and corresponding energy deposits are subtracted from ECal and HCal. Then electrons are reconstructed and identified using the tracking system and ECal. The corresponding tracks and ECal clusters are removed from the block. Remaining tracks and clusters are considered more carefully to identify charged hadrons, neutral hadrons, and photons.
+In each block, muons are considered first. A link between charged tracks in the tracking and muon systems produces one ``particle-flow muon''. The corresponding track in the tracking system is removed from the block and corresponding energy deposits are subtracted from ECal and HCal. Then electrons are reconstructed and identified using the tracking system and ECal. The corresponding tracks and ECal clusters are removed from the block. Remaining tracks and clusters are considered more carefully to identify charged hadrons, neutral hadrons, and photons.
 
 When all particles in the event are reconstructed and identified, the algorithm determines missing transverse energy $E_T^{miss}$ as 
 \begin{equation}\label{eq:MET}
@@ -194,8 +194,8 @@ When all particles in the event are reconstructed and identified, the algorithm 
 \end{equation}
 \noindent{where the summation covers all visible particles in the event. For precise measurement of $E_T^{miss}$ it is important to capture the full energy release of all visible particles.}
 
-$E_T^{miss}$ is used in physics measurements as a measure of $P_T$ of neutrinos and other invisible particles in the event. Fake $E_T^{miss}$ can originate from particles that did not fall into the detector acceptance, particles that did not reach the tracking system because their momenta was too low and, therefore, track curvature was too high, momenta mismeasurement, particle misidentification, cosmic rays particles, and machine background.
+$E_T^{miss}$ is used in physics measurements as a measure of $P_T$ of neutrinos and other invisible particles in the event. Fake $E_T^{miss}$ can originate from particles that did not fall into the detector acceptance, particles that did not reach the tracking system because their momenta was too low and, therefore, track curvature was too high, momenta mismeasurement, particle misidentification, cosmic rays particles, and machine background. Fake $E_T^{miss}$ is a cause of background for the processes with real $E_T^{miss}$. For instance, in $W\gamma$ measurement we have backgrounds from $Z$+jets and $Z\gamma$ which do not have any real $E_T^{miss}$.
 
 In the measurement of this dissertation PF muons, electrons, photons, and $E_T^{miss}$ are used for all the major steps of the cross section measurement including event selection, background subtraction, various corrections, and determination of phase space restrictions and bin boundaries. Each step is described in greater detail in~Ch.~\ref{sec:AN_WgMeas}. 
 
-%Acceptance: particles which are too collinear and go to pipe; particles which get curved too strongly
+
