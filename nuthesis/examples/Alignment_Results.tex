@@ -1,7 +1,7 @@
 \section{Selected Results on Alignment of the Tracking System with~2015 Data}
 \label{sec:alignmentResults}
 
-Data collection periods in~2015 include the following:
+After the long shutdown in~2013-2014, LHC restarted collisions in~2015. Data collection periods in~2015 include the following:
 \begin{itemize}
   \item cosmic ray data with CMS magnetic field of $B=0$T (prior collisions);
   \item cosmic ray data at $B=3.8$T (prior collisions);
@@ -16,7 +16,7 @@ Different data collection periods correspond to different detector geometries pa
 % (2) NO PLAGIARISM 
 The modules in certain parts of BPIX were repaired during the shutdown, and all pixel subdetectors were moved within the tracker. That caused one of the largest differences between Run~I and Run~II geometries. The first alignment of the tracker corrected for these displacements using cosmic ray data with magnetic field turned on ($B=3.8$T) and off ($B=0$T).
 
-After the cosmic ray data collection periods, the magnetic field was turned off again, and the first collisions were detected with $B=0$T. This change in the magnetic field caused movements in the tracking system. The effect is the strongest in the pixel subdetectors. The alignment performed using~$B=0$T collisions and cosmic ray data recovers the tracker performance in reconstructing kinematic parameters of charged particles. When the magnetic field was turned back on, the large substructures of BPIX and FPIX have been displaced again, and, thus, the tracking system was aligned again to recover these displacements.  
+After the cosmic ray data collection periods, the magnetic field was turned off again due to problems with the cryogenic system, and the first collisions were detected with $B=0$T. This change in the magnetic field expectedly caused movements in the tracking system. The effect is the strongest in the pixel subdetectors. The alignment performed using~$B=0$T collisions and cosmic ray data recovers the tracker performance in reconstructing kinematic parameters of charged particles. When the magnetic field was turned back on, the large substructures of BPIX and FPIX have been displaced again, and, thus, the tracking system was aligned again to recover these displacements.  
 
 % (3) MY WORDS
 To validate results of tracking system alignment, the following tools are used:
@@ -38,7 +38,7 @@ The geometry comparison visualizes differences in positions of modules between t
     \begin{center}
         \includegraphics[width=0.45\textwidth]{../figs/Alignment/AlRes_phi_vs_dz_PXF_1.pdf}\includegraphics[width=0.45\textwidth]{../figs/Alignment/AlRes_z_vs_dz_PXF_1.png}
     \end{center}
-    \caption{Comparison of Run~II and Run~I positions of the modules in the FPIX of the CMS tracking system. Positions are determined with the Millepede-II and HIP algorithms using cosmic ray data collected with the magnetic field of $B=0$T and $B=3.8$T magnetic field in the CMS solenoid. The difference $\Delta z$ (Run~II~-~Run~I) is plotted as a function of $z$ (left) and $\phi$ (right) in global coordinates.}
+    \caption{Comparison of Run~II and Run~I positions of the modules in the FPIX of the CMS tracking system. Positions are determined with the Millepede-II and HIP algorithms using cosmic ray data collected with the magnetic field of $B=0$T and $B=3.8$T magnetic field in the CMS solenoid. The difference $\Delta z$ (Run~II~-~Run~I) is plotted as a function of $z$ (left) and $\phi$ (right) in global coordinates. The plot shows the displacements of two pixel half disks by~4.5 and~5.5~mm.}
     \label{fig:GCP_FPIX}
 \end{figure}
 
@@ -64,15 +64,17 @@ Besides the geometry comparison, we also have the distributions of medians of un
 %The DMRs in the transverse and longitudinal planes are studied in bins of track azimuth angle $\phi$ and pseudorapidity $\eta$. Random misalignments of the modules affect only the resolution of the unbiased track-vertex residual, increasing the width of the distributions, but without biasing their mean. Systematic movements of the modules will bias the distributions in a way that depends on the nature and size of the misalignment and the and of the selected tracks.
 
 % (7) NO PLAGIARISM DETECTED
-The DMRs are plotted for the local $x$- (Fig.~\ref{fig:DMRs}, left) and $y$-directions (Fig.~\ref{fig:DMRs}, right) in the BPIX. The blue line shows the DMR for Run~I while the green line shows the aligned geometry. The RMS values show that performance of the aligned geometry is improved by a factor of~10 over the Run~I geometry. Because of physical changes in the detector, the Run~I geometry is not expected to work well with Run~II data.  
+The DMRs are plotted for the local $x$- (Fig.~\ref{fig:DMRs}, left) and $y$-directions (Fig.~\ref{fig:DMRs}, right) in the BPIX. The blue line shows the DMR for Run~I while the green line shows the geometry aligned with Run~II data. The RMS values show that performance of the aligned geometry is improved by a factor of~10 over the Run~I geometry. Because of physical changes in the tracking system, including taking off and putting back on the pixel detector, replacing certain modules, and changes in the magnetic field, the Run~I geometry is not expected to work well with Run~II data.  
 
 \begin{figure}[htb]
     \begin{center}
         \includegraphics[width=0.45\textwidth]{../figs/Alignment/AlRes_CRAFT_DmedianR_BPIX_plain.png}\includegraphics[width=0.45\textwidth]{../figs/Alignment/AlRes_CRAFT_DmedianYR_BPIX_plain.png}
     \end{center}
-    \caption {DMRs for the local $x$-direction (left) and for the local $y$-direction (right) in the BPIX of the CMS tracking system, using~2~million cosmic ray tracks collected with the magnetic field of $B=3.8$T. The blue line shows the Run~I geometry. The green line shows the alignment produced with the Millepede-II and HIP algorithms using cosmic ray data at $B=0$T and $B=3.8$T.}
+    \caption {DMRs for the local $x$-direction (left) and for the local $y$-direction (right) in the BPIX of the CMS tracking system, using~2~million cosmic ray tracks collected with the magnetic field of $B=3.8$T. The blue line shows the Run~I geometry. The green line shows the alignment produced with the Millepede-II and HIP algorithms using cosmic ray data at $B=0$T and $B=3.8$T. The aligned geometry shows reasonable performance.}
     \label{fig:DMRs}
 \end{figure}
+
+\clearpage
 
 \subsection{Cosmic Track Splitting Validation}
 \label{sec:AlRes_trackSplit}
@@ -87,9 +89,11 @@ To perform the cosmic track splitting validation, cosmic tracks are split into t
     \begin{center}
         \includegraphics[width=0.45\textwidth]{../figs/Alignment/AlRes_CRAFT_hist_Delta_dxy.png}\includegraphics[width=0.45\textwidth]{../figs/Alignment/AlRes_CRAFT_hist_Delta_dz.png}
     \end{center}
-    \caption{Results of the cosmic track splitting validation. The normalized differences between two parts of a cosmic track in the $xy$ distance between the track and the origin ($d_{xy}$, left), and in the distance in the $z$ direction between the track and the origin ($d_z$, right). Alignment is produced with the Millepede-II and HIP algorithms using cosmic ray data at the magnetic field of $B=0$T and~$B=3.8$T of CMS solenoid. Aligned geometry is shown in green.}
+    \caption{Results of the cosmic track splitting validation. The normalized differences between two parts of a cosmic track in the $xy$ distance between the track and the origin ($d_{xy}$, left), and in the distance in the $z$ direction between the track and the origin ($d_z$, right). Alignment is produced with the Millepede-II and HIP algorithms using cosmic ray data at the magnetic field of $B=0$T and~$B=3.8$T of CMS solenoid. Geometry aligned with Run~II data is shown in green, Run~I geometry is shown in blue. Aligned geometry shows reasonable performance.}
     \label{fig:trackSplit}
 \end{figure}
+
+\clearpage
 
 \subsection{Primary Vertex Validation}
 \label{sec:AlRes_PVvalid}
@@ -117,4 +121,4 @@ Figure~\ref{fig:PVvalidation} compares the previous alignment to the one of a pr
 %\end{figure}
 
 %(12) NO PLAGIARISM DETECTED
-Given the complexity of the CMS detector, any single measurement based on CMS data requires an excellent understanding of the geometry and response of all systems to particles of all types. The CMS Alignment and Calibration team coordinates hundreds of CMS physicists who are working on various aspects of this. The Chapter~\ref{sec:alignment} of this dissertation presented one aspect of this work that concerns alignment of one system of CMS, the part in which the author of this dissertation played an important role.
+Given the complexity of the CMS detector, any single measurement based on CMS data requires an excellent understanding of the geometry and response of all systems to particles of all types. The CMS Alignment and Calibration team coordinates hundreds of CMS physicists who are working on various aspects of this. The Chapter~\ref{sec:alignment} of this dissertation presented one aspect of this work that concerns alignment of one system of CMS, the part in which the author of this dissertation played an important role that included running alignment and validation for various studies of the procedure performance as well as for actual alignment of the tracking system.
