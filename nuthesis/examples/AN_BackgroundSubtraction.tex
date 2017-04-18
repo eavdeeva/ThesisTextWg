@@ -1,7 +1,7 @@
 \section{Background Subtraction}
 \label{sec:BackgroundSubtraction}
 
-The selected sample contains signal events as well as events coming from various backgrounds. To compute the cross section, we need to subtract background and estimate how many events in each $P_T^\gamma$ bin originate from the $W\gamma$ process. This chapter describes the methods used for the background subtraction and provides the results.
+The selected sample contains signal events as well as events coming from various backgrounds. To compute the cross section, we need to subtract background and estimate how many events in each $P_T^\gamma$ bin originate from the $W\gamma$ process. Main sources of backgrounds include jets misidentified as photons denoted as the jets$\rightarrow\gamma$ background, electrons misindentified as photons denoted as the $e\rightarrow\gamma$ background, and backgrounds with real photons denoted as the real-$\gamma$ background. Jets$\rightarrow\gamma$ and real-$\gamma$ backgrounds are present in both channels while $e\rightarrow\gamma$ background is only present in the electron channel. The reminder of this chapter describes the procedure of the background subtraction and provides the results.
 
 \subsection{Jets$\rightarrow\gamma$ Background Estimation and Subtraction}
 \label{sec:BackgroundSubtraction_jtog}
@@ -9,7 +9,7 @@ The selected sample contains signal events as well as events coming from various
 The selected sample is dominated by the $W$+jets background which cannot be further significantly reduced without reducing our signal sample $W\gamma$ as well. The photon~ID selection criteria help to reduce $W$+jets background to a certain level but there is still a significant number of jets that are reconstructed as photons and pass all the photon~ID criteria. DY+jets is another source of the jets$\rightarrow \gamma$ background but this source is significantly suppressed by the $M_W^T$ selection criterion in both channels and by the $Z$-mass window requirement in the electron channel.
 
 The template method is used to estimate jets$ \rightarrow \gamma$ background. First of all, we choose a variable that has a significant discriminative power between the true and fake photon candidates $V_{fit}$. After that, we prepare real-$\gamma$ ($T_{true}$) and fake-$\gamma$ ($T_{fake}$) templates which should be an accurate representations of $V_{fit}$ distributions of real and fake photons in the $W\gamma$-selected dataset. The $V_{fit}$ distribution in data is fitted by the following function: 
-\begin{equation}
+\begin{equation}\label{eq:F_fit}
 F(V_{fit})=N_{true} \cdot T_{true}(V_{fit}) + N_{fake} \cdot T_{fake}(V_{fit}),
 \end{equation}
 \noindent{where $V_{fit}$ is a fit variable, $N_{true}$ and $N_{fake}$ are numbers of real and fake photons in the data sample, respectively, and $F(V_{fit})$ is a fit function. $N_{true}$ and $N_{fake}$ are fit parameters. We use the charged hadron isolation $I_{ch}^{\gamma}$ and a shower shape variable $\sigma_{i\eta i\eta}^{\gamma}$ as $V_{fit}$. Results of $I_{ch}^{\gamma}$ fits are further propagated for the cross section calculation, and results of $\sigma_{i\eta i\eta}^{\gamma}$ fits are used for the estimation of the systematic uncertainty.}
@@ -37,13 +37,19 @@ To prepare fake-$\gamma$ templates, we need a sample that consists of jets recon
 
 Therefore, to construct a fake-$\gamma$ template, we can use DY+jets events from the ISR $Z\gamma$-selected sample. However, in addition to DY+jets events, this sample also contains non-negligible amount of $Z\gamma$ events. This real-$\gamma$ contribution is subtracted using $Z\gamma$ MC predictions.
 
-FSR and ISR selections are illustrated in App.~\ref{sec:ZgFSRandISRplots}. Distributions of $M_{ll\gamma}$ and $M_{ll}$ for nominally selected $Z\gamma$ dataset are shown in Fig.~\ref{fig:Zg_Mleplep_and_Mpholeplep}. Distributions of $\Delta{R}(l,\gamma)$ for ISR and FSR $Z\gamma$ events are shown in Fig.~\ref{fig:Zg_ISRandFSR_dR}. Distributions of $P_{T}^{\gamma}$ for ISR and FSR $Z\gamma$ events are shown in Fig.~\ref{fig:Zg_ISRandFSR_phoEt}. High $P_{T}^{\gamma}$ bins have higher real-$\gamma$ contamination but even the last bin contains enough events to prepare a template. 
+FSR and ISR selections are illustrated in App.~\ref{sec:ZgFSRandISRplots}. Distributions of $M_{ll\gamma}$ and $M_{ll}$ for nominally selected $Z\gamma$ dataset are shown in Fig.~\ref{fig:Zg_Mleplep_and_Mpholeplep}. Distributions of $\Delta{R}(l,\gamma)$ for ISR and FSR $Z\gamma$ events are shown in Fig.~\ref{fig:Zg_ISRandFSR_dR}. Distributions of $P_{T}^{\gamma}$ for ISR and FSR $Z\gamma$ events are shown in Fig.~\ref{fig:Zg_ISRandFSR_phoEt}. 
 
-Fits are performed in the extended binned maximum likelihood manner separately in each $P_T^{\gamma}$ bin, separately for EB and EE photons. Plots of the template fits are available in App.~\ref{sec:TemplateFitPlots}.   
+Fits are performed in the extended binned maximum likelihood manner separately in each $P_T^{\gamma}$ bin, separately for EB and EE photons. Plots of the template fits are available in App.~\ref{sec:TemplateFitPlots}. The outcomes of the fits are parameters $N_{true}$ and $N_{fake}$ from Eq.~\ref{eq:F_fit}.
 
-To extract real-$\gamma$ yield from the $N_{true}$, efficiency of the $V_{fit}$ is applied on the value derived from fit based on the distribution of events which are used to prepare the real-$\gamma$ template. To extract fake-$\gamma$ yield from the $N_{fake}$, efficiency of the $V_{fit}$ is applied on the value derived from fit based on the distribution of events which are used to prepare a fake-$\gamma$ template. 
+$N_{true}$ appears to be a number of real-$\gamma$ events in $W\gamma$ dataset after all selection criteria applied except the selection condition on $V_{fit}$ which is either $I_{ch}^{\gamma}$ or $\sigma_{i\eta i\eta}^{\gamma}$. However, our goal is to extract number of real-$\gamma$ events in $W\gamma$ dataset after all selection criteria applied including the selection condition on $V_{fit}$. To extract real-$\gamma$ yield, $N_{true}$ is multiplied by the efficiency of the selection condition on $V_{fit}$. The efficiency is estimated using the $Z\gamma$-selected FSR sample as 
+\begin{equation}
+ \epsilon_{Vfit} = \frac{N_{passed_Vfit_condition}}{N_{failed_Vfit_condition}},
+\end{equation}
+\noindent{where $N_{passed_Vfit_condition}$ is a number of events in a specific $P_T^{\gamma}$ range is the FSR sample which pass all $Z\gamma$ FSR selection criteria including the selection condition on $V_{fit}$, and $N_{failed_Vfit_condition}$ is a number of events in a specific $P_T^{\gamma}$ range is the FSR sample which pass all $Z\gamma$ FSR selection criteria except the selection condition on $V_{fit}$.}
 
-Two MC closure checks are performed to validate the procedure. For the first check all MC samples that pass $W\gamma$ selection are mixed together with appropriate weights assigned. Then fits on this sample of pseudodata are performed as on real data and the fit results are superimposed with MC samples. The results of the MC closure check are reported in App.~\ref{sec:MCclosureCheck} and the fit plots are shown in App.~\ref{sec:TemplateFitPlotsMCclosure}. 
+%To extract fake-$\gamma$ yield from the $N_{fake}$, efficiency of the $V_{fit}$ is applied on the value derived from fit based on the distribution of events which are used to prepare a fake-$\gamma$ template. 
+
+Two MC closure checks are performed to validate the procedure. For the first check, MC samples $W\gamma$, $W$+jets, $Z\gamma$, $Z$+jets, and $t\bar{t}$+jets run through the $W\gamma$ selection conditions and mixed together to mimic real data. Then fits on this sample of pseudodata are performed and the fit results are superimposed with MC predictions same as it is done for the real data. The results of the MC closure check are reported in App.~\ref{sec:MCclosureCheck} and the fit plots are shown in App.~\ref{sec:TemplateFitPlotsMCclosure}. 
 
 For the second MC closure check, the pseudodata sample is prepared from $W$+jets and $W\gamma$ samples only. The results are reported in App.~\ref{sec:TemplateFitPlotsMCclosureWjetsPlusWg}. 
 
@@ -52,34 +58,36 @@ For the second MC closure check, the pseudodata sample is prepared from $W$+jets
 
 For the electron channel, DY+jets is the main source of the $e \rightarrow \gamma$ background. The $Z$-mass window requirement of ($M_{e\gamma}<70$~GeV or $M_{e\gamma}>110$~GeV) significantly suppresses this background, however, the remaining contribution is non-negligible. 
 
-The contribution of $e\rightarrow\gamma$ is estimated separately for each $P_{T}^{\gamma}$ bin and separately for barrel and endcap photons using the following expression: 
+The contribution of $e\rightarrow\gamma$ $N_{data-nom}^{e\rightarrow\gamma}$ is estimated separately for each $P_{T}^{\gamma}$ bin and separately for barrel and endcap photons by scaling number of the nominally selected events in DY+jets MC sample $N_{MC-nom}^{e\rightarrow\gamma}$ to the relation of numbers of events in the  $e\rightarrow\gamma$-enriched data ($N_{data-Zpeak}^{e\rightarrow\gamma}$) and DY+jets MC ($N_{MC-Zpeak}^{e\rightarrow\gamma}$) samples under the $Z$-peak: 
 
-\begin{equation}
+\begin{equation}\label{eq:Scale_etog}
 N_{data-nom}^{e\rightarrow\gamma} = N_{MC-nom}^{e\rightarrow\gamma} \cdot \frac{N_{data-Zpeak}^{e\rightarrow\gamma}}{N_{MC-Zpeak}^{e\rightarrow\gamma}}, 
 \end{equation}
-\noindent{where $N_{data-nom}^{e\rightarrow\gamma}$ and $N_{MC-nom}^{e\rightarrow\gamma}$ are the numbers of $e\rightarrow\gamma$ events in the nominally selected of data and DY+jets MC sample, respectively, $N_{data-Zpeak}^{e\rightarrow\gamma}$ and $N_{MC-Zpeak}^{e\rightarrow\gamma}$ are the numbers of $e\rightarrow\gamma$ events under the $Z$-peak data and DY+jets MC sample respectively. }
 
-To estimate number of events under $Z$-peak, $e\rightarrow\gamma$-enriched data and DY+jets MC samples are prepared by inverting the $Z$-mass
-window requirement. After that, numbers of events in DY+jets MC samples $N_{MC-Zpeak}^{e\rightarrow\gamma}$ and $N_{MC-nom}^{e\rightarrow\gamma}$ are estimated by counting with appropriate weights. The number $N_{data-Zpeak}^{e\rightarrow\gamma}$ is extracted from fitting the $M_{e\gamma}$ in the $Z$-peak region (App.~\ref{sec:EtogammaFitPlots}). The fits are performed separately in each $P_T^\gamma$ bin in fine $\eta^\gamma$ binning:
+To estimate $N_{data-Zpeak}^{e\rightarrow\gamma}$, $e\rightarrow\gamma$-enriched data and DY+jets MC samples are prepared by appliyng all $W\gamma$ selection requirements except the $Z$-mass window requirement. After that, numbers of events in DY+jets MC samples $N_{MC-Zpeak}^{e\rightarrow\gamma}$ and $N_{MC-nom}^{e\rightarrow\gamma}$ are estimated by counting. The number $N_{data-Zpeak}^{e\rightarrow\gamma}$ is extracted from fitting the $M_{e\gamma}$ distribution in the $Z$-peak region (App.~\ref{sec:EtogammaFitPlots}). The fits are performed separately in each $P_T^\gamma$ bin in fine $\eta^\gamma$ binning:
      \begin{itemize}
-        \item $P_T^\gamma$ $15-20-25-30-35-45-55-65$~GeV
+        \item $P_T^\gamma$ ranges $15-20-25-30-35-45-55-65$~GeV
            \begin{itemize}
               \item $\eta^\gamma$ binning in barrel: $0.00-0.10-0.50-1.00-1.44$
               \item $\eta^\gamma$ binning in endcap: $1.56-2.10-2.20-2.40-2.50$
            \end{itemize}
-        \item $P_T^\gamma$ $65-75-85-95$~GeV
+        \item $P_T^\gamma$ ranges $65-75-85-95$~GeV
           \begin{itemize}
               \item $\eta^\gamma$ binning in barrel: $0.00-0.50-1.44$
               \item $\eta^\gamma$ binning in endcap: $1.56-2.20-2.50$
            \end{itemize}
-        \item $P_T^\gamma$: $95-120-500$~GeV
+        \item $P_T^\gamma$ ranges $95-120-500$~GeV
           \begin{itemize}
               \item $\eta^\gamma$ binning in barrel: $0.00-1.44$
               \item e$\eta^\gamma$ binning in ndcap: $1.56-2.50$
            \end{itemize}
-        \item $P_T^\gamma$ $10-15$~GeV (underflow bin): MC-prediction is used, no fit performed.
+        \item $P_T^\gamma$ range $10-15$~GeV (underflow bin): MC-prediction is used, no fits performed.
      \end{itemize}
-\noindent{The fit plots are provided in App.~\ref{sec:EtogammaFitPlots} and the tables are provided in App.~\ref{sec:etogTables}. To prepare yields, fit results in all fine barrel $\eta^\gamma$ bins are summed up and fit results in all fine endcap $\eta^\gamma$ bins are summed up. The distributions of $M_{e\gamma}$ before and after appropriate scale of the $e\rightarrow\gamma$ of the DY+jets sample is in different $P_T^{\gamma}$ bins are shown in App.~\ref{sec:Mpholep1DatavsMC}.}
+\noindent{The fit plots are provided in App.~\ref{sec:EtogammaFitPlots} and the tables with numbers from Eq.~\ref{eq:Scale_etog} in different $P_T^{\gamma}$ ranges separately for EB and EE final state photons are provided in App.~\ref{sec:etogTables}. The distributions of $M_{e\gamma}$ in different $P_T^{\gamma}$ bins are shown in App.~\ref{sec:Mpholep1DatavsMC}. After the $M_{e\gamma}$ distribution in the DY+jets sample is scaled by} 
+\begin{equation}
+   scale = \frac{N_{data-Zpeak}^{e\rightarrow\gamma}}{N_{MC-Zpeak}^{e\rightarrow\gamma}}
+\end{equation}
+ \noindent{the data vs MC agreement significantly improves.}
 
 %  \item templates for RooNDKeysPdf: $e\rightarrow\gamma$ portion of the DYjets MC separately for each pt-eta bin
 %  \item $e\rightarrow\gamma$ portion of the DYjets MC: a photon has a gen-level electron within dR=0.4 
@@ -98,7 +106,7 @@ In addition to the backgrounds discussed before, there is also real-$\gamma$ bac
 
 \subsection{$P_T^{\gamma}$ Spectra before and after the Background Subtraction}
 
-The results of the background estimation and subtraction procedure are summarized in Fig.~\ref{fig:DDvsMC_Wg_Data_MUON}-\ref{fig:DDvsMC_Wg_Data_ELECTRON} and in Tab.~\ref{tab:yields_Wg_to_munu__Barrel_}-\ref{tab:yields_Wg_to_enu__Endcap_}. Figure~\ref{fig:DDvsMC_Wg_Data_MUON} and Tab.~\ref{tab:yields_Wg_to_munu__Barrel_}-~\ref{tab:yields_Wg_to_munu__Endcap_} stand for the muon channel while Fig.~\ref{fig:DDvsMC_Wg_Data_ELECTRON} and Tab.~\ref{tab:yields_Wg_to_enu__Barrel_}-\ref{tab:yields_Wg_to_enu__Endcap_} stand for the electron channel. Top and middle plots in Fig.~\ref{fig:DDvsMC_Wg_Data_MUON}-\ref{fig:DDvsMC_Wg_Data_ELECTRON} shows the $P_T^\gamma$ spectrum in data superimposed with the signal MC and background estimates that includes jets$\rightarrow\gamma$ and real-$\gamma$ backgrounds in both channels and $e\rightarrow\gamma$ background in the electron channel. The bottom plots show data yields after full background subtraction superimposed with signal MC. 
+The results of the background estimation and subtraction procedure are summarized in Fig.~\ref{fig:DDvsMC_Wg_Data_MUON}-\ref{fig:DDvsMC_Wg_Data_ELECTRON} and in Tab.~\ref{tab:yields_Wg_to_munu_}-\ref{tab:yields_Wg_to_enu_}. Figure~\ref{fig:DDvsMC_Wg_Data_MUON} and Tab.~\ref{tab:yields_Wg_to_munu_} stand for the muon channel while Fig.~\ref{fig:DDvsMC_Wg_Data_ELECTRON} and Tab.~\ref{tab:yields_Wg_to_enu_} stand for the electron channel. Top and middle plots in Fig.~\ref{fig:DDvsMC_Wg_Data_MUON}-\ref{fig:DDvsMC_Wg_Data_ELECTRON} shows the $P_T^\gamma$ spectrum in data superimposed with the signal MC and background estimates that includes jets$\rightarrow\gamma$ and real-$\gamma$ backgrounds in both channels and $e\rightarrow\gamma$ background in the electron channel. The bottom plots show data yields after full background subtraction superimposed with signal MC. 
 
 Jets$\rightarrow\gamma$ background is estimated by two methods. The results provided by two methods differ significantly, and the difference contributes to the systematic uncertainty.
 
@@ -107,7 +115,7 @@ Jets$\rightarrow\gamma$ background is estimated by two methods. The results prov
    \includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_WGamma/PrepareYields/c_DATAvsBkgPlusSigMCc_MUON_WGamma_TEMPL_CHISO_UNblind__Barrel__phoEt.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_WGamma/PrepareYields/c_DATAvsBkgPlusSigMCc_MUON_WGamma_TEMPL_SIHIH_UNblind__Barrel__phoEt.pdf}  \\
    \includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_WGamma/PrepareYields/c_DATAvsBkgPlusSigMCc_MUON_WGamma_TEMPL_CHISO_UNblind__Endcap__phoEt.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_WGamma/PrepareYields/c_DATAvsBkgPlusSigMCc_MUON_WGamma_TEMPL_SIHIH_UNblind__Endcap__phoEt.pdf}  \\
 \includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_WGamma/PrepareYields/c_BkgSubtrDATAvsSIGMC_c_MUON_WGamma__UNblind__Barrel__phoEt.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_WGamma/PrepareYields/c_BkgSubtrDATAvsSIGMC_c_MUON_WGamma__UNblind__Endcap__phoEt.pdf}\\
-  \caption{Top and middle: data vs fake-$\gamma$ background derived from the template method + real-$\gamma$ background predicted by dedicated MC samples + signal MC, with $I_{ch}$ and $\sigma_{i\etai\eta}$ used as fit variables. Bottom: data yields after full background subtraction vs signal MC. $I_{ch}$ vs $\sigma_{i\etai\eta}$ fit results. Muon channel.}
+  \caption{Top and middle: data vs fake-$\gamma$ background derived from the template method + real-$\gamma$ background predicted by dedicated MC samples + signal MC, with $I_{ch}$ (left) and $\sigma_{i\etai\eta}$ (right) used as fit variables in EB (top) and EE (middle). Bottom: data yields after full background subtraction vs signal MC. $I_{ch}$ vs $\sigma_{i\etai\eta}$ fit results. Muon channel.}
   \label{fig:DDvsMC_Wg_Data_MUON}
   \end{center}
 \end{figure}
@@ -117,7 +125,7 @@ Jets$\rightarrow\gamma$ background is estimated by two methods. The results prov
    \includegraphics[width=0.45\textwidth]{../figs/figs_v11/ELECTRON_WGamma/PrepareYields/c_DATAvsBkgPlusSigMCc_ELECTRON_WGamma_TEMPL_CHISO_UNblind__Barrel__phoEt.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/ELECTRON_WGamma/PrepareYields/c_DATAvsBkgPlusSigMCc_ELECTRON_WGamma_TEMPL_SIHIH_UNblind__Barrel__phoEt.pdf}  \\
    \includegraphics[width=0.45\textwidth]{../figs/figs_v11/ELECTRON_WGamma/PrepareYields/c_DATAvsBkgPlusSigMCc_ELECTRON_WGamma_TEMPL_CHISO_UNblind__Endcap__phoEt.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/ELECTRON_WGamma/PrepareYields/c_DATAvsBkgPlusSigMCc_ELECTRON_WGamma_TEMPL_SIHIH_UNblind__Endcap__phoEt.pdf}  \\
 \includegraphics[width=0.45\textwidth]{../figs/figs_v11/ELECTRON_WGamma/PrepareYields/c_BkgSubtrDATAvsSIGMC_c_ELECTRON_WGamma__UNblind__Barrel__phoEt.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/ELECTRON_WGamma/PrepareYields/c_BkgSubtrDATAvsSIGMC_c_ELECTRON_WGamma__UNblind__Endcap__phoEt.pdf}\\
-  \caption{Top and middle: data vs fake-$\gamma$ background derived from the template method + real-$\gamma$ background predicted by dedicated MC samples + signal MC, with $I_{ch}$ and $\sigma_{i\etai\eta}$ used as fit variables. Bottom: data yields after full background subtraction vs signal MC. $I_{ch}$ vs $\sigma_{i\etai\eta}$ fit results. Electron channel.}
+  \caption{Top and middle: data vs fake-$\gamma$ background derived from the template method + real-$\gamma$ background predicted by dedicated MC samples + signal MC, with $I_{ch}$ (left) and $\sigma_{i\etai\eta}$ (right) used as fit variables in EB (top) and EE (middle). Bottom: data yields after full background subtraction vs signal MC. $I_{ch}$ vs $\sigma_{i\etai\eta}$ fit results. Electron channel.}
   \label{fig:DDvsMC_Wg_Data_ELECTRON}
   \end{center}
 \end{figure}
@@ -127,10 +135,14 @@ Jets$\rightarrow\gamma$ background is estimated by two methods. The results prov
 \begin{table}[h]
   \scriptsize
   \begin{center}
-  \caption{Data, signal and background yields. $W\gamma$, muon channel, barrel photons.}
+  \caption{Data, signal and background yields. $W\gamma$, muon channel. First column is $P_T^{\gamma}$ ranges, second column is numbers of selected events in data in different $P_T^{\gamma}$ regions, third and fourth columns are estimates of the jets$\rightarrow\gamma$ background using $I_{ch}^{\gamma}$ and $\sigma_{i\eta i\eta}^{\gamma}$ templates, respectively, fifth column is MC-based estimates of the real-$\gamma$ background, sixth column is yields after the full background subtraction, and seventh column is signal MC predictions.}
   \begin{tabular}{|c|c|c|c|c|c|c|}
-    bin & data & jets$\rightarrow\gamma$ & jets$\rightarrow\gamma$ & MC real-$\gamma$ &  data-bkg & signal \\ 
-    lims & & $I_{ch}^{\gamma}$ & $\sigma_{i\eta i\eta}^{\gamma}$ & bkg & & MC  \\ \hline
+  \hline
+                  &        &                 &                            &                   &           &   \\ 
+    $P_T^{\gamma}$, & data   &  \multicolumn{3}{|c|}{background estimates}                      &  data-bkg & signal      \\ 
+    GeV           & yields & \multicolumn{2}{|c|}{jets$\rightarrow\gamma$} & MC real-$\gamma$ &           & MC \\ 
+                  &        & $I_{ch}^{\gamma$ & $\sigma_{i\eta i\eta}^{\gamma}$  &                  &           &   \\ \hline
+\multicolumn{7}{|c|}{barrel photons}\\ \hline
 10-15 & 114047$\pm$338 & 79833$\pm$251 & 77612$\pm$322 & 2453$\pm$46 & 26867$\pm$385 & 26251$\pm$240 \\ \hline 
 15-20 & 41411$\pm$203 & 21434$\pm$150 & 24543$\pm$143 & 1566$\pm$34 & 19642$\pm$245 & 12707$\pm$164 \\ \hline 
 20-25 & 19801$\pm$141 & 8466$\pm$101 & 9878$\pm$78 & 1283$\pm$31 & 10446$\pm$168 & 6793$\pm$120 \\ \hline 
@@ -144,18 +156,7 @@ Jets$\rightarrow\gamma$ background is estimated by two methods. The results prov
 85-95 & 600$\pm$24 & 76$\pm$11 & 146$\pm$11 & 34$\pm$6 & 510$\pm$26 & 341$\pm$27 \\ \hline 
 95-120 & 856$\pm$29 & 67$\pm$11 & 319$\pm$25 & 60$\pm$9 & 750$\pm$31 & 454$\pm$31 \\ \hline 
 120-500 & 897$\pm$30 & 28$\pm$7 & 83$\pm$7 & 50$\pm$8 & 825$\pm$31 & 547$\pm$34 \\ \hline 
-  \end{tabular}
-  \label{tab:yields_Wg_to_munu__Barrel_}
-  \end{center}
-\end{table}
-
-\begin{table}[h]
-  \scriptsize
-  \begin{center}
-  \caption{Data, signal and background yields. $W\gamma$, muon channel, endcap photons.}
-  \begin{tabular}{|c|c|c|c|c|c|c|}
-    bin & data & jets$\rightarrow\gamma$ & jets$\rightarrow\gamma$ & MC real-$\gamma$ &  data-bkg & signal \\ 
-    lims & & $I_{ch}^{\gamma}$ & $\sigma_{i\eta i\eta}^{\gamma}$ & bkg & & MC  \\ \hline
+\multicolumn{7}{|c|}{endcap photons}\\ \hline
 10-15 & 94370$\pm$307 & 77649$\pm$215 & 81161$\pm$426 & 2632$\pm$41 & 7937$\pm$306 & 10823$\pm$154 \\ \hline 
 15-20 & 34643$\pm$186 & 25902$\pm$142 & 27661$\pm$184 & 1835$\pm$34 & 5089$\pm$213 & 6474$\pm$120 \\ \hline 
 20-25 & 15988$\pm$126 & 10018$\pm$93 & 11659$\pm$102 & 1294$\pm$29 & 4842$\pm$138 & 3377$\pm$86 \\ \hline 
@@ -170,7 +171,7 @@ Jets$\rightarrow\gamma$ background is estimated by two methods. The results prov
 95-120 & 433$\pm$21 & 20$\pm$5 & -81$\pm$5 & 32$\pm$6 & 374$\pm$21 & 209$\pm$22 \\ \hline 
 120-500 & 396$\pm$20 & 11$\pm$4 & 153$\pm$12 & 10$\pm$2 & 302$\pm$18 & 157$\pm$19 \\ \hline 
   \end{tabular}
-  \label{tab:yields_Wg_to_munu__Endcap_}
+  \label{tab:yields_Wg_to_munu_}
   \end{center}
 \end{table}
 
@@ -179,10 +180,13 @@ Jets$\rightarrow\gamma$ background is estimated by two methods. The results prov
 \begin{table}[h]
   \scriptsize
   \begin{center}
-  \caption{Data, signal and background yields. $W\gamma$, electron channel, barrel photons.}
+  \caption{Data, signal and background yields. $W\gamma$, electron channel. First column is $P_T^{\gamma}$ ranges, second column is numbers of selected events in data in different $P_T^{\gamma}$ regions, third and fourth columns are estimates of the jets$\rightarrow\gamma$ background using $I_{ch}^{\gamma}$ and $\sigma_{i\eta i\eta}^{\gamma}$ templates, respectively, fifth column is $e\rightarrow\gamma$ background estimates, sixths column is MC-based estimates of the real-$\gamma$ background, seventh column is yields after the full background subtraction, and eighth column is signal MC predictions.}
   \begin{tabular}{|c|c|c|c|c|c|c|c|}
-    bin & data & jets$\rightarrow\gamma$ & jets$\rightarrow\gamma$ &  & MC real-$\gamma$ &  data-bkg & signal \\
-    lims & & $I_{ch}^{\gamma}$ & $\sigma_{i\eta i\eta}^{\gamma}$ &$e\rightarrow\gamma$ & bkg & & MC  \\ \hline
+                  &        &                 &                            & &                   &           &   \\ 
+    $P_T^{\gamma}$, & data   &  \multicolumn{4}{|c|}{background estimates}                      &  data-bkg & signal      \\ 
+    GeV           & yields & \multicolumn{2}{|c|}{jets$\rightarrow\gamma$} & $e\rightarrow\gamma$ & MC real-$\gamma$ &           & MC \\ 
+                  &        & $I_{ch}^{\gamma$ & $\sigma_{i\eta i\eta}^{\gamma}$  &                       &                  &           &   \\ \hline
+\multicolumn{8}{|c|}{barrel photons}\\ \hline
 10-15 & 71649$\pm$268 & 51004$\pm$200 & 53577$\pm$266 & 2923$\pm$80 & 2688$\pm$41 & 12425$\pm$316 & 12480$\pm$164 \\ \hline
 15-20 & 25455$\pm$160 & 13487$\pm$118 & 14474$\pm$110 & 3715$\pm$178 & 1779$\pm$32 & 7422$\pm$262 & 5858$\pm$110 \\ \hline
 20-25 & 11130$\pm$105 & 5112$\pm$78 & 4846$\pm$55 & 2023$\pm$137 & 1101$\pm$25 & 3168$\pm$186 & 2869$\pm$77 \\ \hline
@@ -196,19 +200,7 @@ Jets$\rightarrow\gamma$ background is estimated by two methods. The results prov
 85-95 & 473$\pm$22 & 43$\pm$9 & 99$\pm$9 & 43$\pm$17 & 34$\pm$5 & 366$\pm$29 & 234$\pm$23 \\ \hline
 95-120 & 703$\pm$27 & 53$\pm$9 & 274$\pm$24 & 63$\pm$19 & 47$\pm$5 & 555$\pm$34 & 318$\pm$27 \\ \hline
 120-500 & 859$\pm$29 & 23$\pm$6 & 61$\pm$6 & 34$\pm$12 & 71$\pm$8 & 735$\pm$33 & 430$\pm$31 \\ \hline
-  \end{tabular}
-
-  \label{tab:yields_Wg_to_enu__Barrel_}
-  \end{center}
-\end{table}
-
-\begin{table}[h]
-  \scriptsize
-  \begin{center}
-  \caption{Data, signal and background yields. $W\gamma$, electron channel, endcap photons.}
-   \begin{tabular}{|c|c|c|c|c|c|c|c|}
-    bin & data & jets$\rightarrow\gamma$ & jets$\rightarrow\gamma$ &  & MC real-$\gamma$ &  data-bkg & signal \\
-    lims & & $I_{ch}^{\gamma}$ & $\sigma_{i\eta i\eta}^{\gamma}$ &$e\rightarrow\gamma$ & bkg & & MC  \\ \hline
+\multicolumn{8}{|c|}{endcap photons}\\ \hline
 10-15 & 39746$\pm$199 & 31043$\pm$138 & 40022$\pm$13 & 666$\pm$38 & 1120$\pm$27 & 4130$\pm$204 & 4368$\pm$97 \\ \hline
 15-20 & 13818$\pm$118 & 9920$\pm$88 & 12692$\pm$124 & 509$\pm$56 & 744$\pm$21 & 1870$\pm$145 & 2253$\pm$68 \\ \hline
 20-25 & 6133$\pm$78 & 3538$\pm$56 & 4558$\pm$63 & 433$\pm$36 & 473$\pm$17 & 1680$\pm$92 & 1177$\pm$49 \\ \hline
@@ -224,6 +216,6 @@ Jets$\rightarrow\gamma$ background is estimated by two methods. The results prov
 120-500 & 360$\pm$19 & 5$\pm$3 & 53$\pm$7 & 15$\pm$7 & 24$\pm$4 & 254$\pm$18 & 146$\pm$19 \\ \hline
   \end{tabular}
 
-  \label{tab:yields_Wg_to_enu__Endcap_}
+  \label{tab:yields_Wg_to_enu_}
   \end{center}
 \end{table}
