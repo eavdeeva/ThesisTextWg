@@ -1,9 +1,9 @@
-\section{Background Subtraction}
+\section{Background Estimation and Subtraction}
 \label{sec:BackgroundSubtraction}
 
 The selected sample contains signal events as well as events coming from various backgrounds. To compute the cross section, we need to subtract background and estimate how many events in each $P_T^\gamma$ bin originate from the $W\gamma$ process. Main sources of backgrounds include jets misidentified as photons denoted as the jets$\rightarrow\gamma$ background, electrons misindentified as photons denoted as the $e\rightarrow\gamma$ background, and backgrounds with real photons denoted as the real-$\gamma$ background. Jets$\rightarrow\gamma$ and real-$\gamma$ backgrounds are present in both channels while $e\rightarrow\gamma$ background is only present in the electron channel. The reminder of this chapter describes the procedure of the background subtraction and provides the results.
 
-\subsection{Jets$\rightarrow\gamma$ Background Estimation and Subtraction}
+\subsection{Background from Jets Faking Photons}
 \label{sec:BackgroundSubtraction_jtog}
 
 The selected sample is dominated by the $W$+jets background which cannot be further significantly reduced without reducing our signal sample $W\gamma$ as well. The photon~ID selection criteria help to reduce $W$+jets background to a certain level but there is still a significant number of jets that are reconstructed as photons and pass all the photon~ID criteria. DY+jets is another source of the jets$\rightarrow \gamma$ background but this source is significantly suppressed by the $M_W^T$ selection criterion in both channels and by the $Z$-mass window requirement in the electron channel.
@@ -49,11 +49,7 @@ $N_{true}$ appears to be a number of real-$\gamma$ events in $W\gamma$ dataset a
 
 %To extract fake-$\gamma$ yield from the $N_{fake}$, efficiency of the $V_{fit}$ is applied on the value derived from fit based on the distribution of events which are used to prepare a fake-$\gamma$ template. 
 
-Two MC closure checks are performed to validate the procedure. For the first check, MC samples $W\gamma$, $W$+jets, $Z\gamma$, $Z$+jets, and $t\bar{t}$+jets run through the $W\gamma$ selection conditions and mixed together to mimic real data. Then fits on this sample of pseudodata are performed and the fit results are superimposed with MC predictions same as it is done for the real data. The results of the MC closure check are reported in App.~\ref{sec:MCclosureCheck} and the fit plots are shown in App.~\ref{sec:TemplateFitPlotsMCclosure}. 
-
-For the second MC closure check, the pseudodata sample is prepared from $W$+jets and $W\gamma$ samples only. The results are reported in App.~\ref{sec:TemplateFitPlotsMCclosureWjetsPlusWg}. 
-
-\subsection{$e\rightarrow\gamma$ Background Estimation and Subtraction for the Electron Channel}
+\subsection{Background from Electrons Faking Photons in the Electron Channel}
 \label{sec:BackgroundSubtraction_etog}
 
 For the electron channel, DY+jets is the main source of the $e \rightarrow \gamma$ background. The $Z$-mass window requirement of ($M_{e\gamma}<70$~GeV or $M_{e\gamma}>110$~GeV) significantly suppresses this background, however, the remaining contribution is non-negligible. 
@@ -108,7 +104,13 @@ In addition to the backgrounds discussed before, there is also real-$\gamma$ bac
 
 The results of the background estimation and subtraction procedure are summarized in Fig.~\ref{fig:DDvsMC_Wg_Data_MUON}-\ref{fig:DDvsMC_Wg_Data_ELECTRON} and in Tab.~\ref{tab:yields_Wg_to_munu_}-\ref{tab:yields_Wg_to_enu_}. Figure~\ref{fig:DDvsMC_Wg_Data_MUON} and Tab.~\ref{tab:yields_Wg_to_munu_} stand for the muon channel while Fig.~\ref{fig:DDvsMC_Wg_Data_ELECTRON} and Tab.~\ref{tab:yields_Wg_to_enu_} stand for the electron channel. Top and middle plots in Fig.~\ref{fig:DDvsMC_Wg_Data_MUON}-\ref{fig:DDvsMC_Wg_Data_ELECTRON} shows the $P_T^\gamma$ spectrum in data superimposed with the signal MC and background estimates that includes jets$\rightarrow\gamma$ and real-$\gamma$ backgrounds in both channels and $e\rightarrow\gamma$ background in the electron channel. The bottom plots show data yields after full background subtraction superimposed with signal MC. 
 
-Jets$\rightarrow\gamma$ background is estimated by two methods. The results provided by two methods differ significantly, and the difference contributes to the systematic uncertainty.
+Jets$\rightarrow\gamma$ background is estimated by two methods: by fits of $I_{ch}^{\gamma}$ and $\sigma_{i\eta i\eta}^{\gamma}$ templates. The results provided by two methods differ significantly, as well as both show signicant disagreement with the MC prediction. To understand the diagreements and validate the procedure, we perform two MC closure checks. The results of the checks are reported in App.~\ref{sec:MCclosureCheck}.  
+
+For the first MC closure check, the pseudodata sample is prepared from $W$+jets and $W\gamma$ samples and mixed together to mimic real data. Templates are prepared from exactly the same $W\gamma$ and $W$+jets samples that constitute pseudodata. Then fits on this sample of pseudodata are performed and real-$\gamma$ and fake-$\gamma$ fit results are compared to $W\gamma$ and $W$+jets MC predictions. Such approach eliminates effects of possible wrong normalizations of MC samples and the difference between real-$\gamma$ and fake-$\gamma$ $I_{ch}^{\gamma}$ and $\sigma_{i\eta i\eta}^{\gamma}$ distributions in $W\gamma$/W+jets and $Z\gamma$/DY+jets samples. The agreement is quite good between real-$\gamma$ yields extracted from fits and the $W\gamma$ MC prediction. However, the fake-$\gamma$ yields extracted from fits do not always agree that well with $W$+jets MC predictions.
+
+The second check is closer to mimicing real data: MC samples $W\gamma$, $W$+jets, $Z\gamma$, $Z$+jets, and $t\bar{t}$+jets run through the $W\gamma$ selection conditions and mixed together. To prepare templates, $Z\gamma$ and $DY$+jets MC samples are mixed together to constitute a $Z\gamma$-selected pseudodataset which is used the same way as $Z\gamma$-selected dataset is used to prepare templates for the background estimation in the data analisys. Then the pseudodata histograms are fitted and the fit results are superimposed with MC predictions same as it is done for the real data. Such closure checks eliminates the effects of possible wrong normalizations of MC samples but leaves the effect of the possible difference between real-$\gamma$ and fake-$\gamma$ $I_{ch}^{\gamma}$ and $\sigma_{i\eta i\eta}^{\gamma}$ distributions in $W\gamma$/W+jets and $Z\gamma$/DY+jets samples. The results of this closure check show better agreement of data vs estimated background + signal MC however the disagreement in certain $P_T^{\gamma}$ bins remain significant. Presumably, there is a systematic bias in our fit procedure, and it is taken into account as a difference between fit outcomes of the $I_{ch}^{\gamma}$ and $\sigma_{i\eta i\eta}^{\gamma}$ templates as described in detail in Ch.~\ref{sec:Systematics}.
+
+In addition to the checks described above, we also perform $Z\gamma$ check on data and MC mixture (App.~\ref{App.~\ref{sec:ZgCheck}}). Both $Z\gamma$ data analysis and $Z\gamma$ MC closure check show very good agreement data and background estimates + signal MC as well as between two methods of the background estimation.
 
 \begin{figure}[htb]
   \begin{center}
