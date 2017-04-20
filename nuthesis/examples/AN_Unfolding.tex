@@ -13,7 +13,7 @@
 %calculations are described below.
 
 %My words:
-The finite detector resolution in $P_T^\gamma$ causes the bin-by-bin migration. The reconstructed $P_T^{\gamma(reco)}$ may not coincide with the true $P_T^{\gamma(true)}$, and, therefore, the event reconstructed in a $P_T^{\gamma}$ bin $i_{reco}$ may, in fact, belong to the bin $i_{true} \neq i_{reco}$. To recover the true $P_T^{\gamma}$ spectrum, we apply the procedure of the detector resolution unfolding.
+The finite detector resolution in $P_T^\gamma$ causes the bin-by-bin migration in the $P_T^{\gamma}$ spectrum. The reconstructed $P_T^{\gamma(reco)}$ may not coincide with the true $P_T^{\gamma(true)}$, and, therefore, the event reconstructed in a $P_T^{\gamma}$ bin $i_{reco}$ may, in fact, belong to the bin $i_{true} \neq i_{reco}$. To recover the true $P_T^{\gamma}$ spectrum, we apply the procedure of the detector resolution unfolding.
 
 Unfolding constants are derived from the signal MC sample ($W\gamma\rightarrow\mu\nu_{\mu}\gamma$/$W\gamma\rightarrow{e}\nu_{e}\gamma$) where both true (gen-level) and reconstructed $P_T^\gamma$ spectrum are known. We use the D'Agostini method~\cite{ref_DAgostini} which unfolds the reconstructed spectrum iteratively.  
 
@@ -31,7 +31,7 @@ After $P_T^{\gamma}$ spectrum is unfolded, measurements in different $P_T^{\gamm
 
 To validate the detector resolution unfolding procedure, we perform the MC closure check. Gen-level and reconstructed yields are prepared using the signal MC. Then reconstructed yields are smeared by the Gaussian distribution according to the errors on the yields. The smeared yields are unfolded and compared to the gen-level yields. In addition to the D'Agostini method, we check the performance of the matrix inversion method for the unfolding which recovers the true yields as $N^{true}_i = (R_{ji})^{-1} N^{reco}_j$. 
 
-The results of the MC closure check are summarized in Tab.~\ref{tab:unf_mc_closure_MUON_WGamma}-\ref{tab:unf_mc_closure_ELECTRON_WGamma} for the muon and electron channels respectively. The unfolded yields show reasonable agreement to the gen-level yields except the underflow bin ($10-15$~GeV). The disagreement in the underflow bin may be caused by migration from and to range with $P_T^{\gamma}<10$~GeV which is not available in our sample. 
+The results of the MC closure check are summarized in Tab.~\ref{tab:unf_mc_closure_MUON_WGamma}-\ref{tab:unf_mc_closure_ELECTRON_WGamma} for the muon and electron channels respectively. The unfolded yields show reasonable agreement to the gen-level yields except the underflow bin ($10-15$~GeV). The disagreement in the underflow bin may be caused by migration between $P_T^{\gamma}<10$~GeV and  $10<P_T^{\gamma}<15$~GeV ranges because events with $P_T^{\gamma}<10$~GeV are not available to us.  
 
 %$M^{corr}_{ij} = \frac{C_i \cdot C_j}{\sqrt{(C_{ii} \cdot C_{jj})}} $, where $C_{ij}$ is a matrix element of a covariance matrix.
 
