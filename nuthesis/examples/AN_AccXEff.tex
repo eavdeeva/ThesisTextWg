@@ -1,18 +1,22 @@
 \section{Acceptance and Efficiency Correction}
 \label{sec:AccXEff}
 
-To compute the cross section in a phase space different from our selection criteria, it is necessary to apply the acceptance and efficiency corrections. They are computed as a single number which accumulates both acceptance and efficiency effects, separately for the total yield and for the differenctial yields. The correction is denoted as $A \times \epsilon$ and derived using the signal MC samples.  
+% A is the fiducial and kinematic acceptance,
+% is the selection efficiency for events in the acceptance,
+During the selection procedure, we lose a large number of signal events that are within our phase space. Our selection criteria intend to reduce various backgrounds, however, at the same time, they remove many signal events as well. The selection requirements often, as well as in the $W\gamma$ measurement are strickter than the phase space requirements. The ratio between the number of selected signal events and the number of signal events reconstructed within the phase space is called a ``selection efficiency''. In addition to the effect descibed above, a certain number of events are truly within our phase space but are reconstructed outside of the phase space and vice versa. A ratio between the number of signal events that are reconstructed within our phase space and the number of events that truly appear within our phase space is calles a ``reconstruction efficiency''. Finally, certain events that are truly within the phase space may not be caught by the detector due to the detector acceptance restricitions. Examples of such events include events with final state photons or electrons that goes into the gap between the EB and EE, with corresponding $1.44<|\eta^{\gamma,e}|<1.56$. A ratio between the number of events truly reconstructed within the phase space and the number of events that are also caught by the detector is called ``acceptance''.  
+
+To correct our selected, background-subtracted yields for these effects, we introduce a correction $A \times \epsilon$ that accumulates all three effects. The correction is estimated using the signal MC sample, separately for the total yield and for each $P_T^{\gamma}$ bin of the differential yields. 
 
 The numerator $N^{A\epsilon}$ for the correction of the total yield is determined as the number of selected events in the signal MC with PU weight applied. The numerator $N^{A\epsilon}_i$ for the correction of the differential yields is determined as selected signal MC yields with PU weight applied in $P_T^{\gamma-GEN}$ bins at the gen-level. Index $i$ stands for $P_T^{\gamma}$ bins.
 
 The denominator $D^{A\epsilon}$ of the $A \times \epsilon$ corretion is determined as the number of events that are within the phase space based on their gen-level kinematic values. For the correction $(A \times \epsilon)_i$ of the differential yields, the numbers $D^{A\epsilon}_{i}$ are determined separately for each $P_T^\gamma$ bin.  
 
-The $A \times \epsilon$ correction is determined then as $A \times \epsilon = N/D$ for the total cross section and as $(A \times \epsilon)_i = N^{A\epsilon}_i/{D^{A\epsilon}_i}$ for the differential cross section where index $i$ stands for a $P_T^{\gamma}$ bin. The $A \times \epsilon$ for the total cross section are 0.2891$\pm$0.0006 for the muon channel and 0.1229$\pm$0.0004 for the electron channel. The uncerntainties are determined by the statistical power of the $W\gamma$ MC sample. The values of the $(A \times \epsilon)_i$ correction for the differential yields are plotted in Fig.~\ref{fig:covMatricesaccXeff_Wg}.
+The $A \times \epsilon$ correction is determined then as $A \times \epsilon = N^{A\epsilon}/D^{A\epsilon}$ for the total cross section and as $(A \times \epsilon)_i = N^{A\epsilon}_i/{D^{A\epsilon}_i}$ for the differential cross section where index $i$ stands for a $P_T^{\gamma}$ bin. The $A \times \epsilon$ for the total cross section are~0.2891$\pm$0.0006 for the muon channel and~0.1229$\pm$0.0004 for the electron channel. The uncerntainties are determined by the statistical power of the $W\gamma$ MC sample. The values of the $(A \times \epsilon)_i$ correction for the differential yields are plotted in Fig.~\ref{fig:accXeff_Wg}.
 
 \begin{figure}[htb]
   \begin{center}
-  \includegraphics[width=0.5\textwidth]{../figs/figs_v11/MUON_WGamma/Constants/C_accXeff_MUON_WGamma.pdf}\includegraphics[width=0.5\textwidth]{../figs/figs_v11/ELECTRON_WGamma/Constants/C_accXeff_ELECTRON_WGamma.pdf}\\
-  \label{fig:covMatricesaccXeff_Wg}
+  \includegraphics[width=0.48\textwidth]{../figs/figs_v11/MUON_WGamma/Constants/C_accXeff_MUON_WGamma.pdf}  \includegraphics[width=0.48\textwidth]{../figs/figs_v11/ELECTRON_WGamma/Constants/C_accXeff_ELECTRON_WGamma.pdf}\\
+  \label{fig:accXeff_Wg}
   \caption{$A\times\epsilon$ corrections in the muon (left) and electron (right) channels. Plots are produced with $W\gamma$ MC sample. }
   \end{center}
 \end{figure}
