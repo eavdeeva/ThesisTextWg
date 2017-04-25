@@ -57,10 +57,11 @@ For the electron channel, DY+jets is the main source of the $e \rightarrow \gamm
 The contribution of $e\rightarrow\gamma$ $N_{data-nom}^{e\rightarrow\gamma}$ is estimated separately for each $P_{T}^{\gamma}$ bin and separately for barrel and endcap photons by scaling number of the nominally selected events in DY+jets MC sample $N_{MC-nom}^{e\rightarrow\gamma}$ to the relation of numbers of events in the  $e\rightarrow\gamma$-enriched data ($N_{data-Zpeak}^{e\rightarrow\gamma}$) and DY+jets MC ($N_{MC-Zpeak}^{e\rightarrow\gamma}$) samples under the $Z$-peak: 
 
 \begin{equation}\label{eq:Scale_etog}
-N_{data-nom}^{e\rightarrow\gamma} = N_{MC-nom}^{e\rightarrow\gamma} \cdot \frac{N_{data-Zpeak}^{e\rightarrow\gamma}}{N_{MC-Zpeak}^{e\rightarrow\gamma}}, 
+N_{data-nom}^{e\rightarrow\gamma} = N_{MC-nom}^{e\rightarrow\gamma} \cdot \frac{N_{data-Zpeak}^{e\rightarrow\gamma}}{N_{MC-Zpeak}^{e\rightarrow\gamma}}. 
 \end{equation}
 
-To estimate $N_{data-Zpeak}^{e\rightarrow\gamma}$, $e\rightarrow\gamma$-enriched data and DY+jets MC samples are prepared by appliyng all $W\gamma$ selection requirements except the $Z$-mass window requirement. After that, numbers of events in DY+jets MC samples $N_{MC-Zpeak}^{e\rightarrow\gamma}$ and $N_{MC-nom}^{e\rightarrow\gamma}$ are estimated by counting. The number $N_{data-Zpeak}^{e\rightarrow\gamma}$ is extracted from fitting the $M_{e\gamma}$ distribution in the $Z$-peak region (App.~\ref{sec:EtogammaFitPlots}). The fits are performed separately in each $P_T^\gamma$ bin in fine $\eta^\gamma$ binning:
+To estimate $N_{data-Zpeak}^{e\rightarrow\gamma}$, $e\rightarrow\gamma$-enriched data and DY+jets MC samples are prepared by appliyng all $W\gamma$ selection requirements except the $Z$-mass window requirement. After that, numbers of events in DY+jets MC samples $N_{MC-Zpeak}^{e\rightarrow\gamma}$ and $N_{MC-nom}^{e\rightarrow\gamma}$ are estimated by counting. The number $N_{data-Zpeak}^{e\rightarrow\gamma}$ is extracted from fitting the $M_{e\gamma}$ distribution in the $Z$-peak region.
+The fits are performed in an extended, maximum likelihood manner, separately in each $P_T^\gamma$ bin in fine $\eta^\gamma$ binning:
      \begin{itemize}
         \item $P_T^\gamma$ ranges $15-20-25-30-35-45-55-65$~GeV
            \begin{itemize}
@@ -79,7 +80,17 @@ To estimate $N_{data-Zpeak}^{e\rightarrow\gamma}$, $e\rightarrow\gamma$-enriched
            \end{itemize}
         \item $P_T^\gamma$ range $10-15$~GeV (underflow bin): MC-prediction is used, no fits performed.
      \end{itemize}
-\noindent{The fit plots are provided in App.~\ref{sec:EtogammaFitPlots} and the tables with numbers from Eq.~\ref{eq:Scale_etog} in different $P_T^{\gamma}$ ranges separately for EB and EE final state photons are provided in App.~\ref{sec:etogTables}. The distributions of $M_{e\gamma}$ in different $P_T^{\gamma}$ bins are shown in App.~\ref{sec:Mpholep1DatavsMC}. After the $M_{e\gamma}$ distribution in the DY+jets sample is scaled by} 
+
+The fit model is composed by the template-based function $RooNDKeysPdf$~\cite{ref_RooFit} convoluted with the Gaussian distribution multiplied by the number of events from the $e\rightarrow\gamma$ background  $N_{e\rightarrow\gamma}$ and the function describing a cumulative contribution of all other processes $RooCMSShapePdf$~\cite{ref_RooCMSShapePdf} multiplied by the number of events from other sources that have $M_{e\gamma}$ distiributions without a peak at the values of $Z$ mass $N_{else}$. The expression for the fit function is:
+\begin{equation}
+F_{fit}^{e\rightarrow\gamma} = N_{e\rightarrow\gamma} \cdot (RooNDKeysPdf \times Gaussian) +  N_{else} \cdot (RooCMSShapePdf).
+\end{equation}
+
+The function $RooNDKeysPdf$ is a function of the RooFit package~\cite{ref_RooFit} that creates a continuous probability distribution function out of a template. The templates are prepared from $e\rightarrow\gamma$-enriched DY+jets MC sample, separately for each $P_T^{\gamma}$ and $\eta^\gamma$ range. $RooNDKeysPdf$ is convoluted with the Gaussian distribution, the two parameters of the Gaussian distribution are fit parameters. 
+
+The function $RooCMSShapePdf$ is a function that was developed specifically for CMS~\cite{ref_RooCMSShapePdf}. It has four parameters, and they all are used as fit parameters in $F_{fit}^{e\rightarrow\gamma}$. Overall,  $F_{fit}^{e\rightarrow\gamma}$ has eight fit parameters, including two parameters of the Gaussian distribution, four parameters of $RooCMSShapePdf$, $N_{e\rightarrow\gamma}$ and $N_{else}$.
+
+The fit plots are provided in App.~\ref{sec:EtogammaFitPlots} and the tables with numbers from Eq.~\ref{eq:Scale_etog} in different $P_T^{\gamma}$ ranges separately for EB and EE final state photons are provided in App.~\ref{sec:etogTables}. The distributions of $M_{e\gamma}$ in different $P_T^{\gamma}$ bins are shown in App.~\ref{sec:Mpholep1DatavsMC}. After the $M_{e\gamma}$ distribution in the DY+jets sample is scaled by 
 \begin{equation}
    scale = \frac{N_{data-Zpeak}^{e\rightarrow\gamma}}{N_{MC-Zpeak}^{e\rightarrow\gamma}}
 \end{equation}

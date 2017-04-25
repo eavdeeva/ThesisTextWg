@@ -1,7 +1,7 @@
 \section{Measurement Strategy}
 \label{sec:AN_WgMeasStrategy}
 
-The measurement strategy can be represented as a chain of steps that is summarized in Tab.~\ref{tab:analysisOutline}. First, we select events and obtain number of selected events. In Tab.~\ref{tab:analysisOutline} the total number of selected events is $N_{sel}$ and numbers of selected events in $P_T^{\gamma}$ bins are $N_{sel}^j$, where $j$ is a bin number. In the selected sample, we have events of our signal as well as background events. Our next step is to subtract the background. This step gives us background subtracted numbers of signal events $N_{sign}$ and $N_{sign}^j$. After that, we perform the detector resolution unfolding (Ch.~\ref{sec:Unfolding}) and obtain yields within acceptance: $N_{acc}^i = U_{ij} \cdot N_{sign}^j$, where $U_{ij}$ is the unfolding operator. Then we apply corrections for kinematic acceptance and selection efficiency (Ch.~\ref{sec:AccXEff}). Finally, we divide measured number of events by intergated luminosity recorded by CMS and, in case of the differential cross section, by the width of $P_T^{\gamma}$ bin. This gives us total and differential cross section. Each step has its systematic uncerntainties associated with it and we estimate their contributions to the final results. The remainder of this Chapter describe each measurement step in detail.
+The measurement strategy can be represented as a chain of steps that is summarized in Tab.~\ref{tab:analysisOutline}. First, we select events and obtain number of selected events. In Tab.~\ref{tab:analysisOutline} the total number of selected events is $N_{sel}$ and numbers of selected events in $P_T^{\gamma}$ bins are $N_{sel}^j$, where $j$ is a bin number. In the selected sample, we have events of our signal as well as background events. Our next step is to subtract the background. This step gives us background subtracted yields of signal events $N_{sign}$ and $N_{sign}^j$. After that, we perform the detector resolution unfolding (Ch.~\ref{sec:Unfolding}) and obtain yields within acceptance and selection restrictions: $N_{A\times\epsilon}^i = U_{ij} \cdot N_{sign}^j$, where $U_{ij}$ is the unfolding operator. Then we apply corrections for kinematic and geometrical acceptance and reconstruction and selection efficiency (Ch.~\ref{sec:AccXEff}). Finally, we divide measured number of events by intergated luminosity recorded by CMS and, in case of the differential cross section, by the width of $P_T^{\gamma}$ bin. This gives us total and differential cross section. Each step has its systematic uncerntainties associated with it and we estimate their contributions to the final results. The remainder of this Chapter describe each measurement step in detail.
 
 \begin{table}[h]
   \small
@@ -12,8 +12,8 @@ The measurement strategy can be represented as a chain of steps that is summariz
     Step & $d\sigma/dP_{T}$ & $\sigma$ \\ \hline
     select events & $N_{sel}^j$ &    $N_{sel}$       \\ \hline
     subtract background & $N_{sign}^j = N_{sel}^j - N_{bkg}^j$ &    $N_{sign}=N_{sel}-N_{bkg}$       \\ \hline
-    unfold   & $N_{acc}^i = U_{ij} \cdot N_{sign}^j$ &    $-$       \\ \hline
-    correct for the acceptance and efficiency & $N_{true}^i = \frac{N_{acc}^i}{(A \times\epsilon)^i}$ &  $N_{true}=\frac{N_{sign}}{A\times\epsilon}$       \\ \hline
+    unfold   & $N_{A\times\epsilon}^i = U_{ij} \cdot N_{sign}^j$ &    $-$       \\ \hline
+    correct for the acceptance and efficiency & $N_{true}^i = \frac{N_{A\times\epsilon}^i}{(A \times\epsilon)^i}$ &  $N_{true}=\frac{N_{sign}}{A\times\epsilon}$       \\ \hline
     divide by luminosity and bin width & $ \left( \frac{d\sigma}{dP_{T}^\gamma} \right) ^i = \frac{N_{true}^i}{L \cdot (\Delta P_T^\gamma)^i}$  &  $\sigma = N_{true}/L$       \\ \hline
     estimate systematic uncertainties &  &         \\ \hline
   \end{tabular}
@@ -26,7 +26,7 @@ At first, we perform the measurement in a blinded way. It is done to avoid unint
   \item for $p_T^{\gamma}<45$~GeV: use $100\%$ of data; and
   \item for $p_T^{\gamma}>45$~GeV: use $5\%$ of data (every 20$^{th}$ event).
 \end{itemize}
-\noindent{The threshold of $p_T^{\gamma}=45$~GeV is chosen because below that we do not expect any new physics, and the persantage of~$5\%$ is chosen because these amount of data gives us such a large statistical uncertainty so that we would not notice new physics if it was there. After the measurement procedure is fully established, we perform the measurement using our full dataset (``unblinded'' measurement). All plots shown in this dissertation are prepared in the unblinded manner.}
+\noindent{The threshold of $p_T^{\gamma}=45$~GeV is chosen because below that we do not expect any new physics, and the persantage of~$5\%$ is chosen because these amount of data gives us such a large statistical uncertainty so that we would not notice any new physics if it was there. After the measurement procedure is fully established, we perform the measurement using our full dataset (``unblinded'' measurement). All plots shown in this dissertation are prepared in the unblinded manner.}
 
 % REPHRASE THE UNBLINDING STUFF
 
