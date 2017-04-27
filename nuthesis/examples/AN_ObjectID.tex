@@ -59,12 +59,16 @@ After the selection procedure, 175889 and 85643 events survived in the muon and 
 
 Selected samples are dominated by $W$+jets events. The main mechanism of a jet to be misidentified as a photon is a $\pi^0 \rightarrow \gamma\gamma$ decay. Photon~ID requirements rejects most of such fragmentation photons, however, a $W$+jets event has much larger probability to be produced in a $pp$ collision than a $W\gamma$ event, and, therefore, even a small fraction of fragmentation photons from $W$+jets events becomes a significant background to $W\gamma$.  
 
+DY+jets background in the electron channel consists of two parts: jets misidentified as photons and electron misidentified as photons. The DY+jets MC samples in the the electron channel is split into two parts based on the gen-level information, and these two parts are denotes as jets$rightarrow\gamma$ and $e\rightarrow\gamma$.
+
 There are large discrepancies between data and MC predictions in all the distributions as shown in Fig.~\ref{fig:DATAvsMC_WMt}-\ref{fig:DATAvsMC}. Possible reasons for the discrepancies include but are not limited to uncerntainties in the normalizations of all MC samples involved and difficulties in modeling jet fragmentation. Therefore, the data-driven background estimates are necessary (Ch.~\ref{sec:BackgroundSubtraction}).
+
+MC samples in all the plots are reweithed to the luminosity of data. PU weights and efficiency scale factors are applied as well.
 
 \begin{figure}[htb]
   \begin{center}
    \includegraphics[width=0.5\textwidth]{../figs/figs_v11/MUON_WGamma/PrepareYields/c_TotalDATAvsMC_EtaCommon__WMtVERY_PRELIMINARY.pdf}\includegraphics[width=0.5\textwidth]{../figs/figs_v11/ELECTRON_WGamma/PrepareYields/c_TotalDATAvsMC_EtaCommon__WMtVERY_PRELIMINARY.pdf}
-  \caption{ $M_T^W$ distribution of $W\gamma$ candidates. Data vs MC plots. Left: muon channel, right: electron channel. All selection criteria except $M_{T}^W$ requirement are applied on these plots. $15$~GeV$<P_T^{\gamma}<45$~GeV. }
+  \caption{$M_T^W$ distribution of $W\gamma$ candidates. Data vs total MC. Left: muon channel, right: electron channel. All selection criteria except $M_{T}^W$ requirement are applied on all samples that are present on the plot. The $P_T^{\gamma}$ range where we do not expect any new physics is used: $15-45$~GeV. The ratio plot is data divided by total MC. }
   \label{fig:DATAvsMC_WMt}
   \end{center}
 \end{figure}
@@ -72,7 +76,7 @@ There are large discrepancies between data and MC predictions in all the distrib
 \begin{figure}[htb]
   \begin{center}
    \includegraphics[width=0.65\textwidth]{../figs/figs_v11/ELECTRON_WGamma/PrepareYields/c_TotalDATAvsMC_EtaCommon__Mpholep1PRELIMINARY_FOR_E_TO_GAMMA_WITH_PSV_CUT.pdf}
-  \caption{$M_{l\gamma}$ distribution of $W\gamma$ candidates in the electron channel. Data vs MC plots. All selection criteria except $Z$-mass window are applied on this plot. $P_T^{\gamma}>15$~GeV. }
+  \caption{$M_{l\gamma}$ distribution of $W\gamma$ candidates in the electron channel. Data vs total MC. All selection criteria except $Z$-mass window are applied on all samples that are present on the plot. The $P_T^{\gamma}$ range where we do not expect any new physics is used: $15-45$~GeV. The ratio plot is data divided by total MC.}
   \label{fig:DATAvsMC_Mpholep1}
   \end{center}
 \end{figure}
@@ -81,7 +85,7 @@ There are large discrepancies between data and MC predictions in all the distrib
   \begin{center}
    \includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_WGamma/PrepareYields/c_TotalDATAvsMC_Barrel__phoEt.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/ELECTRON_WGamma/PrepareYields/c_TotalDATAvsMC_Barrel__phoEt.pdf}
    \includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_WGamma/PrepareYields/c_TotalDATAvsMC_Endcap__phoEt.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/ELECTRON_WGamma/PrepareYields/c_TotalDATAvsMC_Endcap__phoEt.pdf}
-  \caption{$P_T^{\gamma}$ distribution of $W\gamma$ candidates. Data vs MC plots. Left column: muon channel, right column: electron channel. Top to bottom: photons in EB and EE of ECal.}
+  \caption{$P_T^{\gamma}$ distribution of $W\gamma$ candidates. Data vs total MC. Left column: muon channel, right column: electron channel. EB (top) and EE (bottom) photons. The ratio plot is data divided by total MC. }
   \label{fig:DATAvsMC}
   \end{center}
 \end{figure}

@@ -5,9 +5,11 @@ Fit results of electron-photon invariant mass $M_{e\gamma}$ for the $e \rightarr
 
 The number of $e\righarrow\gamma$ events in data under the $Z$-peak $N_{MC-Zpeak}^{e\rightarrow\gamma}$ is extracted from the fit of the model: 
 \begin{equation}
-F_{fit} = N_{e\rightarrow\gamma} \cdot (RooNDKeysPdf \times Gaussian) +  N_{else} \cdot (RooCMSShapePdf).
+F_{fit}^{e\rightarrow\gamma} = N_{e\rightarrow\gamma} \cdot (RooNDKeysPdf \times Gaussian) +  N_{else} \cdot (RooCMSShapePdf).
 \end{equation}
 \noindent{The function $RooNDKeysPdf$ is part of the RooFit package~\cite{ref_RooFit} and the $RooCMSShapePdf$ was developed specifically for CMS~\cite{ref_RooCMSShapePdf}. }
+
+$F_{fit}^{e\rightarrow\gamma}$ has eight fit parameters. ``Nsig'' and ``Nbkg'' is the plots are $N_{e\rightarrow\gamma}$ and $N_{else}$, respectively, ``mean\_gau'' and ``sigma\_gau'' are parameters of the Gaussian distribution, ``CMS\_alpha'' and ``CMS\_beta'' are parameters of the exponential component of the $RooCMSShapePdf$, and ``CMS\_gamma'' and ``CMS\_peak'' are parameters of the turn over component of the $RooCMSShapePdf$.  
 
 \begin{figure}[htb]
   \begin{center}
