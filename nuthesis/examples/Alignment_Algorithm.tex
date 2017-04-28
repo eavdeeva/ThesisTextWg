@@ -39,6 +39,7 @@ The concept of track-based alignment can be illustrated in the example of the al
     \label{fig:toyTracker_part2}
 \end{figure}
 
+
 %The CMS tracker contains 1440 silicon pixel modules in PXB and PXF and 15148 silicon strip modules in TIB, TOB, TID, TEC. 
 
 The tracker alignment problem is a least squares problem. The expression to minimize is the following:
@@ -55,8 +56,6 @@ We can align the large substructures (like pixel half barrels, pixel endcap disk
 
 %Cosmic tracks pass through the detector vertically and do not allow us to connect different subdetectors to one another. Collision tracks originate from the collision point and go in all directions. However, those tracks which cross TEC are all almost collinear and, therefore, it is difficult to measure $z$-coordinate of TEC modules with collision tracks only.
 
-The alignment process appears to require the inversion of giant matrices, of millions by millions. We have two alignment algorithms that use their ways to simplify the computation: Hits and Impact Parameter (HIP)~\cite{ref_HIP_Alg} and Millepede-II~\cite{ref_MPII_Alg}. HIP performs a miminization for one module at a time processing tracks that pass though this particular module. After the minimization is done for all modules, HIP performs the second iteration. The iterations are stopped after module positions converge. Millepede-II performs a simultaneous fit of all alignment parameters at a time, and uses linear algebra tricks for sparse matrices to avoid dealing with most track parameters.
-
 \begin{figure}[htb]
     \begin{center}
         \includegraphics[width=0.70\textwidth]{../figs/Alignment/alignment_strip_coords.png}
@@ -72,6 +71,8 @@ The alignment process appears to require the inversion of giant matrices, of mil
     \caption{Surface deformations~\cite{ref_Alignment}.}
     \label{fig:surfaceDeformations}
 \end{figure}
+
+The alignment process appears to require the inversion of giant matrices, of millions by millions. We have two alignment algorithms that use their ways to simplify the computation: Hits and Impact Parameter (HIP)~\cite{ref_HIP_Alg} and Millepede-II~\cite{ref_MPII_Alg}. HIP performs a minimization for one module at a time processing tracks that pass though this particular module. After the minimization is done for all modules, HIP performs the second iteration. The iterations are stopped after module positions converge. Millepede-II performs a simultaneous fit of all alignment parameters at a time, and uses linear algebra tricks for sparse matrices to avoid dealing with most track parameters.
 
 After the procedure of the tracking system alignment is performed, we validate the results. Chapter~\ref{sec:alignmentResults} discusses various tools of alignment validation using the example of the tracking system alignment based on the~2015 data.   
 
