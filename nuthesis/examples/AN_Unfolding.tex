@@ -13,24 +13,24 @@
 %calculations are described below.
 
 %My words:
-The finite detector resolution in $P_T^\gamma$ causes the bin-by-bin migration in the $P_T^{\gamma}$ spectrum. The reconstructed $P_T^{\gamma(reco)}$ may not coincide with the true $P_T^{\gamma(true)}$, and, therefore, the event reconstructed in a $P_T^{\gamma}$ bin $i_{reco}$ may, in fact, belong to the bin $i_{true} \neq i_{reco}$. To recover the true $P_T^{\gamma}$ spectrum, we apply the procedure of the detector resolution unfolding.
+The finite detector resolution in $P_T^\gamma$ causes the bin-by-bin migration in the $P_T^{\gamma}$ spectrum. The reconstructed $P_T^{\gamma(reco)}$ may not coincide with the true $P_T^{\gamma(true)}$, and, therefore, the event reconstructed in a $P_T^{\gamma}$ bin $j$ may, in fact, belong to the bin $i \neq j$. To recover the true $P_T^{\gamma}$ spectrum, we apply the procedure of the detector resolution unfolding.
 
 The reconstructed $P_T^{\gamma}$ spectrum is related to true $P_T^{\gamma}$ spectrum as:
 \begin{equation}
-  N^{reco}_{ireco} = R_{ireco,itrue} N^{true}_{itrue},
+  N^{reco}_{j} = R_{ji} N^{true}_{i},
 \end{equation}
-\noindent{where $N_{ireco}$ and $N_{itrue}$ are numbers of events in a given $P_T^{\gamma(reco)}$ and $P_T^{\gamma(true)}$ bins, respectively, $R_{ireco,itrue}$ is the ``response matrix'' where each element is the probability of an event with true $P_T^{\gamma}$ in the bin ``$itrue$'' to be reconstructed with  $P_T^{\gamma}$ in the bin ``$ireco$''.}
+\noindent{where $N_{j}$ and $N_{i}$ are numbers of events in a given $P_T^{\gamma(reco)}$ and $P_T^{\gamma(true)}$ bins, respectively, $R_{ji}$ is the ``response matrix'' where each element is the probability of an event with true $P_T^{\gamma}$ in the bin ``$i$'' to be reconstructed with  $P_T^{\gamma}$ in the bin ``$j$''.}
 
-To recover the true $P_T^{\gamma(true)}$ spectrum, we use the D'Agostini method~\cite{ref_DAgostini} which is based on Bayes' theorem and unfolds the reconstructed spectrum iteratively. D'Agostini method was chosen because it is recommended by the CMS SMP group in contrast to the matrix inversion method ($N^{true}_{itrue} = \left( R_{ireco,itrue} \right) ^{-1} N^{reco}_{ireco}$) to avoid problems with possible matrix singularity and large statistical fluctuations.
+To recover the true $P_T^{\gamma(true)}$ spectrum, we use the D'Agostini method~\cite{ref_DAgostini} which is based on Bayes' theorem and unfolds the reconstructed spectrum iteratively. D'Agostini method was chosen because it is recommended by the CMS SMP group in contrast to the matrix inversion method ($N^{true}_{i} = \left( R_{ji} \right) ^{-1} N^{reco}_{j}$) to avoid problems with possible matrix singularity and large statistical fluctuations.
 
 %One possible way to recover the true  $P_T^{\gamma}$ spectrum is matrix inversion:}
 %\begin{equation}
 %  N^{true}_i = \left( R_{ji} \right) ^{-1} N^{reco}_j.
 %\end{equation}
 
-Unfolding constants are derived from the signal MC sample ($W\gamma\rightarrow\mu\nu_{\mu}\gamma$/$W\gamma\rightarrow{e}\nu_{e}\gamma$) where both true (gen-level) and reconstructed $P_T^\gamma$ spectra are known. Using the signal MC sample, we prepare the migration matrix $M_{ireco,igen}$ which has the number of selected signal events in each [$i_{reco}$,$i_{gen}$] bin. 
+Unfolding constants are derived from the signal MC sample ($W\gamma\rightarrow\mu\nu_{\mu}\gamma$/$W\gamma\rightarrow{e}\nu_{e}\gamma$) where both true (gen-level) and reconstructed $P_T^\gamma$ spectra are known. Using the signal MC sample, we prepare the migration matrix $M_{ji}$ which has the number of selected signal events in each [$j$,$i$] bin. 
 
-After that, we provide the migration matrix $M_{ireco,igen}$, generated and reconstructed yields from signal MC $N^{gen-MC}_i$ and $N^{reco-MC}_i$ and reconstructed yields from data to RooUnfold class~\cite{ref_RooUnfold} which performs unfolding using D'Agostini method with five iterations. Yields before and after detector resolution unfolding are compared in Tab.~\ref{tab:unf_results_MUON_WGamma} for the muon channel and in Tab.~\ref{tab:unf_results_ELECTRON_WGamma} for the electron channel. 
+After that, we provide the migration matrix $M_{ji}$, generated and reconstructed yields from signal MC $N^{gen-MC}_i$ and $N^{reco-MC}_j$ and reconstructed yields from data to RooUnfold class~\cite{ref_RooUnfold} which performs unfolding using D'Agostini method with five iterations. Yields before and after detector resolution unfolding are compared in Tab.~\ref{tab:unf_results_MUON_WGamma} for the muon channel and in Tab.~\ref{tab:unf_results_ELECTRON_WGamma} for the electron channel. 
 
 \begin{table}[h]
   \scriptsize
@@ -38,8 +38,8 @@ After that, we provide the migration matrix $M_{ireco,igen}$, generated and reco
   \caption{Unfolding Results in $W\gamma$, muon channel. First column: $P_T^{\gamma}$ ranges, second column: $W\gamma$ differential yields after background subtraction before unfolding, third column: $W\gamma$ yields after unfolding.}
   \begin{tabular}{|c|c|c|}
 
-  $P_T^{\gamma}$, &  yields &   yields  \\ 
-  GeV             &  data-bkg & unfolded  \\ \hline
+  $P_T^{\gamma}$, &  yields   &  yields  \\ 
+  GeV           &  data-bkg &  unfolded  \\ \hline
 
  10 -  15 &     $39621\pm 678$ &     $38843\pm 718$  \\ \hline
  15 -  20 &     $19449\pm 361$ &     $19662\pm 438$  \\ \hline
@@ -88,15 +88,15 @@ After that, we provide the migration matrix $M_{ireco,igen}$, generated and reco
 
 After $P_T^{\gamma}$ spectrum is unfolded, measurements in different $P_T^{\gamma}$ bins become correlated. Correlation matrices are shown in Fig.~\ref{fig:corrMatrices_Wg}. 
 
-For illustration purpose, we in addition to the migration matrix we also prepare the response matrix  $R_{ireco,igen}$ by normalizing the migration matrix in each $i_{reco}$ bin to all events reconstructed in this bin (Fig.~\ref{fig:respMatrices_Wg}) such as 
+For illustration purpose, we in addition to the migration matrix we also prepare the response matrix $R_{ji}$ (Fig.~\ref{fig:respMatrices_Wg}) by normalizing the migration matrix in each $j$ bin to all events reconstructed in this bin such as 
 \begin{equation}
-R_{ireco,igen} = \frac{M_{ireco,igen}{\sum_{igen} M_{ireco,igen}}. 
+R_{ji} = \frac{M_{ji}}{\sum_{i} M_{ji}}. 
 \end{equation}
 \noindent{The response matrix is shown in Fig.~\ref{fig:respMatrices_Wg}.}
 
 To validate the detector resolution unfolding procedure, we perform the MC closure check. Gen-level and reconstructed yields are prepared using the signal MC. Then reconstructed yields are smeared by the Gaussian distribution according to the errors on the yields. The smeared yields are unfolded and compared to the gen-level yields. In addition to the D'Agostini method, we check the performance of the matrix inversion method for the unfolding which recovers the true yields as $N^{true}_i = (R_{ji})^{-1} N^{reco}_j$. 
 
-The results of the MC closure check are summarized in Tab.~\ref{tab:unf_mc_closure_MUON_WGamma}-\ref{tab:unf_mc_closure_ELECTRON_WGamma} for the muon and electron channels respectively. The unfolded yields show reasonable agreement to the gen-level yields except the underflow bin ($10-15$~GeV). The disagreement in the underflow bin may be caused by migration between $P_T^{\gamma}<10$~GeV and  $10<P_T^{\gamma}<15$~GeV ranges because events with $P_T^{\gamma}<10$~GeV are not available to us.  
+The results of the MC closure check are summarized in Tab.~\ref{tab:unf_mc_closure_MUON_WGamma}-\ref{tab:unf_mc_closure_ELECTRON_WGamma} for the muon and electron channels respectively. The unfolded yields show reasonable agreement to the gen-level yields except the underflow bin ($10-15$~GeV). The disagreement in the underflow bin may be caused by migration between $P_T^{\gamma}<$10~GeV and 10$<P_T^{\gamma}<$15~GeV ranges because events with $P_T^{\gamma}<$10~GeV are not available to us.  
 
 %$M^{corr}_{ij} = \frac{C_i \cdot C_j}{\sqrt{(C_{ii} \cdot C_{jj})}} $, where $C_{ij}$ is a matrix element of a covariance matrix.
 
@@ -185,3 +185,4 @@ The results of the MC closure check are summarized in Tab.~\ref{tab:unf_mc_closu
   \label{tab:unf_mc_closure_ELECTRON_WGamma}
   \end{center}
 \end{table}
+\clearpage
