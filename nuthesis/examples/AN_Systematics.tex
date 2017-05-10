@@ -3,32 +3,32 @@
 
 \subsection{Uncertainties due to Jets$\rightarrow\gamma$ Background Estimation}
 
-The dominant systematic uncertainty is uncertainty due to jets$\rightarrow\gamma$ background estimation. The following sources contribute to the uncertainty of  the jets$\rightarrow\gamma$ background estimation:
+The dominant systematic uncertainty is uncertainty due to bias in the procedure of the jets$\rightarrow\gamma$ background estimation. The following sources contribute to the uncertainty of  the jets$\rightarrow\gamma$ background estimation:
 
 \begin{itemize}
-  \item the difference between fit results of $I_{ch}^\gamma$ and $\sigma_{i\eta i\eta}^\gamma$ templates;
+  \item the biases in the template shapes and the fit procedure;
   \item the uncertainty on the normalizations of $Z\gamma$ and DY+jets MC samples when the real-$\gamma$ (fake-$\gamma$) portions are subtracted from the ISR (FSR) templates. 
   \item the limited statistical power of the fake-$\gamma$ and real-$\gamma$ templates.
 \end{itemize}
 
-The systematic uncertainty due to the difference between fit results of $I_{ch}$ and $\sigma_{i\eta i\eta}$ templates is computed as 
+The systematic uncertainty due to the biases in the template shapes and the fit procedure is computed as the difference between fit results of $I_{ch}^\gamma$ and $\sigma_{i\eta i\eta}^\gamma$ distributions
 
 \begin{equation}
-\frac{1}{2}|N_{Ich}-N_{\sigma i\eta i\eta}|.
+err = |N_{Ich}-N_{\sigma i\eta i\eta}|.
 \end{equation}
-\noindent{ The mean value is taken as an average between $N_{Ich}}$ and $N_{\sigma{i\eta i\eta}}$.}
 
-The error due to template statistics is computed by separately randomizing the real-$\gamma$ and the fake-$\gamma$ templates, we prepare $20$ real-$\gamma$ and $100$ fake-$\gamma$ templates by randomizing our nominal templates with the Gaussian distribution. Then we perform fits with new templates and take the standard deviation of the fit results as a error. The errors are computed separately for the real-$\gamma$ and the fake-$\gamma$ templates. The statistical error of the fake-$\gamma$ template is larger.
+The uncertainty due to template statistics is computed by separately randomizing the real-$\gamma$ and the fake-$\gamma$ templates, we prepare $20$ real-$\gamma$ and $100$ fake-$\gamma$ templates by randomizing our nominal templates with the Gaussian distribution. Then we perform fits with new templates and take the standard deviation of the fit results as an uncertainty. The uncertainties are computed separately for the real-$\gamma$ and the fake-$\gamma$ templates. The statistical uncertainty of the fake-$\gamma$ template is larger.
 
-The results of the systematic error of $|N_{Ich}-N_{\sigma i\eta i\eta}|$ and the template statistical uncertainty are summarized in the Tab.~\ref{tab:diff_ways_to_fit_phoEt_BARREL_muon}-\ref{tab:diff_ways_to_fit_phoEt_ENDCAP_electron}. Columns ``data $I_{ch}^{\gamma}$'', ``data $\sigma_{i\eta i\eta}^\gamma$'', ``MC cl. $I_{ch}^{\gamma}$'' and ``MC cl. $\sigma_{i\eta i\eta}^\gamma$''  are the yields derived from the fit results of $I_{ch}^{\gamma}$ and $\sigma_{i\eta i\eta}^{\gamma}$ fits of data and MC mixtures. The difference between columns ``data $I_{ch}^{\gamma}$'' and ``data $\sigma_{i\eta i\eta}^\gamma$'' is propagated as a systematic error of $|N_{Ich}-N_{\sigma i\eta i\eta}|$. The column ``yield'' is the background subtracted yield which is used for the cross section measurement. The errors include the statistical errors and the errors due to template statistics.
+The results of the systematic uncertainty of $|N_{Ich}-N_{\sigma i\eta i\eta}|$ and the template statistical uncertainty are summarized in the Tab.~\ref{tab:diff_ways_to_fit_phoEt_muon}-\ref{tab:diff_ways_to_fit_phoEt_electron}. The column ``yield data-bkg'' is the background subtracted yield which is used for the cross section measurement. The central value of this yields is taken from the ``data $I_{ch}^{\gamma}$'' column. %The uncertainties include the statistical uncertainties and the uncertainties due to template statistics.
 
 \begin{table}[h]
   \tiny
   \begin{center}
-  \caption{Results of the background subtraction based on fits of different variables. $W\gamma$, muon channel, barrel photons.}
+  \caption{Results of the background subtraction based on fits of different variables. $W\gamma$, muon channel. First column: $P_T^{\gamma}$ ranges, second column: signal MC prediction, third and fourth columns: signal yields extracted from fits of $I_{ch}^{\gamma}$ and $\sigma_{i\eta i\eta}^\gamma$ distributions of data, fifth and sixth columns: signal yields extracted from MC closure tests, seventh column: signal yield that is used in the next measurement steps.}
   \begin{tabular}{|c|c|c|c|c|c|c|}
-    bin &  MC   & data  & data  & MC cl. & MC cl. & yield\\ 
-    lims & pred & $I_{ch}^{\gamma}$ & $\sigma_{i\eta i\eta}^\gamma$  & $I_{ch}^{\gamma}$  & $\sigma_{i\eta i\eta}^\gamma$   & average \\ \hline
+    $P_T^{\gamma}$, &  sig. MC   & \multicolumn{2}{|c|}{data}  & \multicolumn{2}{|c|}{MC closure} & yield\\ 
+    GeV & ($W\gamma\rightarrow\mu\nu\gamma$) & $I_{ch}^{\gamma}$ & $\sigma_{i\eta i\eta}^\gamma$  & $I_{ch}^{\gamma}$  & $\sigma_{i\eta i\eta}^\gamma$   & data-bkg. \\ \hline
+    \multicolumn{7}{|c|}{barrel photons} \\ \hline
     10-15 & $26250\pm240$ & $30683\pm1919$ & $26770\pm3134$ & $29657\pm2476$ & $35073\pm3726$ &$30683\pm3913\pm1865$  \\ \hline
     15-20 & $12706\pm164$ & $14554\pm1070$ & $19575\pm1771$ & $10742\pm1079$ & $14924\pm2123$ &$14554\pm5021\pm1041$  \\ \hline
     20-25 & $6793\pm120$ & $8364\pm711$ & $10398\pm4313$ & $7698\pm626$ & $9399\pm1741$ &$8364\pm2033\pm693$  \\ \hline
@@ -42,18 +42,7 @@ The results of the systematic error of $|N_{Ich}-N_{\sigma i\eta i\eta}|$ and th
     85-95 & $340\pm27$ & $502\pm139$ & $502\pm175$ & $455\pm62$ & $443\pm98$ &$502\pm0\pm136$  \\ \hline
     95-120 & $453\pm31$ & $641\pm105$ & $732\pm31$ & $714\pm113$ & $577\pm83$ &$641\pm91\pm98$  \\ \hline
     120-500 & $546\pm34$ & $810\pm214$ & $792\pm63$ & $777\pm105$ & $678\pm191$ &$810\pm18\pm211$  \\ \hline
-  \end{tabular}
-  \label{tab:diff_ways_to_fit_phoEt_BARREL_muon}
-  \end{center}
-\end{table}
-
-\begin{table}[h]
-  \tiny
-  \begin{center}
-  \caption{Results of the background subtraction based on fits of different variables. $W\gamma$, muon channel, endcap photons.}
-  \begin{tabular}{|c|c|c|c|c|c|c|c|}
-    bin &  MC   & data  & data  & MC cl. & MC cl. & yield \\ 
-    lims & pred & $I_{ch}^{\gamma}$ & $\sigma_{i\eta i\eta}^\gamma$  & $I_{ch}^{\gamma}$  & $\sigma_{i\eta i\eta}^\gamma$   & average\\ \hline
+    \multicolumn{7}{|c|}{endcap photons} \\ \hline
     10-15 & $10823\pm154$ & $8797\pm2242$ & $7893\pm2947$ & $16512\pm2900$ & $-2675\pm1967$ &$8797\pm903\pm2184$  \\ \hline
     15-20 & $6474\pm119$ & $4793\pm1132$ & $5053\pm1518$ & $6454\pm1142$ & $2650\pm2124$ &$4793\pm260\pm1101$  \\ \hline
     20-25 & $3377\pm86$ & $2877\pm729$ & $4817\pm1329$ & $5393\pm578$ & $4458\pm1291$ &$2877\pm1939\pm710$  \\ \hline
@@ -68,17 +57,18 @@ The results of the systematic error of $|N_{Ich}-N_{\sigma i\eta i\eta}|$ and th
     95-120 & $208\pm21$ & $390\pm55$ & $369\pm195$ & $348\pm41$ & $168\pm54$ &$390\pm21\pm51$  \\ \hline
     120-500 & $157\pm18$ & $255\pm88$ & $294\pm17$ & $257\pm53$ & $181\pm30$ &$255\pm38\pm85$  \\ \hline
   \end{tabular}
-  \label{tab:diff_ways_to_fit_phoEt_ENDCAP_muon}
+  \label{tab:diff_ways_to_fit_phoEt_muon}
   \end{center}
 \end{table}
 
 \begin{table}[h]
   \tiny
   \begin{center}
-  \caption{Results of the background subtraction based on fits of different variables. $W\gamma$, electron channel, barrel photons.}
+  \caption{Results of the background subtraction based on fits of different variables. $W\gamma$, electron channel. First column: $P_T^{\gamma}$ ranges, second column: signal MC prediction, third and fourth columns: signal yields extracted from fits of $I_{ch}^{\gamma}$ and $\sigma_{i\eta i\eta}^\gamma$ distributions of data, fifth and sixth columns: signal yields extracted from MC closure tests, seventh column: signal yield that is used in the next measurement steps.}
   \begin{tabular}{|c|c|c|c|c|c|c|}
-    bin &  MC   & data  & data  & MC cl. & MC cl. & yield \\ 
-    lims & pred & $I_{ch}^{\gamma}$ & $\sigma_{i\eta i\eta}^\gamma$  & $I_{ch}^{\gamma}$  & $\sigma_{i\eta i\eta}^\gamma$   & average \\ \hline
+    $P_T^{\gamma}$, &  sig. MC   & \multicolumn{2}{|c|}{data}  & \multicolumn{2}{|c|}{MC closure} & yield\\ 
+    GeV & ($W\gamma\rightarrow e\nu\gamma$) & $I_{ch}^{\gamma}$ & $\sigma_{i\eta i\eta}^\gamma$  & $I_{ch}^{\gamma}$  & $\sigma_{i\eta i\eta}^\gamma$   & data-bkg. \\ \hline
+    \multicolumn{7}{|c|}{barrel photons} \\ \hline
     10-15 & $12480\pm163$ & $10994\pm1331$ & $12425\pm2000$ & $10640\pm1500$ & $14995\pm2225$ &$10994\pm1430\pm1277$  \\ \hline
     15-20 & $5857\pm110$ & $5160\pm668$ & $7421\pm1173$ & $4124\pm602$ & $5721\pm1927$ &$5160\pm2261\pm613$  \\ \hline
     20-25 & $2868\pm77$ & $3022\pm384$ & $3168\pm2937$ & $3390\pm258$ & $3699\pm1261$ &$3022\pm145\pm338$  \\ \hline
@@ -92,18 +82,7 @@ The results of the systematic error of $|N_{Ich}-N_{\sigma i\eta i\eta}|$ and th
     85-95 & $234\pm22$ & $364\pm29$ & $366\pm33$ & $315\pm63$ & $283\pm83$ &$364\pm1\pm2$  \\ \hline
     95-120 & $318\pm26$ & $430\pm88$ & $555\pm66$ & $397\pm77$ & $400\pm135$ &$430\pm124\pm78$  \\ \hline
     120-500 & $429\pm30$ & $743\pm234$ & $734\pm40$ & $568\pm54$ & $537\pm236$ &$743\pm9\pm231$  \\ \hline
-  \end{tabular}
-  \label{tab:diff_ways_to_fit_phoEt_BARREL_electron}
-  \end{center}
-\end{table}
-
-\begin{table}[h]
-  \tiny
-  \begin{center}
-  \caption{Results of the background subtraction based on fits of different variables. $W\gamma$, electron channel, endcap photons.}
-  \begin{tabular}{|c|c|c|c|c|c|c|c|}
-    bin &  MC   & data  & data  & MC cl. & MC cl. & yield\\ 
-    lims & pred & $I_{ch}^{\gamma}$ & $\sigma_{i\eta i\eta}^\gamma$  & $I_{ch}^{\gamma}$  & $\sigma_{i\eta i\eta}^\gamma$   & average \\ \hline
+    \multicolumn{7}{|c|}{endcap photons} \\ \hline
      10-15 & $4368\pm96$ & $-1785\pm122$ & $4129\pm1180$ & $2286\pm1356$ & $-1502\pm1196$ &$-1785\pm5915\pm108$  \\ \hline
     15-20 & $2253\pm68$ & $-241\pm537$ & $1869\pm762$ & $1541\pm483$ & $352\pm759$ &$-241\pm2110\pm506$  \\ \hline
     20-25 & $1177\pm49$ & $637\pm298$ & $1679\pm534$ & $1308\pm192$ & $1414\pm481$ &$637\pm1042\pm277$  \\ \hline
@@ -118,12 +97,12 @@ The results of the systematic error of $|N_{Ich}-N_{\sigma i\eta i\eta}|$ and th
     95-120 & $166\pm20$ & $233\pm51$ & $211\pm21$ & $224\pm21$ & $192\pm49$ &$233\pm21\pm46$  \\ \hline
     120-500 & $145\pm18$ & $276\pm21$ & $254\pm24$ & $227\pm31$ & $194\pm46$ &$276\pm22\pm3$  \\ \hline
   \end{tabular}
-  \label{tab:diff_ways_to_fit_phoEt_ENDCAP_electron}
+  \label{tab:diff_ways_to_fit_phoEt_electron}
   \end{center}
 \end{table}
 
 
-The uncertainty on the $Z\gamma$ MC normalization for jets$\rightarrow\gamma$ background estimation is determined by performing the fits with the different $Z\gamma$ normalizations and propagating the spread of the results as the systematic error. The uncertainty on the $Z\gamma$ normalization is set to be~$4.6\%$ as qouted by $Z\gamma$~$8$~TeV measurement~\cite{ref_Zg8TeV}.
+The uncertainty on the ``data-bkg. yield'' due to uncertainty on the $Z\gamma$ MC normalization for jets$\rightarrow\gamma$ background estimation is determined by performing the fits with different $Z\gamma$ normalizations and propagating the spread of the results as the systematic uncertainty. The uncertainty on the $Z\gamma$ normalization is set to be~$4.6\%$ as reported by $Z\gamma$~$8$~TeV measurement~\cite{ref_Zg8TeV}.
 
 \subsection{Other Sources of the Systematic Uncertainties}
 \label{sec:Systematics_OtherSources}
@@ -131,22 +110,24 @@ The uncertainty on the $Z\gamma$ MC normalization for jets$\rightarrow\gamma$ ba
 
 The next significant uncertainty after the uncertainty due to jets$\rightarrow\gamma$ background estimation in the electron channel is the uncertainty due to $e\rightarrow\gamma$ background estimation. This uncertainty is comprised of a fit bias and a statistical power of the MC samples used for this background estimation. 
 
-The uncertainty due to fit bias is taken into account by fitting $Z$-peak before and after $M_T^W$ requirement is applied. Other selection requirements are applied except $Z$-mass window requirement. The fits plots of the datasets before and after $M_W^T$ requirement applied are shown in App.~\ref{sec:EtogammaFitPlotsNoWMtCut} and~\ref{sec:EtogammaFitPlots} respectively.
+The uncertainty due to fit bias is evaluated by fitting $Z$-peak before and after $M_T^W$ requirement is applied. Other selection requirements are applied except the $Z$-mass window requirement. The plots with the fit results of the datasets before and after $M_W^T$ requirement applied are shown in App.~\ref{sec:EtogammaFitPlotsNoWMtCut} and~\ref{sec:EtogammaFitPlots} respectively.
 
-Another source of uncertainty comes from the limited statistics of all MC samples involved in the $e\rightarrow\gamma$ background estimation. The uncertainty is propagated through the unfolding, $A \times \epsilon$ correction, is divided over the luminosity and the bin width (for the differential cross section). Values of $e\rightarrow\gamma$ uncertainties from both sources are summarized in Tab.~\ref{tab:systInPercentEtogamma_ELECTRON_WGamma}.
+Another source of uncertainty comes from the limited statistics of all MC samples involved in the $e\rightarrow\gamma$ background estimation. Values of $e\rightarrow\gamma$ uncertainties from both sources are summarized in Tab.~\ref{tab:systInPercentEtogamma_ELECTRON_WGamma}.
 
 % real gamma
 
-For the real-$\gamma$ background subtraction, the statistical uncertainties of $Z\gamma$ and $W\gamma\rightarrow\tau\nu\gamma$ samples and their normalization uncertainties are taken into account. The normalization uncertainty applied for the $Z\gamma$ sample is~$4.6\%$ and for the $W\gamma\rightarrow\tau\nu\gamma$ is~$20\%$. The $Z\gamma$ normalization uncertainty is dominant out of the four sources to the real-$\gamma$ background subtraction.
+For the real-$\gamma$ background subtraction, the statistical uncertainties of $Z\gamma$ and $W\gamma\rightarrow\tau\nu\gamma$ samples and their normalization uncertainties are taken into account. The normalization uncertainty applied for the $Z\gamma$ sample is~$4.6\%$ and for the $W\gamma\rightarrow\tau\nu\gamma$ is~$20\%$.
+
+All uncertainties related to the background subtraction procedure are estimated as uncertainties on ``data-bkg. yields''. To estimate uncerntainties of the effects listed above on the cross section, the uncertainties on yields are propagated through the unfolding, $A \times \epsilon$ correction, divided over the luminosity and the bin width (for the differential cross section).
 
 % unfolding
 
-For differential cross section, the statistical uncertainty on the signal MC sample is taken into account for the unfolding uncertainty. It is done with the randomization of the migration matrix. The procedure is the following:
+Limited statistical power of the signal MC sample contributes to the systematic uncertainty of the differential cross section through the unfolding procedure. We evaluate this uncertainty in the following way:
 \begin{itemize}
   \item randomize migration matrix $100$ times according with the signal MC statistical uncertainties in each $[P_T^{gen},P_T^{reco}]$ bin;
   \item the unfolding is applied for each migration matrix;
-  \item the standard deviation out of $100$ unfolding outputs is taken as a error;
-  \item the error is propagated through the $A\times\epsilon$ correction and is divided over the luminosity and the bin width.
+  \item the standard deviation out of $100$ unfolding outputs is taken as a uncertainty;
+  \item the uncertainty is propagated through the $A\times\epsilon$ correction and is divided over the luminosity and the bin width.
 \end{itemize}
 
 % Acc X Eff
@@ -166,7 +147,7 @@ Another source of the systematic uncertainty is the uncertainty of $E_T^{miss}$ 
   \item recalculate $M_T^{W}$;
   \item recompute $A \times \epsilon$ and unfolding constants with the new $M_T^{W}$ values;
   \item recompute the cross section values;
-  \item take the spread in the cross section between the lower, upper and nominal $M_T^{W}$ values as a systematic error.
+  \item take the spread in the cross section between the lower, upper and nominal $M_T^{W}$ values as a systematic uncertainty.
 \end{itemize}
 
 % SF
@@ -178,7 +159,7 @@ The contribution from the uncertainties of the efficiency scale factors are also
 
 % PU, Lumi
 
-The systematic error due to pileup reweighting is estimated by varying the pileup cross section by $\pm5\%$. The luminosity uncertainty is~$2.6\%$.
+The systematic uncertainty due to pileup reweighting is estimated by varying the pileup cross section by $\pm5\%$. The luminosity uncertainty is~$2.6\%$.
 
 \subsection{Results}
 
@@ -187,7 +168,7 @@ The relative systematic uncertainties are summarized in Tab.~\ref{tab:systInPerc
 \begin{table}[h]
   \scriptsize
   \begin{center}
-  \caption{Relative errors [\%]. $W\gamma$, muon channel. The details of the ``syst other'' column are provided in Tab.~\ref{tab:systInPercentSmallSysts_MUON_WGamma}. }
+  \caption{Relative uncertainties [\%]. $W\gamma$, muon channel. The details of the ``syst other'' column are provided in Tab.~\ref{tab:systInPercentSmallSysts_MUON_WGamma}. }
    \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
     bin  & err & syst & $Z\gamma$ MC & templ & SFs & syst & syst & syst\\
     lims  & stat & $|N_{Ich}-N_{\sigma{i\eta i\eta}}|$ & norm & stat & err & lumi & other & total\\ \hline
@@ -214,7 +195,7 @@ The relative systematic uncertainties are summarized in Tab.~\ref{tab:systInPerc
 \begin{table}[h]
   \scriptsize
   \begin{center}
-  \caption{Relative errors [\%]. $W\gamma$, electron channel. The details of the ``syst other'' and ``$e\rightarrow\gamma$''column are provided in Tab.~\ref{tab:systInPercentSmallSysts_ELECTRON_WGamma} and~\ref{tab:systInPercentEtogamma_ELECTRON_WGamma} respectively. }
+  \caption{Relative uncertainties [\%]. $W\gamma$, electron channel. The details of the ``syst other'' and ``$e\rightarrow\gamma$''column are provided in Tab.~\ref{tab:systInPercentSmallSysts_ELECTRON_WGamma} and~\ref{tab:systInPercentEtogamma_ELECTRON_WGamma} respectively. }
    \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
     bin  & err & syst & $Z\gamma$ MC & templ & SFs & syst & $e\rightarrow\gamma$ & syst & syst\\
     lims  & stat & $|N_{Ich}-N_{\sigma{i\eta i\eta}}|$ & norm & stat & err & lumi &  & other & total\\ \hline
