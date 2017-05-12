@@ -14,7 +14,7 @@ The dominant systematic uncertainty is uncertainty due to bias in the procedure 
 The systematic uncertainty due to the biases in the template shapes and the fit procedure is computed as the difference between fit results of $I_{ch}^\gamma$ and $\sigma_{i\eta i\eta}^\gamma$ distributions
 
 \begin{equation}
-err = |N_{Ich}-N_{\sigma i\eta i\eta}|.
+  err = |N_{Ich}-N_{\sigma i\eta i\eta}|.
 \end{equation}
 
 The uncertainty due to template statistics is computed by separately randomizing the real-$\gamma$ and the fake-$\gamma$ templates, we prepare $20$ real-$\gamma$ and $100$ fake-$\gamma$ templates by randomizing our nominal templates with the Gaussian distribution. Then we perform fits with new templates and take the standard deviation of the fit results as an uncertainty. The uncertainties are computed separately for the real-$\gamma$ and the fake-$\gamma$ templates. The statistical uncertainty of the fake-$\gamma$ template is larger.
@@ -109,11 +109,11 @@ The uncertainty on the $Z\gamma$ normalization is set to be~$4.6\%$ as reported 
 \label{sec:Systematics_OtherSources}
 % e to gamma
 
-The next significant uncertainty after the uncertainty due to jets$\rightarrow\gamma$ background estimation in the electron channel is the uncertainty due to $e\rightarrow\gamma$ background estimation. This uncertainty is comprised of a fit bias and a statistical power of the MC samples used for this background estimation. 
+The next significant uncertainty in the electron channel is the uncertainty related to $e\rightarrow\gamma$ background estimation. This uncertainty is comprised of a fit bias and a statistical power of the MC samples used for this background estimation. 
 
-The uncertainty due to fit bias is evaluated by fitting $Z$-peak before and after $M_T^W$ requirement is applied. Other selection requirements are applied except the $Z$-mass window requirement. The plots with the fit results of the datasets before and after $M_W^T$ requirement applied are shown in App.~\ref{sec:EtogammaFitPlotsNoWMtCut} and~\ref{sec:EtogammaFitPlots} respectively.
+To estimate the uncertainty due to fit bias, we perform fits of $Z$-peak on two data samples. One of them is prepared by applying all $W\gamma$ selection criteria except $Z$-mass window requirement, and the other one is prepared by applying all $W\gamma$ selection criteria except $Z$-mass window and $M_T^{\gamma}$ requirements. For the second case, we apply efficiency of $M_T^W$ selection requirement on the fit result. Whether $M_T^W$ selection requirement is applied or not, the data sample can be described by the same function, which must result in the amount of $e\rightarrow\gamma$ events in the nominally selected sample. The difference in the number of $e\rightarrow\gamma$ background events indicates a fit bias. The plots with the fit results of the datasets before and after $M_W^T$ requirement applied are shown in App.~\ref{sec:EtogammaFitPlotsNoWMtCut} and~\ref{sec:EtogammaFitPlots} respectively.
 
-Another source of uncertainty originates from the limited statistics of all MC samples involved in the $e\rightarrow\gamma$ background estimation. Values of $e\rightarrow\gamma$ uncertainties from both sources are summarized in Tab.~\ref{tab:systInPercentEtogamma_ELECTRON_WGamma}.
+Another source of uncertainty originates from the limited statistical power of all MC samples involved in the $e\rightarrow\gamma$ background estimation. This uncertainty is taken care of by RooFit~\cite{ref_RooFit} which provides us with uncertainties on the $N_{e\rightarrow\gamma}$ determined by fit (Eq.~\ref{eq:fit_function_etog}) and by ROOT~\cite{ref_ROOT} which treates properly the uncertainties on wiethed $M_{e\gamma}$ histograms involved in the algebraic expression~\ref{eq:Scale_etog}. Values of $e\rightarrow\gamma$ uncertainties from both sources are summarized in Tab.~\ref{tab:systInPercentEtogamma_ELECTRON_WGamma}.
 
 % real gamma
 
@@ -151,6 +151,32 @@ The systematic uncertainty due to pileup reweighting is estimated by varying the
 \subsection{Summary of the Systematic Uncertainties}
 
 The relative systematic uncertainties are summarized in Tab.~\ref{tab:systInPercent_MUON_WGamma} and Tab.~\ref{tab:systInPercent_ELECTRON_WGamma} for the muon and electron channels respectively. The systematic uncertainties related to pre-unfolding measurement steps have to be propagated through unfolding. For each of such uncertainties, a correlation matrix appears. All these correlation matrices are plotted in App.~\ref{sec:corrMatrices}.
+
+\begin{table}[h]
+  \scriptsize
+  \begin{center}
+  \caption{Relative systematic uncertainties [\%] of $e\rightarrow\gamma$ background estimation. $W\gamma$, electron channel. First column: $P_T^{\gamma}$ ranges, second column: total systematic uncertainty related to $e\rightarrow\gamma$ background estimation, third column: systematic uncertainty evaluated by comparing fit results of samples with and without $M_T^W$ selection requirement, fourth column: systematic uncertainty due to statistical power of MC samples involved in $e\rightarrow\gamma$ background estimation. }
+  \begin{tabular}{|c|c|c|c|}
+    $P_T^{\gamma}$,  & $e\rightarrow\gamma$ & $e\rightarrow\gamma$  & $e\rightarrow\gamma$ samp.\\
+    GeV  &  & y/n $M_T^W$ req. & stat\\ \hline
+    total  & 4 & 4 & 1 \\ \hline
+%    10-15 & 2 & 1 & 1 \\ \hline
+    15-20 & 18 & 17 & 4 \\ \hline
+    20-25 & 11 & 10 & 4 \\ \hline
+    25-30 & 8 & 7 & 3 \\ \hline
+    30-35 & 3 & 1 & 2 \\ \hline
+    35-45 & 2 & 1 & 1 \\ \hline
+    45-55 & 7 & 4 & 5 \\ \hline
+    55-65 & 5 & 3 & 4 \\ \hline
+    65-75 & 4 & 1 & 4 \\ \hline
+    75-85 & 6 & 4 & 4 \\ \hline
+    85-95 & 8 & 5 & 6 \\ \hline
+    95-120 & 5 & 3 & 4 \\ \hline
+    120-500 & 1 & 0 & 1 \\ \hline
+  \end{tabular}
+  \label{tab:systInPercentEtogamma_ELECTRON_WGamma}
+  \end{center}
+\end{table}
 
 \begin{table}[h]
   \scriptsize
@@ -255,31 +281,5 @@ The relative systematic uncertainties are summarized in Tab.~\ref{tab:systInPerc
     120-500 & 9 & 1 & 7 & 2 & 3 & 4 \\ \hline
   \end{tabular}
   \label{tab:systInPercentSmallSysts_ELECTRON_WGamma}
-  \end{center}
-\end{table}
-
-\begin{table}[h]
-  \scriptsize
-  \begin{center}
-  \caption{Relative systematic uncertainties [\%] of $e\rightarrow\gamma$ background estimation. $W\gamma$, electron channel. First column: $P_T^{\gamma}$ ranges, second column: total systematic uncertainty related to $e\rightarrow\gamma$ background estimation, third column: systematic uncertainty evaluated by comparing fit results of samples with and without $M_T^W$ selection requirement, fourth column: systematic uncertainty due to statistical power of MC samples involved in $e\rightarrow\gamma$ background estimation. }
-  \begin{tabular}{|c|c|c|c|}
-    $P_T^{\gamma}$,  & $e\rightarrow\gamma$ & $e\rightarrow\gamma$  & $e\rightarrow\gamma$ samp.\\
-    GeV  &  & y/n $M_T^W$ req. & stat\\ \hline
-    total  & 4 & 4 & 1 \\ \hline
-%    10-15 & 2 & 1 & 1 \\ \hline
-    15-20 & 18 & 17 & 4 \\ \hline
-    20-25 & 11 & 10 & 4 \\ \hline
-    25-30 & 8 & 7 & 3 \\ \hline
-    30-35 & 3 & 1 & 2 \\ \hline
-    35-45 & 2 & 1 & 1 \\ \hline
-    45-55 & 7 & 4 & 5 \\ \hline
-    55-65 & 5 & 3 & 4 \\ \hline
-    65-75 & 4 & 1 & 4 \\ \hline
-    75-85 & 6 & 4 & 4 \\ \hline
-    85-95 & 8 & 5 & 6 \\ \hline
-    95-120 & 5 & 3 & 4 \\ \hline
-    120-500 & 1 & 0 & 1 \\ \hline
-  \end{tabular}
-  \label{tab:systInPercentEtogamma_ELECTRON_WGamma}
   \end{center}
 \end{table}

@@ -82,7 +82,7 @@ The fits are performed in an extended unbinned maximum likelihood manner, separa
 
 
 The fit model is composed by the template-based function $RooNDKeysPdf$~\cite{ref_RooFit} convoluted with the Gaussian distribution multiplied by the number of events from the $e\rightarrow\gamma$ background  $N_{e\rightarrow\gamma}$ and the function describing a cumulative contribution of all other processes $RooCMSShapePdf$~\cite{ref_RooCMSShapePdf} multiplied by the number of events from other sources that have $M_{e\gamma}$ distributions without a peak at the values of $Z$ mass $N_{else}$. The expression for the fit function is:
-\begin{equation}
+\begin{equation}\label{eq:fit_function_etog}
 F_{fit}^{e\rightarrow\gamma} = N_{e\rightarrow\gamma} \cdot (RooNDKeysPdf \ast Gaussian) +  N_{else} \cdot (RooCMSShapePdf).
 \end{equation}
 
