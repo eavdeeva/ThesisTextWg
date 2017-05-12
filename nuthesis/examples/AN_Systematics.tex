@@ -1,6 +1,8 @@
 \section{Systematic Uncertainties}
 \label{sec:Systematics}
 
+All uncertainties related to the background subtraction procedure are estimated as uncertainties on ``data-bkg. yields''. To estimate uncerntainties of the effects listed above on the cross section, the uncertainties on yields are propagated through the unfolding, $A \times \epsilon$ correction, divided over the luminosity and the bin width (for the differential cross section).
+
 \subsection{Uncertainties Related to Jets$\rightarrow\gamma$ Background Estimation}
 
 The dominant systematic uncertainty is uncertainty due to bias in the procedure of the jets$\rightarrow\gamma$ background estimation. The following sources contribute to the uncertainty of  the jets$\rightarrow\gamma$ background estimation:
@@ -117,21 +119,19 @@ Another source of uncertainty originates from the limited statistical power of a
 
 % real gamma
 
-For the real-$\gamma$ background subtraction, the statistical uncertainties of $Z\gamma$ and $W\gamma\rightarrow\tau\nu\gamma$ samples and their normalization uncertainties are taken into account. The normalization uncertainty applied for the $Z\gamma$ sample is~$4.6\%$ and for the $W\gamma\rightarrow\tau\nu\gamma$ is~$20\%$.
+For the real-$\gamma$ background subtraction, the statistical uncertainties of $Z\gamma$ and $W\gamma\rightarrow\tau\nu\gamma$ samples and their normalization uncertainties are taken into account. The normalization uncertainty applied for the $Z\gamma$ sample is~$4.6\%$ and for the $W\gamma\rightarrow\tau\nu\gamma$ is~$20\%$. These uncertainties are minor, and are listed in Tab.~\ref{tab:systInPercentSmallSysts_MUON_WGamma}-\ref{tab:systInPercentSmallSysts_ELECTRON_WGamma}.
 
-All uncertainties related to the background subtraction procedure are estimated as uncertainties on ``data-bkg. yields''. To estimate uncerntainties of the effects listed above on the cross section, the uncertainties on yields are propagated through the unfolding, $A \times \epsilon$ correction, divided over the luminosity and the bin width (for the differential cross section).
+% unfolding and Acc X Eff
 
-% unfolding
+The migration matrix for the unfolding and $A\times\epsilon$ correction constants are derived from the signal MC sample. Limited statistical power of the signal MC sample contributes to the systematic uncertainty of the differential cross section through the unfolding procedure and to both differential and total cross section through the  $A\times\epsilon$ correction. 
 
-Limited statistical power of the signal MC sample contributes to the systematic uncertainty of the differential cross section through the unfolding procedure. To evaluate this uncertainty, first, we randomize the migration matrix $100$ times by Gaussian distribution as $M_{ji}\rightarrow Gaus(M_{ji},\sigma_{ji})$ where $\sigma_{ji}$ is the signal MC statistical uncertainties in particular $[j,i]$ bin. After that, the procedure of unfolding is repeated for each migration matrix. The standard deviation out of all unfolding outputs is taken as an uncertainty in each $P_T^{\gamma}$ bin, and, finally, the uncertainty is propagated through the $A\times\epsilon$ correction and is divided over the luminosity and the bin width to estimate the uncertainty on the cross section.
+To evaluate the uncertainty related to the limited signal MC statistical power for the migration matrix, first, we randomize the migration matrix 100 times by Gaussian distribution as $M_{ji}\rightarrow Gaus(M_{ji},\sigma_{ji})$ where $\sigma_{ji}$ is the signal MC statistical uncertainties in particular $[j,i]$ bin. After that, the procedure of unfolding is repeated for each migration matrix. The standard deviation out of all unfolding outputs is taken as an uncertainty in each $P_T^{\gamma}$ bin, and, finally, the uncertainty is propagated through the $A\times\epsilon$ correction and is divided over the luminosity and the bin width to estimate the uncertainty on the cross section.
 
-% Acc X Eff
-
-For the uncertainty due to the $A \times \epsilon$ correction, the signal MC statistical power is also taken into account. This uncertainty is estimated as 
+To evaluate the uncertainty related to the limited signal MC statistical power for the $A \times \epsilon$ correction constants, we use the expression
 \begin{equation}
-\Delta N_{true}^i= N_{acc}^i \cdot \frac{\Delta{(A\times \epsilon)^i}} { ((A\times \epsilon)^{i2})}, 
+\Delta N_{true}^i= N_{A\times \epsilon}^i \cdot \frac{\Delta{(A\times \epsilon)^i}} { ((A\times \epsilon)^{i2})}, 
 \end{equation}
-\noindent{where $N_{acc}^i$ are unfolded yields, before $A \times \epsilon$ correction. To estimate uncertainty on the cross section, $\Delta N_{true}^i$ is divided by the luminosity and by the bin width.}
+\noindent{where $N_{A\times \epsilon}^i$ are unfolded yields, before $A \times \epsilon$ correction as defined in Tab.~\ref{tab:analysisOutline}. To estimate uncertainty on the cross section, $\Delta N_{true}^i$ is divided by the luminosity and by the bin width.  These uncertainties are minor, and are listed in Tab.~\ref{tab:systInPercentSmallSysts_MUON_WGamma}-\ref{tab:systInPercentSmallSysts_ELECTRON_WGamma} in ``unf. MC stat'' and ``$A \times \epsilon$ MC stat'' columns.}
 
 % MET
 

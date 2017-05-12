@@ -17,15 +17,15 @@ The finite detector resolution in $P_T^\gamma$ causes the bin-by-bin migration i
 
 The reconstructed $P_T^{\gamma}$ spectrum is related to true $P_T^{\gamma}$ spectrum as:
 \begin{equation}
-  N^{reco}_{j} = R_{ji} N^{true}_{i},
+  N^{reco}_{j} = R_{ji} N^{A\times\epsilon}_{i},
 \end{equation}
-\noindent{where $N_{j}$ and $N_{i}$ are numbers of events in a given $P_T^{\gamma(reco)}$ and $P_T^{\gamma(true)}$ bins, respectively, $R_{ji}$ is the ``response matrix'' where each element is the probability of an event with true $P_T^{\gamma}$ in the bin ``$i$'' to be reconstructed with  $P_T^{\gamma}$ in the bin ``$j$''.}
+\noindent{where $N^{reco}_{j}$ and $N^{A\times\epsilon}_{i}$ are numbers of events in a given $P_T^{\gamma(reco)}$ and $P_T^{\gamma(true)}$ bins, respectively, $R_{ji}$ is the ``response matrix'' where each element is the probability of an event with true $P_T^{\gamma}$ in the bin ``$i$'' to be reconstructed with  $P_T^{\gamma}$ in the bin ``$j$''. The notation $N^{A\times\epsilon}_{i}$ is used to be consistent with a definition given in Tab.~\ref{tab:analysisOutline}.}
 
-To recover the true $P_T^{\gamma(true)}$ spectrum, we use the D'Agostini method~\cite{ref_DAgostini} which is based on Bayes' theorem and unfolds the reconstructed spectrum iteratively. D'Agostini method was chosen because it is recommended by the CMS SMP group in contrast to the matrix inversion method ($N^{true}_{i} = \left( R_{ji} \right) ^{-1} N^{reco}_{j}$) to avoid problems with possible matrix singularity and large statistical fluctuations.
+To recover the true $P_T^{\gamma(true)}$ spectrum, we use the D'Agostini method~\cite{ref_DAgostini} which is based on Bayes' theorem and unfolds the reconstructed spectrum iteratively. D'Agostini method was chosen because it is recommended by the CMS SMP group in contrast to the matrix inversion method ($N^{A\times\epsilon}_{i} = \left( R_{ji} \right) ^{-1} N^{reco}_{j}$) to avoid problems with possible matrix singularity and large statistical fluctuations.
 
 %One possible way to recover the true  $P_T^{\gamma}$ spectrum is matrix inversion:}
 %\begin{equation}
-%  N^{true}_i = \left( R_{ji} \right) ^{-1} N^{reco}_j.
+%  N^{A\times\epsilon}_i = \left( R_{ji} \right) ^{-1} N^{reco}_j.
 %\end{equation}
 
 Unfolding constants are derived from the signal MC sample ($W\gamma\rightarrow\mu\nu_{\mu}\gamma$/$W\gamma\rightarrow{e}\nu_{e}\gamma$) where both true (gen-level) and reconstructed $P_T^\gamma$ spectra are known. Using the signal MC sample, we prepare the migration matrix $M_{ji}$ which has the number of selected signal events in each [$j$,$i$] bin. 
@@ -94,7 +94,7 @@ R_{ji} = \frac{M_{ji}}{\sum_{i} M_{ji}}.
 \end{equation}
 \noindent{The response matrix is shown in Fig.~\ref{fig:respMatrices_Wg}.}
 
-To validate the detector resolution unfolding procedure, we perform the MC closure check. Gen-level and reconstructed yields are prepared using the signal MC. Then reconstructed yields are smeared by the Gaussian distribution according to the errors on the yields. The smeared yields are unfolded and compared to the gen-level yields. In addition to the D'Agostini method, we check the performance of the matrix inversion method for the unfolding which recovers the true yields as $N^{true}_i = (R_{ji})^{-1} N^{reco}_j$. 
+To validate the detector resolution unfolding procedure, we perform the MC closure check. Gen-level and reconstructed yields are prepared using the signal MC. Then reconstructed yields are smeared by the Gaussian distribution according to the errors on the yields. The smeared yields are unfolded and compared to the gen-level yields. In addition to the D'Agostini method, we check the performance of the matrix inversion method for the unfolding which recovers the true yields as $N^{A\times\epsilon}_i = (R_{ji})^{-1} N^{reco}_j$. 
 
 The results of the MC closure check are summarized in Tab.~\ref{tab:unf_mc_closure_MUON_WGamma}-\ref{tab:unf_mc_closure_ELECTRON_WGamma} for the muon and electron channels respectively. The unfolded yields show reasonable agreement to the gen-level yields except the underflow bin ($10-15$~GeV). The disagreement in the underflow bin may be caused by migration between $P_T^{\gamma}<$10~GeV and 10$<P_T^{\gamma}<$15~GeV ranges because events with $P_T^{\gamma}<$10~GeV are not available to us.  
 
