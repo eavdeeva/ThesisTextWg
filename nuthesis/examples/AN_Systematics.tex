@@ -107,6 +107,8 @@ Another source of the systematic uncertainty related to jets$\rightarrow\gamma$ 
 
 The uncertainty on the $Z\gamma$ normalization is set to be~$4.6\%$ as reported by CMS $Z\gamma$ measurement at $\sqrt{s}=8$~TeV~\cite{ref_Zg8TeV}. To estimate $\Delta \sigma^{Z\gamma-Norm}$, we prepare templates with $Z\gamma$ normalizations deviated by $\pm 4.6\%$ from the nominal value. After that, we perform fits with such deviated templates, and compare results among the fits with templates of nominal normalization and with two deviated ones. The spread among three results is a systematic uncertainty on the signal yields. 
 
+ Systematic uncertainties related to jets$\rightarrow\gamma$ background estimation are listed among the major uncertainties in Tab.~\ref{tab:systInPercent_MUON_WGamma}-\ref{tab:systInPercent_ELECTRON_WGamma} in columns ``syst $|N_{Ich}-N_{\sigma{i\eta i\eta}}|$'', `` $Z\gamma$ MC norm'', and ``temp stat''.
+
 \subsection{Other Sources of the Systematic Uncertainties}
 \label{sec:Systematics_OtherSources}
 % e to gamma
@@ -135,18 +137,20 @@ To evaluate the uncertainty related to the limited signal MC statistical power f
 
 % MET
 
-Another source of the systematic uncertainty originates from biases in $E_T^{miss}$ modeling in the MC. To estimate this uncertainty, we, first of all, vary the $P_T$ of the photons, electrons (for the electron channel) and jets in the event by their uncertainties as prescribed by CMS JetMET POG. Then sum up all the listed contributions as the Lorentz vectors and propagate their variations to the variation of $E_T^{miss}$. After that, we recalculate $M_T^{W}$ and recompute $A \times \epsilon$ and unfolding constants with the new $M_T^{W}$ values. Then recompute the cross section values and take the spread in the cross section among the lower, upper and nominal $M_T^{W}$ values as a systematic uncertainty.
+Another source of the systematic uncertainty originates from biases in $E_T^{miss}$ modeling in the MC. These biases affect procedures of detector resolution unfolding and $A\timies\epsilon$. To estimate this uncertainty, we prepare two additional signal MC samples with $M_T^{W} \rightarrow M_T^W \pm \sigma^{\pm}_{MTW}$. To determine $\sigma^{\pm}_{MTW}$, we changes values of the $P_T$ of the photons, electrons (for the electron channel) and jets in the event by their uncertainties as prescribed by CMS EGamma and JetMET POG as $P_T^{\gamma}\rightarrow P_T^{\gamma} \pm \Delta P_T^{\gamma}$, $P_T^{e}\rightarrow P_T^{e} \pm \Delta P_T^{e}$, $P_T^{jets}\rightarrow P_T^{jets} \pm \Delta P_T^{jets}$. Then sum up all the listed contributions as the Lorentz vectors, to recalculate values of $E_T^{miss}$ and, therefore, of $M_T^{W}$. Then we compute $A \times \epsilon$ and prepare migration matrices based on these samples where we apply a selection requirement based on the alternative $M_T^{W}$ values described above. After that, we compute two additional cross section values based on new $A\times\epsilon$ values and migration matrices. The spread in the cross section among the three results, including the nominal one, is the systematic uncertainty. This uncertainty is minor, and the values are provided in Tab.~\ref{tab:systInPercentSmallSysts_MUON_WGamma}-\ref{tab:systInPercentSmallSysts_ELECTRON_WGamma} in ``$M_T^W$ req.'' column.
 
 % SF
 
-The contribution from the uncertainties of the efficiency scale factors are also estimated. The scale factors are varied by $\pm 1\sigma$, then the $A \times \epsilon$ and unfolding constants are recomputed and new values of the cross section are found. The spread in the cross section among the $+1\sigma$, $-1\sigma$ and the nominal scale factor values is taken as a systematic uncertainty.
+The contribution from the uncertainties of the efficiency scale factors are also estimated. The SFs are varied by $\pm 1\sigma$, then the new $A \times \epsilon$ values and migration matrices are obtained and new values of the cross section are found. The spread in the cross section among the three results, with $+1\sigma$, $-1\sigma$ and the nominal scale factor values, is the systematic uncertainty. The contribution of the SF systematic uncertainty in the muon channel is minor, however, in the muon channel it is very significant and in certain $P_T^{\ranges}$ is even dominant (Tab.~\ref{tab:systInPercent_MUON_WGamma}-\ref{tab:systInPercent_ELECTRON_WGamma}). The SF uncertainty in the electron channel is so large because we required PSV instead of CSEV to select $W\gamma\rightarrow e\nu\gamma$ events, therefore, we could not use SFs provided by EGamma POG but had to use the SFs provided by $W\gamma\gamma$ measurement team instead. Those SFs was prepared based on a very small data sample resulting in large uncertainties of SFs which converts into large uncertainties of the $W\gamma\rightarrow e\nu\gamma$ cross section. 
 
 %TODO:\\
 %Momentum scale and resolution (variations prescribed by POGs). Need to think more carefully how to implement technically \\
 
 % PU, Lumi
 
-The systematic uncertainty due to pileup reweighting is estimated by varying the pileup cross section by $\pm5\%$. The luminosity uncertainty is~$2.6\%$.
+The systematic uncertainty due to pileup reweighting is estimated by varying the pileup cross section by $\pm$5\%. Similarly to the uncertainties related to $E_T^{miss}$ and SFs, we prepare two additional signal MC samples with alternative values of PU weight, prepare new $A \times \epsilon$ constants and migration values, and compute new cross section values. The spread in the cross section among the three results corresponding to the nominal PU cross section and to those changed by $\pm$5\% is the systematic uncertainty. This uncertainty is minor, and the values are provided in Tab.~\ref{tab:systInPercentSmallSysts_MUON_WGamma}-\ref{tab:systInPercentSmallSysts_ELECTRON_WGamma} in ``PU weight'' column.
+
+The luminosity uncertainty is~2.6\% which converts to~2.6\% uncertainty of cross section in all $P_T^{\gamma}$ bins. This systematic uncertainty is listed among the major uncertainties in Tab.~\ref{tab:systInPercent_MUON_WGamma}-\ref{tab:systInPercent_ELECTRON_WGamma}.
 
 \subsection{Summary of the Systematic Uncertainties}
 
@@ -181,7 +185,7 @@ The relative systematic uncertainties are summarized in Tab.~\ref{tab:systInPerc
 \begin{table}[h]
   \scriptsize
   \begin{center}
-  \caption{Relative uncertainties [\%]. $W\gamma$, muon channel. The details of the ``syst other'' column are provided in Tab.~\ref{tab:systInPercentSmallSysts_MUON_WGamma}. }
+  \caption{Relative uncertainties [\%]. $W\gamma$, muon channel. First column: $P_T^{\gamma}$ ranges, second column: statistical uncertainty. Third, fourth and fifth columns: uncertainties related to jets$\rightarrow\gamma$ background estimation, including, the one determined as a difference between fit results of $I_{ch}$ and $\sigma_{i\eta i\eta}$ distributions, the one originating from the uncertainty on the normalization of the $Z\gamma$ MC sample, and the one originating from the limited statistical power of the templates. Sixth column: uncertainties associated with the SF uncertainties, seventh column: uncertainty on the luminosity, eighth column: the total contribution of several minor uncertainties. The details of the ``syst other'' column are provided in Tab.~\ref{tab:systInPercentSmallSysts_MUON_WGamma}. Ninth column: total systematic uncertainty on the cross section.}
    \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
     $P_T^{\gamma}$,  & err & syst                          & $Z\gamma$ MC & templ & SFs & syst & syst & syst\\
     GeV           & stat & $|N_{Ich}-N_{\sigma{i\eta i\eta}}|$ & norm         & stat  & err & lumi & other & total\\ \hline
@@ -208,7 +212,7 @@ The relative systematic uncertainties are summarized in Tab.~\ref{tab:systInPerc
 \begin{table}[h]
   \scriptsize
   \begin{center}
-  \caption{Relative uncertainties [\%]. $W\gamma$, electron channel. The details of the ``syst other'' and ``$e\rightarrow\gamma$''column are provided in Tab.~\ref{tab:systInPercentSmallSysts_ELECTRON_WGamma} and~\ref{tab:systInPercentEtogamma_ELECTRON_WGamma} respectively. }
+  \caption{Relative uncertainties [\%]. $W\gamma$, electron channel. First column: $P_T^{\gamma}$ ranges, second column: statistical uncertainty. Third, fourth and fifth columns: uncertainties related to jets$\rightarrow\gamma$ background estimation, including, the one determined as a difference between fit results of $I_{ch}$ and $\sigma_{i\eta i\eta}$ distributions, the one originating from the uncertainty on the normalization of the $Z\gamma$ MC sample, and the one originating from the limited statistical power of the templates. Sixth column: uncertainties associated with the SF uncertainties, seventh column: uncertainty on the luminosity, eighth column: uncertainty related to $e\rightarrow\gamma$ background estimation, ninth column: the total contribution of several minor uncertainties. The details of the ``syst other'' column are provided in Tab.~\ref{tab:systInPercentSmallSysts_MUON_WGamma}. Tenth column: total systematic uncertainty on the cross section. The details of the ``syst other'' and ``$e\rightarrow\gamma$''column are provided in Tab.~\ref{tab:systInPercentSmallSysts_ELECTRON_WGamma} and~\ref{tab:systInPercentEtogamma_ELECTRON_WGamma} respectively. }
    \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
     $P_T^{\gamma}$,  & err & syst & $Z\gamma$ MC & templ & SFs & syst & $e\rightarrow\gamma$ & syst & syst\\
     GeV  & stat & $|N_{Ich}-N_{\sigma{i\eta i\eta}}|$ & norm & stat & err & lumi &  & other & total\\ \hline
@@ -235,7 +239,7 @@ The relative systematic uncertainties are summarized in Tab.~\ref{tab:systInPerc
 \begin{table}[h]
   \scriptsize
   \begin{center}
-  \caption{Relative systematic uncertainties [\%] of smaller contributions (details of the column ``syst other'' from Tab.~\ref{tab:systInPercent_MUON_WGamma}). $W\gamma$, muon channel. First column: $P_T^{\gamma}$ range, second column: total systematic uncertainties of smaller contributions, third column: uncertainties related to real-$\gamma$ background estimation, fourth column: uncertainties due to limited signal MC statistical power in $A\times\epsilon$ correction, fifth column: uncertainties due to $M_T^W$ selection requirement,  sixth column: uncertainties related to PU reweighting, seventh column:  uncertainties due to limited signal MC statistical power in the unfolding correction.}
+  \caption{Relative systematic uncertainties [\%] of smaller contributions (details of the column ``syst other'' from Tab.~\ref{tab:systInPercent_MUON_WGamma}). $W\gamma$, muon channel. First column: $P_T^{\gamma}$ range, second column: total systematic uncertainties of smaller contributions (a combination of the rest of the contributions listed in this table), third column: uncertainties related to real-$\gamma$ background estimation, fourth column: uncertainties due to limited signal MC statistical power in $A\times\epsilon$ correction, fifth column: uncertainties due to $M_T^W$ selection requirement,  sixth column: uncertainties related to PU reweighting, seventh column:  uncertainties due to limited signal MC statistical power in the unfolding correction.}
   \begin{tabular}{|c|c|c|c|c|c|c|}
     $P_T^{\gamma}$,  & syst  & real-$\gamma$ & $A\times\epsilon$ & $M_T^W$ & PU    & unf      \\
     GeV            & other & bkg           & MC stat           & req.   & weight & MC stat \\ \hline
@@ -261,7 +265,7 @@ The relative systematic uncertainties are summarized in Tab.~\ref{tab:systInPerc
 \begin{table}[h]
   \scriptsize
   \begin{center}
-  \caption{Relative systematic uncertainties [\%] of smaller contributions. $W\gamma$, electron channel. First column: $P_T^{\gamma}$ range, second column: total systematic uncertainties of smaller contributions, third column: uncertainties related to real-$\gamma$ background estimation, fourth column: uncertainties due to limited signal MC statistical power in $A\times\epsilon$ correction, fifth column: uncertainties due to $M_T^W$ selection requirement,  sixth column: uncertainties related to PU reweighting, seventh column:  uncertainties due to limited signal MC statistical power in the unfolding correction.}
+  \caption{Relative systematic uncertainties [\%] of smaller contributions. $W\gamma$, electron channel. First column: $P_T^{\gamma}$ range, second column: total systematic uncertainties of smaller contributions (a combination of the rest of the contributions listed in this table), third column: uncertainties related to real-$\gamma$ background estimation, fourth column: uncertainties due to limited signal MC statistical power in $A\times\epsilon$ correction, fifth column: uncertainties due to $M_T^W$ selection requirement,  sixth column: uncertainties related to PU reweighting, seventh column:  uncertainties due to limited signal MC statistical power in the unfolding correction.}
   \begin{tabular}{|c|c|c|c|c|c|c|}
     $P_T^{\gamma}$,  & syst & real-$\gamma$ & $A\times\epsilon$ & $M_T^W$ & PU & unf\\
     GeV  & other & bkg & MC stat & req. & weight & MC stat\\ \hline
