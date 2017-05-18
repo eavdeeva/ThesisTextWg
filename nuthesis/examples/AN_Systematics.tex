@@ -13,15 +13,16 @@ The dominant systematic uncertainty is uncertainty due to bias in the procedure 
   \item the limited statistical power of the fake-$\gamma$ and real-$\gamma$ templates.
 \end{itemize}
 
-The systematic uncertainty due to the biases in the template shapes and the fit procedure is computed as the difference between fit results of $I_{ch}^\gamma$ and $\sigma_{i\eta i\eta}^\gamma$ distributions
+The systematic uncertainty due to the bias in the template shapes and the fit procedure is computed as the difference between fit results of $I_{ch}^\gamma$ and $\sigma_{i\eta i\eta}^\gamma$ distributions
 
 \begin{equation}
   err = |N_{Ich}-N_{\sigma i\eta i\eta}|.
 \end{equation}
+\noindent{This two variables are chosen because they are fairly independent: $I_{ch}^{\gamma}$ indicates charged particle activity around the photon, while $\sigma_{i\eta i\eta}^{\gamma}$ describes the shape of the shower in ECal. Ideally, the results from fits of these two variables should be the same, thus, the difference between the results is a systematic uncertainty.}
 
 The uncertainty due to template statistics is computed by separately randomizing the real-$\gamma$ and the fake-$\gamma$ templates, we prepare $20$ real-$\gamma$ and $100$ fake-$\gamma$ templates by randomizing our nominal templates with the Gaussian distribution. Then we perform fits with new templates and take the standard deviation of the fit results as an uncertainty. The uncertainties are computed separately for the real-$\gamma$ and the fake-$\gamma$ templates. The statistical uncertainty of the fake-$\gamma$ template is larger.
 
-The results of the systematic uncertainty of $|N_{Ich}-N_{\sigma i\eta i\eta}|$ and the template statistical uncertainty are summarized in the Tab.~\ref{tab:diff_ways_to_fit_phoEt_muon}-\ref{tab:diff_ways_to_fit_phoEt_electron}. The column ``yield data-bkg'' is the background subtracted yield which is used for the cross section measurement. The central value of this yields is taken from the ``data $I_{ch}^{\gamma}$'' column. %The uncertainties include the statistical uncertainties and the uncertainties due to template statistics.
+The results of the systematic uncertainty of $|N_{Ich}-N_{\sigma i\eta i\eta}|$ and the template statistical uncertainty are summarized in the Tab.~\ref{tab:diff_ways_to_fit_phoEt_muon}-\ref{tab:diff_ways_to_fit_phoEt_electron}. The column ``yield data-bkg'' is the background subtracted yield which is used for the cross section measurement. The central value of this yields is taken from the ``data $I_{ch}^{\gamma}$'' column. The uncertainties in column ``sig. MC ($W\gamma\rightarrow[\mu/e]\nu\gamma$)''are statistical uncertainties of the signal MC samples. The uncertainties in columns ``data $I_{ch}^{\gamma}$'', ``data $\sigma_{i\eta i\eta}^\gamma$'', ``MC closure $I_{ch}^{\gamma}$'', ``MC closure $\sigma_{i\eta i\eta}^\gamma$'' include statistical uncertainties and systematic uncertainties related to the limited statistical power data used to prepare templates for jets$\rightarrow\gamma$ background estimation. Two uncertainties in the column ``yield data-bkg.'' are uncertainties estimated as $|N_{Ich}-N_{\sigma i\eta i\eta}|$ and uncertainties related to the limited statistical power of data used to prepare real-$\gamma$ and fake-$\gamma$ templates. The values are shown in a format $N\pm\Delta N(I_{ch} vs \sigma_{i\eta i\eta} templ.)\pm \Delta N(templ. stat.)$ to compare these two uncertainties side-by-side.  %The uncertainties include the statistical uncertainties and the uncertainties due to template statistics.
 
 \begin{table}[h]
   \tiny
@@ -31,33 +32,33 @@ The results of the systematic uncertainty of $|N_{Ich}-N_{\sigma i\eta i\eta}|$ 
     $P_T^{\gamma}$, &  sig. MC   & \multicolumn{2}{|c|}{data}  & \multicolumn{2}{|c|}{MC closure} & yield\\ 
     GeV & ($W\gamma\rightarrow\mu\nu\gamma$) & $I_{ch}^{\gamma}$ & $\sigma_{i\eta i\eta}^\gamma$  & $I_{ch}^{\gamma}$  & $\sigma_{i\eta i\eta}^\gamma$   & data-bkg. \\ \hline
     \multicolumn{7}{|c|}{barrel photons} \\ \hline
-    10-15 & $26250\pm240$ & $30683\pm1919$ & $26770\pm3134$ & $29657\pm2476$ & $35073\pm3726$ &$30683\pm3913\pm1865$  \\ \hline
-    15-20 & $12706\pm164$ & $14554\pm1070$ & $19575\pm1771$ & $10742\pm1079$ & $14924\pm2123$ &$14554\pm5021\pm1041$  \\ \hline
-    20-25 & $6793\pm120$ & $8364\pm711$ & $10398\pm4313$ & $7698\pm626$ & $9399\pm1741$ &$8364\pm2033\pm693$  \\ \hline
-    25-30 & $4087\pm93$ & $5505\pm685$ & $7141\pm3437$ & $4421\pm532$ & $5023\pm2094$ &$5505\pm1636\pm675$  \\ \hline
-    30-35 & $2603\pm74$ & $3409\pm500$ & $5152\pm2581$ & $3422\pm197$ & $3266\pm1156$ &$3409\pm1742\pm490$  \\ \hline
-    35-45 & $2971\pm80$ & $4990\pm466$ & $5544\pm3366$ & $4472\pm308$ & $4351\pm1632$ &$4990\pm554\pm454$  \\ \hline
-    45-55 & $1861\pm63$ & $1428\pm410$ & $2893\pm593$ & $1799\pm277$ & $2464\pm146$ &$1428\pm1464\pm402$  \\ \hline
-    55-65 & $1135\pm49$ & $1604\pm207$ & $1671\pm501$ & $1143\pm214$ & $1475\pm311$ &$1604\pm67\pm201$  \\ \hline
-    65-75 & $664\pm37$ & $866\pm43$ & $1090\pm271$ & $773\pm193$ & $680\pm162$ &$866\pm223\pm7$  \\ \hline
-    75-85 & $451\pm31$ & $710\pm34$ & $762\pm88$ & $621\pm106$ & $701\pm143$ &$710\pm52\pm0$  \\ \hline
-    85-95 & $340\pm27$ & $502\pm139$ & $502\pm175$ & $455\pm62$ & $443\pm98$ &$502\pm0\pm136$  \\ \hline
-    95-120 & $453\pm31$ & $641\pm105$ & $732\pm31$ & $714\pm113$ & $577\pm83$ &$641\pm91\pm98$  \\ \hline
-    120-500 & $546\pm34$ & $810\pm214$ & $792\pm63$ & $777\pm105$ & $678\pm191$ &$810\pm18\pm211$  \\ \hline
+    10-15 & 26250$\pm$240 & 30779$\pm$1919 & 26866$\pm$3134 & 29753$\pm$2476 & 35169$\pm$3726 &30779$\pm$3913$\pm$1865  \\ \hline
+    15-20 & 12706$\pm$164 & 14620$\pm$1070 & 19641$\pm$1771 & 10809$\pm$1079 & 14990$\pm$2123 &14620$\pm$5021$\pm$1041  \\ \hline
+    20-25 & 6793$\pm$120 & 8412$\pm$711 & 10446$\pm$4313 & 7746$\pm$626 & 9447$\pm$1741 &8412$\pm$2033$\pm$693  \\ \hline
+    25-30 & 4087$\pm$93 & 5543$\pm$685 & 7179$\pm$3437 & 4459$\pm$532 & 5061$\pm$2094 &5543$\pm$1636$\pm$675  \\ \hline
+    30-35 & 2603$\pm$74 & 3438$\pm$500 & 5181$\pm$2581 & 3451$\pm$197 & 3296$\pm$1156 &3438$\pm$1742$\pm$490  \\ \hline
+    35-45 & 2971$\pm$80 & 5033$\pm$466 & 5587$\pm$3366 & 4515$\pm$308 & 4394$\pm$1632 &5033$\pm$554$\pm$454  \\ \hline
+    45-55 & 1861$\pm$63 & 1458$\pm$410 & 2923$\pm$593 & 1828$\pm$277 & 2493$\pm$146 &1458$\pm$1464$\pm$402  \\ \hline
+    55-65 & 1135$\pm$49 & 1626$\pm$207 & 1693$\pm$501 & 1165$\pm$214 & 1497$\pm$311 &1626$\pm$67$\pm$201  \\ \hline
+    65-75 & 664$\pm$37 & 881$\pm$43 & 1105$\pm$271 & 787$\pm$193 & 694$\pm$162 &881$\pm$223$\pm$7  \\ \hline
+    75-85 & 451$\pm$31 & 720$\pm$34 & 772$\pm$88 & 631$\pm$106 & 711$\pm$143 &720$\pm$52$\pm$0  \\ \hline
+    85-95 & 340$\pm$27 & 511$\pm$139 & 510$\pm$175 & 464$\pm$62 & 451$\pm$98 &511$\pm$0$\pm$136  \\ \hline
+    95-120 & 453$\pm$31 & 658$\pm$105 & 749$\pm$31 & 730$\pm$113 & 593$\pm$83 &658$\pm$91$\pm$98  \\ \hline
+    120-500 & 546$\pm$34 & 842$\pm$214 & 824$\pm$63 & 809$\pm$105 & 710$\pm$191 &842$\pm$18$\pm$211  \\ \hline
     \multicolumn{7}{|c|}{endcap photons} \\ \hline
-    10-15 & $10823\pm154$ & $8797\pm2242$ & $7893\pm2947$ & $16512\pm2900$ & $-2675\pm1967$ &$8797\pm903\pm2184$  \\ \hline
-    15-20 & $6474\pm119$ & $4793\pm1132$ & $5053\pm1518$ & $6454\pm1142$ & $2650\pm2124$ &$4793\pm260\pm1101$  \\ \hline
-    20-25 & $3377\pm86$ & $2877\pm729$ & $4817\pm1329$ & $5393\pm578$ & $4458\pm1291$ &$2877\pm1939\pm710$  \\ \hline
-    25-30 & $2068\pm67$ & $2856\pm408$ & $3443\pm1514$ & $3137\pm356$ & $3904\pm975$ &$2856\pm586\pm394$  \\ \hline
-    30-35 & $1403\pm55$ & $2160\pm306$ & $1686\pm693$ & $1808\pm401$ & $1482\pm545$ &$2160\pm474\pm295$  \\ \hline
-    35-45 & $1489\pm57$ & $2465\pm339$ & $2937\pm1009$ & $2385\pm279$ & $2185\pm935$ &$2465\pm471\pm329$  \\ \hline
-    45-55 & $818\pm42$ & $1246\pm243$ & $1184\pm595$ & $894\pm176$ & $1139\pm226$ &$1246\pm61\pm237$  \\ \hline
-    55-65 & $550\pm34$ & $657\pm208$ & $957\pm375$ & $572\pm219$ & $320\pm260$ &$657\pm299\pm204$  \\ \hline
-    65-75 & $280\pm24$ & $304\pm169$ & $599\pm206$ & $471\pm80$ & $452\pm141$ &$304\pm295\pm166$  \\ \hline
-    75-85 & $186\pm20$ & $375\pm162$ & $374\pm91$ & $244\pm69$ & $195\pm66$ &$375\pm1\pm161$  \\ \hline
-    85-95 & $139\pm17$ & $242\pm60$ & $250\pm28$ & $318\pm19$ & $199\pm30$ &$242\pm8\pm57$  \\ \hline
-    95-120 & $208\pm21$ & $390\pm55$ & $369\pm195$ & $348\pm41$ & $168\pm54$ &$390\pm21\pm51$  \\ \hline
-    120-500 & $157\pm18$ & $255\pm88$ & $294\pm17$ & $257\pm53$ & $181\pm30$ &$255\pm38\pm85$  \\ \hline
+     10-15 & 10823$\pm$154 & 8840$\pm$2242 & 7936$\pm$2947 & 16556$\pm$2900 & -2631$\pm$1967 &8840$\pm$903$\pm$2184  \\ \hline
+    15-20 & 6474$\pm$119 & 4829$\pm$1132 & 5089$\pm$1518 & 6490$\pm$1142 & 2686$\pm$2124 &4829$\pm$260$\pm$1101  \\ \hline
+    20-25 & 3377$\pm$86 & 2902$\pm$729 & 4842$\pm$1329 & 5418$\pm$578 & 4483$\pm$1291 &2902$\pm$1939$\pm$710  \\ \hline
+    25-30 & 2068$\pm$67 & 2873$\pm$408 & 3460$\pm$1514 & 3154$\pm$356 & 3920$\pm$975 &2873$\pm$586$\pm$394  \\ \hline
+    30-35 & 1403$\pm$55 & 2174$\pm$306 & 1699$\pm$693 & 1821$\pm$401 & 1495$\pm$545 &2174$\pm$474$\pm$295  \\ \hline
+    35-45 & 1489$\pm$57 & 2485$\pm$339 & 2956$\pm$1009 & 2405$\pm$279 & 2204$\pm$935 &2485$\pm$471$\pm$329  \\ \hline
+    45-55 & 818$\pm$42 & 1257$\pm$243 & 1196$\pm$595 & 905$\pm$176 & 1150$\pm$226 &1257$\pm$61$\pm$237  \\ \hline
+    55-65 & 550$\pm$34 & 666$\pm$208 & 966$\pm$375 & 581$\pm$219 & 329$\pm$260 &666$\pm$299$\pm$204  \\ \hline
+    65-75 & 280$\pm$24 & 308$\pm$169 & 604$\pm$206 & 476$\pm$80 & 457$\pm$141 &308$\pm$295$\pm$166  \\ \hline
+    75-85 & 186$\pm$20 & 380$\pm$162 & 378$\pm$91 & 249$\pm$69 & 200$\pm$66 &380$\pm$1$\pm$161  \\ \hline
+    85-95 & 139$\pm$17 & 245$\pm$60 & 254$\pm$28 & 322$\pm$19 & 203$\pm$30 &245$\pm$8$\pm$57  \\ \hline
+    95-120 & 208$\pm$21 & 395$\pm$55 & 374$\pm$195 & 353$\pm$41 & 173$\pm$54 &395$\pm$21$\pm$51  \\ \hline
+    120-500 & 157$\pm$18 & 263$\pm$88 & 302$\pm$17 & 265$\pm$53 & 189$\pm$30 &263$\pm$38$\pm$85  \\ \hline
   \end{tabular}
   \label{tab:diff_ways_to_fit_phoEt_muon}
   \end{center}
@@ -71,33 +72,33 @@ The results of the systematic uncertainty of $|N_{Ich}-N_{\sigma i\eta i\eta}|$ 
     $P_T^{\gamma}$, &  sig. MC   & \multicolumn{2}{|c|}{data}  & \multicolumn{2}{|c|}{MC closure} & yield\\ 
     GeV & ($W\gamma\rightarrow e\nu\gamma$) & $I_{ch}^{\gamma}$ & $\sigma_{i\eta i\eta}^\gamma$  & $I_{ch}^{\gamma}$  & $\sigma_{i\eta i\eta}^\gamma$   & data-bkg. \\ \hline
     \multicolumn{7}{|c|}{barrel photons} \\ \hline
-    10-15 & $12480\pm163$ & $10994\pm1331$ & $12425\pm2000$ & $10640\pm1500$ & $14995\pm2225$ &$10994\pm1430\pm1277$  \\ \hline
-    15-20 & $5857\pm110$ & $5160\pm668$ & $7421\pm1173$ & $4124\pm602$ & $5721\pm1927$ &$5160\pm2261\pm613$  \\ \hline
-    20-25 & $2868\pm77$ & $3022\pm384$ & $3168\pm2937$ & $3390\pm258$ & $3699\pm1261$ &$3022\pm145\pm338$  \\ \hline
-    25-30 & $1411\pm54$ & $1846\pm293$ & $2250\pm1984$ & $1365\pm152$ & $1339\pm1167$ &$1846\pm404\pm273$  \\ \hline
-    30-35 & $915\pm43$ & $1283\pm193$ & $1831\pm971$ & $877\pm111$ & $891\pm278$ &$1283\pm547\pm180$  \\ \hline
-    35-45 & $1247\pm51$ & $1732\pm190$ & $1965\pm882$ & $1359\pm111$ & $1330\pm277$ &$1732\pm232\pm178$  \\ \hline
-    45-55 & $820\pm41$ & $673\pm207$ & $1199\pm485$ & $698\pm118$ & $933\pm65$ &$673\pm526\pm196$  \\ \hline
-    55-65 & $654\pm37$ & $956\pm302$ & $1010\pm157$ & $566\pm95$ & $666\pm152$ &$956\pm53\pm296$  \\ \hline
-    65-75 & $440\pm30$ & $625\pm252$ & $756\pm47$ & $357\pm99$ & $458\pm123$ &$625\pm131\pm248$  \\ \hline
-    75-85 & $295\pm25$ & $367\pm137$ & $516\pm134$ & $339\pm45$ & $285\pm84$ &$367\pm148\pm132$  \\ \hline
-    85-95 & $234\pm22$ & $364\pm29$ & $366\pm33$ & $315\pm63$ & $283\pm83$ &$364\pm1\pm2$  \\ \hline
-    95-120 & $318\pm26$ & $430\pm88$ & $555\pm66$ & $397\pm77$ & $400\pm135$ &$430\pm124\pm78$  \\ \hline
-    120-500 & $429\pm30$ & $743\pm234$ & $734\pm40$ & $568\pm54$ & $537\pm236$ &$743\pm9\pm231$  \\ \hline
+    10-15 & 12480$\pm$163 & 10994$\pm$1331 & 12425$\pm$2000 & 10640$\pm$1500 & 14995$\pm$2225 &10994$\pm$1430$\pm$1277  \\ \hline
+    15-20 & 5857$\pm$110 & 5160$\pm$668 & 7421$\pm$1173 & 4124$\pm$602 & 5721$\pm$1927 &5160$\pm$2261$\pm$613  \\ \hline
+    20-25 & 2868$\pm$77 & 3022$\pm$384 & 3168$\pm$2937 & 3390$\pm$258 & 3699$\pm$1261 &3022$\pm$145$\pm$338  \\ \hline
+    25-30 & 1411$\pm$54 & 1846$\pm$293 & 2250$\pm$1984 & 1365$\pm$152 & 1339$\pm$1167 &1846$\pm$404$\pm$273  \\ \hline
+    30-35 & 915$\pm$43 & 1283$\pm$193 & 1831$\pm$971 & 877$\pm$111 & 891$\pm$278 &1283$\pm$547$\pm$180  \\ \hline
+    35-45 & 1247$\pm$51 & 1732$\pm$190 & 1965$\pm$882 & 1359$\pm$111 & 1330$\pm$277 &1732$\pm$232$\pm$178  \\ \hline
+    45-55 & 820$\pm$41 & 673$\pm$207 & 1199$\pm$485 & 698$\pm$118 & 933$\pm$65 &673$\pm$526$\pm$196  \\ \hline
+    55-65 & 654$\pm$37 & 956$\pm$302 & 1010$\pm$157 & 566$\pm$95 & 666$\pm$152 &956$\pm$53$\pm$296  \\ \hline
+    65-75 & 440$\pm$30 & 625$\pm$252 & 756$\pm$47 & 357$\pm$99 & 458$\pm$123 &625$\pm$131$\pm$248  \\ \hline
+    75-85 & 295$\pm$25 & 367$\pm$137 & 516$\pm$134 & 339$\pm$45 & 285$\pm$84 &367$\pm$148$\pm$132  \\ \hline
+    85-95 & 234$\pm$22 & 364$\pm$29 & 366$\pm$33 & 315$\pm$63 & 283$\pm$83 &364$\pm$1$\pm$2  \\ \hline
+    95-120 & 318$\pm$26 & 430$\pm$88 & 555$\pm$66 & 397$\pm$77 & 400$\pm$135 &430$\pm$124$\pm$78  \\ \hline
+    120-500 & 429$\pm$30 & 743$\pm$234 & 734$\pm$40 & 568$\pm$54 & 537$\pm$236 &743$\pm$9$\pm$231  \\ \hline
     \multicolumn{7}{|c|}{endcap photons} \\ \hline
-     10-15 & $4368\pm96$ & $-1785\pm122$ & $4129\pm1180$ & $2286\pm1356$ & $-1502\pm1196$ &$-1785\pm5915\pm108$  \\ \hline
-    15-20 & $2253\pm68$ & $-241\pm537$ & $1869\pm762$ & $1541\pm483$ & $352\pm759$ &$-241\pm2110\pm506$  \\ \hline
-    20-25 & $1177\pm49$ & $637\pm298$ & $1679\pm534$ & $1308\pm192$ & $1414\pm481$ &$637\pm1042\pm277$  \\ \hline
-    25-30 & $574\pm34$ & $887\pm147$ & $1078\pm646$ & $674\pm117$ & $1125\pm370$ &$887\pm190\pm131$  \\ \hline
-    30-35 & $445\pm31$ & $731\pm107$ & $555\pm249$ & $451\pm119$ & $355\pm155$ &$731\pm176\pm96$  \\ \hline
-    35-45 & $638\pm37$ & $943\pm116$ & $1071\pm326$ & $773\pm76$ & $789\pm189$ &$943\pm127\pm104$  \\ \hline
-    45-55 & $287\pm24$ & $478\pm106$ & $449\pm449$ & $307\pm67$ & $347\pm78$ &$478\pm28\pm95$  \\ \hline
-    55-65 & $237\pm22$ & $287\pm155$ & $433\pm44$ & $225\pm51$ & $220\pm114$ &$287\pm145\pm150$  \\ \hline
-    65-75 & $194\pm21$ & $255\pm73$ & $372\pm38$ & $154\pm45$ & $37\pm87$ &$255\pm116\pm67$  \\ \hline
-    75-85 & $137\pm18$ & $210\pm47$ & $236\pm28$ & $201\pm59$ & $155\pm73$ &$210\pm25\pm40$  \\ \hline
-    85-95 & $81\pm14$ & $118\pm47$ & $128\pm30$ & $146\pm39$ & $44\pm40$ &$118\pm10\pm40$  \\ \hline
-    95-120 & $166\pm20$ & $233\pm51$ & $211\pm21$ & $224\pm21$ & $192\pm49$ &$233\pm21\pm46$  \\ \hline
-    120-500 & $145\pm18$ & $276\pm21$ & $254\pm24$ & $227\pm31$ & $194\pm46$ &$276\pm22\pm3$  \\ \hline
+    10-15 & 4368$\pm$96 & -1785$\pm$122 & 4129$\pm$1180 & 2286$\pm$1356 & -1502$\pm$1196 &-1785$\pm$5915$\pm$108  \\ \hline
+    15-20 & 2253$\pm$68 & -241$\pm$537 & 1869$\pm$762 & 1541$\pm$483 & 352$\pm$759 &-241$\pm$2110$\pm$506  \\ \hline
+    20-25 & 1177$\pm$49 & 637$\pm$298 & 1679$\pm$534 & 1308$\pm$192 & 1414$\pm$481 &637$\pm$1042$\pm$277  \\ \hline
+    25-30 & 574$\pm$34 & 887$\pm$147 & 1078$\pm$646 & 674$\pm$117 & 1125$\pm$370 &887$\pm$190$\pm$131  \\ \hline
+    30-35 & 445$\pm$31 & 731$\pm$107 & 555$\pm$249 & 451$\pm$119 & 355$\pm$155 &731$\pm$176$\pm$96  \\ \hline
+    35-45 & 638$\pm$37 & 943$\pm$116 & 1071$\pm$326 & 773$\pm$76 & 789$\pm$189 &943$\pm$127$\pm$104  \\ \hline
+    45-55 & 287$\pm$24 & 478$\pm$106 & 449$\pm$449 & 307$\pm$67 & 347$\pm$78 &478$\pm$28$\pm$95  \\ \hline
+    55-65 & 237$\pm$22 & 287$\pm$155 & 433$\pm$44 & 225$\pm$51 & 220$\pm$114 &287$\pm$145$\pm$150  \\ \hline
+    65-75 & 194$\pm$21 & 255$\pm$73 & 372$\pm$38 & 154$\pm$45 & 37$\pm$87 &255$\pm$116$\pm$67  \\ \hline
+    75-85 & 137$\pm$18 & 210$\pm$47 & 236$\pm$28 & 201$\pm$59 & 155$\pm$73 &210$\pm$25$\pm$40  \\ \hline
+    85-95 & 81$\pm$14 & 118$\pm$47 & 128$\pm$30 & 146$\pm$39 & 44$\pm$40 &118$\pm$10$\pm$40  \\ \hline
+    95-120 & 166$\pm$20 & 233$\pm$51 & 211$\pm$21 & 224$\pm$21 & 192$\pm$49 &233$\pm$21$\pm$46  \\ \hline
+    120-500 & 145$\pm$18 & 276$\pm$21 & 254$\pm$24 & 227$\pm$31 & 194$\pm$46 &276$\pm$22$\pm$3  \\ \hline
   \end{tabular}
   \label{tab:diff_ways_to_fit_phoEt_electron}
   \end{center}
@@ -105,23 +106,23 @@ The results of the systematic uncertainty of $|N_{Ich}-N_{\sigma i\eta i\eta}|$ 
 
 Another source of the systematic uncertainty related to jets$\rightarrow\gamma$ background estimation $\Delta \sigma^{Z\gamma-Norm}$ originates from the  uncertainty on the $Z\gamma$ MC normalization. The $Z\gamma$ MC sample is used to prepare fake-$\gamma$ template, and the normalization of this sample significantly affects the template shape. 
 
-The uncertainty on the $Z\gamma$ normalization is set to be~$4.6\%$ as reported by CMS $Z\gamma$ measurement at $\sqrt{s}=8$~TeV~\cite{ref_Zg8TeV}. To estimate $\Delta \sigma^{Z\gamma-Norm}$, we prepare templates with $Z\gamma$ normalizations deviated by $\pm 4.6\%$ from the nominal value. After that, we perform fits with such deviated templates, and compare results among the fits with templates of nominal normalization and with two deviated ones. The spread among three results is a systematic uncertainty on the signal yields. 
+The uncertainty on the $Z\gamma$ normalization is set to be~4.6\% as reported by CMS $Z\gamma$ measurement at $\sqrt{s}$=8~TeV~\cite{ref_Zg8TeV}. To estimate $\Delta \sigma^{Z\gamma-Norm}$, we prepare templates with $Z\gamma$ normalizations deviated by $\pm$4.6\% from the nominal value. After that, we perform fits with such deviated templates, and compare results among the fits with templates of nominal normalization and with two deviated ones. The spread among three results is a systematic uncertainty on the signal yields. 
 
- Systematic uncertainties related to jets$\rightarrow\gamma$ background estimation are listed among the major uncertainties in Tab.~\ref{tab:systInPercent_MUON_WGamma}-\ref{tab:systInPercent_ELECTRON_WGamma} in columns ``syst $|N_{Ich}-N_{\sigma{i\eta i\eta}}|$'', `` $Z\gamma$ MC norm'', and ``temp stat''.
+ Systematic uncertainties related to jets$\rightarrow\gamma$ background estimation are listed among the major uncertainties in Tab.~\ref{tab:systInPercent_MUON_WGamma}-\ref{tab:systInPercent_ELECTRON_WGamma} in columns ``syst $|N_{Ich}-N_{\sigma{i\eta i\eta}}|$'', ``$Z\gamma$ MC norm'', and ``temp stat''.
 
 \subsection{Other Sources of the Systematic Uncertainties}
 \label{sec:Systematics_OtherSources}
 % e to gamma
 
-The next significant uncertainty in the electron channel is the uncertainty related to $e\rightarrow\gamma$ background estimation. This uncertainty is comprised of a fit bias and a statistical power of the MC samples used for this background estimation. 
+The next significant uncertainty in the electron channel is the uncertainty related to $e\rightarrow\gamma$ background estimation. This uncertainty has components related to the fit bias and to the limitations of the statistical power of MC samples unvolved in this background estimation. 
 
 To estimate the uncertainty due to fit bias, we perform fits of $Z$-peak on two data samples. One of them is prepared by applying all $W\gamma$ selection criteria except $Z$-mass window requirement, and the other one is prepared by applying all $W\gamma$ selection criteria except $Z$-mass window and $M_T^{\gamma}$ requirements. For the second case, we apply efficiency of $M_T^W$ selection requirement on the fit result. Whether $M_T^W$ selection requirement is applied or not, the data sample can be described by the same function, which must result in the amount of $e\rightarrow\gamma$ events in the nominally selected sample. The difference in the number of $e\rightarrow\gamma$ background events indicates a fit bias. The plots with the fit results of the datasets before and after $M_W^T$ requirement applied are shown in App.~\ref{sec:EtogammaFitPlotsNoWMtCut} and~\ref{sec:EtogammaFitPlots} respectively.
 
-Another source of uncertainty originates from the limited statistical power of all MC samples involved in the $e\rightarrow\gamma$ background estimation. This uncertainty is taken care of by RooFit~\cite{ref_RooFit} which provides us with uncertainties on the $N_{e\rightarrow\gamma}$ determined by fit (Eq.~\ref{eq:fit_function_etog}) and by ROOT~\cite{ref_ROOT} which treates properly the uncertainties on wiethed $M_{e\gamma}$ histograms involved in the algebraic expression~\ref{eq:Scale_etog}. Values of $e\rightarrow\gamma$ uncertainties from both sources are summarized in Tab.~\ref{tab:systInPercentEtogamma_ELECTRON_WGamma}.
+Another source of uncertainty originates from the limited statistical power of all MC samples involved in the $e\rightarrow\gamma$ background estimation. This uncertainty is taken care of by RooFit~\cite{ref_RooFit} which provides us with uncertainties on the $N_{e\rightarrow\gamma}$ determined by fit (Eq.~\ref{eq:fit_function_etog}) and by ROOT~\cite{ref_ROOT} which treats properly the uncertainties on weighted $M_{e\gamma}$ histograms involved in the algebraic expression~\ref{eq:Scale_etog}. Values of $e\rightarrow\gamma$ uncertainties from both sources are summarized in Tab.~\ref{tab:systInPercentEtogamma_ELECTRON_WGamma}.
 
 % real gamma
 
-For the real-$\gamma$ background subtraction, the statistical uncertainties of $Z\gamma$ and $W\gamma\rightarrow\tau\nu\gamma$ samples and their normalization uncertainties are taken into account. The normalization uncertainty applied for the $Z\gamma$ sample is~$4.6\%$ and for the $W\gamma\rightarrow\tau\nu\gamma$ is~$20\%$. These uncertainties are minor, and are listed in Tab.~\ref{tab:systInPercentSmallSysts_MUON_WGamma}-\ref{tab:systInPercentSmallSysts_ELECTRON_WGamma}.
+For the real-$\gamma$ background subtraction, the statistical uncertainties of $Z\gamma$ and $W\gamma\rightarrow\tau\nu\gamma$ samples and their normalization uncertainties are taken into account. The normalization uncertainty applied for the $Z\gamma$ sample is~4.6\% as reported by CMS~8~TeV~$Z\gamma$ measurement and for the $W\gamma\rightarrow\tau\nu\gamma$ is~20\% because we use NLO value, and the NNLO contribution is estimated to have an order of~20\%. These uncertainties are minor, and are listed in Tab.~\ref{tab:systInPercentSmallSysts_MUON_WGamma}-\ref{tab:systInPercentSmallSysts_ELECTRON_WGamma}.
 
 % unfolding and Acc X Eff
 
