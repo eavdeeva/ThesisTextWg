@@ -1,9 +1,16 @@
 \section{Systematic Uncertainties}
 \label{sec:Systematics}
 
-Each step of the measurement has uncertainties associated with this step. All uncertainties related to the background subtraction procedure are estimated as uncertainties on ``data-bkg. yields''. To estimate uncerntainties of the effects listed above on the cross section, the uncertainties on yields are propagated through the unfolding, $A \times \epsilon$ correction, divided over the luminosity and the bin width (for the differential cross section).
+Each step of the measurement has uncertainties associated with this step. Each uncertainty is estimated as an uncertainty on yields, and is propagated through the further measurement steps to be converted into the uncertainty on the cross section. 
+
+Uncertainties related to the subtraction of various background are estimated as uncertainties on ``data-bkg. yields''. To estimate uncerntainties of the effects listed above on the differential cross section, the uncertainties on yields are propagated through the unfolding, $A \times \epsilon$ correction, divided by the luminosity and by the bin width. For the total cross section, the uncertainties on ``data-bkg.'' yields are divided by the $A \times \epsilon$ correction and luminosity. 
+
+When an uncertainty is propagated through the unfolding, the yields in the different $P_T^{\gamma}$ become correlated. The correlation matrices on the unfolded yields corresponding to all each uncertainty related to the background subtraction are provided in App.~\ref{sec:corrMatrices}, as well as the correlation matrix related to the unfolding procedure itself. Uncertainties related to post-unfolding steps of the $W\gamma$ measurement do not have to be propagated through unfolding and, thus, do not have corresponding correlation matrices. 
+
+Uncertainties related to jets$\rightarrow\gamma$ background estimation are described in Ch.~\ref{sec:Systematics_jtog} while uncertainties related to the other measurement steps are described in Ch.~\ref{sec:Systematics_OtherSources}. Ch.~\ref{sec:Systematics_summary} summarizes relative systematic uncertainties originating from different sources.
 
 \subsection{Uncertainties Related to Jets$\rightarrow\gamma$ Background Estimation}
+\label{sec:Systematics_jtog}
 
 The selected data samples in both muon and electron channels are composed mostly of the jets$\rightarrow\gamma$ events. Because there are more background than signal events in our selected sampls, any uncertainty on the background yields transforms to larger relative uncertainty of the signal yields. The uncertainties related to jets$\rightarrow\gamma$ background estimation are dominant sources of uncertainties in all $P_T^{\gamma}$ bins in the muon channels and in bins with $P_T^{\gamma}<$55~GeV in the electron channel.
 
@@ -154,6 +161,7 @@ The systematic uncertainty related to PU reweighting is estimated by varying the
 The luminosity uncertainty is~2.6\% which converts to~2.6\% uncertainty of cross section in all $P_T^{\gamma}$ bins. This systematic uncertainty is listed among the major uncertainties in Tab.~\ref{tab:systInPercent_MUON_WGamma}-\ref{tab:systInPercent_ELECTRON_WGamma} in the ``syst lumi'' column.
 
 \subsection{Summary of the Systematic Uncertainties}
+\label{sec:Systematics_summary}
 
 The relative systematic uncertainties are summarized in Tab.~\ref{tab:systInPercent_MUON_WGamma} and Tab.~\ref{tab:systInPercent_ELECTRON_WGamma} for the muon and electron channels respectively. The systematic uncertainties related to pre-unfolding measurement steps have to be propagated through unfolding. For each of such uncertainties, a correlation matrix appears. All these correlation matrices are plotted in App.~\ref{sec:corrMatrices}.
 
