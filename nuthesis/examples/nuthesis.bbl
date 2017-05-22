@@ -126,7 +126,7 @@ CMS VW (V=W,Z $\rightarrow$jj) using 5.0 fb-1 of 7 TeV pp collisions
   Eur.Phys.J. C73 (2013) 2283.
 
 \bibitem{ref_MCFM}
-MCFM generator.
+MCFM gcalculator.
 
 \bibitem{ref_LHC_TDR}
 LHC TDR.
@@ -170,11 +170,11 @@ CMS collaboration.
 CMS collaboration.
 \newblock https://inspirehep.net/record/925379/files/PFT-09-001-pas.pdf.
 
-\bibitem{ref_MPII_Alg}
-Millepede ii algorithm.
-
 \bibitem{ref_HIP_Alg}
 Hip algorithm.
+
+\bibitem{ref_MPII_Alg}
+Millepede ii algorithm.
 
 \bibitem{ref_AlApproved_twiki}
 Cms tracker detector performance results 2015: Alignment.
@@ -184,6 +184,18 @@ Cms tracker detector performance results 2015: Alignment.
 \bibitem{ref_MadGraph}
 MadGraph generator.
 
+\bibitem{ref_Pythia}
+Pythia generator.
+
+\bibitem{ref_CTEQ6L1}
+CTEQ6L1 PDF set.
+
+\bibitem{ref_Geant4}
+GEANT.
+
+\bibitem{ref_FEWZ}
+FEWZ calculator.
+
 \bibitem{ref_Zg8TeV}
 CMS collaboration.
 \newblock Zg, 8 tev.
@@ -192,14 +204,20 @@ CMS collaboration.
 CMS collaboration.
 \newblock Wgg, 8 tev.
 
-\bibitem{ref_DAgostini}
-D'agostini unfolding.
-
 \bibitem{ref_RooFit}
 Roofit.
 
 \bibitem{ref_RooCMSShapePdf}
 Roocmsshapepdf.
+
+\bibitem{ref_DAgostini}
+D'agostini unfolding.
+
+\bibitem{ref_RooUnfold}
+Roounfold.
+
+\bibitem{ref_ROOT}
+Root.
 
 \bibitem{ref_CMSSW}
 Cms software.
@@ -210,9 +228,6 @@ Github.
 
 \bibitem{ref_ggNtuplizer}
 ggntuplizer.
-
-\bibitem{ref_RooUnfold}
-Roounfold.
 
 \bibitem{ref_fig_SM}
 UNKNOWN [TEMPORARY].
@@ -259,8 +274,10 @@ F.~Meier Aeschbacher.
   https://indico.cern.ch/event/243940/contributions/1562955/attachments/416194%
 /578159/praesDoktorandensemi2010.pdf.
 
-\bibitem{ref_ROOT}
-Root.
+\bibitem{ref_WJets8TeV}
+CMS collaboration.
+\newblock W+jets, 8 tev.
+\newblock Available at: https://arxiv.org/pdf/1610.04222.pdf.
 
 \bibitem{ref_myCode}
 mycode.

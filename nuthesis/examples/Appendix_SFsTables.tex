@@ -2,14 +2,16 @@
 \chapter{Efficiency Scale Factors}
 \label{sec:SFsTables}
 
-This appendix summarizes efficiency SF that were applied on MC events to make selection efficiency in MC match the selection efficiency in data. Tables~\ref{tab:SFs_MuonID}-\ref{tab:SFs_MuonIso} contain muon~ID ($\rho^{\mu}_{ID}$) and muon isolation SF ($\rho^{\mu}_{iso}$). A full SF on a muon object is a multiplication of~ID and isolation SF. Electron~ID SF are listed in Tab.~\ref{tab:SFs_ElectronID} ($\rho^{e}_{ID}$). Photon~ID ($\rho^{\gamma}_{ID}$) and PSV ($\rho^{\gamma}_{PSV}$) SF are summarized in Tab.~\ref{tab:SFs_PhotonID} and Tab.~\ref{tab:SFs_PhotonPixelSeedVeto}.
+This appendix summarizes efficiency SF that are applied on MC events to make selection efficiency in MC match the selection efficiency in data. Tables~\ref{tab:SFs_MuonID}-\ref{tab:SFs_MuonIso} contain muon~ID ($\rho^{\mu}_{ID}$) and muon isolation SF ($\rho^{\mu}_{iso}$). A full SF on a muon object is a multiplication of~ID and isolation SF. Electron~ID SF are listed in Tab.~\ref{tab:SFs_ElectronID} ($\rho^{e}_{ID}$). Photon~ID ($\rho^{\gamma}_{ID}$) and PSV ($\rho^{\gamma}_{PSV}$) SF are summarized in Tab.~\ref{tab:SFs_PhotonID} and Tab.~\ref{tab:SFs_PhotonPixelSeedVeto}.
 
-For each $W\gamma$ candidate in MC we apply a lepton and a photon SF. PSV SF is used in the electron channel only. For each $Z\gamma$ candidate in MC we apply two lepton and one photon SF. Full SF for each type of candidate are summarized in Tab.~\ref{tab:SFs_Applied}.
+For each $W\gamma$ candidate in any MC sample we apply a lepton and a photon SF. PSV SF is used in the electron channel only. For each $Z\gamma$ candidate in any MC sample we apply two lepton and one photon SF. For instance, in the $Z\gamma$ MC sample selected in the $W\gamma$ selection conditions for the purpose of the $Z\gamma$ background subtraction, we apply SF as for $W\gamma$ candidates, while in the $Z\gamma$ MC sample selected in the $Z\gamma$ selection conditions for the purposes of the $Z\gamma$ check or template construction, we apply SF as for $Z\gamma$ candidates.
+
+A full event SF is a multiplication of individual object SF. Full SF for each type of candidate are summarized in Tab.~\ref{tab:SFs_Applied}.
 
 \begin{table}[h]
   \footnotesize
   \begin{center}
-  \caption{Scale Factors Applied} 
+  \caption{Full event SF for each type of candidate. First column: type of candidate; second column: full event scale factor.} 
    \begin{tabular}{|c|c|}
  candidates                          & SF\\ \hline
  $W\gamma\rightarrow\mu\nu\gamma$   &   $\rho^{\mu}_{ID} \times \rho^{\mu}_{iso} \times \rho^{\gamma}_{ID}$    \\ \hline
@@ -24,9 +26,9 @@ For each $W\gamma$ candidate in MC we apply a lepton and a photon SF. PSV SF is 
 \begin{table}[h]
   \footnotesize
   \begin{center}
-  \caption{Muon ``Tight''~ID Scale Factors as Recommended by POG} 
+  \caption{Muon ID SF as recommended by POG. First column: $P_T^{\mu}$; other columns: SF values depending on $P_T^{\mu}$ and $|\eta^{\mu}|$.} 
    \begin{tabular}{|c|c|c|c|}
- $P_T^{\gamma}$  & $|\eta|< 0.9$   & $0.9<|\eta|< 1.2$    & $1.2<|\eta|< 2.1$ \\ \hline
+ $P_T^{\mu}$  & $|\eta^{\mu}|< 0.9$   & $0.9<|\eta^{\mu}|< 1.2$    & $1.2<|\eta^{\mu}|< 2.1$ \\ \hline
 25-30          & 0.992$\pm$0.001   & 0.995$\pm$0.001    & 0.998$\pm$0.001     \\ \hline
 30-35          & 0.993$\pm$0.001   & 0.993$\pm$0.001    & 0.997$\pm$0.001        \\ \hline
 35-40          & 0.994$\pm$0.000   & 0.992$\pm$0.001    & 0.997$\pm$0.001        \\ \hline
@@ -43,9 +45,9 @@ $>$140         & 1.004$\pm$0.017   & 1.009$\pm$0.035    & 1.023$\pm$0.030       
 \begin{table}[h]
   \footnotesize
   \begin{center}
-  \caption{Muon Isolation Scale Factors as Recommended by POG} 
+  \caption{Muon isolation SF as recommended by POG. First column: $P_T^{\mu}$; other columns: SF values depending on $P_T^{\mu}$ and $|\eta^{\mu}|$.} 
    \begin{tabular}{|c|c|c|c|}
- $P_T^{\gamma}$  & $|\eta|< 0.9$   & $0.9<|\eta|< 1.2$    & $1.2<|\eta|< 2.1$ \\ \hline
+ $P_T^{\mu}$  & $|\eta|< 0.9$   & $0.9<|\eta|< 1.2$    & $1.2<|\eta|< 2.1$ \\ \hline
 25-30          & 0.999$\pm$0.001   & 1.002$\pm$0.001    & 1.002$\pm$0.001     \\ \hline
 30-35          & 0.999$\pm$0.000   & 1.002$\pm$0.001    & 1.003$\pm$0.000        \\ \hline
 35-40          & 0.999$\pm$0.000   & 1.001$\pm$0.001    & 1.002$\pm$0.000        \\ \hline
@@ -63,7 +65,7 @@ $>$140         & 1.001$\pm$0.002   & 1.004$\pm$0.005    & 0.997$\pm$0.002       
 \begin{table}[h]
   \footnotesize
   \begin{center}
-  \caption{Electron ``Tight''~ID Scale Factors as Recommended by POG} 
+  \caption{Electron ID SF as recommended by POG. First column: $P_T^{e}$; other columns: SF values depending on $P_T^{e}$ and $|\eta^{e}|$.} 
    \begin{tabular}{|c|c|c|c|c|}
  $P_T^{e}$  & $|\eta|\leq 0.80$ & $0.80<|\eta|\leq 1.44$ & $1.57<|\eta|\leq 2.00$ & $|\eta|> 2.00$\\ \hline
 $\leq$40       & 0.978$\pm$0.001   & 0.958$\pm$0.002        & 0.909$\pm$0.003        & 0.987$\pm$0.004 \\ \hline
@@ -77,9 +79,9 @@ $>$50            & 0.982$\pm$0.002   & 0.969$\pm$0.002        & 0.957$\pm$0.004 
 \begin{table}[h]
   \footnotesize
   \begin{center}
-  \caption{Photon ``Medium''~ID Scale Factors as Recommended by POG} 
+  \caption{Photon ID SF as recommended by POG. First column: $P_T^{\gamma}$; other columns: SF values depending on $P_T^{\gamma}$ and $|\eta^{\gamma}|$.} 
    \begin{tabular}{|c|c|c|c|c|}
- $P_T^{\gamma}$  & $|\eta|\leq 0.80$ & $0.80<|\eta|\leq 1.44$ & $1.57<|\eta|\leq 2.00$ & $|\eta|> 2.00$\\ \hline
+ $P_T^{\gamma}$  & $|\eta^{\gamma}|\leq 0.80$ & $0.80<|\eta^{\gamma}|\leq 1.44$ & $1.57<|\eta^{\gamma}|\leq 2.00$ & $|\eta^{\gamma}|> 2.00$\\ \hline
 15-20          & 0.95$\pm$0.02   & 0.99$\pm$0.02        & 1.00$\pm$0.02        & 1.02$\pm$0.02 \\ \hline
 20-30          & 0.96$\pm$0.01   & 0.97$\pm$0.01        & 0.98$\pm$0.01        & 1.00$\pm$0.01 \\ \hline
 30-40          & 0.98$\pm$0.01   & 0.98$\pm$0.01        & 0.99$\pm$0.01        & 1.00$\pm$0.01 \\ \hline
@@ -93,7 +95,7 @@ $>$50          & 0.98$\pm$0.01   & 0.98$\pm$0.01        & 1.00$\pm$0.01        &
 \begin{table}[h]
   \footnotesize
   \begin{center}
-  \caption{Additional Photon Scale Factors for ``PixelSeedVeto'' as Derived in $W\gamma\gamma$ Measurement} 
+  \caption{Additional photon SF for ``PixelSeedVeto'' as reported in $W\gamma\gamma$ measurement. First column: $P_T^{\gamma}$; second and third columns: SF values depending on $P_T^{\gamma}$ and $|\eta^{\gamma}|$.} 
    \begin{tabular}{|c|c|c|}
  $P_T^{\gamma}$  & barrel              & endcap \\ \hline
 15-20          & 0.996$\pm$0.020     & 0.960$\pm$0.041 \\ \hline
