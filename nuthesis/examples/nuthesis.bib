@@ -10,12 +10,6 @@
 %% The ToC is required
 %% Uncomment these if need be
 
-  title =  {The \textsf{url} package},
-  author =  {Donald Arseneau},
-  note =  {Available at:
-                  \url{http://tug.ctan.org/cgi-bin/ctanPackageInformation.py?id=url}},
-}
-
 % FIRST CHAPTER
 % Intro
 
@@ -24,13 +18,7 @@
   title =  {Introduction to Elementary Particles},
   publisher =  {WILEY-VCH},
   year =  2008
-}
-
-@Misc{ref_fig_SM,
-  author = {UNKNOWN [TEMPORARY]},
-  title = {Source of SM figure [TEMPORARY]},
-  note = {Available at: http://www.isgtw.org/spotlight/go-particle-quest-first-cern-hackfest}
-}
+}% ref_Griffiths,
 
 @Article{ref_HiggsPaperCMS,
   author =  {CMS Collaboration},
@@ -41,7 +29,7 @@
   number =  1,
   pages =  {30-61},
   note =  {Available at: https://arxiv.org/abs/1207.7235},
-}
+}% ref_HiggsPaperCMS,
 
 @Article{ref_HiggsPaperATLAS,
   author =  {ATLAS Collaboration},
@@ -52,21 +40,26 @@
   number =  1,
   pages =  {1-29},
   note =  {Available at: https://arxiv.org/abs/1207.7214},
-}
+}% ref_HiggsPaperATLAS
 
-@Misc{ref_PDG,
-  key = {Particle Data Group},
-  title = {Particle Data Group},
-  note =  {Available at:
-                  pdg.lbl.gov},
-}
+@article{ref_PDG,
+  author         = "Olive, K. A. and others",
+  title          = "{Review of Particle Physics}",
+  collaboration  = "Particle Data Group",
+  journal        = "Chin. Phys.",
+  volume         = "C38",
+  year           = "2014",
+  pages          = "090001",
+  doi            = "10.1088/1674-1137/38/9/090001",
+  note =  {Available at: pdg.lbl.gov}
+% SLACcitation   = "%%CITATION = CHPHD,C38,090001;%%"
+}% ref_PDG
 
 @Misc{ref_NASA,
   key = {NASA website},
   title =  {NASA website},
-  note =  {Available at:
-                  https://science.nasa.gov/astrophysics/focus-areas/what-is-dark-energy},
-}
+  note =  {Available at: https://science.nasa.gov/astrophysics/focus-areas/what-is-dark-energy},
+}% ref_NASA
 
 %\bibitem{ref_fig_PDFs} website: https://mstwpdf.hepforge.org/
 
@@ -76,290 +69,350 @@
 @Manual{ref_Pich,
   author = {A. Pich},
   title = {The Standard Model of Electroweak Interactions},
-  year = 2007,
+  year = {2007},
   note = {Updated version of the lectures given at the 2006 European School of High Energy Physics (Aronsborg, Sweden, 18 June - 1 July 2006) and at the 4th CERN - CLAF School of High Energy Physics (Vina del Mar, Chile, 18 February - 3 March 2007). Available at: https://arxiv.org/abs/0705.4264}
-}
+}% ref_Pich
 
+% NOT COMPLETE
 @Book{ref_Halzen_Martin,
   author = {Halzen, Martin},
   title = {Quarks and leptons}
-}
+}% ref_Halzen_Martin
 
-@Misc{ref_HardScattering,
+@Article{ref_HardScattering,
   key = {Hard Scattering},
-  title = {Hard Scattering},
+  author         = {J. Campbell, J. Huston, W. Stirling},
+  title          = {Hard interactions of quarks and gluons: a primer for LHC physics},
+  %collaboration  = {},
+  journal        = {Progress in Physics},
+  volume         = {70},
+  year           = {2006},
+  %pages          = "090001",
+  %doi            = "10.1088/1674-1137/38/9/090001",
   note = {Available at: http://iopscience.iop.org/article/10.1088/0034-4885/70/1/R02}
-}
+}%   ref_HardScattering  
 
+% NOT COMPLETE
 @Book{ref_Peskin,
   author = {Peskin, Schroeder},
   title = {Introduction to Quantum Field Theory}
-}
+}% ref_Peskin
 
 @Phdthesis{ref_Lindsey_thesis,
   author       = {L. Gray}, 
-  title        = {A measurement of the Z$\gamma$ Cross Section and Limits on anomalous Gauge Couplings at $\sqrt{s}=7$~TeV Using CMS},
+  title        = {A measurement of the $Z\gamma$ Cross Section and Limits on Anomalous Gauge Couplings at $\sqrt{s}=$7~TeV Using CMS},
   school       = {University of Wisconsin - Madison},
   year         = 2012,
-  month        = 8,
-}
+  month        = 8
+}% ref_Lindsey_thesis
 
 @Misc{ref_fnal_LumiCS,
   key = {Lumi CS},
+  author = {S. Snyder},
+  title = {Of Luminosities and Cross Sections},
   note = {Available at: https://www-d0.fnal.gov/results/publications\_talks/thesis/snyder/html/node17.html}
-}
+}% ref_fnal_LumiCS
 
 @Misc{ref_CS_wiki,
   key = {CS wiki},
   title = {Wikipedia article. Cross Section (physics)},
   note = {Available at: https://en.wikipedia.org/wiki/Cross\_section\_\%28physics\%29}
-}
+}% ref_CS_wiki
 
 @Article{ref_theory_LO,
   key = {theory LO},
-  note = {LO (1969) theory paper}
-}
+  author = {R. Brown, K. Mikaelian, D. Sahdev},
+  title = {$W^{\pm}Z^0$ and $W^{\pm}\gamma$ pair production in $\nu e$, $pp$, and $\bar{p}p$ collisions},
+  journal        = {Physical Review D},
+  volume         = {20},
+  number         = {5},
+  year           = {1979}
+  %pages          = "090001",
+  %doi            = "10.1088/1674-1137/38/9/090001",
+}% ref_theory_LO
 
 @Article{ref_theory_NNLO,
   key = {theory_NNLO},
-  note = {NNLO theory paper}
-}
+  author = {M. Grazzini, S. Kallweit, D. Rathev},
+  title = {$W\gamma$ and $Z\gamma$ production at the LHC in NNLO QCD},
+  journal        = {JHEP},
+  volume         = {2015},
+  number         = {85},
+  year           = {2015},
+  doi            = {10.1007/JHEP07(2015)085},
+  note           = {Available at: https://arxiv.org/pdf/1504.01330.pdf}
+}% ref_theory_NNLO
 
 @Article{ref_theory_NLO,
   key = {theory_NLO},
-  note = {NLO theory paper}
-}
+  author = {J. Ohnemus},
+  title = {Order-$\alpha_s$ calculations of hadronic $W^{\pm}\gamma$ and $Z\gamma$ production},
+  journal        = {Physical Review D},
+  volume         = {47},
+  number         = {3},
+  year           = {1993},
+  doi            = {10.1103/PhysRevD.47.940},
+  note           = {Available at: https://journals.aps.org/prd/pdf/10.1103/PhysRevD.47.940}
+}% ref_theory_NLO
 
 @Article{ref_theory_aTGC,
   key = {theory aTGC},
-  note = {aTGC paper, LEP parametrization}
-}
+%  note = {aTGC paper, LEP parametrization}
+  author = {G. Gounaris, J.-L. Kneur, D. Zeppenfeld, et. al.},
+  title = {Triple Gauge boson Couplings},
+  journal        = {High Energy Physics - Phenomenology},
+%  volume         = {},
+%  number         = {},
+  year           = {1996},
+  doi            = {arXiv:hep-ph/9601233},
+  note           = {Available at: https://arxiv.org/abs/hep-ph/9601233}
+}% ref_theory_aTGC
 
 @Phdthesis{ref_Senka_thesis,
   key = {Senka thesis},
-  note = {Senka's thesis, CMS Wg->munug, 7 TeV}
-}
+  author       = {S. Duric}, 
+  title        = {Measurement of associated WGamma production and search for anomalous WWGamma couplings with the CMS detector},
+  school       = {University of Zagreb},
+  year         = 2013
+}% ref_Senka_thesis
 
 % Past Measurements
 
 @Article{ref_D0_aTGC_comb,
   key = {D0 aTGC comb},
-  note = {D0 Combination of W$\gamma$, WW, WZ and VW using 8.6 fb-1 of 2 TeV $p\bar{p}$ collisions Phys.Lett. B718 (2012) 451-459}
-}
+  author = {D0 collaboration},
+  title = {Limits on anomalous trilinear gauge boson couplings from WW, WZ and Wgamma production in pp-bar collisions at sqrt{s}=1.96~TeV},
+  journal        = {Phys. Lett. B},
+  volume         = {718},
+ % number         = {},
+  pages          = {451-459},
+  year           = {2012},
+  doi            = {10.1016/j.physletb.2012.10.062},
+  note           = {Available at: https://arxiv.org/abs/1208.5458}
+}% ref_D0_aTGC_comb
 
 @Article{ref_LEP_aTGC_comb,
   key = {LEP_aTGC_comb},
-  note = {LEP Combination of WW and single W using 0.7 fb-1 per experiment of $e^+e^-$ collisions at WW pair production energies arXiv:1302.3415}
-}
+  author = {ALEPH Collaboration, DELPHI Collaboration, L3 Collaboration, OPAL Collaboration, LEP Electroweak Working Group},
+  title = {Electroweak Measurements in Electron-Positron Collisions at W-Boson-Pair Energies at LEP},
+  journal        = {Physics Reports},
+%  volume         = {},
+ % number         = {},
+%  pages          = {},
+  year           = {2013},
+  doi            = {10.1016/j.physrep.2013.07.004},
+  note           = {Available at: https://arxiv.org/abs/1302.3415}
+}% ref_LEP_aTGC_comb
 
 @Article{ref_7TeV_ATLAS,
   key = {ref_7TeV_ATLAS},
   note = {7TeV Wg ATLAS paper}
-}
+}% ref_7TeV_ATLAS
 
 @Article{ref_7TeV_CMS,
   key = {ref_7TeV_CMS},
   note = {7TeV Wg CMS paper}
-} 
+}% ref_7TeV_CMS
 
 @Article{ref_ATLAS_WW_8TeV,
   key = {ref_ATLAS_WW_8TeV},
   note = {ATLAS WW using 20.3 fb-1 of 8 TeV pp collisions Submitted to JHEP}
-}
+}% ref_ATLAS_WW_8TeV
 
 @Article{ref_CMS_WW_7TeV,
   key = {CMS_WW_7TeV},
   note = {CMS WW using 4.9 fb-1 of 7 TeV pp collisions Eur. Phys. J. C 73 (2013) 2610}
-}
+}% ref_CMS_WW_7TeV
 
 @Article{ref_CMS_WW_8TeV,
   key = {CMS_WW_8TeV},
   note = {CMS WW using 19.4 fb-1 of 8 TeV pp collisions Submitted to EPJC}
-}
+}% ref_CMS_WW_8TeV
 
 @Article{ref_ATLAS_VW_8TeV,
   key = {ATLAS_VW_8TeV},
   note = {ATLAS VW (V=W,Z $\rightarrow$jj) using 4.6 fb-1 of 7 TeV pp collisions JHEP 01 (2015) 049}
-}
+}% ref_ATLAS_VW_8TeV
 
-@Article{ref_twiki_SMP_ATGC,
+@Misc{ref_twiki_SMP_ATGC,
   key = {twiki_SMP_ATGC},
   note = {Available at: https://twiki.cern.ch/twiki/bin/view/CMSPublic/PhysicsResultsSMPaTGC\#Figure\_1\_Limits\_on\_WWgamma\_aTGC}
-}
+}% ref_twiki_SMP_ATGC
 
 @Article{ref_CMS_VW_7TeV,
   key = {CMS_VW_7TeV},
   note = {CMS VW (V=W,Z $\rightarrow$jj) using 5.0 fb-1 of 7 TeV pp collisions Eur.Phys.J. C73 (2013) 2283}
-}
+}% ref_CMS_VW_7TeV
 
 @Article{ref_CMS_8TeV_WW,
   key = {CMS_8TeV_WW},
   note = {CMS 8 TeV WW lnulnu}
-}
+}% ref_CMS_8TeV_WW
 
 @Article{ref_CMS_7TeV_Zgnunug,
   key = {CMS_7TeV_Zgnunug},
   note = {CMS 7 TeV Zg nunug}
-}
+}% ref_CMS_7TeV_Zgnunug
 
 @Article{ref_MCFM,
   key = {MCFM},
   note = {MCFM gcalculator}
-}
+}% ref_MCFM
 
 @Article{ref_FEWZ,
   key = {FEWZ},
   note = {FEWZ calculator}
-}
+}% ref_FEWZ
 
 @Article{ref_MadGraph,
   key = {MadGraph},
   note = {MadGraph generator}
-}
+}% ref_MadGraph
+
 @Article{ref_Pythia,
   key = {Pythia},
   note = {Pythia generator}
-}
+}% ref_Pythia
 
 @Article{ref_CTEQ6L1,
   key = {CTEQ6L1},
   note = {CTEQ6L1 PDF set}
-}
+}% ref_CTEQ6L1
 
 @Article{ref_Geant4,
   key = {GEANT},
   note = {GEANT}
-}
+}% ref_Geant4
 
 %Exp
 
 @Manual{ref_LHC_brochure,
   key = {LHC brochure},
   note = {CERN brochure, http://cds.cern.ch/record/1165534/files/CERN-Brochure-2009-003-Eng.pdf}
-}
+}% ref_LHC_brochure
 
 @Article{ref_LHC_TDR,
   key = {LHC_TDR},
   note = {LHC TDR}
-}
+}% ref_LHC_TDR
 
 @Misc{ref_LHC_website,
   key = {LHC_website},
   note = {Available at: http://home.cern/topics/large-hadron-collider}
-}
+}% ref_LHC_website
 
 @Misc{ref_fig_CERNacceleratorComplex,
   key = {fig_CERNacceleratorComplex},
   note = {website: http://cds.cern.ch/record/1621583/files/}
-}
+}% ref_fig_CERNacceleratorComplex
 
 @Misc{ref_fig_LHC_totalCS,
   key = {ref_fig_LHC_totalCS},
   note = {website: https://muon.files.wordpress.com/2014/01/cms-sigma-vs-e.png}
-}
+}% ref_fig_LHC_totalCS
 
 @Misc{ref_fig_LHC_CS_WandZ,
   key = {ref_fig_LHC_CS_WandZ},
   note = {website: https://inspirehep.net/record/1235541/files/LHC\_all.png}
-}
+}% ref_fig_LHC_CS_WandZ
 
 @Misc{ref_fig_LHClumi,
   key = {fig_LHClumi},
   note = {Available at: https://twiki.cern.ch/twiki/bin/view/CMSPublic/LumiPublicResults}
-}
+}% ref_fig_LHClumi
 
 @Misc{ref_fig_LHCsectors,
   key = {fig_LHCsectors},
   note = {Available at: http://cds.cern.ch/journal/CERNBulletin/2014/24/News\%20Articles/1706606}
-}
+}% ref_fig_LHCsectors
 
 @Misc{ref_LHClumi_twiki,
   key = {LHClumi_twiki},
   note = {Available at: https://twiki.cern.ch/twiki/bin/view/CMSPublic/LumiPublicResults}
-}
+}% ref_LHClumi_twiki
 
 @Manual{ref_CMS_TDR,
   key = {CMS TDR},
   note = {CMS TDR}
-}
+}% ref_CMS_TDR
 
 @Misc{ref_CMSschemView,
   key = {CMSschemView},
   note = {Available at: https://inspirehep.net/record/837874/plots}
-}
+}% ref_CMSschemView
 
 @Article{ref_MagnetCryo,
   key = {MagnetCryo},
   note = {https://cds.cern.ch/record/345832/files/lhc-project-report-165.pdf}
-}
+}% ref_MagnetCryo
 
 @Article{ref_trackerPerformance,
   author = {CMS collaboration},
   title = {Description and performance of track and primary-vertex reconstruction with the CMS tracker},
   note = {Available at: https://arxiv.org/abs/1405.6569}
-} 
+}% ref_trackerPerformance
 
 @Article{ref_ECalResolution,
   author = {CMS collaboration},
   title = {Energy calibration and resolution of the CMS electromagnetic calorimeter in pp collisions at sqrt(s) = 7 TeV},
   note = {Available at: https://arxiv.org/abs/1306.2016}
-} 
+}% ref_ECalResolution
 
 @Article{ref_MuonSystemPerformance,
   author = {CMS collaboration},
   title = {The performance of the CMS muon detector in proton–proton collisions at √s=7 TeV at the LHC},
   note = {Available at: https://arxiv.org/pdf/1306.6905.pdf}
-}
+}% ref_MuonSystemPerformance
 
 @Article{ref_TriggerSystem,
   author = {CMS collaboration},
   title = {The CMS trigger system},
   note = {Available at: https://arxiv.org/pdf/1609.02366.pdf}
-}
+}% ref_TriggerSystem
 
 @Article{ref_ParticleFlowAlg,
   author = {CMS collaboration},
   key = {ParticleFlowAlg},
   note = {https://inspirehep.net/record/925379/files/PFT-09-001-pas.pdf}
-}
+}% ref_ParticleFlowAlg
 
 % Alignment
 
 @Article{ref_Alignment,
   author = {CMS collaboration},
   title = {Alignment of the CMS Tracker with Large Hadron Collider Data}
-} 
+}% ref_Alignment
 
 @Article{ref_MPII_Alg,
   key = {MPII_Alg},
   title = {Millepede II Algorithm}
-}
+}% ref_MPII_Alg
 
 @Article{ref_HIP_Alg,
   key = {HIP_Alg},
   title = {HIP Algorithm}
-}
+}% ref_HIP_Alg
 
 @Misc{ref_AlApproved_twiki,
   key = {AlApproved_twiki},
   title = {CMS Tracker Detector Performance Results 2015: Alignment},
   note = {Available at: https://twiki.cern.ch/twiki/bin/view/CMSPublic/TkAlignmentPerformance2015}
-}
+}% ref_AlApproved_twiki
 
 @Phdthesis{ref_Frank_thesis,
   author       = {F. Meier Aeschbacher},
   title        = {Measurement of the $\Lambda^0_b$ baryon lifetime using the Compact Muon Solenoid experiment at Cern's Large Hadron Collider},
   school       = {ETH Zurich},
   year         = 2013,
-}
+}% ref_Frank_thesis
 
-@Misc{ref_Frank_presentation,
-  author       = {F. Meier Aeschbacher},
-  title        = {Hunting down suspicious results: recent improvements in the alignment of the CMS tracker detector},
-  school       = {ETH Zurich},
-  year         = 2010,
-  note = {Available as an internal CMS presentation at: https://indico.cern.ch/event/243940/contributions/1562955/attachments/416194/578159/praesDoktorandensemi2010.pdf}
-}
+%@Misc{ref_Frank_presentation,
+%  author       = {F. Meier Aeschbacher},
+%  title        = {Hunting down suspicious results: recent improvements in the alignment of the CMS tracker detector},
+%  school       = {ETH Zurich},
+%  year         = 2010,
+%  note = {Available as an internal CMS presentation at: https://indico.cern.ch/event/243940/contributions/1562955/attachments/416194/578159/praesDoktorandensemi2010.pdf}
+%}
 
 % AN
 
@@ -367,65 +420,66 @@
   author = {CMS collaboration},
   title = {W+jets, 8 TeV},
   note = {Available at: https://arxiv.org/pdf/1610.04222.pdf}
-}
+}% ref_WJets8TeV
 
 @Article{ref_Wgg8TeV,
   author = {CMS collaboration},
   title = {Wgg, 8 TeV}
-}
+}% ref_Wgg8TeV
 
 @Article{ref_Zg8TeV,
   author = {CMS collaboration},
   title = {Zg, 8 TeV}
-}
+}% ref_Zg8TeV
 
 @Article{ref_DAgostini,
   key = {DAgostiniUnfolding},
   title = {D'Agostini Unfolding}
-}
+}% ref_DAgostini
 
 % Appendicies
 
 @Misc{ref_RooCMSShapePdf,
   key       = {RooCMSShapePdf},
   title        = {RooCMSShapePdf},
-}
+}% ref_RooCMSShapePdf
 
 @Misc{ref_RooFit,
   key       = {RooFit},
   title        = {RooFit},
-}
+}% ref_RooFit
 
 @Misc{ref_CMSSW,
   key       = {CMSSW},
   title        = {CMS Software},
   note = {Available at: http://cms-sw.github.io/index.html}
-}
+}% ref_CMSSW
 
 @Misc{ref_GITHUB,
   key       = {GITHUB},
   title        = {GITHUB},
-}
+}% ref_GITHUB
 
 @Misc{ref_ROOT,
   key       = {ROOT},
   title        = {ROOT},
-}
+}% ref_ROOT
 
 @Misc{ref_RooUnfold,
   key       = {RooUnfold},
   title        = {RooUnfold},
-}
+}% ref_RooUnfold
 
 @Misc{ref_ggNtuplizer,
   key       = {ggNtuplizer},
   title        = {ggNtuplizer},
-}
+}% ref_ggNtuplizer
+
 
 @Misc{ref_myCode,
   key       = {myCode},
   title        = {myCode},
-}
+}% ref_myCode
 
 \endinput
 %%

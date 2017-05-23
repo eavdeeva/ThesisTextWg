@@ -1,12 +1,16 @@
 \begin{thebibliography}{10}
 
 \bibitem{ref_PDG}
-Particle data group.
+K.~A. Olive et~al.
+\newblock {Review of Particle Physics}.
+\newblock {\em Chin. Phys.}, C38:090001, 2014.
 \newblock Available at: pdg.lbl.gov.
 
 \bibitem{ref_Senka_thesis}
-PhD thesis.
-\newblock Senka's thesis, CMS Wg->munug, 7 TeV.
+S.~Duric.
+\newblock {\em Measurement of associated WGamma production and search for
+  anomalous WWGamma couplings with the CMS detector}.
+\newblock PhD thesis, University of Zagreb, 2013.
 
 \bibitem{ref_twiki_SMP_ATGC}
 Available at:
@@ -78,7 +82,9 @@ D.~Griffiths.
 \newblock WILEY-VCH, 2008.
 
 \bibitem{ref_fnal_LumiCS}
-Available at:
+S.~Snyder.
+\newblock Of luminosities and cross sections.
+\newblock Available at:
   https://www-d0.fnal.gov/results/publications\_talks/thesis/snyder/html/node1%
 7.html.
 
@@ -87,22 +93,29 @@ Martin Halzen.
 \newblock {\em Quarks and leptons}.
 
 \bibitem{ref_HardScattering}
-Hard scattering.
-\newblock Available at:
-  http://iopscience.iop.org/article/10.1088/0034-4885/70/1/R02.
+W.~Stirling J.~Campbell, J.~Huston.
+\newblock Hard interactions of quarks and gluons: a primer for lhc physics.
 
 \bibitem{ref_theory_LO}
-LO (1969) theory paper.
+D.~Sahdev R.~Brown, K.~Mikaelian.
+\newblock $w^{\pm}z^0$ and $w^{\pm}\gamma$ pair production in $\nu e$, $pp$,
+  and $\bar{p}p$ collisions.
+\newblock {\em Physical Review D}, 20(5), 1979.
 
 \bibitem{ref_theory_NNLO}
-NNLO theory paper.
+D.~Rathev M.~Grazzini, S.~Kallweit.
+\newblock $w\gamma$ and $z\gamma$ production at the lhc in nnlo qcd.
+\newblock {\em JHEP}, 2015(85), 2015.
+\newblock Available at: https://arxiv.org/pdf/1504.01330.pdf.
 
 \bibitem{ref_theory_aTGC}
-aTGC paper, LEP parametrization.
+
 
 \bibitem{ref_D0_aTGC_comb}
-D0 Combination of W$\gamma$, WW, WZ and VW using 8.6 fb-1 of 2 TeV $p\bar{p}$
-  collisions Phys.Lett. B718 (2012) 451-459.
+D0~collaboration.
+\newblock Limits on anomalous trilinear gauge boson couplings from ww, wz and
+  wgamma production in pp-bar collisions at sqrt{s}=1.96~tev.
+\newblock {\em Phys. Lett. B}, 718.
 
 \bibitem{ref_LEP_aTGC_comb}
 LEP Combination of WW and single W using 0.7 fb-1 per experiment of $e^+e^-$
@@ -181,6 +194,10 @@ Cms tracker detector performance results 2015: Alignment.
 \newblock Available at:
   https://twiki.cern.ch/twiki/bin/view/CMSPublic/TkAlignmentPerformance2015.
 
+\bibitem{ref_Zg8TeV}
+CMS collaboration.
+\newblock Zg, 8 tev.
+
 \bibitem{ref_MadGraph}
 MadGraph generator.
 
@@ -195,10 +212,6 @@ GEANT.
 
 \bibitem{ref_FEWZ}
 FEWZ calculator.
-
-\bibitem{ref_Zg8TeV}
-CMS collaboration.
-\newblock Zg, 8 tev.
 
 \bibitem{ref_Wgg8TeV}
 CMS collaboration.
@@ -229,20 +242,14 @@ Github.
 \bibitem{ref_ggNtuplizer}
 ggntuplizer.
 
-\bibitem{ref_fig_SM}
-UNKNOWN [TEMPORARY].
-\newblock Source of sm figure [temporary].
-\newblock Available at:
-  http://www.isgtw.org/spotlight/go-particle-quest-first-cern-hackfest.
-
 \bibitem{ref_Peskin}
 Schroeder Peskin.
 \newblock {\em Introduction to Quantum Field Theory}.
 
 \bibitem{ref_Lindsey_thesis}
 L.~Gray.
-\newblock {\em A measurement of the Z$\gamma$ Cross Section and Limits on
-  anomalous Gauge Couplings at $\sqrt{s}=7$~TeV Using CMS}.
+\newblock {\em A measurement of the $Z\gamma$ Cross Section and Limits on
+  Anomalous Gauge Couplings at $\sqrt{s}=$7~TeV Using CMS}.
 \newblock PhD thesis, University of Wisconsin - Madison, 8 2012.
 
 \bibitem{ref_CS_wiki}
@@ -251,7 +258,12 @@ Wikipedia article. cross section (physics).
   https://en.wikipedia.org/wiki/Cross\_section\_\%28physics\%29.
 
 \bibitem{ref_theory_NLO}
-NLO theory paper.
+J.~Ohnemus.
+\newblock Order-$\alpha_s$ calculations of hadronic $w^{\pm}\gamma$ and
+  $z\gamma$ production.
+\newblock {\em Physical Review D}, 47(3), 1993.
+\newblock Available at:
+  https://journals.aps.org/prd/pdf/10.1103/PhysRevD.47.940.
 
 \bibitem{ref_CMS_8TeV_WW}
 CMS 8 TeV WW lnulnu.
