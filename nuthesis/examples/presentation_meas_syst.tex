@@ -1,0 +1,77 @@
+\begin{frame}\frametitle{Systematic Uncertainties. List}
+  \begin{itemize}
+    \scriptsize
+    \item jets$\rightarrow\gamma$ background estimation 
+       \begin{itemize}
+          \scriptsize
+          \item template statistics (randomize templates and take the RMS of the results as a error)
+          %\item disagreement in the MC closure fits;  part of weighted average approach
+          \item the whole difference  $|N_{CHISO}-N_{SIHIH}|$
+          \item uncerntainty of Z$\gamma$ MC normalization (4.6\% as reported by the 8 TeV Z$\gamma$ measurement); not part of weighted average
+       \end{itemize}
+    \item $M_T^W$ cut: vary Pt of all photons, electrons, jets available in the ggNtuple for each event as prescribed
+    \item statistics of real-$\gamma$ background MC samples; W$\gamma$ normalization (W$\gamma\rightarrow\tau\nu\gamma$) and Z$\gamma$ normalization
+    \item statistics of $e\rightarrow\gamma$ enriched sample and all the other samples involved for the $e\rightarrow\gamma$ bck.estimation
+    \item signal MC statistics for unfolding (randomize migration matrix, unfold for each, take RMS as an error)
+    \item signal MC statistics for accXeff
+    \item luminosity: 2.6\%
+    \item vary scale factors by their uncerntainties (only check the variation effect on the accXeff and unfolding, not background estimation)
+    \item vary pileup cross section by $\pm 5$\% (only check the effect on the accXeff and unfolding)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}\frametitle{Systematic Uncertainties. Table. Muon channel}
+\begin{table}[h]
+  \tiny
+  \begin{center}
+  \caption{Relative errors [\%]. MUON WGamma}
+  \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
+    bin  & err & syst & Zg MC & real \gamma & A.E. & L & MET & PU & SF & unf & syst \\
+    lims  & stat & $j\rightarrow\gamma$ & norm & bkg & MCst &  &  &  &  & MCst & tot \\ \hline
+    total  & 1 & 11 & 4 & 1 & 0 & 3 & 1 & 4 & 3 & 1 & 13  \\ \hline
+%    10-15 & 2 & 14 & 7 & 1 & 1 & 3 & 2 & 5 & 0 & 2 & 17  \\ \hline
+    15-20 & 2 & 32 & 12 & 2 & 1 & 3 & 1 & 4 & 5 & 2 & 35  \\ \hline
+    20-25 & 2 & 31 & 13 & 3 & 2 & 3 & 2 & 4 & 2 & 3 & 34  \\ \hline
+    25-30 & 2 & 27 & 13 & 3 & 2 & 3 & 2 & 2 & 2 & 3 & 31  \\ \hline
+    30-35 & 3 & 42 & 15 & 4 & 3 & 3 & 1 & 4 & 2 & 3 & 45  \\ \hline
+    35-45 & 2 & 15 & 12 & 3 & 3 & 3 & 2 & 3 & 2 & 2 & 20  \\ \hline
+    45-55 & 4 & 64 & 19 & 3 & 3 & 3 & 1 & 4 & 2 & 5 & 67  \\ \hline
+    55-65 & 3 & 21 & 12 & 2 & 4 & 3 & 2 & 4 & 2 & 3 & 26 \\ \hline
+    65-75 & 6 & 40 & 19 & 2 & 6 & 3 & 3 & 5 & 2 & 6 & 45  \\ \hline
+    75-85 & 4 & 18 & 11 & 1 & 7 & 3 & 3 & 3 & 3 & 5 & 23  \\ \hline
+    85-95 & 5 & 22 & 9 & 2 & 8 & 3 & 4 & 6 & 3 & 7 & 27  \\ \hline
+    95-120 & 5 & 15 & 8 & 2 & 7 & 3 & 2 & 2 & 3 & 6 & 20  \\ \hline
+    120-500 & 3 & 22 & 11 & 1 & 6 & 3 & 1 & 4 & 4 & 4 & 26 \\ \hline
+  \end{tabular}
+  \label{tab:systInPercent_MUON_WGamma}
+  \end{center}
+\end{table}
+\end{frame}%Systematic Uncertainties. Table. Muon channel
+
+\begin{frame}\frametitle{Systematic Uncertainties. Table. Electron channel}
+\begin{table}[h]
+  \tiny
+  \begin{center}
+  \caption{Relative errors [\%]. ELECTRON WGamma}
+  \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+    bin  & err & syst & Zg MC & $e\rightarrow\gamma$ & real \gamma & A.E. & L & MET & PU & SF & unf & syst \\
+    lims  & stat & $j\rightarrow\gamma$ & norm & stat & bkg & MCst &  &  &  &  & MCst & tot \\ \hline
+    total  & 2 & 16 & 6 & 1 & 2 & 0 & 3 & 1 & 4 & 16 & 2 & 24  \\ \hline
+%    10-15 & 4 & 90 & 20 & 1 & 4 & 1 & 3 & 1 & 5 & 1 & 5 & 93  \\ \hline
+    15-20 & 8 & 106 & 27 & 5 & 6 & 2 & 3 & 1 & 4 & 11 & 8 & 110  \\ \hline
+    20-25 & 7 & 51 & 20 & 5 & 5 & 2 & 3 & 1 & 4 & 9 & 7 & 56  \\ \hline
+    25-30 & 5 & 51 & 16 & 3 & 3 & 3 & 3 & 1 & 3 & 10 & 6 & 55  \\ \hline
+    30-35 & 5 & 38 & 14 & 2 & 2 & 4 & 3 & 1 & 3 & 12 & 6 & 43  \\ \hline
+    35-45 & 3 & 19 & 13 & 1 & 1 & 4 & 3 & 1 & 4 & 16 & 4 & 29  \\ \hline
+    45-55 & 8 & 57 & 20 & 5 & 2 & 5 & 3 & 3 & 4 & 30 & 9 & 68  \\ \hline
+    55-65 & 7 & 35 & 12 & 4 & 2 & 5 & 3 & 3 & 5 & 39 & 7 & 55  \\ \hline
+    65-75 & 7 & 40 & 15 & 4 & 2 & 6 & 3 & 1 & 4 & 40 & 8 & 59  \\ \hline
+    75-85 & 8 & 42 & 17 & 4 & 2 & 8 & 3 & 2 & 3 & 39 & 8 & 61  \\ \hline
+    85-95 & 9 & 16 & 7 & 6 & 2 & 9 & 3 & 2 & 2 & 35 & 10 & 42 \\ \hline
+    95-120 & 7 & 24 & 9 & 4 & 1 & 8 & 3 & 1 & 4 & 40 & 7 & 49  \\ \hline
+    120-500 & 4 & 30 & 6 & 1 & 1 & 7 & 3 & 2 & 3 & 36 & 4 & 48  \\ \hline
+  \end{tabular}
+  \label{tab:systInPercent_ELECTRON_WGamma}
+  \end{center}
+\end{table}
+\end{frame}%Systematic Uncertainties. Table. Electron channel
