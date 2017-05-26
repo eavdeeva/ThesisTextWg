@@ -13,27 +13,39 @@ S.~Duric.
 \newblock PhD thesis, University of Zagreb, 2013.
 
 \bibitem{ref_twiki_SMP_ATGC}
-Available at:
-  https://twiki.cern.ch/twiki/bin/view/CMSPublic/PhysicsResultsSMPaTGC\#Figure%
-\_1\_Limits\_on\_WWgamma\_aTGC.
+CMS collaboration.
+\newblock Limits on anomalous triple and quartic gauge couplings.
+\newblock Available at: https://twiki.cern.ch/twiki/bin/view/CMSPublic/
+  PhysicsResultsSMPaTGC\#Figure\_1\_Limits\_on\_WWgamma\_aTGC.
 
 \bibitem{ref_7TeV_CMS}
-7TeV Wg CMS paper.
+CMS collaboration.
+\newblock Measurement of the w gamma and z gamma inclusive cross sections in pp
+  collisions at sqrt(s) = 7 tev and limits on anomalous triple gauge boson
+  couplings.
+\newblock {\em Phys. Rev. D}, 89(092005), 2014.
+\newblock Available at: https://arxiv.org/abs/1308.6832.
 
 \bibitem{ref_7TeV_ATLAS}
-7TeV Wg ATLAS paper.
+ATLAS Collaboration.
+\newblock Measurements of wgamma and zgamma production in pp collisions at
+  sqrt{s}= 7 tev with the atlas detector at the lhc.
+\newblock {\em Phys. Rev. D}, 87(112003), 2013.
+\newblock Available at: https://arxiv.org/abs/1302.1283.
 
 \bibitem{ref_fig_CERNacceleratorComplex}
-website: http://cds.cern.ch/record/1621583/files/.
+Figure available at: http://cds.cern.ch/record/1621583/files/.
 
 \bibitem{ref_fig_LHC_totalCS}
-website: https://muon.files.wordpress.com/2014/01/cms-sigma-vs-e.png.
+Figure available at:
+  https://muon.files.wordpress.com/2014/01/cms-sigma-vs-e.png.
 
 \bibitem{ref_fig_LHClumi}
-Available at: https://twiki.cern.ch/twiki/bin/view/CMSPublic/LumiPublicResults.
+Figure available at: https://twiki.cern.ch/twiki/bin/view/CMSPublic/
+  LumiPublicResults.
 
 \bibitem{ref_CMSschemView}
-Available at: https://inspirehep.net/record/837874/plots.
+Figure available at: https://inspirehep.net/record/837874/plots.
 
 \bibitem{ref_Frank_thesis}
 F.~Meier Aeschbacher.
@@ -43,10 +55,13 @@ F.~Meier Aeschbacher.
 
 \bibitem{ref_Alignment}
 CMS collaboration.
-\newblock Alignment of the cms tracker with large hadron collider data.
+\newblock Alignment of the cms tracker with lhc and cosmic ray data.
+\newblock {\em JINST}, 9, 2014.
+\newblock Available at: https://arxiv.org/abs/1403.2286.
 
 \bibitem{ref_LHC_brochure}
-CERN brochure,
+{\em CERN LHC brochure}.
+\newblock Available at:
   http://cds.cern.ch/record/1165534/files/CERN-Brochure-2009-003-Eng.pdf.
 
 \bibitem{ref_HiggsPaperCMS}
@@ -95,6 +110,9 @@ Martin Halzen.
 \bibitem{ref_HardScattering}
 W.~Stirling J.~Campbell, J.~Huston.
 \newblock Hard interactions of quarks and gluons: a primer for lhc physics.
+\newblock {\em Progress in Physics}, 70, 2006.
+\newblock Available at:
+  http://iopscience.iop.org/article/10.1088/0034-4885/70/1/R02.
 
 \bibitem{ref_theory_LO}
 D.~Sahdev R.~Brown, K.~Mikaelian.
@@ -105,89 +123,137 @@ D.~Sahdev R.~Brown, K.~Mikaelian.
 \bibitem{ref_theory_NNLO}
 D.~Rathev M.~Grazzini, S.~Kallweit.
 \newblock $w\gamma$ and $z\gamma$ production at the lhc in nnlo qcd.
-\newblock {\em JHEP}, 2015(85), 2015.
-\newblock Available at: https://arxiv.org/pdf/1504.01330.pdf.
+\newblock {\em JHEP}, 201.
 
 \bibitem{ref_theory_aTGC}
-
+D.~Zeppenfeld et.~al. G.~Gounaris, J.-L.~Kneur.
+\newblock Triple gauge boson couplings.
+\newblock {\em High Energy Physics - Phenomenology}, 1996.
+\newblock Available at: https://arxiv.org/abs/hep-ph/9601233.
 
 \bibitem{ref_D0_aTGC_comb}
 D0~collaboration.
 \newblock Limits on anomalous trilinear gauge boson couplings from ww, wz and
   wgamma production in pp-bar collisions at sqrt{s}=1.96~tev.
-\newblock {\em Phys. Lett. B}, 718.
+\newblock {\em Phys. Lett. B}, 718:451--459, 2012.
+\newblock Available at: https://arxiv.org/abs/1208.5458.
 
 \bibitem{ref_LEP_aTGC_comb}
-LEP Combination of WW and single W using 0.7 fb-1 per experiment of $e^+e^-$
-  collisions at WW pair production energies arXiv:1302.3415.
+L3~Collaboration et.~al. ALEPH~Collaboration, DELPHI~Collaboration.
+\newblock Electroweak measurements in electron-positron collisions at
+  w-boson-pair energies at lep.
+\newblock {\em Physics Reports}, 2013.
+\newblock Available at: https://arxiv.org/abs/1302.3415.
 
 \bibitem{ref_ATLAS_WW_8TeV}
-ATLAS WW using 20.3 fb-1 of 8 TeV pp collisions Submitted to JHEP.
+ATLAS collaboration.
+\newblock Measurement of total and differential w+w− production cross
+  sections in proton-proton collisions at s√= 8 tev with the atlas detector
+  and limits on anomalous triple-gauge-boson couplings.
+\newblock {\em JHEP}, 09(029), 2016.
+\newblock Available at: https://arxiv.org/abs/1603.01702.
 
 \bibitem{ref_CMS_WW_7TeV}
-CMS WW using 4.9 fb-1 of 7 TeV pp collisions Eur. Phys. J. C 73 (2013) 2610.
+CMS collaboration.
+\newblock Measurement of the w+w- cross section in pp collisions at sqrt(s) = 7
+  tev and limits on anomalous ww gamma and wwz couplings.
+\newblock {\em Eur. Phys. J. C}, 73(2610), 2013.
+\newblock Available at: https://arxiv.org/abs/1306.1126.
 
 \bibitem{ref_CMS_WW_8TeV}
-CMS WW using 19.4 fb-1 of 8 TeV pp collisions Submitted to EPJC.
+CMS collaboration.
+\newblock Measurement of the w+ w- cross section in pp collisions at sqrt(s) =
+  8 tev and limits on anomalous gauge couplings.
+\newblock {\em Eur. Phys. J. C}, 76(401), 2016.
+\newblock Available at: https://arxiv.org/abs/1507.03268.
 
 \bibitem{ref_ATLAS_VW_8TeV}
-ATLAS VW (V=W,Z $\rightarrow$jj) using 4.6 fb-1 of 7 TeV pp collisions JHEP 01
-  (2015) 049.
+ATLAS collaboration.
+\newblock Measurement of the ww+wz cross section and limits on anomalous triple
+  gauge couplings using final states with one lepton, missing transverse
+  momentum, and two jets with the atlas detector at s√=7 tev.
+\newblock {\em JHEP}, 01(049), 2015.
+\newblock Available at: https://arxiv.org/abs/1410.7238.
 
 \bibitem{ref_CMS_VW_7TeV}
-CMS VW (V=W,Z $\rightarrow$jj) using 5.0 fb-1 of 7 TeV pp collisions
-  Eur.Phys.J. C73 (2013) 2283.
+CMS collaboration.
+\newblock Measurement of the sum of ww and wz production with w+dijet events in
+  pp collisions at sqrt(s) = 7 tev.
+\newblock {\em Eur. Phys. J. C}, 73(2283), 2013.
+\newblock Available at: https://arxiv.org/abs/1210.7544.
 
 \bibitem{ref_MCFM}
-MCFM gcalculator.
+W.~Giele et.~al. J.~Campbell, K.~Ellis.
+\newblock Mcfm calculator.
+\newblock Available at: https://mcfm.fnal.gov/.
 
 \bibitem{ref_LHC_TDR}
-LHC TDR.
+P.~Collier et.~al. O.~Br\"{u}ning.
+\newblock {\em LHC Design Report}, 2004.
+\newblock Available at: https://cds.cern.ch/record/782076.
 
 \bibitem{ref_LHC_website}
-Available at: http://home.cern/topics/large-hadron-collider.
+The large hadron collider.
+\newblock Available at: http://home.cern/topics/large-hadron-collider.
 
 \bibitem{ref_LHClumi_twiki}
-Available at: https://twiki.cern.ch/twiki/bin/view/CMSPublic/LumiPublicResults.
+Figure available at:
+  https://twiki.cern.ch/twiki/bin/view/CMSPublic/LumiPublicResults.
 
 \bibitem{ref_CMS_TDR}
-CMS TDR.
+CMS collaboration.
+\newblock {\em CMS Physics Technical Design Report}, 2006.
+\newblock Available at:
+  https://cdsweb.cern.ch/record/922757/files/lhcc-2006-001.pdf.
 
 \bibitem{ref_MagnetCryo}
-https://cds.cern.ch/record/345832/files/lhc-project-report-165.pdf.
+G.~Passardi et.~al. D.~Delikaris, J.~Dauvergne.
+\newblock {\em The cryogenic system for the superconducting solenoid magnet of
+  the CMS experiment}, 1998.
+\newblock Available at:
+  https://cds.cern.ch/record/345832/files/lhc-project-report-165.pdf.
 
 \bibitem{ref_trackerPerformance}
 CMS collaboration.
 \newblock Description and performance of track and primary-vertex
   reconstruction with the cms tracker.
+\newblock {\em JINST}, 9, 2014.
 \newblock Available at: https://arxiv.org/abs/1405.6569.
 
 \bibitem{ref_ECalResolution}
 CMS collaboration.
 \newblock Energy calibration and resolution of the cms electromagnetic
   calorimeter in pp collisions at sqrt(s) = 7 tev.
+\newblock {\em JINST}, 8(P09009), 2013.
 \newblock Available at: https://arxiv.org/abs/1306.2016.
 
 \bibitem{ref_MuonSystemPerformance}
 CMS collaboration.
 \newblock The performance of the cms muon detector in proton–proton
-  collisions at √s=7 tev at the lhc.
-\newblock Available at: https://arxiv.org/pdf/1306.6905.pdf.
+  collisions at sqrt(s)=7~tev at the lhc.
+\newblock {\em JINST}, 8, 2013.
+\newblock Available at: https://arxiv.org/abs/1306.6905.
 
 \bibitem{ref_TriggerSystem}
 CMS collaboration.
 \newblock The cms trigger system.
-\newblock Available at: https://arxiv.org/pdf/1609.02366.pdf.
+\newblock {\em JINST}, 12, 2017.
+\newblock Available at: https://arxiv.org/abs/1609.02366.
 
 \bibitem{ref_ParticleFlowAlg}
 CMS collaboration.
+\newblock {\em Particle-Flow Event Reconstruction in CMS and Performance for
+  Jets, Taus, and $E_T^{miss}$}, 2009.
 \newblock https://inspirehep.net/record/925379/files/PFT-09-001-pas.pdf.
 
 \bibitem{ref_HIP_Alg}
-Hip algorithm.
+{\em The HIP Algorithm for Track Based Alignment and its Application to the CMS
+  Pixel Detector}, 2006.
+\newblock Available at: http://cds.cern.ch/record/926537.
 
 \bibitem{ref_MPII_Alg}
-Millepede ii algorithm.
+Millepede-ii.
+\newblock Available at: http://www.desy.de/~kleinwrt/MP2/doc/html/index.html.
 
 \bibitem{ref_AlApproved_twiki}
 Cms tracker detector performance results 2015: Alignment.
@@ -196,41 +262,58 @@ Cms tracker detector performance results 2015: Alignment.
 
 \bibitem{ref_Zg8TeV}
 CMS collaboration.
-\newblock Zg, 8 tev.
+\newblock Measurement of the z gamma production cross section in pp collisions
+  at 8 tev and search for anomalous triple gauge boson couplings.
+\newblock {\em JHEP}, 04(164), 2015.
+\newblock Available at: https://arxiv.org/abs/1502.05664.
 
 \bibitem{ref_MadGraph}
-MadGraph generator.
+Madgraph generator.
+\newblock Available at: http://madgraph.physics.illinois.edu/.
 
 \bibitem{ref_Pythia}
 Pythia generator.
+\newblock Available at: http://home.thep.lu.se/~torbjorn/Pythia.html.
 
 \bibitem{ref_CTEQ6L1}
-CTEQ6L1 PDF set.
+Cteq6l1 pdf set.
+\newblock Available at: http://hep.pa.msu.edu/cteq/public/cteq6.html.
 
 \bibitem{ref_Geant4}
-GEANT.
+Geant.
+\newblock Available at: http://geant.cern.ch/.
 
 \bibitem{ref_FEWZ}
-FEWZ calculator.
+Fewz calculator.
+\newblock Available at: http://gate.hep.anl.gov/fpetriello/FEWZ.html.
 
 \bibitem{ref_Wgg8TeV}
 CMS collaboration.
-\newblock Wgg, 8 tev.
+\newblock Measurements of the pp to w gamma gamma and pp to z gamma gamma cross
+  sections and limits on anomalous quartic gauge couplings at sqrt(s) = 8 tev.
+\newblock {\em submitted to JHEP}, 2017.
+\newblock Available at: https://arxiv.org/abs/1704.00366.
 
 \bibitem{ref_RooFit}
 Roofit.
+\newblock Available at: https://root.cern.ch/roofit.
 
 \bibitem{ref_RooCMSShapePdf}
 Roocmsshapepdf.
 
 \bibitem{ref_DAgostini}
-D'agostini unfolding.
+A multidimensional unfolding method based on bayes' theorem.
+\newblock {\em Nuclear Instruments and Methods in Physics Research A},
+  (362):487--498, 1995.
 
 \bibitem{ref_RooUnfold}
 Roounfold.
+\newblock Available at:
+  http://hepunx.rl.ac.uk/~adye/software/unfold/RooUnfold.html.
 
 \bibitem{ref_ROOT}
 Root.
+\newblock Available at: https://root.cern.ch/.
 
 \bibitem{ref_CMSSW}
 Cms software.
@@ -238,9 +321,12 @@ Cms software.
 
 \bibitem{ref_GITHUB}
 Github.
+\newblock Available at: https://github.com/.
 
 \bibitem{ref_ggNtuplizer}
-ggntuplizer.
+Code that makes ggntuples.
+\newblock Available at:
+  https://github.com/cmkuo/ggAnalysis/tree/V05-03-12-04/ggNtuplizer.
 
 \bibitem{ref_Peskin}
 Schroeder Peskin.
@@ -266,32 +352,36 @@ J.~Ohnemus.
   https://journals.aps.org/prd/pdf/10.1103/PhysRevD.47.940.
 
 \bibitem{ref_CMS_8TeV_WW}
-CMS 8 TeV WW lnulnu.
+CMS collaboration.
+\newblock Search for anomalous couplings in semileptonic ww/wz to l nu qqbar
+  production in proton-proton collisions at sqrt(s)=8 tev.
+\newblock {\em Submitted to Phys. Lett. B}, 2017.
+\newblock Available at: https://arxiv.org/abs/1703.06095.
 
 \bibitem{ref_CMS_7TeV_Zgnunug}
-CMS 7 TeV Zg nunug.
+CMS collaboration.
+\newblock Measurement of the production cross section for z gamma to nu nu
+  gamma in pp collisions at sqrt(s) = 7 tev and limits on z z gamma and z gamma
+  gamma triple gauge boson couplings.
+\newblock {\em JHEP}, 10(164), 2013.
+\newblock Available at: https://arxiv.org/abs/1309.1117.
 
 \bibitem{ref_fig_LHC_CS_WandZ}
-website: https://inspirehep.net/record/1235541/files/LHC\_all.png.
+Figure available at: https://inspirehep.net/record/1235541/files/LHC\_all.png.
 
 \bibitem{ref_fig_LHCsectors}
-Available at:
+Figure available at:
   http://cds.cern.ch/journal/CERNBulletin/2014/24/News\%20Articles/1706606.
-
-\bibitem{ref_Frank_presentation}
-F.~Meier Aeschbacher.
-\newblock Hunting down suspicious results: recent improvements in the alignment
-  of the cms tracker detector, 2010.
-\newblock Available as an internal CMS presentation at:
-  https://indico.cern.ch/event/243940/contributions/1562955/attachments/416194%
-/578159/praesDoktorandensemi2010.pdf.
 
 \bibitem{ref_WJets8TeV}
 CMS collaboration.
-\newblock W+jets, 8 tev.
-\newblock Available at: https://arxiv.org/pdf/1610.04222.pdf.
+\newblock Measurements of differential cross sections for associated production
+  of a w boson and jets in proton-proton collisions at sqrt(s) = 8 tev.
+\newblock {\em Phys. Rev. D}, 95, 2017.
+\newblock Available at: https://arxiv.org/abs/1610.04222.
 
 \bibitem{ref_myCode}
-mycode.
+Code that performs the cross section measurement.
+\newblock Available at: https://github.com/eavdeeva/usercode.
 
 \end{thebibliography}
