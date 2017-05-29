@@ -1,14 +1,14 @@
 \section{Background Estimation and Subtraction}
 \label{sec:BackgroundSubtraction}
 
-The selected sample contains signal events as well as events coming from various backgrounds. To compute the cross section, we need to subtract background and estimate how many events in each $P_T^\gamma$ bin originate from the $W\gamma$ process. Main sources of backgrounds include jets misidentified as photons denoted as the jets$\rightarrow\gamma$ background, electrons misidentified as photons denoted as the $e\rightarrow\gamma$ background, and backgrounds with real photons denoted as the real-$\gamma$ background. Jets$\rightarrow\gamma$ and real-$\gamma$ backgrounds are present in both channels while $e\rightarrow\gamma$ background is only present in the electron channel. The reminder of this chapter describes the procedure of the background estimation and provides the results.
+The selected sample contains signal events as well as events coming from various backgrounds. To compute the cross section, we need to estimate how many events in each $P_T^\gamma$ bin originate from the $W\gamma$ process or, in other words, subtract background. Main sources of backgrounds include jets misidentified as photons denoted as the jets$\rightarrow\gamma$ background, electrons misidentified as photons denoted as the $e\rightarrow\gamma$ background, and backgrounds with real photons denoted as the real-$\gamma$ background. Jets$\rightarrow\gamma$ and real-$\gamma$ backgrounds are present in both channels while $e\rightarrow\gamma$ background is only present in the electron channel. The remainder of this chapter describes the procedure of the background estimation and provides the results.
 
 \subsection{Background from Jets Faking Photons}
 \label{sec:BackgroundSubtraction_jtog}
 
-The selected sample is dominated by the $W$+jets background which cannot be further significantly reduced without reducing our signal sample $W\gamma$ as well. The photon~ID selection criteria help to reduce $W$+jets background to a certain level but there is still a significant number of jets that are reconstructed as photons and pass all the photon~ID criteria. DY+jets is another source of the jets$\rightarrow \gamma$ background but this source is significantly suppressed by the $M_W^T$ selection criterion in both channels and by the $Z$-mass window requirement in the electron channel.
+The selected sample is dominated by the $W$+jets background which cannot be significantly reduced without reducing our signal, $W\gamma$, as well. DY+jets is another source of the jets$\rightarrow \gamma$ background but this source is significantly suppressed by the $M_W^T$ selection criterion in both channels and by the $Z$-mass window requirement in the electron channel.
 
-The template method is used to estimate jets$ \rightarrow \gamma$ background. First of all, we choose a variable that has a significant discriminative power between the true and fake photon candidates $V_{fit}$. After that, we prepare real-$\gamma$ ($T_{true}$) and fake-$\gamma$ ($T_{fake}$) templates which should be accurate representations of $V_{fit}$ distributions of real and fake photons in the $W\gamma$-selected dataset. The $V_{fit}$ distribution in data is fitted by the following function: 
+The template method is used to estimate jets$ \rightarrow \gamma$ background. First of all, we choose a variable that has a significant discriminative power between the true and fake photon candidates $V_{fit}$. After that, we prepare real-$\gamma$ ($T_{true}$) and fake-$\gamma$ ($T_{fake}$) templates, binned histograms of $V_{fit}$, which should be accurate representations of $V_{fit}$ distributions of real and fake photons in the $W\gamma$-selected dataset. $T_{true}$ and $T_{fake}$ are normalized to area~1. The $V_{fit}$ distribution in data is fitted by the following function: 
 \begin{equation}\label{eq:F_fit}
 F(V_{fit})=N_{true} \cdot T_{true}(V_{fit}) + N_{fake} \cdot T_{fake}(V_{fit}),
 \end{equation}
@@ -25,23 +25,27 @@ The $\sigma_{i\eta i\eta}^{\gamma}$ is defined as
 \begin{equation}
   \sigma_{i\eta i\eta}^{\gamma} = \frac{\sum{(\eta_i-\eta)^2 w_i}}{\sum(w_i)},
 \end{equation}
-\noindent{where the sum runs over~$5\times5$ matrix of crystals around the crystal with the largest $P_T$, and $w_i$ is the weight that has a logarithmic dependence on energy released by the photon.}
+\noindent{where the sum runs over individual crystals in the~$5\times5$ matrix around the crystal that detects the largest $P_T$, and $w_i$ is the weight that has a logarithmic dependence on energy released by the photon.}
 
-To prepare templates, we use $Z\gamma$-selected dataset. $Z\gamma$ goes through two different mechanisms: FSR, when a photon is radiated from one of the final state leptons, and ISR, when a photon is radiated from the initial state quark or antiquark. Real-$\gamma$ templates $T_{true}$ are taken from the FSR events of $Z\gamma\rightarrow\mu\mu\gamma$ while fake-$\gamma$ templates are taken from the ISR events of $Z\gamma\rightarrow\mu\mu\gamma$.
+To prepare templates, we use $Z\gamma$-selected dataset. $Z\gamma$ is produced through two different mechanisms: FSR, when a photon is radiated from one of the final state leptons, and ISR, when a photon is radiated from the initial state quark or antiquark. Real-$\gamma$ templates $T_{true}$ are prepared using the FSR events of $Z\gamma\rightarrow\mu\mu\gamma$ while fake-$\gamma$ templates are taken from the ISR events of $Z\gamma\rightarrow\mu\mu\gamma$. The preparation of the FSR and ISR $Z\gamma$ samples is discussed below.
 
-The FSR $Z\gamma$ selection has muon-photon separation requirement of $\Delta R_{min}(\mu,\gamma)>0.4$. This requirement is chosen to be smaller than nominal separation requirement of $\Delta R_{min}(\mu,\gamma)>0.7$ because FSR events typically have smaller separation than ISR events and, therefore, smaller separation increases a fraction of FSR events. Three-particle invariant mass required to be $M_{\gamma\mu\mu}<101$~GeV. 
+The FSR $Z\gamma$ selection has muon-photon separation requirement of $\Delta R_{min}(\mu,\gamma)>0.4$. This requirement is chosen to be smaller than nominal separation requirement of $\Delta R_{min}(\mu,\gamma)>0.7$ because FSR events typically have smaller separation than ISR events and, therefore, smaller separation increases a fraction of FSR events. 
 
-The FSR contribution drops fast as a function of $P_{T}^{\gamma}$, therefore, the FSR sample has a small statistical power in high $P_{T}^{\gamma}$ bins. To increase the statistical power, we use events from several $P_T^{\gamma}$ ranges to prepare templates for each of them. The distribution of $I_{ch}^{\gamma}$ of real photons does not depend on $P_{T}^{\gamma}$ and, therefore, all events with $P_{T}^{\gamma}>15$~GeV are used to prepare $I_{ch}^{\gamma}$ templates for all $P_T^{\gamma}$ bins. Distributions of $\sigma_{i\eta i\eta}^{\gamma}$ depend on $P_T^{\gamma}$. Only events of $P_T^{\gamma}>30$~GeV are combined together to prepare templates for all $P_T^{\gamma}>30$~GeV bins. Both $I_{ch}^{\gamma}$ and $\sigma_{i\eta i\eta}^{\gamma}$ templates are prepared separately for barrel and endcap photons.
+For FSR, since the photon is radiated off a lepton that comes mostly from the $Z$ resonance, the three-body inveriant mass should be close to $Z$ mass. For ISR, it is two leptons that give us the $Z$ resonance mass, and adding a photon radiated from a quark makes the three-body invariant mass bigger. Therefore, to separate FSR events from ISR, three-particle invariant mass required to be $M_{\gamma\mu\mu}<101$~GeV. 
 
-To prepare fake-$\gamma$ templates, we need a sample that consists of jets reconstructed and identified as photons. To prepare such sample, we apply ISR $Z\gamma$ selection conditions on double muon dataset. These selection conditions include nominal $Z\gamma$ selection described in Ch.~\ref{sec:AN_Selection_EventLevel} with tighter requirement on the lepton-photon separation $\Delta{R_{min}}(\mu,\gamma)>1.0$, and a requirement on the invariant mass of the three final state particles $M_{ll\gamma}>101$~GeV. A sample prepared in such a way consists of $Z\gamma$+(DY+jets) events, and jets from the DY+jets are reconstructed and identified as photons same as jets from $W$+jets, DY+jets and $t\bar{t}$+jets in a $W\gamma$-selected sample. 
+The distribution of $I_{ch}^{\gamma}$ of real photons does not depend on $P_{T}^{\gamma}$ and, therefore, all events with $P_{T}^{\gamma}>15$~GeV are used to prepare $I_{ch}^{\gamma}$ templates for all $P_T^{\gamma}$ bins. Distributions of $\sigma_{i\eta i\eta}^{\gamma}$ do depend on $P_T^{\gamma}$ and, ideally,  $\sigma_{i\eta i\eta}^{\gamma}$ templates should have been prepared separately for each $P_T^{\gamma}$ bin. However, the FSR contribution drops fast as a function of $P_{T}^{\gamma}$, therefore, the FSR sample has a small statistical power in high $P_{T}^{\gamma}$ bins. To increase the statistical power, it was decided to combine FSR events of $P_T^{\gamma}>30$~GeV to prepare $\sigma_{i\eta i\eta}^{\gamma}$ templates for all $P_T^{\gamma}>30$~GeV bins. 
+
+The distributions of both $I_{ch}^{\gamma}$ and $\sigma_{i\eta i\eta}^{\gamma}$ depend on $\eta$. Therefore, all templates are prepared separately for barrel and endcap photons.
+
+To prepare fake-$\gamma$ templates, we need a sample that consists of jets reconstructed and identified as photons. To prepare such sample, we apply ISR $Z\gamma$ selection conditions on double muon dataset. These selection conditions include nominal $Z\gamma$ selection described in Ch.~\ref{sec:AN_Selection_EventLevel} with tighter requirement on the lepton-photon separation $\Delta{R_{min}}(\mu,\gamma)>1.0$, and a requirement on the invariant mass of the three final state particles $M_{ll\gamma}>101$~GeV. A sample prepared in such a way consists of $Z\gamma$ and (DY+jets) events, and jets from the DY+jets are reconstructed and identified as photons same as jets from $W$+jets, DY+jets and $t\bar{t}$+jets in a $W\gamma$-selected sample. 
 
 Therefore, to construct a fake-$\gamma$ template, we can use DY+jets events from the ISR $Z\gamma$-selected sample. However, in addition to DY+jets events, this sample also contains non-negligible amount of $Z\gamma$ events. This real-$\gamma$ contribution is subtracted using $Z\gamma$ MC predictions.
 
 FSR and ISR selections are illustrated in App.~\ref{sec:ZgFSRandISRplots}. Distributions of $M_{ll\gamma}$ and $M_{ll}$ for nominally selected $Z\gamma$ dataset are shown in Fig.~\ref{fig:Zg_Mleplep_and_Mpholeplep}. Distributions of $\Delta{R}(l,\gamma)$ for ISR and FSR $Z\gamma$ events are shown in Fig.~\ref{fig:Zg_ISRandFSR_dR}. Distributions of $P_{T}^{\gamma}$ for ISR and FSR $Z\gamma$ events are shown in Fig.~\ref{fig:Zg_ISRandFSR_phoEt}. 
 
-Fits are performed in the extended binned maximum likelihood manner separately in each $P_T^{\gamma}$ bin, separately for EB and EE photons. Plots of the template fits are available in App.~\ref{sec:TemplateFitPlots}. The outcomes of the fits are parameters $N_{true}$ and $N_{fake}$ from Eq.~\ref{eq:F_fit}.
+Fits are performed in the extended binned maximum likelihood way separately in each $P_T^{\gamma}$ bin, separately for candidates with the photon in EB and EE. Plots of the template fits are available in App.~\ref{sec:TemplateFitPlots}. The fits result in the yields of the candidates with true and fake photons ($N_{true}$ and $N_{fake}$ from Eq.~\ref{eq:F_fit}) as well as the errors on the yields.
 
-$N_{true}$ appears to be a number of real-$\gamma$ events in $W\gamma$ dataset after all selection criteria applied except the selection condition on $V_{fit}$ which is either $I_{ch}^{\gamma}$ or $\sigma_{i\eta i\eta}^{\gamma}$. However, our goal is to extract number of real-$\gamma$ events in $W\gamma$ dataset after all selection criteria applied including the selection condition on $V_{fit}$. To extract real-$\gamma$ yield, $N_{true}$ is multiplied by the efficiency of the selection condition on $V_{fit}$. The efficiency is estimated using the $Z\gamma$-selected FSR sample as 
+$N_{true}$ is the number of real-$\gamma$ events in $W\gamma$ dataset after all selection criteria applied except the selection condition on $V_{fit}$ which is either $I_{ch}^{\gamma}$ or $\sigma_{i\eta i\eta}^{\gamma}$. However, our goal is to extract number of real-$\gamma$ events in $W\gamma$ dataset after all selection criteria applied including the selection condition on $V_{fit}$. $N_{true}$ obtained from the fit is corrected by the efficiency of the selection condition on $V_{fit}$. The efficiency is estimated using the $Z\gamma$-selected FSR sample as 
 \begin{equation}
  \epsilon_{Vfit} = \frac{N_{passed\_Vfit\_condition}}{N_{failed\_Vfit\_condition}+N_{passed\_Vfit\_condition}},
 \end{equation}
@@ -52,17 +56,20 @@ $N_{true}$ appears to be a number of real-$\gamma$ events in $W\gamma$ dataset a
 \subsection{Background from Electrons Faking Photons in the Electron Channel}
 \label{sec:BackgroundSubtraction_etog}
 
-For the electron channel, DY+jets is the main source of the $e \rightarrow \gamma$ background. The $Z$-mass window requirement of ($M_{e\gamma}<70$~GeV or $M_{e\gamma}>110$~GeV) significantly suppresses this background, however, the remaining contribution is non-negligible. 
+For the electron channel, DY+jets is the main source of the $e \rightarrow \gamma$ background. This happens when an electron from DY is detected in the calorimeter, but the tracking system fails to find the electron, and therefore the calorimeter response is considered to be a photon. The $Z$-mass window requirement of ($M_{e\gamma}<70$~GeV or $M_{e\gamma}>110$~GeV) significantly suppresses this background, however, the remaining contribution is non-negligible. 
 
-The contribution of $e\rightarrow\gamma$ $N_{data-nom}^{e\rightarrow\gamma}$ is estimated separately for each $P_{T}^{\gamma}$ bin and separately for barrel and endcap photons by scaling number of the nominally selected events in DY+jets MC sample $N_{MC-nom}^{e\rightarrow\gamma}$ to the relation of numbers of events in the  $e\rightarrow\gamma$-enriched data ($N_{data-Zpeak}^{e\rightarrow\gamma}$) and DY+jets MC ($N_{MC-Zpeak}^{e\rightarrow\gamma}$) samples under the $Z$-peak: 
+The contribution of $e\rightarrow\gamma$ $N_{data-nom}^{e\rightarrow\gamma}$ is estimated separately for each $P_{T}^{\gamma}$ bin and separately for barrel and endcap photons by scaling number of the nominally selected events in DY+jets MC sample $N_{MC-nom}^{e\rightarrow\gamma}$ to the ratio of numbers of events in the  $e\rightarrow\gamma$-enriched data ($N_{data-Zpeak}^{e\rightarrow\gamma}$) and DY+jets MC ($N_{MC-Zpeak}^{e\rightarrow\gamma}$) samples under the $Z$-peak: 
 
 \begin{equation}\label{eq:Scale_etog}
-N_{data-nom}^{e\rightarrow\gamma} = N_{MC-nom}^{e\rightarrow\gamma} \cdot \frac{N_{data-Zpeak}^{e\rightarrow\gamma}}{N_{MC-Zpeak}^{e\rightarrow\gamma}}. 
+N_{data-nom}^{e\rightarrow\gamma} = N_{MC-nom}^{e\rightarrow\gamma} \cdot \frac{N_{data-Zpeak}^{e\rightarrow\gamma}}{N_{MC-Zpeak}^{e\rightarrow\gamma}}, 
 \end{equation}
+\noindent{MC samples are normalized to data luminosity.}
 
-To estimate $N_{data-Zpeak}^{e\rightarrow\gamma}$, $e\rightarrow\gamma$-enriched data and DY+jets MC samples are prepared by applying all $W\gamma$ selection requirements except the $Z$-mass window requirement. After that, numbers of events in DY+jets MC samples $N_{MC-Zpeak}^{e\rightarrow\gamma}$ and $N_{MC-nom}^{e\rightarrow\gamma}$ are estimated by counting. The number $N_{data-Zpeak}^{e\rightarrow\gamma}$ is extracted from fitting the $M_{e\gamma}$ distribution in the $Z$-peak region.
+To estimate $N_{data-Zpeak}^{e\rightarrow\gamma}$, $e\rightarrow\gamma$-enriched data and DY+jets MC samples are prepared by applying all $W\gamma$ selection requirements except the $Z$-mass window requirement. After that, numbers of events in DY+jets MC samples $N_{MC-Zpeak}^{e\rightarrow\gamma}$ and $N_{MC-nom}^{e\rightarrow\gamma}$ are found by counting. The number $N_{data-Zpeak}^{e\rightarrow\gamma}$ is extracted from fitting the $M_{e\gamma}$ distribution in the $Z$-peak region.
 
-The fits are performed in an extended unbinned maximum likelihood manner, separately in each $P_T^\gamma$ bin in fine $\eta^\gamma$ binning. The $\eta^\gamma$ binning for different $P_T^\gamma$ ranges is described in Tab.~\ref{tab:fine_eta_binning}:
+The fits are performed in an extended unbinned maximum likelihood way, separately in each $P_T^\gamma$ bin in fine $\eta^\gamma$ binning. The $\eta^\gamma$ binning for different $P_T^\gamma$ ranges is described in Tab.~\ref{tab:fine_eta_binning}.
+
+Because of very small fraction of $e\rightarrow\gamma$ events in the underflow bin (10-15~GeV), fits in this bin do not find a proper number of $e\rightarrow\gamma$ events. MC prediction from the nominally selected DY+jets sample is used as a background estimate for this bin. 
 
 \begin{table}[h]
   \small
@@ -71,30 +78,34 @@ The fits are performed in an extended unbinned maximum likelihood manner, separa
     \begin{tabular}{|c|c|c|}
       \hline
       $P_T^{\gamma}$ ranges, GeV & $\eta^{\gamma}$ binning in barrel &$\eta^{\gamma}$ binning in endcap  \\ \hline
-      15-20-25-30-35-45-55-65 & 0.00-0.10-0.50-1.00-1.44 & 1.56-2.10-2.20-2.40-2.50  \\ \hline
-      65-75-85-95 & 0.00-0.50-1.44 & 1.56-2.20-2.50  \\ \hline
-      95-120-500 & 0.00-1.44 & 1.56-2.50  \\ \hline
-      10-15 (underflow) & \multicolumn{2}{|c|}{no fits; MC prediction used} \\ \hline
+      15-20-25-30-35-45-55-65 & 0.00-0.10-0.50-1.00-1.44         & 1.56-2.10-2.20-2.40-2.50  \\ \hline
+      65-75-85-95             & 0.00-0.50-1.44                   & 1.56-2.20-2.50  \\ \hline
+      95-120-500              & 0.00-1.44                        & 1.56-2.50  \\ \hline
+      10-15 (underflow)       & \multicolumn{2}{|c|}{no fits; MC prediction used} \\ \hline
     \end{tabular}
     \label{tab:fine_eta_binning}
   \end{center}
 \end{table} 
 
 
-The fit model is composed by the template-based function $RooNDKeysPdf$~\cite{ref_RooFit} convoluted with the Gaussian distribution multiplied by the number of events from the $e\rightarrow\gamma$ background  $N_{e\rightarrow\gamma}$ and the function describing a cumulative contribution of all other processes $RooCMSShapePdf$~\cite{ref_RooCMSShapePdf} multiplied by the number of events from other sources that have $M_{e\gamma}$ distributions without a peak at the values of $Z$ mass $N_{else}$. The expression for the fit function is:
+The fit model is composed of two terms. The first of them is the template-based function $RooNDKeysPdf$~\cite{ref_RooFit} convolved with the Gaussian distribution multiplied by the number of events from the $e\rightarrow\gamma$ background  $N_{e\rightarrow\gamma}$. The second one is the function that descibes a cumulative contribution of all other processes $RooCMSShapePdf$~\cite{ref_RooCMSShapePdf} multiplied by the number of events from other sources that have $M_{e\gamma}$ distributions without a peak at the values of $Z$ mass $N_{other}$. The expression for the fit function is:
 \begin{equation}\label{eq:fit_function_etog}
-F_{fit}^{e\rightarrow\gamma} = N_{e\rightarrow\gamma} \cdot (RooNDKeysPdf \ast Gaussian) +  N_{else} \cdot (RooCMSShapePdf).
+F_{fit}^{e\rightarrow\gamma} = N_{e\rightarrow\gamma} \cdot (RooNDKeysPdf \ast Gaussian) +  N_{other} \cdot (RooCMSShapePdf).
 \end{equation}
 
-The function $RooNDKeysPdf$ is a function of the RooFit package~\cite{ref_RooFit} that creates a continuous probability distribution function out of a template. The templates are prepared from $e\rightarrow\gamma$-enriched DY+jets MC sample, separately for each $P_T^{\gamma}$ and $\eta^\gamma$ range. $RooNDKeysPdf$ is convoluted with the Gaussian distribution, the two parameters of the Gaussian distribution are fit parameters. 
+The function $RooNDKeysPdf$ is a function of the RooFit package~\cite{ref_RooFit} that creates a continuous probability distribution function out of a binned template. The templates are prepared from $e\rightarrow\gamma$-enriched DY+jets MC sample, separately for each $P_T^{\gamma}$ and $\eta^\gamma$ range. $RooNDKeysPdf$ is convolved with the Gaussian distribution, the two parameters of the Gaussian distribution are fit parameters. 
 
-The function $RooCMSShapePdf$~\cite{ref_RooCMSShapePdf} is a product of an exponential decay and a constant that smoothly turns over due to a threshold effect. $RooCMSShapePdf$ is described by four parameters, and they all are used as fit parameters in $F_{fit}^{e\rightarrow\gamma}$. Overall,  $F_{fit}^{e\rightarrow\gamma}$ has eight fit parameters, including two parameters of the Gaussian distribution, four parameters of $RooCMSShapePdf$, $N_{e\rightarrow\gamma}$ and $N_{else}$.
+The function $RooCMSShapePdf$~\cite{ref_RooCMSShapePdf} is a product of an exponential decay and a step function. $RooCMSShapePdf$ is described by four parameters, and they all are used as fit parameters in $F_{fit}^{e\rightarrow\gamma}$. 
 
-The fit plots are provided in App.~\ref{sec:EtogammaFitPlots} and the tables with numbers from Eq.~\ref{eq:Scale_etog} in different $P_T^{\gamma}$ ranges separately for EB and EE final state photons are provided in App.~\ref{sec:etogTables}. The distributions of $M_{e\gamma}$ in different $P_T^{\gamma}$ bins are shown in App.~\ref{sec:Mpholep1DatavsMC}. After the $M_{e\gamma}$ distribution in the DY+jets sample is scaled by 
-\begin{equation}
-   scale = \frac{N_{data-Zpeak}^{e\rightarrow\gamma}}{N_{MC-Zpeak}^{e\rightarrow\gamma}},
-\end{equation}
- \noindent{the data vs MC agreement significantly improves.}
+Overall,  $F_{fit}^{e\rightarrow\gamma}$ has eight fit parameters. This includes two parameters of the Gaussian distribution, four parameters of $RooCMSShapePdf$, $N_{e\rightarrow\gamma}$ and $N_{other}$.
+
+The fit plots are provided in App.~\ref{sec:EtogammaFitPlots} and the tables with the parameter values determined from the fits in different $P_T^{\gamma}$ ranges separately for EB and EE final state photons are provided in App.~\ref{sec:etogTables}.
+
+% The distributions of $M_{e\gamma}$ in different $P_T^{\gamma}$ bins are shown in App.~\ref{sec:Mpholep1DatavsMC}. After the $M_{e\gamma}$ distribution in the DY+jets sample is scaled by 
+%\begin{equation}
+%   scale = \frac{N_{data-Zpeak}^{e\rightarrow\gamma}}{N_{MC-Zpeak}^{e\rightarrow\gamma}},
+%\end{equation}
+%\noindent{the data vs MC agreement significantly improves.}
 
 %  \item templates for RooNDKeysPdf: $e\rightarrow\gamma$ portion of the DYjets MC separately for each pt-eta bin
 %  \item $e\rightarrow\gamma$ portion of the DYjets MC: a photon has a gen-level electron within dR=0.4 
@@ -102,7 +113,7 @@ The fit plots are provided in App.~\ref{sec:EtogammaFitPlots} and the tables wit
 
 \subsection{Other Backgrounds}
 
-In addition to the backgrounds discussed before, there is also real-$\gamma$ background. The contributions to this background from $Z\gamma$ and $W\gamma \rightarrow \tau \nu \gamma$ are estimated based on MC predictions.
+In addition to the backgrounds discussed before, there is also the real-$\gamma$ background. The contributions to this background from $Z\gamma \rightarrow ll\gamma$  and $W\gamma \rightarrow \tau \nu \gamma$ are estimated based on MC predictions.
 
 \begin{itemize}
    \item real-$\gamma$ background from $WW\gamma$;  
@@ -113,7 +124,7 @@ In addition to the backgrounds discussed before, there is also real-$\gamma$ bac
 
 \subsection{$P_T^{\gamma}$ Spectra before and after the Background Subtraction}
 
-The results of the background estimation and subtraction procedure are summarized in Fig.~\ref{fig:DDvsMC_Wg_Data_MUON}-\ref{fig:DDvsMC_Wg_Data_ELECTRON} and in Tab.~\ref{tab:yields_Wg_to_munu_}-\ref{tab:yields_Wg_to_enu_}. Figure~\ref{fig:DDvsMC_Wg_Data_MUON} and Tab.~\ref{tab:yields_Wg_to_munu_} stand for the muon channel while Fig.~\ref{fig:DDvsMC_Wg_Data_ELECTRON} and Tab.~\ref{tab:yields_Wg_to_enu_} stand for the electron channel. Top and middle plots in Fig.~\ref{fig:DDvsMC_Wg_Data_MUON}-\ref{fig:DDvsMC_Wg_Data_ELECTRON} shows the $P_T^\gamma$ spectrum in data superimposed with the signal MC and background estimates that includes jets$\rightarrow\gamma$ and real-$\gamma$ backgrounds in both channels and $e\rightarrow\gamma$ background in the electron channel. The bottom plots show data yields after full background subtraction superimposed with signal MC. 
+The results of the background estimation and subtraction procedure are summarized in Fig.~\ref{fig:DDvsMC_Wg_Data_MUON}-\ref{fig:DDvsMC_Wg_Data_ELECTRON} and in Tab.~\ref{tab:yields_Wg_to_munu_}-\ref{tab:yields_Wg_to_enu_}. Top and middle plots in Fig.~\ref{fig:DDvsMC_Wg_Data_MUON}-\ref{fig:DDvsMC_Wg_Data_ELECTRON} show the $P_T^\gamma$ spectrum in data superimposed with the signal MC and background estimates that includes jets$\rightarrow\gamma$ and real-$\gamma$ backgrounds in both channels and $e\rightarrow\gamma$ background in the electron channel. The bottom plots show data yields after full background subtraction superimposed with signal MC. 
 
 Jets$\rightarrow\gamma$ background is estimated by two methods: by fits of $I_{ch}^{\gamma}$ and $\sigma_{i\eta i\eta}^{\gamma}$ templates. The results provided by two methods differ significantly, as well as both show significant disagreement with the MC prediction. To understand the disagreements and validate the procedure, we perform two MC closure checks. The results of the checks are reported in App.~\ref{sec:MCclosureCheck}.  
 
