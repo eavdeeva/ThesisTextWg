@@ -37,9 +37,7 @@ The distribution of $I_{ch}^{\gamma}$ of real photons does not depend on $P_{T}^
 
 The distributions of both $I_{ch}^{\gamma}$ and $\sigma_{i\eta i\eta}^{\gamma}$ depend on $\eta$. Therefore, all templates are prepared separately for barrel and endcap photons.
 
-To prepare fake-$\gamma$ templates, we need a sample that consists of jets reconstructed and identified as photons. To prepare such sample, we apply ISR $Z\gamma$ selection conditions on double muon dataset. These selection conditions include nominal $Z\gamma$ selection described in Ch.~\ref{sec:AN_Selection_EventLevel} with tighter requirement on the lepton-photon separation $\Delta{R_{min}}(\mu,\gamma)>1.0$, and a requirement on the invariant mass of the three final state particles $M_{ll\gamma}>101$~GeV. A sample prepared in such a way consists of $Z\gamma$ and (DY+jets) events, and jets from the DY+jets are reconstructed and identified as photons same as jets from $W$+jets, DY+jets and $t\bar{t}$+jets in a $W\gamma$-selected sample. 
-
-Therefore, to construct a fake-$\gamma$ template, we can use DY+jets events from the ISR $Z\gamma$-selected sample. However, in addition to DY+jets events, this sample also contains non-negligible amount of $Z\gamma$ events. This real-$\gamma$ contribution is subtracted using $Z\gamma$ MC predictions.
+To prepare fake-$\gamma$ templates, we need a sample that consists of jets reconstructed and identified as photons. The $Z\gamma\rightarrow\mu\mu\gamma$-selected dataset consists of $Z\gamma$ and (DY+jets) events, where jets from the DY+jets are reconstructed and identified as photons, same as jets from $W$+jets, DY+jets and $t\bar{t}$+jets in a $W\gamma$-selected sample. In order to increase a fraction of jets, on top of the nominal $Z\gamma$ selection conditions decribed in Ch.~\ref{sec:AN_Selection_EventLevel}, we apply ISR requirements. The ISR requirements include the lepton-photon separation $\Delta{R_{min}}(\mu,\gamma)>1.0$, and the invariant mass of the three final state particles $M_{ll\gamma}>101$~GeV. The remaining non-negligible real-$\gamma$ contribution is subtracted using $Z\gamma$ MC predictions.
 
 FSR and ISR selections are illustrated in App.~\ref{sec:ZgFSRandISRplots}. Distributions of $M_{ll\gamma}$ and $M_{ll}$ for nominally selected $Z\gamma$ dataset are shown in Fig.~\ref{fig:Zg_Mleplep_and_Mpholeplep}. Distributions of $\Delta{R}(l,\gamma)$ for ISR and FSR $Z\gamma$ events are shown in Fig.~\ref{fig:Zg_ISRandFSR_dR}. Distributions of $P_{T}^{\gamma}$ for ISR and FSR $Z\gamma$ events are shown in Fig.~\ref{fig:Zg_ISRandFSR_phoEt}. 
 
@@ -67,7 +65,7 @@ N_{data-nom}^{e\rightarrow\gamma} = N_{MC-nom}^{e\rightarrow\gamma} \cdot \frac{
 
 To estimate $N_{data-Zpeak}^{e\rightarrow\gamma}$, $e\rightarrow\gamma$-enriched data and DY+jets MC samples are prepared by applying all $W\gamma$ selection requirements except the $Z$-mass window requirement. After that, numbers of events in DY+jets MC samples $N_{MC-Zpeak}^{e\rightarrow\gamma}$ and $N_{MC-nom}^{e\rightarrow\gamma}$ are found by counting. The number $N_{data-Zpeak}^{e\rightarrow\gamma}$ is extracted from fitting the $M_{e\gamma}$ distribution in the $Z$-peak region.
 
-The fits are performed in an extended unbinned maximum likelihood way, separately in each $P_T^\gamma$ bin in fine $\eta^\gamma$ binning. The $\eta^\gamma$ binning for different $P_T^\gamma$ ranges is described in Tab.~\ref{tab:fine_eta_binning}. The fit outputs in fine $\eta$ bins are summed up to EB and EE yields. 
+The fits are performed in an extended unbinned maximum likelihood way, separately in each $P_T^\gamma$ bin in fine $\eta^\gamma$ binning. We use fine $\eta^{\gamma}$ binning because an electron track ability to be reconstructed and, therefore, the the amount of the $e\rightarrow\gamma$ background, depends strongly on $\eta$. The $\eta^\gamma$ binning for different $P_T^\gamma$ ranges is described in Tab.~\ref{tab:fine_eta_binning}. The fit outputs in fine $\eta$ bins are summed up to form EB and EE yields. 
 
 Because of very small fraction of $e\rightarrow\gamma$ events in the underflow bin (10-15~GeV), fits in this bin do not find a proper number of $e\rightarrow\gamma$ events. MC prediction from the nominally selected DY+jets sample is used as a background estimate for this bin. 
 
@@ -77,7 +75,7 @@ Because of very small fraction of $e\rightarrow\gamma$ events in the underflow b
     \caption{Fine $\eta^{\gamma}$ binning for fits for $e\rightarrow\gamma$ background estimation.}
     \begin{tabular}{|c|c|c|}
       \hline
-      $P_T^{\gamma}$ ranges, GeV & $\eta^{\gamma}$ binning in barrel &$\eta^{\gamma}$ binning in endcap  \\ \hline
+      $P_T^{\gamma}$ ranges, GeV & $\eta^{\gamma}$ binning in barrel & $\eta^{\gamma}$ binning in endcap  \\ \hline
       15-20-25-30-35-45-55-65 & 0.00-0.10-0.50-1.00-1.44         & 1.56-2.10-2.20-2.40-2.50  \\ \hline
       65-75-85-95             & 0.00-0.50-1.44                   & 1.56-2.20-2.50  \\ \hline
       95-120-500              & 0.00-1.44                        & 1.56-2.50  \\ \hline
@@ -87,19 +85,23 @@ Because of very small fraction of $e\rightarrow\gamma$ events in the underflow b
   \end{center}
 \end{table} 
 
-
-The fit model is composed of two terms. The first of them is the template-based function $RooNDKeysPdf$~\cite{ref_RooFit} convolved with the Gaussian distribution multiplied by the number of events from the $e\rightarrow\gamma$ background  $N_{e\rightarrow\gamma}$. The second one is the function that descibes a cumulative contribution of all other processes $RooCMSShapePdf$~\cite{ref_RooCMSShapePdf} multiplied by the number of events from other sources that have $M_{e\gamma}$ distributions without a peak at the values of $Z$ mass $N_{other}$. The expression for the fit function is:
+The $M_{e\gamma}$ distribution has two distinct types of events. The first is the events from DY+jets$\rightarrowee$+jets with one of the electrons misidentified as photons. The distribution of $M_{e\gamma}$ of these events has a $Z$ peak and a non-resonant component rising to low masses. The second type of events are all the other sources that do not have a $Z$ peak. The general view of the fit function is:
 \begin{equation}\label{eq:fit_function_etog}
-F_{fit}^{e\rightarrow\gamma} = N_{e\rightarrow\gamma} \cdot (RooNDKeysPdf \ast Gaussian) +  N_{other} \cdot (RooCMSShapePdf).
+F_{fit}^{e\rightarrow\gamma}(M_{e\gamma}) = N_{e\rightarrow\gamma} \cdot P_{e\rightarrow\gamma}(M_{e\gamma}) +  N_{other} \cdot P_{other}(M_{e\gamma}),
 \end{equation}
+\noindent{where $N_{e\rightarrow\gamma}$ and $N_{other}$ are the numbers of $e\rightarrow\gamma$ events and events from other sources, respectively, and $P_{e\rightarrow\gamma}$ and $P_{other}$ are $M_{e\gamma}$ distribution functions of these two types of events.}
 
-The function $RooNDKeysPdf$ is a function of the RooFit package~\cite{ref_RooFit} that creates a continuous probability distribution function out of a binned template. The templates are prepared from $e\rightarrow\gamma$-enriched DY+jets MC sample, separately for each $P_T^{\gamma}$ and $\eta^\gamma$ range. $RooNDKeysPdf$ is convolved with the Gaussian distribution, the two parameters of the Gaussian distribution are fit parameters. 
+The $P_{e\rightarrow\gamma}$ is the template-based function $RooNDKeysPdf$~\cite{ref_RooFit} convolved with the Gaussian
+\begin{equation}\label{eq:fit_function_etog_1}
+ P_{e\rightarrow\gamma} = RooNDKeysPdf \ast Gaussian,
+\end{equation}
+\noindent{where $RooNDKeysPdf$ is a function of the RooFit package~\cite{ref_RooFit} that creates a continuous probability distribution function out of a binned template. The templates are prepared from $e\rightarrow\gamma$-enriched DY+jets MC sample, separately for each $P_T^{\gamma}$ and $\eta^\gamma$ range. The convolution with the Gaussian is necessary because the template shapes are extracted from MC, and the energy scale and resolution in MC slightly differ from those in data. The parameters of the Gaussian distribution correct for these differences.}
 
-The function $RooCMSShapePdf$~\cite{ref_RooCMSShapePdf} is a product of an exponential decay and a step function. $RooCMSShapePdf$ is described by four parameters, and they all are used as fit parameters in $F_{fit}^{e\rightarrow\gamma}$. 
+The $P_{other}$ is $RooCMSShapePdf$~\cite{ref_RooCMSShapePdf} which is a product of an exponential decay and a step function. $RooCMSShapePdf$ is described by four parameters, and they all are used as fit parameters in $F_{fit}^{e\rightarrow\gamma}$. 
 
 Overall,  $F_{fit}^{e\rightarrow\gamma}$ has eight fit parameters. This includes two parameters of the Gaussian distribution, four parameters of $RooCMSShapePdf$, $N_{e\rightarrow\gamma}$ and $N_{other}$.
 
-The fit plots are provided in App.~\ref{sec:EtogammaFitPlots} and the tables with the parameter values determined from the fits in different $P_T^{\gamma}$ ranges separately for EB and EE final state photons are provided in App.~\ref{sec:etogTables}.
+The fit plots as well as the explanaition of parameters on the plots are provided in App.~\ref{sec:EtogammaFitPlots} and the tables with the parameter values determined from the fits in different $P_T^{\gamma}$ ranges separately for EB and EE final state photons are provided in App.~\ref{sec:etogTables}.
 
 % The distributions of $M_{e\gamma}$ in different $P_T^{\gamma}$ bins are shown in App.~\ref{sec:Mpholep1DatavsMC}. After the $M_{e\gamma}$ distribution in the DY+jets sample is scaled by 
 %\begin{equation}
@@ -241,7 +243,7 @@ The results produced with two methods of jets$\rightarrow\gamma$ background esti
 \subsection{Closure Checks}
 \label{sec:AN_BackSubtr_Closure}
 
-For the first MC closure check, the pseudodata sample is prepared from simulated $W$+jets and $W\gamma$ samples and mixed together to mimic real data. Real-$\gamma$ templates are prepared from the $W\gamma$ subsample of the mixture while the fake-$\gamma$ templates are prepared from the $W$+jets subsample. Then fits on this sample of pseudodata are performed and the number of real-$\gamma$ and fake-$\gamma$ events determined from fit are compared to the known numbers of simulated events that went into preparing the mixture. The outcome of this cross check cannot be affected by  the effects of possible wrong normalizations of MC samples and the difference between real-$\gamma$ and fake-$\gamma$ $I_{ch}^{\gamma}$ and $\sigma_{i\eta i\eta}^{\gamma}$ distributions in $W\gamma$/$W$+jets and $Z\gamma$/DY+jets samples, and therefore gives us a cleaner test of other effects. The real-$\gamma$ yields extracted from fits and the $W\gamma$ MC prediction are in agreement, however, the fake-$\gamma$ yields extracted from fits disagree with $W$+jets MC predictions in certain $P_T^{\gamma}$ bins.
+For the first MC closure check, we prepare the pseudodata sample by mixing simulated $W$+jets and $W\gamma$ together to mimic real data. Events in both samples are weighted to the same luminosity $L=$19.6~fb$^{-1}$. Real-$\gamma$ templates are prepared from the $W\gamma$ subsample of the mixture while the fake-$\gamma$ templates are prepared from the $W$+jets subsample. Then fits on this sample of pseudodata are performed and the number of real-$\gamma$ and fake-$\gamma$ events determined from fit are compared to the known numbers of simulated events that went into preparing the mixture. The outcome of this cross check cannot be affected by  the effects of possible wrong normalizations of MC samples and the difference between real-$\gamma$ and fake-$\gamma$ $I_{ch}^{\gamma}$ and $\sigma_{i\eta i\eta}^{\gamma}$ distributions in $W\gamma$/$W$+jets and $Z\gamma$/DY+jets samples, and therefore gives us a cleaner test of other effects. The real-$\gamma$ yields extracted from fits and the $W\gamma$ MC prediction are in agreement, however, the fake-$\gamma$ yields extracted from fits disagree with $W$+jets MC predictions in certain $P_T^{\gamma}$ bins.
 
 The second check is more realistic: the $W\gamma$ selection requirements are applied on MC samples $W\gamma$, $W$+jets, $Z\gamma$, $Z$+jets, and $t\bar{t}$+jets, and afterwards these samples and mixed together into the pseudodata sample~I. To prepare templates, $Z\gamma$ and $DY$+jets MC samples are mixed together to constitute a $Z\gamma$-selected pseudodata sample~II which is used the same way as $Z\gamma$-selected dataset is used to prepare templates for the background estimation in the data analysis. Then the pseudodata~I histograms are fitted and the fit results are superimposed with MC predictions same as it is done for the real data. The outcome of this closure check is not affected by the effects of possible wrong normalizations of MC samples but is affected by the effect of the possible difference between real-$\gamma$ and fake-$\gamma$ $I_{ch}^{\gamma}$ and $\sigma_{i\eta i\eta}^{\gamma}$ distributions in $W\gamma$/$W$+jets and $Z\gamma$/DY+jets samples. The results of this closure check show better agreement of pseudodata~I vs estimated background + signal MC than we observe in data, however the disagreement in certain $P_T^{\gamma}$ bins remains significant. This disagreement indicates a possible bias in our fit procedure. The systematic uncertainties related to the possible fit bias are discussed in Ch.~\ref{sec:Systematics}.
 
