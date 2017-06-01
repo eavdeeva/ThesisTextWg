@@ -2,16 +2,13 @@
 \chapter{MC Closure Check}
 \label{sec:MCclosureCheck}
 
-Fit results of jets$ \rightarrow \gamma$ background estimation on pseudodata prepared as $W$+jets and $W\gamma$ samples appropriately weighted and mixed together. Templates are prepared from $W\gamma$ and $W$+jets MC samples, same as those that constitute pseudodata. On all the plots, the black histogram is the pseudodata, green is a real-$\gamma$ template, blue is a fake-$\gamma$ template, and red is a fit function. Cyan is a histogram of $W$+jets MC sample in a given channel. 
-%The $\Chi^2/{NDF}$ quoted on the plots is computed as the $\Chi^2$ value provided by RooFit tools (RooChi2Var chi2("chi2","chi2",fullPdf,dataHist)) divided over $N_{bins}-2$ where $N_{bins}$ is the number of bins in the histogram used for fit.
-
-
+%Fit results of jets$ \rightarrow \gamma$ background estimation on pseudodata prepared as $W$+jets and $W\gamma$ samples appropriately weighted and mixed together. Templates are prepared from $W\gamma$ and $W$+jets MC samples, same as those that constitute pseudodata. 
 
  \begin{figure}[htb]
   \begin{center}
    \includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_WGamma/MCclosureWjetsPlusWg/c_TrueDDvsMC_c_MUON_WGamma__UNblind_MCclosure__Barrel__phoEt_MCclosure.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/ELECTRON_WGamma/MCclosureWjetsPlusWg/c_TrueDDvsMC_c_ELECTRON_WGamma__UNblind_MCclosure__Barrel__phoEt_MCclosure.pdf}
    \includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_WGamma/MCclosureWjetsPlusWg/c_TrueDDvsMC_c_MUON_WGamma__UNblind_MCclosure__Endcap__phoEt_MCclosure.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/ELECTRON_WGamma/MCclosureWjetsPlusWg/c_TrueDDvsMC_c_ELECTRON_WGamma__UNblind_MCclosure__Endcap__phoEt_MCclosure.pdf}
-  \caption{Real-$\gamma$ yields derived from fits of pseudodata superimposed with $W\gamma$ MC. Left column - muon channel, right column - electron channel. Top to bottom: barrel and endcap photons.}
+  \caption{Real-$\gamma$ yields derived from fits of pseudodata superimposed with $W\gamma$ MC in the muon (left) and electron (right) channels. Top to bottom: barrel and endcap photons.}
   \label{fig:TrueDDvsMC_MCclosureWjetsPlusWg}
   \end{center}
 \end{figure}
@@ -20,26 +17,26 @@ Fit results of jets$ \rightarrow \gamma$ background estimation on pseudodata pre
   \begin{center}
    \includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_WGamma/MCclosureWjetsPlusWg/c_FakeDDvsMC_c_MUON_WGamma__UNblind_MCclosure__Barrel__phoEt_MCclosure.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/ELECTRON_WGamma/MCclosureWjetsPlusWg/c_FakeDDvsMC_c_ELECTRON_WGamma__UNblind_MCclosure__Barrel__phoEt_MCclosure.pdf}
    \includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_WGamma/MCclosureWjetsPlusWg/c_FakeDDvsMC_c_MUON_WGamma__UNblind_MCclosure__Endcap__phoEt_MCclosure.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/ELECTRON_WGamma/MCclosureWjetsPlusWg/c_FakeDDvsMC_c_ELECTRON_WGamma__UNblind_MCclosure__Endcap__phoEt_MCclosure.pdf}
-  \caption{$W$+jets yields derived from fits of pseudodata superimposed with $W$+jets MC. Left column - muon channel, right column - electron. Top to bottom: barrel and endcap photons.}
+  \caption{$W$+jets yields derived from fits of pseudodata superimposed with $W$+jets MC in the muon (left) and electron (right) channels. Top to bottom: barrel and endcap photons.}
   \label{fig:FakeDDvsMC_MCclosureWjetsPlusWg}
   \end{center}
 \end{figure}
 
 \clearpage
 
-To perform the MC closure check, the pseudodata samples are prepared to mimic each of the data samples needed for the fit. This includes:
-\begin{itemize}
-  \item $W\gamma$-selected samples to be used for fit (full analysis selection without $I_{ch}$ or $\sigma_{i\eta i\eta}$ requirements), those samples are prepared separately for the muon and electron channels;
-  \item $W\gamma$ in full selection to be plotted into the [data vs bkg+signal] plots, separately for the two channels;
-  \item $Z\gamma\rightarrow\mu\mu\gamma$ FSR selected sample for the real-$\gamma$ templates;
-  \item $Z\gamma\rightarrow\mu\mu\gamma$ + (DY+jets) ISR selected sample for the fake-$\gamma$ templates.
-\end{itemize}
+%To perform the MC closure check, the pseudodata samples are prepared to mimic each of the data samples needed for the fit. This includes:
+%\begin{itemize}
+%  \item $W\gamma$-selected samples to be used for fit (full analysis selection without $I_{ch}$ or $\sigma_{i\eta i\eta}$ requirements), those samples are prepared separately for the muon and electron channels;
+%  \item $W\gamma$ in full selection to be plotted into the [data vs bkg+signal] plots, separately for the two channels;
+%  \item $Z\gamma\rightarrow\mu\mu\gamma$ FSR selected sample for the real-$\gamma$ templates;
+%  \item $Z\gamma\rightarrow\mu\mu\gamma$ + (DY+jets) ISR selected sample for the fake-$\gamma$ templates.
+%\end{itemize}
 
-To prepare the pseudodata $W\gamma$-selected samples, the $W\gamma$, $W$+jets, $Z\gamma$, DY+jets, $t\bar{t}\gamma$, $t\bar{t}$+jets, and $WW\gamma$ MC samples are merged with the $W\gamma$ selection applied. To prepare the pseudodata $Z\gamma$-selected samples that are used for the template extraction, the $Z\gamma$ and DY+jets MC samples are merged with the appropriate $Z\gamma$ selections applied. Luminosity normalizations, PU and scale factor weights are applied on all MC samples. Then the pseudodata are treated as if they were data to perform the fits, prepare the plots and subtract the background. All the MC samples used in the nominal $W\gamma$ measurement are used for this MC closure check the same way.
+%To prepare the pseudodata $W\gamma$-selected samples, the $W\gamma$, $W$+jets, $Z\gamma$, DY+jets, $t\bar{t}\gamma$, $t\bar{t}$+jets, and $WW\gamma$ MC samples are merged with the $W\gamma$ selection applied. To prepare the pseudodata $Z\gamma$-selected samples that are used for the template extraction, the $Z\gamma$ and DY+jets MC samples are merged with the appropriate $Z\gamma$ selections applied. Luminosity normalizations, PU and scale factor weights are applied on all MC samples. Then the pseudodata are treated as if they were data to perform the fits, prepare the plots and subtract the background. All the MC samples used in the nominal $W\gamma$ measurement are used for this MC closure check the same way.
 
-Figures~\ref{fig:DATAvsBKGandSIGMC_MCclosure_MUON_B}-\ref{fig:DATAvsBKGandSIGMC_MCclosure_ELECTRON_E} show the selection and background estimation results in data (left column) and pseudodata (right column). Top plots are data and pseudodata superimposed with MC. Because the pseudodata was prepared as MC samples merged together, there is an exact match in right-top plots by construction. Middle and bottom plots are results of the background estimation in data and pseudodata. Plots show data (pseudodata) vs background estimates and signal MC where jets$\rightarrow\gamma$ background is estimated from fits of $I_{ch}^{\gamma}$ (middle) and  $\sigma_{i\eta i\eta}^{\gamma}$ (bottom) templates. Plots of fits themselves on the pseudodata are available in App.~\ref{sec:TemplateFitPlotsMCclosure}.
+%Figures~\ref{fig:DATAvsBKGandSIGMC_MCclosure_MUON_B}-\ref{fig:DATAvsBKGandSIGMC_MCclosure_ELECTRON_E} show the selection and background estimation results in data (left column) and pseudodata (right column). Top plots are data and pseudodata superimposed with MC. Because the pseudodata was prepared as MC samples merged together, there is an exact match in right-top plots by construction. Middle and bottom plots are results of the background estimation in data and pseudodata. Plots show data (pseudodata) vs background estimates and signal MC where jets$\rightarrow\gamma$ background is estimated from fits of $I_{ch}^{\gamma}$ (middle) and  $\sigma_{i\eta i\eta}^{\gamma}$ (bottom) templates. Plots of fits themselves on the pseudodata are available in App.~\ref{sec:TemplateFitPlotsMCclosure}.
 
-The agreement in pseudodata vs background plus signal plots is significantly better than in data plots. Thus, the poor agreement in data can be partially explained by wrong normalizations of the signal MC and other real-$\gamma$ MC samples. The disagreement between $I_{ch}^{\gamma}$ and $\sigma_{i\eta i\eta}^{\gamma}$ fit results in pseudodata is smaller than in data however is still significant in many $P_T^{\gamma}$ bins which indicates systematic bias of the fit procedure.
+%The agreement in pseudodata vs background plus signal plots is significantly better than in data plots. Thus, the poor agreement in data can be partially explained by wrong normalizations of the signal MC and other real-$\gamma$ MC samples. The disagreement between $I_{ch}^{\gamma}$ and $\sigma_{i\eta i\eta}^{\gamma}$ fit results in pseudodata is smaller than in data however is still significant in many $P_T^{\gamma}$ bins which indicates systematic bias of the fit procedure.
 
 \begin{figure}[htb]
   \begin{center}
@@ -47,7 +44,7 @@ The agreement in pseudodata vs background plus signal plots is significantly bet
    \includegraphics[width=0.48\textwidth]{../figs/figs_v11/MUON_WGamma/PrepareYields/c_DATAvsBkgPlusSigMCc_MUON_WGamma_TEMPL_CHISO_UNblind__Barrel__phoEt.png}\includegraphics[width=0.48\textwidth]{../figs/figs_v11/MUON_WGamma/PrepareYields/c_DATAvsBkgPlusSigMCc_MUON_WGamma_TEMPL_CHISO_UNblind_MCclosure__Barrel__phoEt_MCclosure.png}\\
    \includegraphics[width=0.48\textwidth]{../figs/figs_v11/MUON_WGamma/PrepareYields/c_DATAvsBkgPlusSigMCc_MUON_WGamma_TEMPL_SIHIH_UNblind__Barrel__phoEt.png}\includegraphics[width=0.48\textwidth]{../figs/figs_v11/MUON_WGamma/PrepareYields/c_DATAvsBkgPlusSigMCc_MUON_WGamma_TEMPL_SIHIH_UNblind_MCclosure__Barrel__phoEt_MCclosure.png}
   %\caption{Top: data (left) and pseudodata (right) vs MC. Middle and bottom: data (left) and pseudodata (right) vs background estimates and signal MC in bins of $P_T^{\gamma}$. Jets$\rightarrow\gamma$ background estimated from fits of $I_{ch}^{\gamma}$ (top) and  $\sigma_{i\eta i\eta}^{\gamma}$ (bottom). Muon channel. Barrel photons.}
-  \caption{Data (left) and pseudodata (right) vs background estimates and signal MC in bins of $P_T^{\gamma}$. Jets$\rightarrow\gamma$ background estimated from fits of $I_{ch}^{\gamma}$ (top) and  $\sigma_{i\eta i\eta}^{\gamma}$ (bottom). Muon channel. Barrel photons.}
+  \caption{Data (left) and pseudodata (right) vs background estimates and signal MC in bins of $P_T^{\gamma}$ in the muon channel. Jets$\rightarrow\gamma$ background estimated from fits of $I_{ch}^{\gamma}$ (top) and  $\sigma_{i\eta i\eta}^{\gamma}$ (bottom). Barrel photons.}
   \label{fig:DATAvsBKGandSIGMC_MCclosure_MUON_B}
   \end{center}
 \end{figure}
@@ -58,7 +55,7 @@ The agreement in pseudodata vs background plus signal plots is significantly bet
 %   \includegraphics[width=0.48\textwidth]{../figs/figs_v11/MUON_WGamma/PrepareYields/c_TotalDATAvsMC_Endcap__phoEt_MCclosure.png}\\
    \includegraphics[width=0.48\textwidth]{../figs/figs_v11/MUON_WGamma/PrepareYields/c_DATAvsBkgPlusSigMCc_MUON_WGamma_TEMPL_CHISO_UNblind__Endcap__phoEt.png}\includegraphics[width=0.48\textwidth]{../figs/figs_v11/MUON_WGamma/PrepareYields/c_DATAvsBkgPlusSigMCc_MUON_WGamma_TEMPL_CHISO_UNblind_MCclosure__Endcap__phoEt_MCclosure.png}\\
 \includegraphics[width=0.48\textwidth]{../figs/figs_v11/MUON_WGamma/PrepareYields/c_DATAvsBkgPlusSigMCc_MUON_WGamma_TEMPL_SIHIH_UNblind__Endcap__phoEt.png}\includegraphics[width=0.48\textwidth]{../figs/figs_v11/MUON_WGamma/PrepareYields/c_DATAvsBkgPlusSigMCc_MUON_WGamma_TEMPL_SIHIH_UNblind_MCclosure__Endcap__phoEt_MCclosure.png}
-  \caption{Data (left) and pseudodata (right) vs background estimates and signal MC in bins of $P_T^{\gamma}$. Jets$\rightarrow\gamma$ background estimated from fits of $I_{ch}^{\gamma}$ (middle) and  $\sigma_{i\eta i\eta}^{\gamma}$ (bottom). Muon channel. Endcap photons. }
+  \caption{Data (left) and pseudodata (right) vs background estimates and signal MC in bins of $P_T^{\gamma}$ in the muon channel. Jets$\rightarrow\gamma$ background estimated from fits of $I_{ch}^{\gamma}$ (middle) and  $\sigma_{i\eta i\eta}^{\gamma}$ (bottom). Endcap photons. }
   \label{fig:DATAvsBKGandSIGMC_MCclosure_MUON_E}
   \end{center}
 \end{figure}
@@ -69,7 +66,7 @@ The agreement in pseudodata vs background plus signal plots is significantly bet
 %   \includegraphics[width=0.48\textwidth]{../figs/figs_v11/ELECTRON_WGamma/PrepareYields/c_TotalDATAvsMC_Barrel__phoEt_MCclosure.png}\\
    \includegraphics[width=0.48\textwidth]{../figs/figs_v11/ELECTRON_WGamma/PrepareYields/c_DATAvsBkgPlusSigMCc_ELECTRON_WGamma_TEMPL_CHISO_UNblind__Barrel__phoEt.png}\includegraphics[width=0.48\textwidth]{../figs/figs_v11/ELECTRON_WGamma/PrepareYields/c_DATAvsBkgPlusSigMCc_ELECTRON_WGamma_TEMPL_CHISO_UNblind_MCclosure__Barrel__phoEt_MCclosure.png}\\
    \includegraphics[width=0.48\textwidth]{../figs/figs_v11/ELECTRON_WGamma/PrepareYields/c_DATAvsBkgPlusSigMCc_ELECTRON_WGamma_TEMPL_SIHIH_UNblind__Barrel__phoEt.png}\includegraphics[width=0.48\textwidth]{../figs/figs_v11/ELECTRON_WGamma/PrepareYields/c_DATAvsBkgPlusSigMCc_ELECTRON_WGamma_TEMPL_SIHIH_UNblind_MCclosure__Barrel__phoEt_MCclosure.png}
-  \caption{Data (left) and pseudodata (right) vs background estimates and signal MC in bins of $P_T^{\gamma}$. Jets$\rightarrow\gamma$ background estimated from fits of $I_{ch}^{\gamma}$ (middle) and  $\sigma_{i\eta i\eta}^{\gamma}$ (bottom). Electron channel. Barrel photons.}
+  \caption{Data (left) and pseudodata (right) vs background estimates and signal MC in bins of $P_T^{\gamma}$ in the electron channel. Jets$\rightarrow\gamma$ background estimated from fits of $I_{ch}^{\gamma}$ (middle) and  $\sigma_{i\eta i\eta}^{\gamma}$ (bottom). Barrel photons.}
   \label{fig:DATAvsBKGandSIGMC_MCclosure_ELECTRON_B}
   \end{center}
 \end{figure}
@@ -80,7 +77,7 @@ The agreement in pseudodata vs background plus signal plots is significantly bet
 %   \includegraphics[width=0.48\textwidth]{../figs/figs_v11/ELECTRON_WGamma/PrepareYields/c_TotalDATAvsMC_Endcap__phoEt_MCclosure.png}\\
    \includegraphics[width=0.48\textwidth]{../figs/figs_v11/ELECTRON_WGamma/PrepareYields/c_DATAvsBkgPlusSigMCc_ELECTRON_WGamma_TEMPL_CHISO_UNblind__Endcap__phoEt.png}\includegraphics[width=0.48\textwidth]{../figs/figs_v11/ELECTRON_WGamma/PrepareYields/c_DATAvsBkgPlusSigMCc_ELECTRON_WGamma_TEMPL_CHISO_UNblind_MCclosure__Endcap__phoEt_MCclosure.png}\\
    \includegraphics[width=0.48\textwidth]{../figs/figs_v11/ELECTRON_WGamma/PrepareYields/c_DATAvsBkgPlusSigMCc_ELECTRON_WGamma_TEMPL_SIHIH_UNblind__Endcap__phoEt.png}\includegraphics[width=0.48\textwidth]{../figs/figs_v11/ELECTRON_WGamma/PrepareYields/c_DATAvsBkgPlusSigMCc_ELECTRON_WGamma_TEMPL_SIHIH_UNblind_MCclosure__Endcap__phoEt_MCclosure.png}
-  \caption{Data (left) and pseudodata (right) vs background estimates and signal MC in bins of $P_T^{\gamma}$. Jets$\rightarrow\gamma$ background estimated from fits of $I_{ch}^{\gamma}$ (middle) and  $\sigma_{i\eta i\eta}^{\gamma}$ (bottom). Electron channel. Endcap photons.}
+  \caption{Data (left) and pseudodata (right) vs background estimates and signal MC in bins of $P_T^{\gamma}$ in the electron channel. Jets$\rightarrow\gamma$ background estimated from fits of $I_{ch}^{\gamma}$ (middle) and  $\sigma_{i\eta i\eta}^{\gamma}$ (bottom). Endcap photons.}
   \label{fig:DATAvsBKGandSIGMC_MCclosure_ELECTRON_E}
   \end{center}
 \end{figure}
