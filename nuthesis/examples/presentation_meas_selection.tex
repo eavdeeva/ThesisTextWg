@@ -1,4 +1,5 @@
-\begin{frame}\frametitle{Cut-Based Event Selection}
+\begin{frame}\frametitle{Event-Level Selection Requirements}
+% ADD A PLOT WITH GEOMETRY (eta)
 \begin{table}[h]
 \scriptsize
 \begin{center}
@@ -16,14 +17,38 @@
  \tiny{$p_T^{\mu2}>10$ GeV;} &  \tiny{$p_T^{ele2}>10$;} \\
  \tiny{$|\eta^{\mu2}|<2.4$}  &   \tiny{$|\eta^{ele2}| < 1.4442$ or $1.566 < |\eta^{ele2}| < 2.5$;} \\
   &   \tiny{veto ID for ele2} \\ \hline
- $M_T^W>40$ GeV & $M_T^W>40$ GeV \\ \hline
-  & $110~GeV>M_{e\gamma}>70~GeV$ excluded \\ \hline
+ \multicolumn{2}{|c|}{$M_T^W>$40 GeV (discussed later)} \\ \hline
+  & $110~GeV>M_{e\gamma}>70~GeV$ excluded (discussed later) \\ \hline
  \multicolumn{2}{|c|}{$\Delta{R}(lep,\gamma)>0.7$}\\  \hline
 \end{tabular}
 \end{center}
 \end{table}
+\end{frame}%{Event-Level Selection Requirements}
 
-\end{frame}%{Cut-Based Event Selection}
+
+
+\begin{frame}\frametitle{Data vs MC. $M_T^W$}
+\scriptsize
+The selection requirement of {\bfseries{$M_T^W>40$~GeV}} is applied.
+\begin{figure}[htb]
+  \begin{center}
+   \includegraphics[width=0.25\textwidth]{../figs/figs_v11/MUON_WGamma/PrepareYields/c_TotalDATAvsMC_EtaCommon__WMtVERY_PRELIMINARY.pdf}\includegraphics[width=0.25\textwidth]{../figs/figs_v11/ELECTRON_WGamma/PrepareYields/c_TotalDATAvsMC_EtaCommon__WMtVERY_PRELIMINARY.pdf}
+  \label{fig:DATAvsMC_WMt}
+  \end{center}
+\end{figure}
+\end{frame}
+
+\begin{frame}\frametitle{Data vs MC. $M_{l\gamma}$}
+\scriptsize
+The selection requirement of {\bfseries{$M_{l,\gamma}<70~or~M_{l,\gamma}>110$~GeV}} is applied in the {\bfseries{electron channel}} only.
+\begin{figure}[htb]
+  \begin{center}
+   \includegraphics[width=0.25\textwidth]{../figs/figs_v11/MUON_WGamma/PrepareYields/c_TotalDATAvsMC_EtaCommon__Mpholep1_pt15to500_.pdf}\includegraphics[width=0.25\textwidth]{../figs/figs_v11/ELECTRON_WGamma/PrepareYields/c_TotalDATAvsMC_EtaCommon__Mpholep1PRELIMINARY_FOR_E_TO_GAMMA_WITH_PSV_CUT_pt15to500_.pdf}
+  \label{fig:DATAvsMC_WMt}
+  \end{center}
+\end{figure}
+\end{frame}
+
 
 %\begin{frame}\frametitle{Weights and Corrections}
 %\begin{table}[h]
@@ -64,30 +89,8 @@
 \scriptsize
   \begin{figure}[htb]
     \begin{center}
-       \includegraphics[width=0.5\textwidth]{../figs/figs_v11/MUON_WGamma/PrepareYields/c_TotalDATAvsMC_Barrel__phoEt.pdf} \includegraphics[width=0.5\textwidth]{../figs/figs_v11/MUON_WGamma/PrepareYields/c_TotalDATAvsMC_Endcap__phoEt.pdf}\\
-       \includegraphics[width=0.5\textwidth]{../figs/figs_v11/ELECTRON_WGamma/PrepareYields/c_TotalDATAvsMC_Barrel__phoEt.pdf} \includegraphics[width=0.5\textwidth]{../figs/figs_v11/ELECTRON_WGamma/PrepareYields/c_TotalDATAvsMC_Endcap__phoEt.pdf}\\
+       \includegraphics[width=0.25\textwidth]{../figs/figs_v11/MUON_WGamma/PrepareYields/c_TotalDATAvsMC_Barrel__phoEt.pdf} \includegraphics[width=0.25\textwidth]{../figs/figs_v11/MUON_WGamma/PrepareYields/c_TotalDATAvsMC_Endcap__phoEt.pdf}\\
+       \includegraphics[width=0.25\textwidth]{../figs/figs_v11/ELECTRON_WGamma/PrepareYields/c_TotalDATAvsMC_Barrel__phoEt.pdf} \includegraphics[width=0.25\textwidth]{../figs/figs_v11/ELECTRON_WGamma/PrepareYields/c_TotalDATAvsMC_Endcap__phoEt.pdf}\\
     \end{center}
   \end{figure}
-\end{frame}
-
-\begin{frame}\frametitle{Data vs MC. $M_T^W$}
-\scriptsize
-The selection requirement of {\bfseries{$M_T^W>40$~GeV}} is applied.
-\begin{figure}[htb]
-  \begin{center}
-   \includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_WGamma/PrepareYields/c_TotalDATAvsMC_EtaCommon__WMtVERY_PRELIMINARY.pdf}\includegraphics[width=0.45\textwidth]{../figs/figs_v11/ELECTRON_WGamma/PrepareYields/c_TotalDATAvsMC_EtaCommon__WMtVERY_PRELIMINARY.pdf}
-  \label{fig:DATAvsMC_WMt}
-  \end{center}
-\end{figure}
-\end{frame}
-
-\begin{frame}\frametitle{Data vs MC. $M_{l\gamma}$}
-\scriptsize
-The selection requirement of {\bfseries{$M_{l,\gamma}<70~or~M_{l,\gamma}>110$~GeV}} is applied in the {\bfseries{electron channel}} only.
-\begin{figure}[htb]
-  \begin{center}
-   \includegraphics[width=0.5\textwidth]{../figs/figs_v11/MUON_WGamma/PrepareYields/c_TotalDATAvsMC_EtaCommon__Mpholep1_pt15to500_.pdf}\includegraphics[width=0.5\textwidth]{../figs/figs_v11/ELECTRON_WGamma/PrepareYields/c_TotalDATAvsMC_EtaCommon__Mpholep1PRELIMINARY_FOR_E_TO_GAMMA_WITH_PSV_CUT_pt15to500_.pdf}
-  \label{fig:DATAvsMC_WMt}
-  \end{center}
-\end{figure}
 \end{frame}
