@@ -11,9 +11,9 @@ A full event SF is a multiplication of individual object SF. Full SF for each ty
 \begin{table}[h]
   \footnotesize
   \begin{center}
-  \caption{Full event SF for each type of candidate. First column: type of candidate; second column: full event scale factor.} 
+  \caption{Full event SF for each type of candidate.} 
    \begin{tabular}{|c|c|}
- candidates                          & SF\\ \hline
+ type of candidate                  &   full SF\\ \hline
  $W\gamma\rightarrow\mu\nu\gamma$   &   $\rho^{\mu}_{ID} \times \rho^{\mu}_{iso} \times \rho^{\gamma}_{ID}$    \\ \hline
  $W\gamma\rightarrow e\nu\gamma$    &   $\rho^{\e}_{ID} \times \rho^{\gamma}_{ID}\times \rho^{\gamma}_{PSV}$       \\ \hline
  $Z\gamma\rightarrow\mu\mu\gamma$   &   $\rho^{\mu1}_{ID} \times \rho^{\mu1}_{iso} \times \rho^{\mu2}_{ID} \times \rho^{\mu2}_{iso} \times \rho^{\gamma}_{ID}$      \\ \hline
@@ -26,7 +26,7 @@ A full event SF is a multiplication of individual object SF. Full SF for each ty
 \begin{table}[h]
   \footnotesize
   \begin{center}
-  \caption{Muon ID SF as recommended by POG. First column: $P_T^{\mu}$; other columns: SF values depending on $P_T^{\mu}$ and $|\eta^{\mu}|$.} 
+  \caption{Muon ID SF as recommended by POG depending on $P_T^{\mu}$ and $|\eta^{\mu}|$.} 
    \begin{tabular}{|c|c|c|c|}
  $P_T^{\mu}$  & $|\eta^{\mu}|< 0.9$   & $0.9<|\eta^{\mu}|< 1.2$    & $1.2<|\eta^{\mu}|< 2.1$ \\ \hline
 25-30          & 0.992$\pm$0.001   & 0.995$\pm$0.001    & 0.998$\pm$0.001     \\ \hline
@@ -45,7 +45,7 @@ $>$140         & 1.004$\pm$0.017   & 1.009$\pm$0.035    & 1.023$\pm$0.030       
 \begin{table}[h]
   \footnotesize
   \begin{center}
-  \caption{Muon isolation SF as recommended by POG. First column: $P_T^{\mu}$; other columns: SF values depending on $P_T^{\mu}$ and $|\eta^{\mu}|$.} 
+  \caption{Muon isolation SF as recommended by POG depending on $P_T^{\mu}$ and $|\eta^{\mu}|$.} 
    \begin{tabular}{|c|c|c|c|}
  $P_T^{\mu}$  & $|\eta|< 0.9$   & $0.9<|\eta|< 1.2$    & $1.2<|\eta|< 2.1$ \\ \hline
 25-30          & 0.999$\pm$0.001   & 1.002$\pm$0.001    & 1.002$\pm$0.001     \\ \hline
@@ -65,9 +65,9 @@ $>$140         & 1.001$\pm$0.002   & 1.004$\pm$0.005    & 0.997$\pm$0.002       
 \begin{table}[h]
   \footnotesize
   \begin{center}
-  \caption{Electron ID SF as recommended by POG. First column: $P_T^{e}$; other columns: SF values depending on $P_T^{e}$ and $|\eta^{e}|$.} 
+  \caption{Electron ID SF as recommended by POG depending on $P_T^{e}$ and $|\eta^{e}|$.} 
    \begin{tabular}{|c|c|c|c|c|}
- $P_T^{e}$  & $|\eta|\leq 0.80$ & $0.80<|\eta|\leq 1.44$ & $1.57<|\eta|\leq 2.00$ & $|\eta|> 2.00$\\ \hline
+ $P_T^{e}$  & $|\eta^{e}|\leq 0.80$ & $0.80<|\eta^{e}|\leq 1.44$ & $1.57<|\eta^{e}|\leq 2.00$ & $|\eta^{e}|> 2.00$\\ \hline
 $\leq$40       & 0.978$\pm$0.001   & 0.958$\pm$0.002        & 0.909$\pm$0.003        & 0.987$\pm$0.004 \\ \hline
 40-50          & 0.981$\pm$0.001   & 0.969$\pm$0.001        & 0.942$\pm$0.002        & 0.991$\pm$0.003 \\ \hline
 $>$50            & 0.982$\pm$0.002   & 0.969$\pm$0.002        & 0.957$\pm$0.004        & 0.999$\pm$0.005 \\ \hline
@@ -79,7 +79,7 @@ $>$50            & 0.982$\pm$0.002   & 0.969$\pm$0.002        & 0.957$\pm$0.004 
 \begin{table}[h]
   \footnotesize
   \begin{center}
-  \caption{Photon ID SF as recommended by POG. First column: $P_T^{\gamma}$; other columns: SF values depending on $P_T^{\gamma}$ and $|\eta^{\gamma}|$.} 
+  \caption{Photon ID SF as recommended by POG depending on $P_T^{\gamma}$ and $|\eta^{\gamma}|$.} 
    \begin{tabular}{|c|c|c|c|c|}
  $P_T^{\gamma}$  & $|\eta^{\gamma}|\leq 0.80$ & $0.80<|\eta^{\gamma}|\leq 1.44$ & $1.57<|\eta^{\gamma}|\leq 2.00$ & $|\eta^{\gamma}|> 2.00$\\ \hline
 15-20          & 0.95$\pm$0.02   & 0.99$\pm$0.02        & 1.00$\pm$0.02        & 1.02$\pm$0.02 \\ \hline
@@ -95,7 +95,7 @@ $>$50          & 0.98$\pm$0.01   & 0.98$\pm$0.01        & 1.00$\pm$0.01        &
 \begin{table}[h]
   \footnotesize
   \begin{center}
-  \caption{Additional photon SF for ``PixelSeedVeto'' as reported in $W\gamma\gamma$ measurement. First column: $P_T^{\gamma}$; second and third columns: SF values depending on $P_T^{\gamma}$ and $|\eta^{\gamma}|$.} 
+  \caption{Additional photon SF for ``PixelSeedVeto'' as reported in $W\gamma\gamma$ measurement depending on $P_T^{\gamma}$ and $|\eta^{\gamma}|$.} 
    \begin{tabular}{|c|c|c|}
  $P_T^{\gamma}$  & barrel              & endcap \\ \hline
 15-20          & 0.996$\pm$0.020     & 0.960$\pm$0.041 \\ \hline
