@@ -35,25 +35,25 @@ After that, we provide the migration matrix $M_{ji}$, generated and reconstructe
 \begin{table}[h]
   \scriptsize
   \begin{center}
-  \caption{Unfolding Results in $W\gamma$, muon channel. First column: $P_T^{\gamma}$ ranges, second column: $W\gamma$ differential yields after background subtraction before unfolding, third column: $W\gamma$ yields after unfolding.}
+  \caption{$P_T^{\gamma}$ yields of $W\gamma$ before and after unfolding in the muon channel. Diagonal elements of the error matrix are shown as uncertainties for the unfolded yields.}
   \begin{tabular}{|c|c|c|}
 
-  $P_T^{\gamma}$, &  yields   &  yields  \\ 
-  GeV           &  data-bkg &  unfolded  \\ \hline
+  $P_T^{\gamma}$, &  \multicolumn{2}{|c|}{yields} \\ 
+  GeV           & pre-unfolded &  unfolded  \\ \hline
 
- 10 -  15 &     $39621\pm 678$ &     $38843\pm 718$  \\ \hline
- 15 -  20 &     $19449\pm 361$ &     $19662\pm 438$  \\ \hline
- 20 -  25 &     $11315\pm 230$ &     $11443\pm 275$  \\ \hline
- 25 -  30 &     $8417\pm 160$ &     $8714\pm 196$  \\ \hline
- 30 -  35 &     $5613\pm 128$ &     $5529\pm 155$  \\ \hline
- 35 -  45 &     $7518\pm 133$ &     $7895\pm 149$  \\ \hline
- 45 -  55 &     $2716\pm  95$ &     $2605\pm 108$  \\ \hline
- 55 -  65 &     $2293\pm  62$ &     $2307\pm  70$  \\ \hline
- 65 -  75 &     $1191\pm  53$ &     $1198\pm  62$  \\ \hline
- 75 -  85 &     $1101\pm  41$ &     $1165\pm  48$  \\ \hline
- 85 -  95 &     $757\pm  33$ &     $776\pm  41$  \\ \hline
- 95 - 120 &     $1054\pm  44$ &     $1064\pm  50$  \\ \hline
-120 - 500 &     $1107\pm  39$ &     $1141\pm  40$  \\ \hline
+ 10 -  15 &     $39621 \pm 678$ &     $38843 \pm 718$  \\ \hline
+ 15 -  20 &     $19449 \pm 361$ &     $19662 \pm 438$  \\ \hline
+ 20 -  25 &     $11315 \pm 230$ &     $11443 \pm 275$  \\ \hline
+ 25 -  30 &     $8417 \pm 160$ &     $8714 \pm 196$  \\ \hline
+ 30 -  35 &     $5613 \pm 128$ &     $5529 \pm 155$  \\ \hline
+ 35 -  45 &     $7518 \pm 133$ &     $7895 \pm 149$  \\ \hline
+ 45 -  55 &     $2716 \pm  95$ &     $2605 \pm 108$  \\ \hline
+ 55 -  65 &     $2293 \pm  62$ &     $2307 \pm  70$  \\ \hline
+ 65 -  75 &     $1191 \pm  53$ &     $1198 \pm  62$  \\ \hline
+ 75 -  85 &     $1101 \pm  41$ &     $1165 \pm  48$  \\ \hline
+ 85 -  95 &     $757 \pm  33$ &     $776 \pm  41$  \\ \hline
+ 95 - 120 &     $1054 \pm  44$ &     $1064 \pm  50$  \\ \hline
+120 - 500 &     $1107 \pm  39$ &     $1141 \pm  40$  \\ \hline
   \end{tabular}
   \label{tab:unf_results_MUON_WGamma}
   \end{center}
@@ -62,11 +62,11 @@ After that, we provide the migration matrix $M_{ji}$, generated and reconstructe
 \begin{table}[h]
   \scriptsize
   \begin{center}
-  \caption{Unfolding Results in $W\gamma$, electron channel. First column: $P_T^{\gamma}$ ranges, second column: $W\gamma$ differential yields after background subtraction before unfolding, third column: $W\gamma$ yields after unfolding.}
+  \caption{$P_T^{\gamma}$ yields of $W\gamma$ before and after unfolding in the electron channel. Diagonal elements of the error matrix are shown as uncertainties for the unfolded yields.}
   \begin{tabular}{|c|c|c|}
 
-  $P_T^{\gamma}$, &  yields   &   yields  \\ 
-  GeV           &  data-bkg & unfolded  \\ \hline
+  $P_T^{\gamma}$, &    \multicolumn{2}{|c|}{yields}  \\ 
+  GeV           &  pre-unfolded &  unfolded  \\ \hline
 
  10 -  15 &     $9209\pm 378$ &     $9192\pm 413$  \\ \hline
  15 -  20 &     $4920\pm 319$ &     $4850\pm 380$  \\ \hline
@@ -135,12 +135,12 @@ The results of the MC closure check are summarized in Tab.~\ref{tab:unf_mc_closu
 \begin{table}[h]
   \scriptsize
   \begin{center}
-  \caption{Unfolding, MC closure test. $W\gamma$, muon channel. The first column is $P_T^{\gamma}$ range, the second column is true selected yields in the signal MC sample based on the generator level information, the third column is reconstructed and smeared yields in the signal MC sample, the fourth column is yields from the third column unfolded by the D'Agostini method, and the fifth column is yields from the third column unfolded by the matrix inversion method. }
+  \caption{Results of the MC closure test of the detector resolution unfolding of $P_T^{\gamma}$ yields of $W\gamma$ in the muon channel. The unfolding procedure is applied on the ``MC truth yields'', and the results of the matrix inversion (``inversion'') and D'Agostini (``D\'Agostini'') unfolding methods are compared to ``reconstructed yields'' and to each other.}
   \begin{tabular}{|c|c|c|c|c|}
   \hline
-  $P_T^{\gamma}$, &  yields &   yields &  unfolded &  unfolded \\ \hline
-  GeV &  gen-level & rec &  inversion &  D'Agostini \\ \hline
-10 -  15 &     $33888\pm 273$ &     $37074\pm 286$ &     $36226\pm206$ &     $36222\pm204$ \\ \hline
+  $P_T^{\gamma}$,&  MC truth         &   reconstructed &  \multicolumn{2}{|c|}{unfoldied yields} \\ \hline
+  GeV          &  yields       &       yields        &  inversion &  D'Agostini \\ \hline
+ 10 -  15 &     $33888\pm 273$ &     $37074\pm 286$ &     $36226\pm206$ &     $36222\pm204$ \\ \hline
  15 -  20 &     $19736\pm 207$ &     $19181\pm 203$ &     $19612\pm171$ &     $19619\pm169$ \\ \hline
  20 -  25 &     $10364\pm 149$ &     $10171\pm 148$ &     $10358\pm122$ &     $10354\pm119$ \\ \hline
  25 -  30 &     $6254\pm 116$ &     $6156\pm 115$ &     $6233\pm96$ &     $6234\pm96$ \\ \hline
@@ -162,11 +162,11 @@ The results of the MC closure check are summarized in Tab.~\ref{tab:unf_mc_closu
 \begin{table}[h]
   \scriptsize
   \begin{center}
-  \caption{Unfolding, MC closure test. $W\gamma$, electron channel. The first column is $P_T^{\gamma}$ range, the second column is true selected yields in the signal MC sample based on the generator level information, the third column is reconstructed and smeared yields in the signal MC sample, the fourth column is yields from the third column unfolded by the D'Agostini method, and the fifth column is yields from the third column unfolded by the matrix inversion method. }
+  \caption{Results of the MC closure test of the detector resolution unfolding of $P_T^{\gamma}$ yields of $W\gamma$ in the electron channel. The unfolding procedure is applied on the ``MC truth yields'', and the results of the matrix inversion (``inversion'') and D'Agostini (``D\'Agostini'') unfolding methods are compared to ``reconstructed yields'' and to each other. }
   \begin{tabular}{|c|c|c|c|c|}
   \hline
-  $P_T^{\gamma}$, &  yields &   yields &  unfolded &  unfolded \\ \hline
-  GeV &  gen-level & rec &  inversion &  D'Agostini \\ \hline
+  $P_T^{\gamma}$, &  MC truth         &   reconstructed          &  \multicolumn{2}{|c|}{unfoldied yields} \\ \hline
+  GeV &  yields       &       yields        &  inversion &  D'Agostini \\ \hline
  10 -  15 &     $16025\pm 185$ &     $16849\pm 190$ &     $17117\pm143$ &     $17116\pm141$ \\ \hline
  15 -  20 &     $8246\pm 131$ &     $8111\pm 130$ &     $8194\pm109$ &     $8196\pm108$ \\ \hline
  20 -  25 &     $4093\pm  92$ &     $4046\pm  92$ &     $4083\pm75$ &     $4082\pm74$ \\ \hline
@@ -185,4 +185,4 @@ The results of the MC closure check are summarized in Tab.~\ref{tab:unf_mc_closu
   \label{tab:unf_mc_closure_ELECTRON_WGamma}
   \end{center}
 \end{table}
-\clearpage
+
