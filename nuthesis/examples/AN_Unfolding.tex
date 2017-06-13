@@ -13,31 +13,31 @@
 %calculations are described below.
 
 %My words:
-The finite detector resolution in $P_T^\gamma$ causes the bin-by-bin migration in the $P_T^{\gamma}$ spectrum. The reconstructed $P_T^{\gamma(reco)}$ may not coincide with the true $P_T^{\gamma(true)}$, and, therefore, the event reconstructed in a $P_T^{\gamma}$ bin $j$ may, in fact, belong to the bin $i \neq j$. To recover the true $P_T^{\gamma}$ spectrum, we apply the procedure of the detector resolution unfolding.
+The finite detector resolution in measuring the energy of a photon causes bin-to-bin migration in the $P_T^{\gamma}$ spectrum. The reconstructed $P_T^{\gamma(reco)}$ may not coincide with the true $P_T^{\gamma(true)}$, and, therefore, the event reconstructed in a $P_T^{\gamma}$ bin $j$ may, in fact, belong to the bin $i \neq j$. To recover the true $P_T^{\gamma}$ spectrum, we apply the procedure of the detector resolution unfolding.
 
 The reconstructed $P_T^{\gamma}$ spectrum is related to true $P_T^{\gamma}$ spectrum as:
-\begin{equation}
+\begin{equation}\label{eq:response_matrix}
   N^{reco}_{j} = R_{ji} N^{A\times\epsilon}_{i},
 \end{equation}
-\noindent{where $N^{reco}_{j}$ and $N^{A\times\epsilon}_{i}$ are numbers of events in a given $P_T^{\gamma(reco)}$ and $P_T^{\gamma(true)}$ bins, respectively, $R_{ji}$ is the ``response matrix'' where each element is the probability of an event with true $P_T^{\gamma}$ in the bin ``$i$'' to be reconstructed with  $P_T^{\gamma}$ in the bin ``$j$''. The notation $N^{A\times\epsilon}_{i}$ is used to be consistent with a definition given in Tab.~\ref{tab:analysisOutline}.}
+\noindent{where $N^{reco}_{j}$ and $N^{A\times\epsilon}_{i}$ are numbers of events in a given $P_T^{\gamma(reco)}$ and $P_T^{\gamma(true)}$ bins, respectively, $R_{ji}$ is the ``response matrix'' where each element is the probability of an event with true $P_T^{\gamma}$ in the bin ``$i$'' to be reconstructed with  $P_T^{\gamma}$ in the bin ``$j$''. The notation $N^{A\times\epsilon}_{i}$ is used because this yield is further corrected for the acceptance and efficiency (Ch.~\ref{sec:AccXEff}) and is consistent with the definition given in Tab.~\ref{tab:analysisOutline}.}
 
-To recover the true $P_T^{\gamma(true)}$ spectrum, we use the D'Agostini method~\cite{ref_DAgostini} which is based on Bayes' theorem and unfolds the reconstructed spectrum iteratively. D'Agostini method was chosen because it is recommended by the CMS SMP group in contrast to the matrix inversion method ($N^{A\times\epsilon}_{i} = \left( R_{ji} \right) ^{-1} N^{reco}_{j}$) to avoid problems with possible matrix singularity and large statistical fluctuations.
+The simplest method to recover the true spectrum is to solve the system of linear equations Eq.~\ref{eq:response_matrix} if the $R_{ji}$ is known. However, this method often encounters numerical difficulties due to possible matrix singularity, large statistical fluctuations and the effect of oscillations of the unfolded spectrum. To avoid these difficulties, we use the D'Agostini method~\cite{ref_DAgostini} as recommended by the CMS SMP group. The D'Agostini method is based on the Bayes' theorem and unfolds the reconstructed spectrum iteratively.
 
 %One possible way to recover the true  $P_T^{\gamma}$ spectrum is matrix inversion:}
 %\begin{equation}
 %  N^{A\times\epsilon}_i = \left( R_{ji} \right) ^{-1} N^{reco}_j.
 %\end{equation}
 
-Unfolding constants are derived from the signal MC sample ($W\gamma\rightarrow\mu\nu_{\mu}\gamma$/$W\gamma\rightarrow{e}\nu_{e}\gamma$) where both true (gen-level) and reconstructed $P_T^\gamma$ spectra are known. Using the signal MC sample, we prepare the migration matrix $M_{ji}$ which has the number of selected signal events in each [$j$,$i$] bin. 
+The migration matrix $M_{ji}$ is prepared using the signal MC sample ($W\gamma\rightarrow\mu\nu_{\mu}\gamma$/$W\gamma\rightarrow{e}\nu_{e}\gamma$) where both true (gen-level) and reconstructed $P_T^\gamma$ spectra are known. The $M_{ji}$ contains the number of selected signal events in each [$j$,$i$] bin. 
 
-After that, we provide the migration matrix $M_{ji}$, generated and reconstructed yields from signal MC $N^{gen-MC}_i$ and $N^{reco-MC}_j$ and reconstructed yields from data to RooUnfold class~\cite{ref_RooUnfold} which performs unfolding using D'Agostini method with five iterations. Yields before and after detector resolution unfolding are compared in Tab.~\ref{tab:unf_results_MUON_WGamma} for the muon channel and in Tab.~\ref{tab:unf_results_ELECTRON_WGamma} for the electron channel. 
+After that, we pass the migration matrix $M_{ji}$, generated and reconstructed yields from signal MC $N^{gen-MC}_i$ and $N^{reco-MC}_j$ and reconstructed yields from data to RooUnfold class~\cite{ref_RooUnfold} which performs unfolding using D'Agostini method with five iterations. Yields before and after detector resolution unfolding are compared in Tab.~\ref{tab:unf_results_MUON_WGamma} for the muon channel and in Tab.~\ref{tab:unf_results_ELECTRON_WGamma} for the electron channel. 
 
 \begin{table}[h]
   \scriptsize
   \begin{center}
   \caption{$P_T^{\gamma}$ yields of $W\gamma$ before and after unfolding in the muon channel. Diagonal elements of the error matrix are shown as uncertainties for the unfolded yields.}
   \begin{tabular}{|c|c|c|}
-
+\hline
   $P_T^{\gamma}$, &  \multicolumn{2}{|c|}{yields} \\ 
   GeV           & pre-unfolded &  unfolded  \\ \hline
 
@@ -64,7 +64,7 @@ After that, we provide the migration matrix $M_{ji}$, generated and reconstructe
   \begin{center}
   \caption{$P_T^{\gamma}$ yields of $W\gamma$ before and after unfolding in the electron channel. Diagonal elements of the error matrix are shown as uncertainties for the unfolded yields.}
   \begin{tabular}{|c|c|c|}
-
+\hline
   $P_T^{\gamma}$, &    \multicolumn{2}{|c|}{yields}  \\ 
   GeV           &  pre-unfolded &  unfolded  \\ \hline
 
@@ -88,15 +88,15 @@ After that, we provide the migration matrix $M_{ji}$, generated and reconstructe
 
 After $P_T^{\gamma}$ spectrum is unfolded, measurements in different $P_T^{\gamma}$ bins become correlated. Correlation matrices are shown in Fig.~\ref{fig:corrMatrices_Wg}. 
 
-For illustration purpose, we in addition to the migration matrix we also prepare the response matrix $R_{ji}$ (Fig.~\ref{fig:respMatrices_Wg}) by normalizing the migration matrix in each $j$ bin to all events reconstructed in this bin such as 
+For illustration purpose, in addition to the migration matrix we also prepare the response matrix $R_{ji}$ (Fig.~\ref{fig:respMatrices_Wg}) by normalizing the migration matrix in each $j$ bin to all events reconstructed in this bin such as 
 \begin{equation}
 R_{ji} = \frac{M_{ji}}{\sum_{i} M_{ji}}. 
 \end{equation}
 \noindent{The response matrix is shown in Fig.~\ref{fig:respMatrices_Wg}.}
 
-To validate the detector resolution unfolding procedure, we perform the MC closure check. Gen-level and reconstructed yields are prepared using the signal MC. Then reconstructed yields are smeared by the Gaussian distribution according to the errors on the yields. The smeared yields are unfolded and compared to the gen-level yields. In addition to the D'Agostini method, we check the performance of the matrix inversion method for the unfolding which recovers the true yields as $N^{A\times\epsilon}_i = (R_{ji})^{-1} N^{reco}_j$. 
+To validate the procedure of the detector resolution unfolding, we perform the MC closure checks. Gen-level and reconstructed yields are prepared using the signal MC. Then reconstructed yields are smeared by the Gaussian distribution according to the statistical uncertainties on the yields. The smeared yields are unfolded and compared to the gen-level yields. In addition to the D'Agostini method, we check the performance of the matrix inversion method for the unfolding which recovers the true yields as $N^{A\times\epsilon}_i = (R_{ji})^{-1} N^{reco}_j$. 
 
-The results of the MC closure check are summarized in Tab.~\ref{tab:unf_mc_closure_MUON_WGamma}-\ref{tab:unf_mc_closure_ELECTRON_WGamma} for the muon and electron channels respectively. The unfolded yields show reasonable agreement to the gen-level yields except the underflow bin ($10-15$~GeV). The disagreement in the underflow bin may be caused by migration between $P_T^{\gamma}<$10~GeV and 10$<P_T^{\gamma}<$15~GeV ranges because events with $P_T^{\gamma}<$10~GeV are not available to us.  
+The results of the MC closure checks are summarized in Tab.~\ref{tab:unf_mc_closure_MUON_WGamma}-\ref{tab:unf_mc_closure_ELECTRON_WGamma} for the muon and electron channels respectively. The unfolded yields show reasonable agreement to the gen-level yields except for the underflow bin ($10-15$~GeV). The disagreement in the underflow bin may be caused by migration between $P_T^{\gamma}<$10~GeV and 10$<P_T^{\gamma}<$15~GeV ranges because events with $P_T^{\gamma}<$10~GeV are not present in the signal MC samples.  
 
 %$M^{corr}_{ij} = \frac{C_i \cdot C_j}{\sqrt{(C_{ii} \cdot C_{jj})}} $, where $C_{ij}$ is a matrix element of a covariance matrix.
 
@@ -111,19 +111,19 @@ The results of the MC closure check are summarized in Tab.~\ref{tab:unf_mc_closu
 
 \begin{figure}[htb]
   \begin{center}
-   \includegraphics[width=0.90\textwidth]{../figs/figs_v11/MUON_WGamma/Constants/cResponseMatr_MUON_WGamma__yield_pm_stat.pdf}\\
-\includegraphics[width=0.90\textwidth]{../figs/figs_v11/ELECTRON_WGamma/Constants/cResponseMatr_ELECTRON_WGamma__yield_pm_stat.pdf}
-  \caption{Response matrix derived from the signal MC.}
-  \label{fig:respMatrices_Wg}
+   \includegraphics[width=0.90\textwidth]{../figs/figs_v11/MUON_WGamma/Constants/matrCorrelation_yield_pm_stat.pdf}\\
+\includegraphics[width=0.90\textwidth]{../figs/figs_v11/ELECTRON_WGamma/Constants/matrCorrelation_yield_pm_stat.pdf}
+  \caption{Correlation matrices of statistical uncertainties on unfolded $W\gamma$ yields in the muon (top) and electron (bottom) channels.}
+  \label{fig:corrMatrices_Wg}
   \end{center}
 \end{figure}
 
 \begin{figure}[htb]
   \begin{center}
-   \includegraphics[width=0.90\textwidth]{../figs/figs_v11/MUON_WGamma/Constants/matrCorrelation_yield_pm_stat.pdf}\\
-\includegraphics[width=0.90\textwidth]{../figs/figs_v11/ELECTRON_WGamma/Constants/matrCorrelation_yield_pm_stat.pdf}
-  \caption{Correlation matrices of statistical uncertainties on unfolded $W\gamma$ yields in the muon (top) and electron (bottom) channels.}
-  \label{fig:corrMatrices_Wg}
+   \includegraphics[width=0.90\textwidth]{../figs/figs_v11/MUON_WGamma/Constants/cResponseMatr_MUON_WGamma__yield_pm_stat.pdf}\\
+\includegraphics[width=0.90\textwidth]{../figs/figs_v11/ELECTRON_WGamma/Constants/cResponseMatr_ELECTRON_WGamma__yield_pm_stat.pdf}
+  \caption{Response matrix derived from the signal MC in the muon (top) and electron (bottom) channels.}
+  \label{fig:respMatrices_Wg}
   \end{center}
 \end{figure}
 
@@ -138,7 +138,7 @@ The results of the MC closure check are summarized in Tab.~\ref{tab:unf_mc_closu
   \caption{Results of the MC closure test of the detector resolution unfolding of $P_T^{\gamma}$ yields of $W\gamma$ in the muon channel. The unfolding procedure is applied on the ``MC truth yields'', and the results of the matrix inversion (``inversion'') and D'Agostini (``D\'Agostini'') unfolding methods are compared to ``reconstructed yields'' and to each other.}
   \begin{tabular}{|c|c|c|c|c|}
   \hline
-  $P_T^{\gamma}$,&  MC truth         &   reconstructed &  \multicolumn{2}{|c|}{unfoldied yields} \\ \hline
+  $P_T^{\gamma}$,&  MC truth         &   reconstructed &  \multicolumn{2}{|c|}{unfolded yields} \\ 
   GeV          &  yields       &       yields        &  inversion &  D'Agostini \\ \hline
  10 -  15 &     $33888\pm 273$ &     $37074\pm 286$ &     $36226\pm206$ &     $36222\pm204$ \\ \hline
  15 -  20 &     $19736\pm 207$ &     $19181\pm 203$ &     $19612\pm171$ &     $19619\pm169$ \\ \hline
@@ -165,9 +165,9 @@ The results of the MC closure check are summarized in Tab.~\ref{tab:unf_mc_closu
   \caption{Results of the MC closure test of the detector resolution unfolding of $P_T^{\gamma}$ yields of $W\gamma$ in the electron channel. The unfolding procedure is applied on the ``MC truth yields'', and the results of the matrix inversion (``inversion'') and D'Agostini (``D\'Agostini'') unfolding methods are compared to ``reconstructed yields'' and to each other. }
   \begin{tabular}{|c|c|c|c|c|}
   \hline
-  $P_T^{\gamma}$, &  MC truth         &   reconstructed          &  \multicolumn{2}{|c|}{unfoldied yields} \\ \hline
+  $P_T^{\gamma}$, &  MC truth         &   reconstructed          &  \multicolumn{2}{|c|}{unfolded yields} \\ \hline
   GeV &  yields       &       yields        &  inversion &  D'Agostini \\ \hline
- 10 -  15 &     $16025\pm 185$ &     $16849\pm 190$ &     $17117\pm143$ &     $17116\pm141$ \\ \hline
+ 10 -  15 &     $16025\pm 185$ &     $16849\pm 190$ &     $17117\pm143$ &     $17116\pm141$ \\ 
  15 -  20 &     $8246\pm 131$ &     $8111\pm 130$ &     $8194\pm109$ &     $8196\pm108$ \\ \hline
  20 -  25 &     $4093\pm  92$ &     $4046\pm  92$ &     $4083\pm75$ &     $4082\pm74$ \\ \hline
  25 -  30 &     $2080\pm  66$ &     $1987\pm  64$ &     $2072\pm55$ &     $2072\pm55$ \\ \hline
