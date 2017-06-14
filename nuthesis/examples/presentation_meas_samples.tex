@@ -1,21 +1,18 @@
 \begin{frame}\frametitle{Data Samples and Triggering}
-The data sample we use in this measurement was recorded by the CMS experiment in~2012 in LHC $pp$ collisions at $\sqrt{s}=$8~TeV. Integrated luminosity of the dataset is $L=$19.6~fb$^{-1}$. To select $W\gamma$ events, we use data collected by single muon and single electron triggers.
+\scriptsize
+The data sample we use in this measurement was recorded by the CMS experiment in~2012 in LHC $pp$ collisions at $\sqrt{s}=$8~TeV. Integrated luminosity of the dataset is $L=$19.6~fb$^{-1}$. 
+
 \begin{table}[h]
-  \small
+  \scriptsize
   \begin{center}
-    \caption{Summary of simulated samples used in the measurement.}
-    \begin{tabular}{|l|l|l|}
+    \begin{tabular}{|l|l|l|l|}
       \hline
-      Process                              & Type & $\sigma$, pb  \\ \hline
-      $W\gamma \rightarrow l\nu\gamma$     & signal & 554   \\ \hline %(NLO MCFM)
-      $W$+jets$ \rightarrow l\nu $+jets   & background & 36257  \\ \hline %(NNLO FEWZ)
-      DY+jets$ \rightarrow ll $+jets     & background & 3504  \\ \hline %(NNLO FEWZ)
-      $t\bar{t}$+jets$\rightarrow 1l$+X    & background & 99    \\ \hline %(NNLO)
-      $t\bar{t}$+jets$\rightarrow 2l$+X    & background & 24    \\ \hline
-%      $t\bar{t}\gamma$                     & background & 1    \\ \hline
-      $Z\gamma \rightarrow ll\gamma$       & background & 172   \\ \hline
+      Dataset          & Candidates                        &  Purpose   & Size, T   \\ \hline
+      Single muon      & $W\gamma\rightarrow\mu\nu\gamma$  &  target process   & 1.2 \\ \hline %(NLO MCFM)
+      Single electron  & $W\gamma\rightarrow e\nu\gamma$   &  target process   & 2.0 \\ \hline %(NNLO FEWZ)
+      Double muon      & $Z\gamma\rightarrow\mu\mu\gamma$  &  background estimation   & 0.4 \\ \hline %(NNLO FEWZ)
+      Double electron  & $Z\gamma\rightarrow ee\gamma$     &  background estimation   & 0.5 \\ \hline %(NNLO)
     \end{tabular}
-    \label{tab:mc_bkg_samples}
   \end{center}
 \end{table} 
 \end{frame}%{Data Samples and Triggering}
@@ -23,9 +20,9 @@ The data sample we use in this measurement was recorded by the CMS experiment in
 
 \begin{frame}\frametitle{MC Samples and Luminosity Reweighting}
 \begin{table}[h]
-  \small
+  \scriptsize
   \begin{center}
-    \caption{Summary of simulated samples used in the measurement.}
+ %   \caption{Summary of simulated samples used in the measurement.}
     \begin{tabular}{|l|l|l|}
       \hline
       Process                              & Type & $\sigma$, pb  \\ \hline
@@ -34,12 +31,13 @@ The data sample we use in this measurement was recorded by the CMS experiment in
       DY+jets$ \rightarrow ll $+jets     & background & 3504  \\ \hline %(NNLO FEWZ)
       $t\bar{t}$+jets$\rightarrow 1l$+X    & background & 99    \\ \hline %(NNLO)
       $t\bar{t}$+jets$\rightarrow 2l$+X    & background & 24    \\ \hline
-%      $t\bar{t}\gamma$                     & background & 1    \\ \hline
       $Z\gamma \rightarrow ll\gamma$       & background & 172   \\ \hline
     \end{tabular}
     \label{tab:mc_bkg_samples}
   \end{center}
 \end{table} 
-* Other weights and corrections that are not discussed\\
-(SFs have to be discussed, I believe)
+
+\scriptsize
+All MC samples are normalized to the data luminosity of $L=$19.6~fb$^{-1}$ in all studies and plots.
+
 \end{frame}%{MC Samples and Luminosity Reweighting}
