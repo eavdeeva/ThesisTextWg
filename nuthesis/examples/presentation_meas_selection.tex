@@ -3,28 +3,39 @@
   \begin{table}[h]
      \tiny
      \begin{center}
-     \begin{tabular}{|c|c|c|}
+     \begin{tabular}{|c|c|l|}
      \hline
-     \multicolumn{2}{|c|}{Selection requirements for candidates} & Reject \\ 
+     \multicolumn{2}{|c|}{\scriptsize{Selection requirements for candidates}} & {\scriptsize{Comment}} \\ 
      {\bfseries{- - - - - - $W\gamma\rightarrow\mu\nu\gamma$ - - - - - -}} & 
      {\bfseries{- - - - - - $W\gamma\rightarrow e\nu\gamma$ - - - - - -}}  & \\ \hline
-     \multicolumn{2}{|c|}{Exactly one lepton + at least one photon}  & \\ \hline
-     \multicolumn{2}{|c|}{Photon selection:} & \\
-     \multicolumn{2}{|c|}{\tiny{Photon ID; $p_T>15$; EB or EE}} & \\ 
-                                                               &{\tiny{ [one change in ID]}} & \\ \hline
-      Muon ID & Electron ID & \\ \hline
-      \tiny{$p_T^{\mu}>25$ GeV;} &  \tiny{$p_T^{e}>30$;}  & \\ 
-      \tiny{$|\eta^{\mu}|<2.1$} & \tiny{ EB or EE} & \\ \hline
-      \multicolumn{2}{|c|}{Second lepton veto:} & \\
+
+    \multicolumn{2}{|c|}{\scriptsize\bfseries{Event level:}}  & \\ 
+     \multicolumn{2}{|c|}{Exactly one lepton + at least one photon}  & process signature\\  
+      \multicolumn{2}{|c|}{$M_T^W>$40~GeV} & rejects DY+jets, $Z\gamma$\\ 
+                                & 110$>M_{e\gamma}>$70~GeV excl. & rejects DY+jets\\ 
+      \multicolumn{2}{|c|}{$\Delta{R}(lep,\gamma)>$0.7} & theory consideration\\  \hline
+
+     \multicolumn{2}{|c|}{\scriptsize\bfseries{Photon selection:}} & \\
+     \multicolumn{2}{|c|}{\tiny{$P_T^{\gamma}>$15~GeV}} & theory considerations \\ 
+     \multicolumn{2}{|c|}{\tiny{$\eta^{\gamma}$: EB or EE}} & acceptance \\ 
+     \multicolumn{2}{|c|}{\tiny{Photon ID}} & POG*-recommended \\ 
+             &{\tiny{ [one change in ID]}} & $W\gamma\gamma$-recommended\\ \hline
+
+     \multicolumn{2}{|c|}{\scriptsize\bfseries{Lepton selection:}} & \\
+      \tiny{$p_T^{\mu}>$25~GeV;} &  \tiny{$p_T^{e}>$30~GeV;}  & trigger\\ 
+      \tiny{$|\eta^{\mu}|<2.1$} & \tiny{  $\eta^{e}$: EB or EE} & trigger, acceptance\\ 
+      Muon ID & Electron ID & POG*-recommended \\ \hline
+
+      \multicolumn{2}{|c|}{\scriptsize\bfseries{Second lepton veto:}} & rejects DY+jets, $Z\gamma$\\
       \tiny{$p_T^{\mu2}>10$ GeV;} &  \tiny{$p_T^{e2}>10$ GeV;} & \\
-      \tiny{$|\eta^{\mu2}|<2.4$}  &   \tiny{ EB or EE} & \\
-                                &   \tiny{[veto] ID} & \\ \hline
-      \multicolumn{2}{|c|}{$M_T^W>$40 GeV} & \\ \hline
-                                & $110>M_{e\gamma}>70~GeV$ excl. & \\ \hline
-      \multicolumn{2}{|c|}{$\Delta{R}(lep,\gamma)>0.7$} & \\  \hline
+      \tiny{$|\eta^{\mu2}|<2.4$}  &   \tiny{ $\eta^{e2}$: EB or EE} &  \\
+                                &   \tiny{[veto] ID} & very loose \\ \hline
       \end{tabular}
       \end{center}
   \end{table}
+\scriptsize
+If we have several candidates in an event, we choose one with the highest $P_T^{\gamma}$\\
+*POG - Particle Object Group (in CMS)\\
 \end{frame}%{Event-Level Selection Requirements}
 
 \begin{frame}\frametitle{Data vs MC. $M_T^W$ and $M_{l\gamma}$}
@@ -41,11 +52,15 @@
 \begin{frame}\frametitle{Data vs MC. $P_T^{\gamma}$}
 \scriptsize
 \begin{itemize}
-   \item selected datasets in both channels are dominated by $W$+jets events
+   \item Selected datasets are dominated by $W$+jets events in low $P_T^{\gamma}$ bins;
+   \item Fraction of signal increases with $P_T^{\gamma}$;
+   \item Data disagree with MC.
 \end{itemize}
   \begin{figure}[htb]
     \begin{center}
-       \includegraphics[width=0.45\textwidth]{../figs/figs_v11/MUON_WGamma/PrepareYields/c_TotalDATAvsMC_Barrel__phoEt.pdf} \includegraphics[width=0.45\textwidth]{../figs/figs_v11/ELECTRON_WGamma/PrepareYields/c_TotalDATAvsMC_Barrel__phoEt.pdf} 
+       \includegraphics[width=0.49\textwidth]{../figs/figs_v11/MUON_WGamma/PrepareYields/c_TotalDATAvsMC_Barrel__phoEt.pdf} \includegraphics[width=0.49\textwidth]{../figs/figs_v11/ELECTRON_WGamma/PrepareYields/c_TotalDATAvsMC_Barrel__phoEt.pdf} 
     \end{center}
   \end{figure}
+\tiny
+All MC samples are normalized to the luminosity of data.
 \end{frame}
