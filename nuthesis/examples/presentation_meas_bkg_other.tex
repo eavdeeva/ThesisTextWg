@@ -1,14 +1,30 @@
-\begin{frame}\frametitle {Real-$\gamma$ Background. Sources}
+\begin{frame}\frametitle {$e\rightarrow\gamma$ and Real-$\gamma$ Backgrounds}
 
-Main sources of true $\gamma$ background are $Z\gamma$ and $W\gamma \rightarrow \tau \nu \gamma$. The MC-based estimation is used to subtract these backgrounds.
+  \begin{table}[h]
+     \scriptsize
+     \begin{center}
+     \begin{tabular}{|l|l|l|l|}
+     \hline
+     Type & Source & Comment & Estimation \\ \hline
+     $e\rightarrow\gamma$ & DY+jets$\rightarrow ee$+jets & no track for $e$; fake $E_T^{miss}$ & semi data driven\\\hline
+     Real-$\gamma$ & $Z\gamma \rightarrow ll\gamma$ & pass second lepton veto; fake $E_T^{miss}$ & MC-based\\\hline
+     Real-$\gamma$ & $W\gamma \rightarrow \tau\nu\gamma$ & $\tau^- \rightarrow \mu^- \bar{\nu_{\mu}} \nu_{\tau}$ and $\tau^- \rightarrow e^- \bar{\nu_{e}} \nu_{\tau}$ & MC-based\\
+     \hline
+      \end{tabular}
+      \end{center}
+  \end{table}
 
-MC-based background estimation.
-  \begin{figure}[htb]
-    \begin{center}
-       \includegraphics[width=0.40\textwidth]{../figs/figs_v11/MUON_WGamma/PrepareYields/c_TotalDATAvsMC_Barrel__phoEt.pdf}
-    \end{center}
-  \end{figure}
-\end{frame}%{Real-$\gamma$ Backgrounds}
+\begin{figure}[htb]
+  \begin{center}
+   \includegraphics[width=0.30\textwidth]{../figs/figs_v11/MUON_WGamma/PrepareYields/c_TotalDATAvsMC_EtaCommon__WMtVERY_PRELIMINARY.pdf}\includegraphics[width=0.30\textwidth]{../figs/figs_v11/ELECTRON_WGamma/PrepareYields/c_TotalDATAvsMC_EtaCommon__WMtVERY_PRELIMINARY.pdf}\includegraphics[width=0.30\textwidth]{../figs/figs_v11/ELECTRON_WGamma/PrepareYields/c_TotalDATAvsMC_EtaCommon__Mpholep1PRELIMINARY_FOR_E_TO_GAMMA_WITH_PSV_CUT.pdf}
+  \end{center}
+\end{figure}
+\tiny
+$M_T^W>40$~GeV in both channels: rejects events without $E_T^{miss}$\\
+$M_{l,\gamma}<70~or~M_{l,\gamma}>110$~GeV in the electron channel: rejects events from DY+jets$\rightarrow ee$+jets \\
+{\bfseries{Non-negligible amount remains}}\\
+
+\end{frame}%{$e\rightarrow\gamma$ and Real-$\gamma$ Backgrounds}
 
 \begin{frame}\frametitle{\footnotesize{$P_T^{\gamma}$ Spectrum (EB only)}}
    \begin{figure}[htb]
@@ -31,35 +47,32 @@ MC-based background estimation.
 
 \begin{frame}\frametitle {Cross Checks for Jets$\rightarrow\gamma$ Background Estimation}
 
-\footnotesize{\bfseries{Simple MC closure check:}}
-\tiny
-\begin{itemize}
-  \item Mix $W\gamma$ and $W$+jets MC samples to prepare pseudodata;
-  \item Use $W\gamma$ and $W$+jets Mc to prepare templates;
-  \item Fit pseudodata and compare fit results with MC predictions;
-  \item Agreement is mostly good.
-\end{itemize}
 
-\footnotesize{\bfseries{MC realistic check:}}
-\tiny
-\begin{itemize}
-  \item Mix $W\gamma$, $W$+jets, DY+jets, $Z\gamma$, $t\bar{t}$+jets MC samples to prepare pseudodata-I;
-  \item Mix $Z\gamma$ and DY+jets MC to prepare pseudodata-II for templates;
-  \item Fit pseudodata-I and compare fit results with MC predictions;
-  \item Agreement is better than in data but generally not very good.
-\end{itemize}
 
-\footnotesize{\bfseries{$Z\gamma$ check:}}
 \tiny
-\begin{itemize}
-  \item Apply $Z\gamma$ selection on Double Muon and Double Electron datasets;
-  \item Prepare templates the same way as for the $W\gamma$ measurement;
-  \item Fit $Z\gamma$-selected datasets and compare fit results with MC predictions and $I_{ch}^{\gamma}$ vs $\sigma_{i\etai\eta}^{\gamma}$;
-  \item Measure $Z\gamma$ cross section and compare to the published CMS~8~TeV result;
-  \item Agreement is very good.
-\end{itemize}
 
-\footnotesize{\bfseries{Conclusions: }}\scriptsize{reasons of discrepancies in the $W\gamma$ measurement:  }
+\begin{table}[h]
+  \tiny
+  \begin{center}
+    \begin{tabular}{|l|c|c|c|}
+      \hline
+      Checks$\rightarrow$  & {\bfseries{- - - Simple MC closure - - -}} &  {\bfseries{- - - - - MC realistic - - - - -}}   & {\bfseries{- - - - - - - $Z\gamma$ data - - - - - - -}} \\ \hline
+
+      Templates & \multicolumn{2}{|c|}{MC samples}                 &  $Z\gamma$ FSR and ISR data \\ 
+                & $W\gamma$ and $W$+jets &  $Z\gamma$ and DY+jets  &  (same as for $W\gamma$ meas.) \\ \hline
+
+      Data-to-fit & \multicolumn{2}{|c|}{Mix MC samples}   &  $Z\gamma$-selected  \\ 
+                  & $W\gamma$ and $W$+jets  & All $W\gamma$-selected  &  data \\ \hline
+
+      Check & \multicolumn{3}{|c|}{Compare fit results of two methods to each other and to MC predictions} \\
+                                                       &  &   &  Compute cross section  \\ 
+                                                      &  &   &  and compare to CMS published \\ \hline
+      Agreement & mostly good & slightly better than in data &  excellent \\ \hline
+    \end{tabular}
+  \end{center}
+\end{table} 
+
+\footnotesize{\bfseries{Reasons of discrepancies in the $W\gamma$ measurement:  }}
 \scriptsize
 \begin{itemize}
   \item Not accurate shape of templates; 
