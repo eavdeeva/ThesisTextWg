@@ -1,4 +1,35 @@
-\begin{frame}\frametitle{Uncertainties. Introduction}
+\begin{frame}\frametitle{Uncertainties}
+\scriptsize{\bfseries{Statistical:}} \tiny{limited statistical power of the $W\gamma$-selected dataset}\\
+\scriptsize{\bfseries{Systematic:}} \tiny{all other effects including limited stat. of control datasets and MC datasets}\\
+
+  \begin{table}[h]
+  \tiny
+  \begin{center}
+  \begin{tabular}{|l|c|c|}
+    \hline
+          & \multicolumn{2}{|c|}{Statistical uncertainty propagation} \\ 
+     Step & \multicolumn{2}{|c|}{for the measurement of} \\
+          & $d\sigma/dP_{T}^{\gamma}$ & $\sigma$ \\ \hline
+
+    select events & $N_{sel}^j \pm \Delta N_{sel}^j$ &    $N_{sel} \pm \Delta N_{sel}$       \\ 
+                  & {\color{blue}$\Delta N_{sel}^j = \sqrt{N_{sel}^j}$} &  {\color{blue}$\Delta N_{sel} = \sqrt{N_{sel}}$}   \\ \hline
+
+    subtract background & $N_{sign}^j = N_{sel}^j - N_{bkg}^j$ &    $N_{sign}=N_{sel}-N_{bkg}$       \\ 
+                        & {\color{blue}$\Delta N_{sign}^j = \Delta N_{sel}^j$} &    {\color{blue}$\Delta N_{sign} = \Delta N_{sel}$}   \\ \hline
+
+    unfold   & $N_{A\times\epsilon}^i = U_{ij} \cdot N_{sign}^j$ &           \\ 
+             & {\color{blue}$\Delta N_{A\times\epsilon}^i$: diagonal elements} &    $-$       \\ 
+             & {\color{blue}of the error matrix} &           \\ \hline
+
+    correct for eff X acc & $N_{true}^i = \frac{N_{A\times\epsilon}^i}{(A \times\epsilon)^i}$ &  $N_{true}=\frac{N_{sign}}{A\times\epsilon}$       \\ 
+                          & {\color{blue}$\Delta N_{true}^i = \frac{\Delta N_{A\times\epsilon}^i}{(A \times\epsilon)^i}$} &  {\color{blue}$\Delta N_{true}=\frac{\Delta N_{sign}}{A\times\epsilon}$}       \\ \hline
+
+    compute cross section & $ \left( \frac{d\sigma}{dP_{T}^\gamma} \right) ^i = \frac{N_{true}^i}{L \cdot (\Delta P_T^\gamma)^i}$  &  $\sigma = N_{true}/L$       \\ 
+                          & {\color{blue}$ \Delta \left[ \left( \frac{d\sigma}{dP_{T}^\gamma} \right) ^i \right]= \frac{\Delta N_{true}^i}{L \cdot (\Delta P_T^\gamma)^i}$ } &  {\color{blue}$\Delta\sigma = \DeltaN_{true}/L$   }    \\ \hline
+
+  \end{tabular}
+  \end{center}
+\end{table}
 
 \end{frame}%Systematic Uncertainties. Introduction
 
@@ -135,6 +166,15 @@ Diagonal elements of error matrices only
      \item Propagate each of three uncertainties through unfolding and other corrections.
   \end{itemize}
 
-\footnotesize{\bfseries{Related to PixelSeedVeto SF (electron channel only):}}\scriptsize{}
-
+\footnotesize{- - - - - - - - - - - - - - - - - - - -}\\
+\footnotesize{\bfseries{Related to PixelSeedVeto SF (electron channel only):}}
+  \begin{itemize}
+  \begin{itemize}
+     \tiny
+     \item Change SF by $\pm \Delta[SF]$;
+     \item From signal MC, obtain new constants for $A \times \epsilon$ and unfolding corrections;
+     \item Compute two new cross section values corresponding to $\pm \Delta[SF]$;
+     \item Assign the spread among three cross section values as an uncertainty. 
+  \end{itemize}
+  \end{itemize}
 \end{frame}%Major Sources of the Systematic Uncertainties
