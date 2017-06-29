@@ -1,14 +1,101 @@
 \begin{frame}\frametitle{Other Corrections}
 
-\footnotesize{\bfseries{Detector resolution unfolding:}}\scriptsize{Important note: errors across difffent $P_T^{\gamma}$ bins become correlated after the unfolding procedure.}
+\begin{table}[h]
+  \tiny
+  \begin{center}
+  \begin{tabular}{|l|c|c|}
+    \hline
+          & \multicolumn{2}{|c|}{Algebraic representation for} \\ 
+     Step & \multicolumn{2}{|c|}{the measurement of} \\ 
+          & $d\sigma/dP_{T}^{\gamma}$ & $\sigma$ \\ \hline
+    select events & {\bfseries{$N_{sel}^j$}} &    {\bfseries{$N_{sel}$}}       \\ \hline
+    subtract background & {\bfseries{$N_{sign}^j = N_{sel}^j - N_{bkg}^j$}} &    {\bfseries{$N_{sign}=N_{sel}-N_{bkg}$}}       \\ \hline
+    \multicolumn{3}{|c|}{ } \\  
+    \multicolumn{3}{|c|}{NEXT MEASUREMENT STEPS:} \\  
+    \multicolumn{3}{|c|}{ } \\ \hline 
+    {\bfseries\color{blue}{unfold}}   & {\color{blue}$N_{A\times\epsilon}^i = U_{ij} \cdot N_{sign}^j$} &    $-$       \\ \hline
+    {\bfseries\color{blue}{correct for eff X acc}} & {\color{blue}$N_{true}^i = \frac{N_{A\times\epsilon}^i}{(A \times\epsilon)^i}$} &  {\color{blue}$N_{true}=\frac{N_{sign}}{A\times\epsilon}$}       \\ \hline
+    compute cross section & $ \left( \frac{d\sigma}{dP_{T}^\gamma} \right) ^i = \frac{N_{true}^i}{L \cdot (\Delta P_T^\gamma)^i}$  &  $\sigma = N_{true}/L$       \\ \hline
+    \multicolumn{3}{|l|}{estimate systematic uncertainties }         \\ \hline
+  \end{tabular}
+  \label{tab:analysisOutline}
+  \end{center}
+\end{table}
 
-\footnotesize{\bfseries{Efficiency:}}\scriptsize{}
+\scriptsize
+{\bfseries{Detector resolution unfolding}} (step {\bfseries\color{blue}{``unfold''}}): 
+  \begin{itemize} 
+    \tiny
+    \item {\bfseries{Effect:}} bin-to-bin migration during the $P_T^{\gamma}$ reconstruction; 
+    \item {\bfseries{Method:}} D'Agostini, signal MC sample is used;
+    \item {\bfseries{Note:}} uncertainties across difffent $P_T^{\gamma}$ bins become correlated.
+  \end{itemize}
 
-\footnotesize{\bfseries{Acceptance:}}\scriptsize{}
+{\bfseries{Efficiency and Acceptance}} (step {\bfseries\color{blue}{``correct for eff X acc''}}): 
+  \begin{itemize} 
+    \tiny
+    \item {\bfseries{Effect (main):}} lose signal events due to selection criteria applied;
+    \item {\bfseries{Method:}} bin-by-bin correction by $A\times\epsilon$, constants prepared using signal MC sample;
+    \item {\bfseries{Note:}} efficiencies between data and MC differ (next slide).
+  \end{itemize}
 
 \end{frame}%{Other Corrections}
 
 \begin{frame}\frametitle{Efficiency Scale Factors}
-  POG \\
-  Special SF from $W\gammma\gamma$
+
+\tiny
+The scale factors (SF) $\rho = \frac{\epsilon_{data}}{\epsilon_{MC}}$. SF are applied as weights on each event in each MC sample.
+
+\begin{table}[h]
+  \tiny
+  \begin{center}
+   \begin{tabular}{|c|c|}
+\hline
+ type of candidate                  &   full event SF\\ 
+ $W\gamma\rightarrow\mu\nu\gamma$   &   $\rho^{\mu}_{ID\_iso} \times \rho^{\gamma}_{ID}$    \\
+ $W\gamma\rightarrow e\nu\gamma$    &   $\rho^{e}_{ID} \times \rho^{\gamma}_{ID}\times \rho^{\gamma}_{PSV}$       \\ \hline
+  \end{tabular}
+  \label{tab:SFs_Applied}
+  \end{center}
+\end{table}
+Provided by POG: $\rho^{\mu}_{ID\_iso}$, $\rho^{\gamma}_{ID}$,  $\rho^{e}_{ID}$;       provided by $W\gamma\gamma$ measurement: $\rho^{\gamma}_{PSV}$
+
+{\begin{center}$\rho^{\gamma}_{ID}$: \end{center}}
+\begin{table}[h]
+  \tiny
+  \begin{center}
+   \begin{tabular}{|c|c|c|c|c|}
+\hline
+ $P_T^{\gamma}$  & $|\eta^{\gamma}|\leq 0.80$ & $0.80<|\eta^{\gamma}|\leq 1.44$ & $1.57<|\eta^{\gamma}|\leq 2.00$ & $|\eta^{\gamma}|> 2.00$\\ \hline
+15-20          & 0.95$\pm$0.02   & 0.99$\pm$0.02        & 1.00$\pm$0.02        & 1.02$\pm$0.02 \\ \hline
+20-30          & 0.96$\pm$0.01   & 0.97$\pm$0.01        & 0.98$\pm$0.01        & 1.00$\pm$0.01 \\ \hline
+30-40          & 0.98$\pm$0.01   & 0.98$\pm$0.01        & 0.99$\pm$0.01        & 1.00$\pm$0.01 \\ \hline
+40-50          & 0.98$\pm$0.01   & 0.98$\pm$0.01        & 1.00$\pm$0.01        & 1.01$\pm$0.01 \\ \hline
+$>$50          & 0.98$\pm$0.01   & 0.98$\pm$0.01        & 1.00$\pm$0.01        & 1.01$\pm$0.01 \\ \hline
+  \end{tabular}
+  \label{tab:SFs_PhotonID}
+  \end{center}
+\end{table}
+
+{\begin{center}$\rho^{\gamma}_{PSV}$: \end{center}}
+\begin{table}[h]
+  \tiny
+  \begin{center}
+   \begin{tabular}{|c|c|c|}
+\hline
+ $P_T^{\gamma}$  & barrel              & endcap \\ \hline
+15-20          & 0.996$\pm$0.020     & 0.960$\pm$0.041 \\ \hline
+20-25          & 0.994$\pm$0.024     & 0.977$\pm$0.051 \\ \hline
+25-30          & 0.996$\pm$0.030     & 0.951$\pm$0.062 \\ \hline
+30-40          & 0.999$\pm$0.033     & 1.029$\pm$0.081 \\ \hline
+40-50          & 1.009$\pm$0.073     & {\bfseries{0.971$\pm$0.150}} \\ \hline
+50-70          & {\bfseries{0.993$\pm$0.128}}     & {\bfseries{0.965$\pm$0.294}} \\ \hline
+$>$70          & {\bfseries{1.047$\pm$0.111}}     & {\bfseries{1.145$\pm$0.371}} \\ \hline
+
+  \end{tabular}
+  \label{tab:SFs_PhotonPixelSeedVeto}
+  \end{center}
+\end{table}
+
+
 \end{frame}%{Efficiency Scale Factors}
