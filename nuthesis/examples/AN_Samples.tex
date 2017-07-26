@@ -3,20 +3,8 @@
 
 The data sample we use in this measurement was recorded by the CMS experiment in~2012 in LHC $pp$ collisions at $\sqrt{s}=$8~TeV. Integrated luminosity of the dataset is $L=$19.6~fb$^{-1}$. To select $W\gamma$ events, we use data collected by single muon and single electron triggers. The single muon trigger requires that in each event there is at least one reconstructed isolated muon with $P_T^{\mu}>$24~GeV and $|\eta|<$2.1. The isolation requirement imposes a restriction on the total energy of particles observed in a narrow cone around the muon. The single electron trigger requires at least one reconstructed electron with $P_T^{e}>$27~GeV that also passes a certain set of identification requirements, including isolation. Such trigger choice maximizes our chances to select $W\gamma$ events in $pp$ collisions that produce mostly less interesting and much more probable events of other types, such as multijets events.
 
-In addition to $W\gamma$-selected data sample, we also prepare $Z\gamma$-selected data sample which is used for the background estimation (Ch.~\ref{sec:BackgroundSubtraction}) and cross checks (App.~\ref{sec:ZgCheck}). To select $Z\gamma$ events, we use double muon and double electron triggers. The double muon trigger requires a presence of at least two reconstructed muons with $P_T^{\mu}>$17~GeV and $P_T^{\mu}>$8~GeV per event. The double electron trigger requires a presence of at least two reconstructed electrons with $P_T^{e}>$17~GeV and $P_T^{e}>$8~GeV that also satisfy several quality criteria.
+In addition to the $W\gamma$-selected data sample, we also prepare the $Z\gamma$-selected data sample which is used for the background estimation (Ch.~\ref{sec:BackgroundSubtraction}) and cross checks (App.~\ref{sec:ZgCheck}). To select $Z\gamma$ events, we use double muon and double electron triggers. The double muon trigger requires a presence of at least two reconstructed muons with $P_T^{\mu}>$17~GeV and $P_T^{\mu}>$8~GeV per event. The double electron trigger requires a presence of at least two reconstructed electrons with $P_T^{e}>$17~GeV and $P_T^{e}>$8~GeV that also satisfy several quality criteria.
 
-%_HLT_Mu17_Mu8_v
-%_HLT_Ele17_Ele8_v, many other conditions
-
- % are used as the signal samples while double muon and double electron datasets are used for data-driven background estimation. 
-
-%The data is collected by single electron ($p_T>27$~GeV, WP 80) 
-%and single muon ($p_T>24$~GeV, $|\eta|<2.1$) triggers
-
-% Only runs and luminosity sections certified by CMS are considered in the measurement, 
-% which means that good functioning of all CMS sub-detectors is required.
-
-%THE IDEAS FROM THIS PARAGRAPH NEED TO BE REPACKAGED
 The simulated samples (often called ``Monte Carlo'' or ``MC'' samples) used in this measurement are produced centrally by the CMS simulation team. Information regarding MC samples used for our measurement is given in Tab.~\ref{tab:mc_bkg_samples} alongside with the corresponding cross sections at~8~TeV. All cross sections are calculated with kinematic restrictions matching to the kinematic restrictions of the samples. The kinematic restrictions for different samples differ and reflect theoretical divergencies for specific processes and detector acceptance. In all cases, however, the phase space of the sample is wider than the phase space probed in this measurement.
 
 \begin{table}[h]
@@ -44,11 +32,12 @@ All MC samples were generated with MadGraph~5~\cite{ref_MadGraph} interfaced wit
 
 Cross section values corresponding to all genetated samples in Tab.~\ref{tab:mc_bkg_samples} are calculated by MCFM~\cite{ref_MCFM} or FEWZ~\cite{ref_FEWZ} except for the $Z\gamma$ sample. The uncertainty on normalization of the $Z\gamma$ sample gives a significant contribution to the uncertainty of the measurement because $Z\gamma$ MC sample is used to estimate the most significant background (Ch.~\ref{sec:BackgroundSubtraction_jtog}). MCFM provides a value of the cross section with uncertainty of~20\%. To decrease the uncertainty, we use a cross section of $Z\gamma$ measured at~8~TeV by CMS~\cite{ref_Zg8TeV} and recalculated for the phase space of the generated $Z\gamma$ MC sample. The recalculation procedure is described below.
 
+% MATCHED AN TO THESIS
 The $Z\gamma$ cross section of $\sigma=$2073$\pm$95$\pm$11$\pm$53~fb has been reported in the phase space described in~\cite{ref_Zg8TeV}. To determine the measured cross section  $\sigma_{ps1}$ in the phase space of the $Z\gamma$ MC sample, the following formula was used:
 \begin{equation}
 \sigma_{ps1} = \sigma_{ps2}^{meas.} \cdot \frac{N_{ps1}^{MC}}{N_{ps2}^{MC}},
 \end{equation}
-\noindent{where $\sigma_{ps2}^{meas.}$ is the~8~TeV cross section measured by CMS, $N_{ps1}^{MC}$ and $N_{ps2}^{MC}$ are numbers of events in the full phase space of $Z\gamma$ MC samples and in the phase space corresponding to the measured cross section  $\sigma_{ps2}^{meas.}$. The resulting $Z\gamma$ cross section is found to be $\sigma_{ps1}$172~pb. }
+\noindent{where $\sigma_{ps2}^{meas.}$ is the~8~TeV cross section measured by CMS, $N_{ps1}^{MC}$ and $N_{ps2}^{MC}$ are numbers of events in the full phase space of $Z\gamma$ MC samples and in the phase space corresponding to the measured cross section  $\sigma_{ps2}^{meas.}$. The resulting $Z\gamma$ cross section is found to be $\sigma_{ps1}=$172~pb. }
 
 %The NLO cross section of $W\gamma$ was calculated with the MCFM in the same phase space for which the $W\gamma$ sample was generated. The NNLO contribution is estimated to be~19\%-26\% of the NLO value~\cite{ref_theory_NNLO}. We use an NLO cross section value, and the NNLO estimate is used as an systematic uncertainty of the normalization of the $W\gamma$ sample when it is applicable. 
 

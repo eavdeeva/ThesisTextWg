@@ -15,7 +15,7 @@
 %My words:
 The finite detector resolution in measuring the energy of a photon causes bin-to-bin migration in the $P_T^{\gamma}$ spectrum. The reconstructed $P_T^{\gamma(reco)}$ may not coincide with the true $P_T^{\gamma(true)}$, and, therefore, the event reconstructed in a $P_T^{\gamma}$ bin $j$ may, in fact, belong to the bin $i \neq j$. To recover the true $P_T^{\gamma}$ spectrum, we apply the procedure of the detector resolution unfolding.
 
-The reconstructed $P_T^{\gamma}$ spectrum is related to true $P_T^{\gamma}$ spectrum as:
+The reconstructed $P_T^{\gamma}$ spectrum is related to the true $P_T^{\gamma}$ spectrum as:
 \begin{equation}\label{eq:response_matrix}
   N^{reco}_{j} = R_{ji} N^{A\times\epsilon}_{i},
 \end{equation}
@@ -30,7 +30,7 @@ The simplest method to recover the true spectrum is to solve the system of linea
 
 The migration matrix $M_{ji}$ is prepared using the signal MC sample ($W\gamma\rightarrow\mu\nu_{\mu}\gamma$/$W\gamma\rightarrow{e}\nu_{e}\gamma$) where both true (gen-level) and reconstructed $P_T^\gamma$ spectra are known. The $M_{ji}$ contains the number of selected signal events in each [$j$,$i$] bin. 
 
-After that, we pass the migration matrix $M_{ji}$, generated and reconstructed yields from signal MC $N^{gen-MC}_i$ and $N^{reco-MC}_j$ and reconstructed yields from data to RooUnfold class~\cite{ref_RooUnfold} which performs unfolding using D'Agostini method with five iterations. Yields before and after detector resolution unfolding are compared in Tab.~\ref{tab:unf_results_MUON_WGamma} for the muon channel and in Tab.~\ref{tab:unf_results_ELECTRON_WGamma} for the electron channel. 
+After that, we pass the migration matrix $M_{ji}$, generated and reconstructed yields from signal MC $N^{gen-MC}_i$ and $N^{reco-MC}_j$ and reconstructed yields from data to the RooUnfold class~\cite{ref_RooUnfold} which performs unfolding using D'Agostini method with five iterations. Yields before and after detector resolution unfolding are compared in Tab.~\ref{tab:unf_results_MUON_WGamma} for the muon channel and in Tab.~\ref{tab:unf_results_ELECTRON_WGamma} for the electron channel. 
 
 \begin{table}[h]
   \scriptsize
@@ -88,11 +88,7 @@ After that, we pass the migration matrix $M_{ji}$, generated and reconstructed y
 
 After $P_T^{\gamma}$ spectrum is unfolded, measurements in different $P_T^{\gamma}$ bins become correlated. Correlation matrices are shown in Fig.~\ref{fig:corrMatrices_Wg}. 
 
-For illustration purpose, in addition to the migration matrix we also prepare the response matrix $R_{ji}$ (Fig.~\ref{fig:respMatrices_Wg}) by normalizing the migration matrix in each $j$ bin to all events reconstructed in this bin such as 
-\begin{equation}
-R_{ji} = \frac{M_{ji}}{\sum_{i} M_{ji}}. 
-\end{equation}
-\noindent{The response matrix is shown in Fig.~\ref{fig:respMatrices_Wg}.}
+For illustration purpose, in addition to the migration matrix we also prepare the response matrix $R_{ji}$ (Fig.~\ref{fig:respMatrices_Wg}) by normalizing the migration matrix in each $j$ bin to all events reconstructed in this bin. The response matrix is shown in Fig.~\ref{fig:respMatrices_Wg}.
 
 To validate the procedure of the detector resolution unfolding, we perform the MC closure checks. Gen-level and reconstructed yields are prepared using the signal MC. Then reconstructed yields are smeared by the Gaussian distribution according to the statistical uncertainties on the yields. The smeared yields are unfolded and compared to the gen-level yields. In addition to the D'Agostini method, we check the performance of the matrix inversion method for the unfolding which recovers the true yields as $N^{A\times\epsilon}_i = (R_{ji})^{-1} N^{reco}_j$. 
 
