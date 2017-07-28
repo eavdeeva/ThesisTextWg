@@ -8,7 +8,7 @@
 % my code
 
 % CMSSW
-The CMS software (CMSSW)~\cite{ref_CMSSW} is the tool developed to process all CMS responses, reconstruct particles and prepare data in a condition convenient for the final physics measurements. CMSSW is mostly written in C++ and Python programming languages. It has hundreds of contributors that use GITHUB~\cite{ref_GITHUB} to share their work. All CMS physics measurements use CMSSW.
+The CMS software (CMSSW)~\cite{ref_CMSSW} is the tool developed to process responses from all CMS detectro elements, reconstruct particles and prepare data for physics measurements. CMSSW is mostly written in C++ and Python programming languages. It has hundreds of contributors that use GITHUB~\cite{ref_GITHUB} to share their work. All CMS physics measurements use CMSSW.
 
 The procedure of the tracker alignment and validation described in Ch.~\ref{sec:alignment} is also a part of the CMSSW although the Millepede-II algorithm itself is implemented in the external software tool.
 
@@ -22,4 +22,4 @@ The author of this dissertation used ``ntuples'' prepared by Central Taiwan Univ
 The code for the CMS $W\gamma$ measurement at $\sqrt{s}=8$~TeV was written by the author of this dissertation using C++ language, ROOT and RooFit~\cite{ref_RooFit} packages, $RooUnfold$~\cite{ref_RooUnfold} class for the detector resolution unfolding, and $RooCMSShapePdf$~\cite{ref_RooCMSShapePdf} for $e\rightarrow\gamma$ background estimation. Auxiliary shell scripts are used to run the chain of C++ programs corresponding to separate physics measurement steps. The code is available at~\cite{ref_GITHUB}.
 
 % cross checks
-Several cross check were performed with other collaborators to make sure the code is free of major errors. Especially the event selection and background estimation for the electron channel is fully implemented by both Kansas State University group and the author of this dissertation in separate frameworks. These procedures are carefully cross checked between two developers.  
+Several cross check were performed with other collaborators to make sure the code is free of major errors. The event selection and background estimation for the electron channel is implemented completely independently by both Kansas State University group and the author of this dissertation in separate frameworks. These procedures are carefully cross checked between two developers.  
