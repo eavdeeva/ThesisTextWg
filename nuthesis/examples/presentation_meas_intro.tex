@@ -1,4 +1,4 @@
-\begin{frame}\frametitle{Measurement Goal}
+\begin{frame}\frametitle{Measurement Goal and Strategy}
   \scriptsize
 
   To measure the total and the differential ($\frac{d\sigma}{dP_T^{\gamma}}$) cross sections of $W\gamma\rightarrow l\nu\gamma$ at $\sqrt{s}=$8~TeV.\\
@@ -8,15 +8,8 @@
     \item $P_T^{\gamma}>$ 15 GeV;
     \item $\Delta{R}(\gamma,lep) > $0.7;
     \item several more requirements related to geometric and kinematic limitations
-% \item $|\eta^{\gamma}|<2.5$, $|\eta^{lep}|<2.5$
-%  \item $p_T^{lep}>$ 20 GeV
-%  \item $Iso^{\gamma}<$ 5 GeV
-%  \item for Z$\gamma$ Check: M(lep,lep)$>$50 GeV
-%    \item $P_T^{\gamma}$ ranges for $\frac{d\sigma}{dP_T^{\gamma}}$: 15-20-25-30-35-45-55-65-75-85-95-120-500 GeV
   \end{itemize}
-\end{frame}%{Measurement Goal}
 
-\begin{frame}\frametitle{Measurement Strategy}
 \begin{table}[h]
   \scriptsize
   \begin{center}
@@ -25,12 +18,12 @@
           & \multicolumn{2}{|c|}{Algebraic representation for} \\ 
      Step & \multicolumn{2}{|c|}{the measurement of} \\ 
           & $d\sigma/dP_{T}^{\gamma}$ & $\sigma$ \\ \hline
-    {\bfseries\footnotesize{select events}} & {\bfseries{$N_{sel}^j$}} &    {\bfseries{$N_{sel}$}}       \\ \hline
-    {\bfseries\footnotesize{subtract background}} & {\bfseries{$N_{sign}^j = N_{sel}^j - N_{bkg}^j$}} &    {\bfseries{$N_{sign}=N_{sel}-N_{bkg}$}}       \\ \hline
+    select events & {\bfseries{$N_{sel}^j$}} &    {\bfseries{$N_{sel}$}}       \\ \hline
+    subtract background & {\bfseries{$N_{sign}^j = N_{sel}^j - N_{bkg}^j$}} &    {\bfseries{$N_{sign}=N_{sel}-N_{bkg}$}}       \\ \hline
     unfold   & $N_{A\times\epsilon}^i = U_{ij} \cdot N_{sign}^j$ &    $-$       \\ \hline
     correct for eff X acc & $N_{true}^i = \frac{N_{A\times\epsilon}^i}{(A \times\epsilon)^i}$ &  $N_{true}=\frac{N_{sign}}{A\times\epsilon}$       \\ \hline
     compute cross section & $ \left( \frac{d\sigma}{dP_{T}^\gamma} \right) ^i = \frac{N_{true}^i}{L \cdot (\Delta P_T^\gamma)^i}$  &  $\sigma = N_{true}/L$       \\ \hline
-    \multicolumn{3}{|l|}{\bfseries\footnotesize{estimate systematic uncertainties}}          \\ \hline
+    \multicolumn{3}{|l|}{estimate systematic uncertainties}          \\ \hline
   \end{tabular}
   \label{tab:analysisOutline}
   \end{center}
