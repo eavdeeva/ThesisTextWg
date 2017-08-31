@@ -30,7 +30,7 @@ $\sigma_{i\eta i\eta}$: an ECal shower shape variable\\
 {\bfseries{black}}: data; {\bfseries\color{green}{green}}: real-$\gamma$ template; {\bfseries\color{blue}{blue}}: fake-$\gamma$ template; {\bfseries\color{red}{red}}: fit function
 \end{frame}
 
-\begin{frame}\frametitle{Jets$\rightarrow \gamma$ Background. Templates from $Z\gamma\rightarrow{\bar{\mu}}\mu\gamma$}
+\begin{frame}\frametitle{Jets$\rightarrow \gamma$ Background. Templates from $Z\gamma\rightarrow{\bar{\mu}}\mu\gamma$ - 1}
 
   \begin{figure}[htb]
       \begin{center}
@@ -52,5 +52,32 @@ FSR: final state radiation; ISR: initial state radiation
 \scriptsize
 Increase real-$\gamma$ fraction (FSR): $M_{\mu\mu\gamma}<$101~GeV and $\Delta R(\mu_{1},\gamma)>$0.4\\
 Increase fake-$\gamma$ fraction (ISR): $M_{\mu\mu\gamma}>$101~GeV and $\Delta R(\mu_{1},\gamma)>$1.0
+
+\end{frame}%{{Jets$\rightarrow \gamma$ Background. Templates from $Z\gamma\rightarrow{\bar{\mu}}\mu\gamma$}
+
+\begin{frame}\frametitle{Jets$\rightarrow \gamma$ Background. Templates from $Z\gamma\rightarrow{\bar{\mu}}\mu\gamma$ - 2}
+
+  \begin{figure}[htb]
+    \begin{center}
+       \includegraphics[width=0.40\textwidth]{../figs/figs_v11/MUON_ZGamma/PrepareYields/c_TotalDATAvsMC_Barrel__MpholeplepVERY_PRELIMINARY_pt15to500_.png}\includegraphics[width=0.40\textwidth]{../figs/figs_v11/MUON_ZGamma/PrepareYields/c_TotalDATAvsMC_Barrel__lep1PhoDeltaRVERY_PRELIMINARY_pt15to500_.pdf}\\
+% \includegraphics[width=0.40\textwidth]{../figs/figs_v11/MUON_ZGamma/PrepareYields/c_TotalDATAvsMC_Endcap__MpholeplepVERY_PRELIMINARY_pt15to500_.png}\includegraphics[width=0.40\textwidth]{../figs/figs_v11/MUON_ZGamma/PrepareYields/c_TotalDATAvsMC_Endcap__lep1PhoDeltaRVERY_PRELIMINARY_pt15to500_.pdf}
+    \end{center}
+  \end{figure}
+\scriptsize
+
+Real-$\gamma$ templates:
+  \begin{itemize}
+    \tiny
+    \item Need $V_{fit}$ distributions of photons, the same as distributions of photons in $W\gamma$ candidates in the $W\gamma$-selected sample;
+    \item Use photons selected as photons in $W\gamma$-sample: from $Z\gamma \rightarrow \mu\mu\gamma$-selected sample with additional selection criteria: $M_{\mu\mu\gamma}<$101~GeV and $\Delta R(\mu_{1},\gamma)>$0.4.
+  \end{itemize}
+
+Fake-$\gamma$ templates:
+  \begin{itemize}
+     \tiny
+     \item Need $V_{fit}$ distributions of photon-like jets, the same as distributions of photon-like jets in $W$+jets candidates in the $W\gamma$-selected sample;
+     \item Use jets selected as photons in $W\gamma$-sample: from $Z\gamma \rightarrow \mu\mu\gamma$-selected sample with additional selection criteria: $M_{\mu\mu\gamma}>$101~GeV and $\Delta R(\mu_{1},\gamma)>$1.0;
+     \item This sample is still dominant by real photons. This real photon contribution is subtracted using $Z\gamma \rightarrow \mu\mu\gamma$ simulation.
+  \end{itemize}
 
 \end{frame}%{{Jets$\rightarrow \gamma$ Background. Templates from $Z\gamma\rightarrow{\bar{\mu}}\mu\gamma$}
