@@ -32,6 +32,11 @@
 
 \begin{frame}\frametitle{Measurement Strategy}
   \scriptsize
+
+$\sigma = \frac{N}{L}~\rightarrow~\sigma = \frac{N_{sel}-N_{bkg}}{A \epsilon L}$ 
+
+$\frac{d\sigma}{dP_T^{\gamma}} = \frac{N}{L \Delta P_T^{\gamma}}~\rightarrow~\frac{N_{sel}^i-N_{bkg}^{i}}{(A\epsilon)^i L \Delta P_T^{\gamma}^i}$
+
 \begin{table}[h]
   \scriptsize
   \begin{center}
@@ -40,11 +45,10 @@
           & \multicolumn{2}{|c|}{Algebraic representation for} \\ 
      Step & \multicolumn{2}{|c|}{the measurement of} \\ 
           & $d\sigma/dP_{T}^{\gamma}$ & $\sigma$ \\ \hline
-    select events & {\bfseries{$N_{sel}^j$}} &    {\bfseries{$N_{sel}$}}       \\ \hline
-    subtract background & {\bfseries{$N_{sign}^j = N_{sel}^j - N_{bkg}^j$}} &    {\bfseries{$N_{sign}=N_{sel}-N_{bkg}$}}       \\ \hline
-    unfold   & $N_{A\times\epsilon}^i = U_{ij} \cdot N_{sign}^j$ &    $-$       \\ \hline
-    correct for eff X acc & $N_{true}^i = \frac{N_{A\times\epsilon}^i}{(A \times\epsilon)^i}$ &  $N_{true}=\frac{N_{sign}}{A\times\epsilon}$       \\ \hline
-    compute cross section & $ \left( \frac{d\sigma}{dP_{T}^\gamma} \right) ^i = \frac{N_{true}^i}{L \cdot (\Delta P_T^\gamma)^i}$  &  $\sigma = N_{true}/L$       \\ \hline
+    select events & {\bfseries{$N_{sel}^i$}} &    {\bfseries{$N_{sel}$}}       \\ \hline
+    subtract background & {\bfseries{$N_{sign}^i = N_{sel}^i - N_{bkg}^i$}} &    {\bfseries{$N_{sign}=N_{sel}-N_{bkg}$}}       \\ \hline
+    correct for eff X acc & $N_{ph.sp.}^i = \frac{N_{sign}^i}{(A \times\epsilon)^i}$ &  $N_{ph.sp.}=\frac{N_{sign}}{A\times\epsilon}$       \\ \hline
+    compute cross section & $ \left( \frac{d\sigma}{dP_{T}^\gamma} \right) ^i = \frac{N_{ph.sp.}^i}{L \cdot (\Delta P_T^\gamma)^i}$  &  $\sigma = N_{ph.sp.}/L$       \\ \hline
     \multicolumn{3}{|l|}{estimate systematic uncertainties}          \\ \hline
   \end{tabular}
   \label{tab:analysisOutline}
