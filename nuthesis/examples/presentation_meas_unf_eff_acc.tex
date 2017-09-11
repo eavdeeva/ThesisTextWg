@@ -5,15 +5,15 @@
   \begin{center}
   \begin{tabular}{|l|c|c|}
     \hline
-          & \multicolumn{2}{|c|}{Algebraic representation for} \\ 
-     Step & \multicolumn{2}{|c|}{the measurement of} \\ 
-          & $d\sigma/dP_{T}^{\gamma}$ & $\sigma$ \\ \hline
+          & \multicolumn{2}{|c|}{{\bfseries{Algebraic representation for}}} \\ 
+     {\bfseries{Step}} & \multicolumn{2}{|c|}{{\bfseries{the measurement of}}} \\ 
+          & {\bfseries{$d\sigma/dP_{T}^{\gamma}$}} & {\bfseries{$\sigma$}} \\ \hline
     select events & {\bfseries{$N_{sel}^i$}} &    {\bfseries{$N_{sel}$}}       \\ \hline
     subtract background & {\bfseries{$N_{sign}^i = N_{sel}^i - N_{bkg}^i$}} &    {\bfseries{$N_{sign}=N_{sel}-N_{bkg}$}}       \\ \hline
     \multicolumn{3}{|c|}{ } \\  
     \multicolumn{3}{|c|}{NEXT MEASUREMENT STEPS:} \\  
     \multicolumn{3}{|c|}{ } \\ \hline 
-    {\bfseries\color{blue}{correct for eff X acc}} & {\color{blue}$N_{ph.sp.}^i = \frac{N_{A\times\epsilon}^i}{(A \times\epsilon)^i}$} &  {\color{blue}$N_{ph.sp.}=\frac{N_{sign}}{A\times\epsilon}$}       \\ \hline
+    {\bfseries\color{blue}{correct for eff X acc}} & {\color{blue}$N_{ph.sp.}^i = \frac{N_{sign}^i}{(A \times\epsilon)^i}$} &  {\color{blue}$N_{ph.sp.}=\frac{N_{sign}}{A\times\epsilon}$}       \\ \hline
     compute cross section & $ \left( \frac{d\sigma}{dP_{T}^\gamma} \right) ^i = \frac{N_{true}^i}{L \cdot (\Delta P_T^\gamma)^i}$  &  $\sigma = N_{true}/L$       \\ \hline
     \multicolumn{3}{|l|}{estimate systematic uncertainties }         \\ \hline
   \end{tabular}
@@ -21,14 +21,17 @@
   \end{center}
 \end{table}
 
-\footnotesize
-{\bfseries{Effect (main):}} lose signal events due to selection criteria applied.\\
-
 \scriptsize
-$(A\times\epsilon)^i = \frac{N_{passed}^i}{N_{passed}^i+N_{failed}^i}$\\
-{\tiny{$N_{passed}^i$ and $N_{failed}^i$ are calculated using signal MC simulation sample ($W\gamma$)}}\\
-
-$N_{ph.sp.}^i = \frac{N_{A\times\epsilon}^i}{(A \times\epsilon)^i}$
+Selection criteria are tighter than the measurement phase space. \\
+\tiny
+- - - - - - - - - \\
+{\bfseries{Efficiency and acceptance correction:}} from the number of signal ($W\gamma$) events in the selected sample to the number of signal events in the measurement phase space.\\
+- - - - - - - - - \\
+\scriptsize
+$(A\times\epsilon)^i = \frac{N_{passed(MC)}^i}{N_{passed(MC)}^i+N_{failed(MC)}^i}$, \\
+{\tiny where {$N_{passed}^i$ and $N_{failed}^i$ are calculated using signal MC simulation sample ($W\gamma$)}}\\
+- - - - - - - - - \\
+$N_{ph.sp.}^i = \frac{N_{sign}^i}{(A \times\epsilon)^i}$
 
 \end{frame}%{Other Corrections}
 

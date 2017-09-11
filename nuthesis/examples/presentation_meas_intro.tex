@@ -1,41 +1,55 @@
-\begin{frame}\frametitle{Measurement Goal}
+\begin{frame}\frametitle{Observables to Measure}
   \scriptsize
-  Total ($\sigma$) and the differential ($\frac{d\sigma}{dP_T^{\gamma}}$) cross sections of $W\gamma\rightarrow l\nu\gamma$.\\
+  {\bfseries{Total ($\sigma$) and the differential ($\frac{d\sigma}{dP_T^{\gamma}}$) cross sections of $W\gamma\rightarrow l\nu\gamma$.}}\\
   $\sigma = \frac{N}{L}$, $\frac{d\sigma}{dP_T^{\gamma}} = \frac{N}{L \Delta P_T^{\gamma}}$, \\
   \tiny
-  where $N$ is a number of $W\gamma$ events produced during a given period of time, $L$ is an integrated LHC luminocity during the same period of time, $\Delta P_T^{\gamma}$ is a $P_T^{\gamma}$ bin width.
-  \scriptsize
-  - - - - - - - - - - - - - - - \\
-  Phase space definition:
+  where $N$ is a number of $W\gamma$ events produced during a given period of time, $L$ is an integrated LHC luminocity during the same period of time, $\Delta P_T^{\gamma}$ is a $P_T^{\gamma}$ bin width.\\
+
+
+\begin{minipage}[c]{0.49\textwidth}
+  \tiny
+  - - - - - - - - - - - - - - - - - - - - \\
+  {\bfseries{Phase space definition:}}
   \begin{itemize}
-    \scriptsize
+    \tiny
     \item $P_T^{\gamma}>$ 15 GeV;
     \item $\Delta{R}(\gamma,lep) > $0.7;
     \item several more requirements related to geometric and kinematic limitations
   \end{itemize}
-  - - - - - - - - - - - - - - - \\
+  - - - - - - - - - - - - - - - - - - - - \\
   \tiny
-  Notations:
+  {\bfseries{Notations:}}
   \begin{itemize}
     \tiny
     \item Transverse momentum ($P_T$):  a photon momentum component transverse to the proton beamline
-    \item Cone separation: $\Delta R(a,b) = \sqrt( (\phi_a-\phi_b)^2 + (\eta_a-\eta_b)^2 )$;
+    \item Cone separation: $\Delta R(a,b) = \sqrt{ (\phi_a-\phi_b)^2 + (\eta_a-\eta_b)^2 }$;
     \item Pseudorapidity: $\eta=-ln \left[ tan{(\theta/2)} \right]$
     \item EB and EE: ECal barrel and ECal endcap
   \end{itemize}
-\begin{figure}[htb]
-  \begin{center}
-    {\includegraphics[width=0.90\textwidth]{../figs/ForPresentation/CMS_coordSyst_and_ECal.png}}
-  \end{center}
-\end{figure}
+\end{minipage}%
+\begin{minipage}[c]{0.49\textwidth}
+  \begin{figure}[htb]
+    \begin{center}
+      \includegraphics[width=0.98\textwidth]{../figs/ForPresentation/CMS_coordinateSystem.png}\\
+      \includegraphics[width=0.88\textwidth]{../figs/ForPresentation/CMS_ECAL_eta.png}\\
+    \end{center}
+  \end{figure}
+\end{minipage} 
+
+\tiny
+- - - - - - - - - - - - - - - - - - - - \\
+Two channels: muon ($W\gamma\rightarrow \mu\nu_{\mu}\gamma$) and electron ($W\gamma\rightarrow e\nu_{e}\gamma$). {\bfseries{Will mostly talk about the muon channel.}}
 \end{frame}%{Measurement Goal}
 
 \begin{frame}\frametitle{Measurement Strategy}
   \scriptsize
+\begin{equation}
+  \sigma = \frac{N}{L}~\rightarrow~\sigma = \frac{N_{sel}-N_{bkg}}{A \epsilon L}
+\end{equation}
 
-$\sigma = \frac{N}{L}~\rightarrow~\sigma = \frac{N_{sel}-N_{bkg}}{A \epsilon L}$ 
-
-$\frac{d\sigma}{dP_T^{\gamma}} = \frac{N}{L \Delta P_T^{\gamma}}~\rightarrow~\frac{N_{sel}^i-N_{bkg}^{i}}{(A\epsilon)^i L \Delta P_T^{\gamma}^i}$
+\begin{equation}
+\frac{d\sigma}{dP_T^{\gamma}} = \frac{N}{L \Delta P_T^{\gamma}}~\rightarrow~\frac{N_{sel}^i-N_{bkg}^{i}}{(A\epsilon)^i L \Delta P_T^{\gamma}^i}
+\end{equation}
 
 \begin{table}[h]
   \scriptsize
@@ -44,7 +58,7 @@ $\frac{d\sigma}{dP_T^{\gamma}} = \frac{N}{L \Delta P_T^{\gamma}}~\rightarrow~\fr
     \hline
           & \multicolumn{2}{|c|}{Algebraic representation for} \\ 
      Step & \multicolumn{2}{|c|}{the measurement of} \\ 
-          & $d\sigma/dP_{T}^{\gamma}$ & $\sigma$ \\ \hline
+          & $\frac{d\sigma}{dP_{T}^{\gamma}}$ & $\sigma$ \\ \hline
     select events & {\bfseries{$N_{sel}^i$}} &    {\bfseries{$N_{sel}$}}       \\ \hline
     subtract background & {\bfseries{$N_{sign}^i = N_{sel}^i - N_{bkg}^i$}} &    {\bfseries{$N_{sign}=N_{sel}-N_{bkg}$}}       \\ \hline
     correct for eff X acc & $N_{ph.sp.}^i = \frac{N_{sign}^i}{(A \times\epsilon)^i}$ &  $N_{ph.sp.}=\frac{N_{sign}}{A\times\epsilon}$       \\ \hline
