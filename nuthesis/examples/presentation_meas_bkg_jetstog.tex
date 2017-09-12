@@ -23,7 +23,7 @@
 \begin{minipage}[t]{0.49\textwidth}
   \begin{figure}[htb]
     \begin{center}
-       \includegraphics[width=0.98\textwidth]{../figs/figs_v11/MUON_WGamma/TemplateFits/c_TEMPL_CHISO_UNblind__phoEt15to20__Barrel__RooFit.pdf}
+       \includegraphics[width=0.98\textwidth]{../figs/ForPresentation/fitPlot_CHISO.png}
     \end{center}
   \end{figure}
     \begin{center}
@@ -35,7 +35,7 @@
 \begin{minipage}[t]{0.49\textwidth}
   \begin{figure}[htb]
     \begin{center}
-      \includegraphics[width=0.98\textwidth]{../figs/figs_v11/MUON_WGamma/TemplateFits/c_TEMPL_SIHIH_UNblind__phoEt15to20__Barrel__RooFit.pdf}
+      \includegraphics[width=0.98\textwidth]{../figs/ForPresentation/fitPlot_SIHIH.png}
     \end{center}
   \end{figure}
     \begin{center}
@@ -46,10 +46,10 @@
 
 \begin{center}
 \tiny
-- - - - - - - - - - \\
 Both $I_{ch}^{\gamma}$ and $\sigma_{i\eta i\eta}$ are used in photon ID.\\
 \end{center}
-{\bfseries{black}}: data; {\bfseries\color{green}{green}}: real-$\gamma$ template; {\bfseries\color{blue}{blue}}: fake-$\gamma$ template; {\bfseries\color{red}{red}}: fit function
+{\bfseries{black}}: data; {\bfseries\color{green}{green}}: real-$\gamma$ template; {\bfseries\color{blue}{blue}}: fake-$\gamma$ template; {\bfseries\color{red}{red}}: fit function\\
+{\bfseries{Note:}} fit results undergo a correction for $V_{fit}$ efficiency, and do not have to coincide before that. 
 \end{frame}
 
 \begin{frame}\frametitle{Jets$\rightarrow \gamma$. True-$\gamma$ Templates from $Z\gamma\rightarrow \mu^+ \mu^- \gamma $}
@@ -62,17 +62,17 @@ Both $I_{ch}^{\gamma}$ and $\sigma_{i\eta i\eta}$ are used in photon ID.\\
        \end{center}
     \end{figure}
 
-\scriptsize
+\tiny
 FSR: final state radiation; ISR: initial state radiation
 
   \begin{figure}[htb]
     \begin{center}
-       \includegraphics[width=0.40\textwidth]{../figs/figs_v11/MUON_ZGamma/PrepareYields/c_TotalDATAvsMC_Barrel__MpholeplepVERY_PRELIMINARY_pt15to500_.png}\includegraphics[width=0.40\textwidth]{../figs/figs_v11/MUON_ZGamma/PrepareYields/c_TotalDATAvsMC_Barrel__lep1PhoDeltaRVERY_PRELIMINARY_pt15to500_.pdf}\\
+       \includegraphics[width=0.45\textwidth]{../figs/ForPresentation/forDefense_Mllg.png}\includegraphics[width=0.45\textwidth]{../figs/ForPresentation/forDefense_dR.png}\\
 % \includegraphics[width=0.40\textwidth]{../figs/figs_v11/MUON_ZGamma/PrepareYields/c_TotalDATAvsMC_Endcap__MpholeplepVERY_PRELIMINARY_pt15to500_.png}\includegraphics[width=0.40\textwidth]{../figs/figs_v11/MUON_ZGamma/PrepareYields/c_TotalDATAvsMC_Endcap__lep1PhoDeltaRVERY_PRELIMINARY_pt15to500_.pdf}
     \end{center}
   \end{figure}
-\scriptsize
-$Z\gamma$-selected sample: $Z\gamma$ and $Z$+jets\\
+\tiny
+$Z\gamma$-selected sample: $Z\gamma$ and $Z$+jets(DY+jets)\\
 True-$\gamma$ templates: $M_{\mu\mu\gamma}<$101~GeV and $\Delta R(\mu_{1},\gamma)>$0.4 ($Z\gamma\rightarrow\mu^+ \mu^- \gamma $ FSR)\\
 
 \end{frame}%{Jets$\rightarrow \gamma$. Real-$\gamma$ Templates from $Z\gamma\rightarrow{\bar{\mu}}\mu\gamma$}
@@ -81,20 +81,20 @@ True-$\gamma$ templates: $M_{\mu\mu\gamma}<$101~GeV and $\Delta R(\mu_{1},\gamma
 
   \begin{figure}[htb]
     \begin{center}
-       \includegraphics[width=0.40\textwidth]{../figs/figs_v11/MUON_ZGamma/PrepareYields/c_TotalDATAvsMC_Barrel__MpholeplepVERY_PRELIMINARY_pt15to500_.png}\includegraphics[width=0.40\textwidth]{../figs/figs_v11/MUON_ZGamma/PrepareYields/c_TotalDATAvsMC_Barrel__lep1PhoDeltaRVERY_PRELIMINARY_pt15to500_.pdf}\\
+       \includegraphics[width=0.45\textwidth]{../figs/ForPresentation/forDefense_Mllg.png}\includegraphics[width=0.45\textwidth]{../figs/ForPresentation/forDefense_dR.png}\\
 % \includegraphics[width=0.40\textwidth]{../figs/figs_v11/MUON_ZGamma/PrepareYields/c_TotalDATAvsMC_Endcap__MpholeplepVERY_PRELIMINARY_pt15to500_.png}\includegraphics[width=0.40\textwidth]{../figs/figs_v11/MUON_ZGamma/PrepareYields/c_TotalDATAvsMC_Endcap__lep1PhoDeltaRVERY_PRELIMINARY_pt15to500_.pdf}
     \end{center}
   \end{figure}
 
 \tiny
-$Z\gamma$-selected sample: $Z\gamma$, $Z$+jets\\
-$W\gamma$-selected sample: $W\gamma$, $W$+jets, $Z$+jets, $t\bar{t}$+jets, and more\\
+{\bfseries{$Z\gamma$-selected sample:}} $Z\gamma$, $Z$+jets; \\
+{\bfseries{$W\gamma$-selected sample:}} $W\gamma$, $W$+jets, $Z$+jets, $t\bar{t}$+jets, and more\\
 
   \begin{itemize}
      \tiny
-     \item Need $V_{fit}$ distributions of jets selected as photons, same as distributions of jets from $W$+jets in the $W\gamma$-selected sample;
+     \item Need $V_{fit}$ distributions of jets selected as photons (like in the $W\gamma$-selected sample);
      \item {\bfseries{Cannot find a pure sample of such jets in data;}}
-     \item Use jets selected as photons from $Z\gamma \rightarrow \mu^+ \mu^- \gamma$-selected sample;
+     \item Use jets selected as photons in $Z\gamma \rightarrow \mu^+ \mu^- \gamma$-selected sample;
      \item Increase fake-$\gamma$ fraction: $M_{\mu\mu\gamma}>$101~GeV and $\Delta R(\mu_{1},\gamma)>$1.0 ($Z\gamma\rightarrow\mu^+ \mu^- \gamma$ ISR);
      \item {\bfseries{Sample is still dominant by true-$\gamma$ from $Z\gamma$ events}};
      \item Subtract the true-$\gamma$ contribution using $Z\gamma \rightarrow \mu^+ \mu^- \gamma$ simulation.

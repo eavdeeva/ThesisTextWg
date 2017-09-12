@@ -2321,9 +2321,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.22061459"
-     inkscape:cx="2869.7875"
-     inkscape:cy="336.55415"
+     inkscape:zoom="0.44122918"
+     inkscape:cx="1689.3009"
+     inkscape:cy="401.09251"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -2340,7 +2340,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -3484,9 +3484,9 @@
            y="967.84332"
            x="616.16614"
            id="tspan12463-4-8-3-4-9-5-0-6-9-3"
-           sodipodi:role="line">l<tspan
+           sodipodi:role="line">μ<tspan
    id="tspan3707"
-   style="font-size:65%;baseline-shift:super">-</tspan></tspan></text>
+   style="font-size:65.00091553%;baseline-shift:super">-</tspan></tspan></text>
       <text
          sodipodi:linespacing="125%"
          id="text12461-8-46-1-68-6-5-8-5-7-36-6"
@@ -3543,7 +3543,7 @@
            y="742.18304"
            x="617.95215"
            id="tspan12463-4-8-3-4-9-5-0-6-9-3-5"
-           sodipodi:role="line">l<tspan
+           sodipodi:role="line">μ<tspan
    id="tspan3707-9"
    style="font-size:65.00091553%;baseline-shift:super">+</tspan></tspan></text>
     </g>
@@ -3760,7 +3760,7 @@
            y="734.76331"
            x="1330.4668"
            id="tspan12463-4-8-3-4-9-5-0-6-9-3-3"
-           sodipodi:role="line">l<tspan
+           sodipodi:role="line">μ<tspan
    id="tspan3707-7"
    style="font-size:65.00091553%;baseline-shift:super">-</tspan></tspan></text>
       <text
@@ -3774,7 +3774,7 @@
            y="509.10303"
            x="1332.2528"
            id="tspan12463-4-8-3-4-9-5-0-6-9-3-5-9"
-           sodipodi:role="line">l<tspan
+           sodipodi:role="line">μ<tspan
    id="tspan3707-9-1"
    style="font-size:65.00091553%;baseline-shift:super">+</tspan></tspan></text>
     </g>
@@ -3915,9 +3915,9 @@
            y="708.72278"
            x="2135.5747"
            id="tspan12463-4-8-3-4-9-5-0-6-9-3-0"
-           sodipodi:role="line">l<tspan
+           sodipodi:role="line">μ<tspan
    id="tspan3971"
-   style="font-size:65%;baseline-shift:super">-</tspan></tspan></text>
+   style="font-size:65.00091553%;baseline-shift:super">-</tspan></tspan></text>
       <text
          sodipodi:linespacing="125%"
          id="text12461-8-46-1-68-6-5-8-5-7-36-6-3"
@@ -3974,7 +3974,7 @@
            y="792.45673"
            x="2075.8879"
            id="tspan12463-4-8-3-4-9-5-0-6-9-3-0-3"
-           sodipodi:role="line">l<tspan
+           sodipodi:role="line">μ<tspan
    id="tspan3971-4"
    style="font-size:65.00091553%;baseline-shift:super">+</tspan></tspan></text>
     </g>
@@ -4113,7 +4113,7 @@
          id="tspan12463-4-8-3-4-9-5-0-6-9-3-0-4"
          x="2863.7651"
          y="613.75696"
-         style="font-size:72px;font-style:italic;-inkscape-font-specification:Liberation Serif Italic">l<tspan
+         style="font-size:72px;font-style:italic;-inkscape-font-specification:Liberation Serif Italic">μ<tspan
    style="font-size:65.00091553%;baseline-shift:super"
    id="tspan3971-3">-</tspan></tspan></text>
     <text
@@ -4172,7 +4172,7 @@
          id="tspan12463-4-8-3-4-9-5-0-6-9-3-0-3-4"
          x="2904.9519"
          y="707.2384"
-         style="font-size:72px;font-style:italic;-inkscape-font-specification:Liberation Serif Italic">l<tspan
+         style="font-size:72px;font-style:italic;-inkscape-font-specification:Liberation Serif Italic">μ<tspan
    style="font-size:65.00091553%;baseline-shift:super"
    id="tspan3971-4-3">+</tspan></tspan></text>
   </g>
